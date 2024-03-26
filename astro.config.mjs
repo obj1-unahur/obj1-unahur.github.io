@@ -7,7 +7,7 @@ import icon from 'astro-icon'
 // https://astro.build/config
 export default defineConfig({
   site: 'https://obj1-unahur.github.io',
-  base: "/obj1-unahur",
+  base: "/objetos-web",
   compressHTML: false,
   integrations: [
     mdx(),
