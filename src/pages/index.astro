@@ -7,94 +7,36 @@ import Feature from '../components/Feature.astro'
 ---
 
 <DefaultLayout title="Inicio">
-  <!-- <Hero /> -->
-  <section>
+  <Hero />
+  <section class="my-64">
     <div class="container">
-      <h1 class="m-10 text-center text-4xl md:text-center lg:text-8xl">
-        <slot><span class="text-gradient">Objetos 1</span></slot>
-      </h1>
-      <!-- <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        <Feature icon="mdi:tailwind" title="Tailwind CSS">
-          Use the power of Tailwind to greatly improve your productivity and enhance your developer workflow.
-        </Feature>
-        <Feature icon="mdi:wheelchair-accessibility" title="a11y Components">
-          17 components and counting, all tried and tested for the most optimal accessible experience for your visitors.
-        </Feature>
-        <Feature icon="mdi:looks" title="Prettier">
-          Less worry about formatting your code, let the Astro Prettier integration do the heavy lifting.
-        </Feature>
-        <Feature icon="mdi:eslint" title="ESLint">
-          Lint your code with strict a11y settings to ensure you stay on track with the WCAG standards.
-        </Feature>
-        <Feature icon="mdi:book-open-page-variant" title="Blog">
-          This theme comes with a fully integrated blog, dynamic pages and SEO optimization.
-        </Feature>
-        <Feature icon="mdi:language-markdown" title="Markdown & MDX">
-          Easily use .md and .mdx pages to build your websites or use it with Netlify CMS.
-        </Feature>
-        <Feature icon="mdi:theme-light-dark" title="Dark mode">
-          Fully integrated Dark mode gives your users the choice for their favorite viewing mode.
-        </Feature>
-        <Feature icon="mdi:cog" title="Design System">
-          The theme offers some very handy utilities to help you build your website faster.
-        </Feature>
-        <Feature icon="mdi:lighthouse" title="Lighthouse Scores">
-          Excellent lighthouse scores means your website will load faster and get better SEO rankings.
-        </Feature>
-      </div> -->
-      <div class="text-justify">
-        <p class="p-2">
-          Si llegaste hasta este sitio es muy probable que estes inscripto en Programación con Objetos I, de la
-          Licenciatura en Informática y/o Tecnicatura en Programación de la Universidad Nacional de Hurlingham. Aquí
-          encontrarás casi todo lo necesario para tu cursada. Decimos casi porque hay mucho material que “vive” en otras
-          páginas, pero este sitio funcionará como punto de partida para llegar allí. Antes de seguir, es imprescindible
-          que completes el siguiente Formulario de inscripción que nos ayudará a organizar la cursada de la mejor manera
-          posible. Arrancamos el cuatrimestre con una modalidad de cursada mixta, donde tendremos clases presenciales y
-          virtuales. Hay que estar atento/a al cronograma de la cursada por si en algún momento se hace algún cambio. Si
-          ya viniste varias veces, probablemente quieras ir a la sección cursada o ver el material que tenemos
-          disponible.
-        </p>
-        <p class="p-2">
-          Antes de seguir, es imprescindible que completes el siguiente Formulario de inscripción que nos ayudará a
-          organizar la cursada de la mejor manera posible.
-        </p>
-        <p class="p-2">
-          Arrancamos el cuatrimestre con una modalidad de cursada mixta, donde tendremos clases presenciales y
-          virtuales. Hay que estar atento/a al cronograma de la cursada por si en algún momento se hace algún cambio.
-        </p>
-        <p class="p-2">
-          Si ya viniste varias veces, probablemente quieras ir a la sección cursada o ver el material que tenemos
-          disponible.
-        </p>
-      </div>
-    </div>
-  </section>
-  <ContentMedia imgSrc="/accessible-components.webp">
-    <h2>Accessible Components</h2>
-    <p class="text-2xl">
-      This theme provides plenty of tried and tested Accessible Astro Components. Some are native to this theme and a
-      lot of others are integrated using a <a href="https://github.com/markteekman/accessible-astro-components"
-        >separate package</a
-      >. They'll get you up and running in building an accessible solution for your visitors.
-    </p>
-  </ContentMedia>
-  <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
-    <h2>WCAG 2.1 AA Compliant</h2>
-    <p class="text-2xl">
-      Using semantic HTML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible
-      navigation and components, clear outlines and tab indicators and the right color contrast, you're more certain of
-      reaching WCAG AA compliance.
-    </p>
-  </ContentMedia>
-  <section class="mb-32 mt-64">
-    <div class="container">
-      <h2 class="mb-16 text-6xl">Counters</h2>
-      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
-        <Counter count="520" title="Stars" sub="On GitHub" />
-        <Counter count="17" title="Accessible" sub="Components" />
-        <Counter count="500" title="Commits" sub="Merged" />
-        <Counter count="18+" title="Months" sub="Since launch" />
-      </div>
+      <section class="ml10 m-auto flex flex-col">
+        <center>
+          <h2 class="mb-16 text-6xl">¡Bienvenido/a!</h2>
+
+          <p>
+            Si llegaste hasta este sitio es muy probable que estes inscripto en Programación con Objetos I, de la
+            Licenciatura en Informática y/o Tecnicatura en Programación de la Universidad Nacional de Hurlingham. Aquí
+            encontrarás casi todo lo necesario para tu cursada. Decimos casi porque hay mucho material que “vive” en
+            otras páginas, pero este sitio funcionará como punto de partida para llegar allí.
+          </p>
+          <br />
+          <p>
+            Antes de seguir, es imprescindible que completes el siguiente Formulario de inscripción que nos ayudará a
+            organizar la cursada de la mejor manera posible.
+          </p>
+          <br />
+          <p>
+            Arrancamos el cuatrimestre con una modalidad de cursada mixta, donde tendremos clases presenciales y
+            virtuales. Hay que estar atento/a al cronograma de la cursada por si en algún momento se hace algún cambio.
+          </p>
+          <br />
+          <p>
+            Si ya viniste varias veces, probablemente quieras ir a la sección cursada o ver el material que tenemos
+            disponible.
+          </p>
+        </center>
+      </section>
     </div>
   </section>
 </DefaultLayout>

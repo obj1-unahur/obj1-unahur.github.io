@@ -2,14 +2,15 @@
 import ResponsiveToggle from './ResponsiveToggle.astro'
 import { DarkMode } from 'accessible-astro-components'
 import { Image } from 'astro:assets'
-import logo from '../assets/img/logo.svg'
+import logo from '../assets/img/UNAHUR-LOGO.png'
+import { PATH } from '../../paths.js'
 ---
 
 <div id="main-navigation" class="is-desktop py-8">
   <div class="container">
-    <a href="/" class="flex items-center gap-2 !no-underline">
+    <a href={PATH} class="flex items-center gap-2 !no-underline">
       <Image src={logo} alt="Your Logo" width="47" height="37" />
-      <span class="font-bold">Universidad Nacional de Hurlingham</span>
+      <span class="font-bold">Programacion Orientada a Objetos</span>
     </a>
     <div class="wrapper">
       <nav class="desktop-menu" aria-label="Main navigation desktop">
@@ -282,17 +283,6 @@ import logo from '../assets/img/logo.svg'
           text-decoration: none;
           font-size: 1.125rem;
           line-height: 1.6875rem;
-        }
-
-        a:hover,
-        a:focus,
-        .is-active,
-        .has-dropdown > button:hover,
-        .has-dropdown > button:focus {
-          text-decoration: underline;
-          text-decoration-thickness: 1px;
-          text-decoration-style: wavy;
-          text-underline-offset: 7px;
         }
 
         .is-active {

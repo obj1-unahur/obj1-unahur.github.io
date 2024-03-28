@@ -1,1 +1,0 @@
-export const PATH = import.meta.env.BASE_URL
