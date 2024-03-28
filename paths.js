@@ -1,2 +1,3 @@
-export const PATH = import.meta.env.BASE_URL
-export const PATH_CURSADA = '/Cursada'
+export const PATH = '/objetos-web'
+// console.log(PATH)
+export const PATH_CURSADA = `${PATH}/Cursada`

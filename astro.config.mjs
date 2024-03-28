@@ -9,7 +9,7 @@ import { PATH } from './paths';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://obj1-unahur.github.io',
-  base: PATH,
+  base: '/objetos-web',
   compressHTML: false,
   integrations: [mdx(), icon(), tailwind({
     applyBaseStyles: false
