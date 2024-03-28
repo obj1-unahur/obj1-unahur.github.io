@@ -2,7 +2,7 @@
 import { Breadcrumbs } from 'accessible-astro-components'
 import DefaultLayout from './DefaultLayout.astro'
 import { BreadcrumbsItem } from 'accessible-astro-components'
-import { PATH_CURSADA } from '../../paths.js'
+import { PATH, PATH_CURSADA } from '../../paths.js'
 
 const { frontmatter } = Astro.props
 
@@ -13,7 +13,7 @@ const { title, descripcion, videos, horarios } = frontmatter
   <div class="container">
     <div class="mt-12">
       <Breadcrumbs>
-        <BreadcrumbsItem href="/" label="Inicio" />
+        <BreadcrumbsItem href={PATH} label="Inicio" />
         <BreadcrumbsItem href={PATH_CURSADA} label="Cursada" />
         <BreadcrumbsItem currentPage={true} label={title} />
       </Breadcrumbs>
