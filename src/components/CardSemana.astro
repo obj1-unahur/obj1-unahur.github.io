@@ -1,0 +1,20 @@
+---
+const { title, descripcion, href } = Astro.props
+---
+
+<a href={href}>
+  <div
+    class="max-w-30 card mx-auto h-64 max-h-64 w-auto overflow-hidden rounded-xl border-2 bg-white px-4 py-2 shadow-lg transition duration-500 hover:border-white"
+  >
+    <div class="mb-2 text-3xl font-bold">{title}</div>
+    <p class="text-white-700 text-base">{descripcion}</p>
+  </div>
+</a>
+
+<style>
+  .card {
+    color: var(--font-color);
+    background-color: var(--background);
+    border-color: var(--action-color);
+  }
+</style>

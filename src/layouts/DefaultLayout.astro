@@ -5,13 +5,7 @@ import SiteMeta from '../components/SiteMeta.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 
-const {
-  title = 'Astro',
-  description = 'A starter project with accessibility features using Astro static site builder. Contains accessible landmarks, skip links, a dark mode color scheme, better focus outline and keyboard menu navigation.',
-  url,
-  image = '/social-preview-image.png',
-  author = 'Mark Teekman',
-} = Astro.props
+const { title = 'Astro', url, image = '/social-preview-image.png', author = 'Mark Teekman' } = Astro.props
 ---
 
 <html lang="en" dir="ltr">
@@ -23,22 +17,15 @@ const {
     <!-- favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <SiteMeta
-      title={title}
-      description={description.substring(0, 100)}
-      url={Astro.site
-        ? `${Astro.site}/${title.toLowerCase().replaceAll(' ', '-')}`
-        : `https://accessible-astro.dev/${title.toLowerCase().replaceAll(' ', '-')}`}
-      image={image}
-      author={author}
-    />
+    <SiteMeta title={title} image={image} author={author} />
   </head>
   <body>
     <Header />
     <main id="main-content" transition:animate="fade">
       <slot />
     </main>
-    <Footer />
+    <!-- <Footer /> -->
+
     <style lang="scss" is:global>
       // theme settings
       :root {

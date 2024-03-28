@@ -2,7 +2,8 @@
 import Navigation from '../components/Navigation.astro'
 import { SkipLinks } from 'accessible-astro-components'
 import { Icon } from 'astro-icon/components'
-import { PATH } from '../../const'
+
+import { PATH, PATH_CURSADA } from '../../paths'
 ---
 
 <header>
@@ -12,7 +13,7 @@ import { PATH } from '../../const'
       <a href={PATH}>Inicio</a>
     </li>
     <li class="menu-item">
-      <a href=`${PATH}/blog/`>Semanas</a>
+      <a href={PATH_CURSADA}>Cursada</a>
     </li>
     <li class="menu-item has-dropdown">
       <button aria-haspopup="true" aria-expanded="false">Utilidad</button>
@@ -28,6 +29,7 @@ import { PATH } from '../../const'
         </li>
       </ul>
     </li>
+
     <li class="menu-item type-icon">
       <a href="https://github.com/ValentinoChiappanni/Objetos-1-pagina" title="Go to the GitHub page">
         <Icon name="ion:logo-github" />
@@ -52,12 +54,11 @@ import { PATH } from '../../const'
           fill: var(--action-color);
         }
       }
+    }
 
-      &:hover {
-        [data-icon] path {
-          fill: var(--action-color-state);
-        }
-      }
+    .btn-ingresar {
+      background-color: var(--action-color);
+      color: #20292c !important;
     }
   }
 </style>

@@ -1,0 +1,59 @@
+---
+import { Breadcrumbs } from 'accessible-astro-components'
+import DefaultLayout from './DefaultLayout.astro'
+import { BreadcrumbsItem } from 'accessible-astro-components'
+import { PATH_CURSADA } from '../../paths.js'
+
+const { frontmatter } = Astro.props
+
+const { title, descripcion, videos, horarios } = frontmatter
+---
+
+<DefaultLayout title={title}>
+  <div class="container">
+    <div class="mt-12">
+      <Breadcrumbs>
+        <BreadcrumbsItem href="/" label="Inicio" />
+        <BreadcrumbsItem href={PATH_CURSADA} label="Cursada" />
+        <BreadcrumbsItem currentPage={true} label={title} />
+      </Breadcrumbs>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="space-content my-12">
+      <h1>{title}</h1>
+      <br />
+      <p>{descripcion}</p>
+      <br />
+      <ul>
+        {
+          videos.map((video) => (
+            <>
+              <li>{video.nombre}</li>
+              <a href={video.url}>{video.url}</a>
+            </>
+          ))
+        }
+      </ul>
+      <br />
+      <h2>Horarios:</h2>
+      <ul>
+        {
+          horarios.map((horario) => (
+            <li>
+              <p>Día: {horario.Dia}</p>
+              <p>Modalidad: {horario.Modalidad}</p>
+              <p>Hora: {horario.Hora}</p>
+              <p>
+                URL del Meet: <a href={horario.URL}>{horario.URL}</a>
+              </p>
+            </li>
+          ))
+        }
+      </ul>
+      <br />
+      <slot />
+    </div>
+  </div>
+</DefaultLayout>
