@@ -53,7 +53,7 @@ body {
 
   a:not(.button) {
     color: var(--action-color);
-    text-decoration: underline;
+    text-decoration: none;
 
     &:visited {
       color: var(--action-color);

@@ -1,0 +1,63 @@
+---
+const semanas = await Astro.glob('../pages/Cursada/*.md')
+---
+
+<aside id="logo-sidebar" class="sticky left-0 top-0 h-screen w-48 border-r-2 bg-black">
+  <div class="mt-5 h-full overflow-y-auto px-3 pb-4">
+    <h5 class="mb-5">Semanas</h5>
+    <ul class="space-y-2 font-medium">
+      {/* 'reverse()' es para que ponga a ultima semana arriba de todo */}
+      {
+        semanas.reverse().map((semana) => (
+          <li>
+            <a
+              href={semana.url}
+              class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+            >
+              <span class="ms-3">{semana.frontmatter.title}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</aside>
+
+<style>
+  h5 {
+    color: var(--action-color);
+  }
+
+  aside {
+    color: var(--font-color);
+    background-color: var(--background);
+    border-color: transparent;
+  }
+
+  aside::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    /* Adjust these values for border width and desired gradient direction */
+    background-image: linear-gradient(to top, var(--action-color), var(--background));
+  }
+
+  span {
+    color: var(--font-color);
+  }
+
+  @media (min-width: 550px) {
+    aside {
+      display: block;
+    }
+  }
+
+  @media (max-width: 549px) {
+    aside {
+      display: none;
+    }
+  }
+</style>
