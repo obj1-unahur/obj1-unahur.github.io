@@ -7,7 +7,7 @@ import LayoutSemanas from './LayoutSemanas.astro'
 
 const { frontmatter } = Astro.props
 
-const { title, descripcion, videos, horarios } = frontmatter
+const { title, descripcion, videos, horarios, ejercicios } = frontmatter
 ---
 
 <LayoutSemanas title={title}>
@@ -27,16 +27,28 @@ const { title, descripcion, videos, horarios } = frontmatter
       <br />
       <p>{descripcion}</p>
       <br />
-      <ul>
-        {
-          videos.map((video) => (
-            <>
-              <li>{video.nombre}</li>
-              <a href={video.url}>{video.url}</a>
-            </>
-          ))
-        }
-      </ul>
+      <h3 id="videos">Videos</h3>
+      {
+        videos.map((video) => (
+          <>
+            <p>{video.nombre}</p>
+            <a href={video.url}>{video.url}</a>
+          </>
+        ))
+      }
+      <br />
+      <h3 id="ejercicios">Ejercicios</h3>
+      {
+        ejercicios
+          ? ejercicios.map((ejercicio) => (
+              <>
+                <h5>{ejercicio.name}</h5>
+                <a href={ejercicio.classroom}>{ejercicio.classroom}</a>
+                <p>{ejercicio.comentarios.name}</p>
+              </>
+            ))
+          : null
+      }
       <br />
       <h2>Horarios:</h2>
       <ul>
