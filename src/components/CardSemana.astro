@@ -4,17 +4,33 @@ const { title, descripcion, href } = Astro.props
 
 <a href={href}>
   <div
-    class="max-w-30 card mx-auto h-64 max-h-64 w-auto overflow-hidden rounded-xl border-2 bg-white px-4 py-2 shadow-lg transition duration-500 hover:border-white"
+    class="w-92 relative h-48 rounded-md bg-slate-200 hover:bg-slate-300 dark:bg-zinc-800 dark:text-white dark:hover:bg-zinc-700"
   >
-    <div class="mb-2 text-3xl font-bold">{title}</div>
-    <p class="text-white-700 text-base">{descripcion}</p>
+    <div class="flex flex-col p-6">
+      <h4 class="mb-4 block font-sans font-semibold leading-snug tracking-normal antialiased dark:text-white">
+        {title}
+      </h4>
+      <p class="line-clamp-5">
+        Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi atque hic laboriosam
+        necessitatibus eius corrupti porro commodi explicabo sit natus? Quae itaque sequi dolorum similique voluptatum
+        ipsa veniam esse porro?
+      </p>
+    </div>
+    <div class="flex-start p-6 pt-0">
+      <a
+        href={href + '#videos'}
+        class="rounded-md bg-slate-200 px-4 py-1 text-center align-middle hover:bg-slate-300 dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800"
+      >
+        Videos
+      </a>
+      <a
+        href={href + '#ejercicios'}
+        class="rounded-md bg-slate-200 px-4 py-1 text-center align-middle hover:bg-slate-300 dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800"
+      >
+        Ejercicios
+      </a>
+    </div>
   </div>
 </a>
 
-<style>
-  .card {
-    color: var(--font-color);
-    background-color: var(--background);
-    border-color: var(--action-color);
-  }
-</style>
+<style></style>
