@@ -1,0 +1,27 @@
+---
+import Sidebar from '../components/Sidebar.astro'
+import DefaultLayout from './DefaultLayout.astro'
+---
+
+<DefaultLayout>
+  <div class="flex">
+    <Sidebar />
+    <div class="content">
+      <slot />
+    </div>
+  </div>
+</DefaultLayout>
+
+<style>
+  @media (min-width: 550px) {
+    .content {
+      margin-left: 1.25rem;
+    }
+  }
+
+  @media (max-width: 549px) {
+    .content {
+      margin-left: 0;
+    }
+  }
+</style>

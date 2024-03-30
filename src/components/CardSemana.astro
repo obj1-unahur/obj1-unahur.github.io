@@ -1,8 +1,10 @@
 ---
-const { title, descripcion, href } = Astro.props
+const { frontmatter, url } = Astro.props
+
+const { title, descripcion } = frontmatter // 'frontmatter' devuelve un JSON con todos los campos del .md
 ---
 
-<a href={href}>
+<a href={url}>
   <div
     class="w-92 relative h-48 rounded-md bg-slate-200 hover:bg-slate-300 dark:bg-zinc-800 dark:text-white dark:hover:bg-zinc-700"
   >
