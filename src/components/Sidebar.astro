@@ -48,4 +48,16 @@ const semanas = await Astro.glob('../pages/Cursada/*.md')
   span {
     color: var(--font-color);
   }
+
+  @media (min-width: 550px) {
+    aside {
+      display: block;
+    }
+  }
+
+  @media (max-width: 549px) {
+    aside {
+      display: none;
+    }
+  }
 </style>

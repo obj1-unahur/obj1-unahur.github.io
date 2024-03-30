@@ -11,7 +11,7 @@ const { src = `${PATH}/UNAHUR-LOGO.png` } = Astro.props
         <h1 class="text-center text-6xl md:text-left lg:text-8xl">
           <slot><span class="text-gradient">Programacion Orientada a Objetos</span></slot>
         </h1>
-        <div class="min-[500px] flex flex-col justify-center gap-3 md:flex-row md:flex-wrap">
+        <div class="button-container min-[500px] flex flex-col justify-center gap-3 md:flex-row md:flex-wrap">
           <a class="button has-icon" href={PATH_CURSADA}>
             <Icon name="ion:star-outline" />
             Cursada
@@ -39,6 +39,14 @@ const { src = `${PATH}/UNAHUR-LOGO.png` } = Astro.props
       background-clip: border-box;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+
+    .button-container a {
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .button-container a:hover {
+      transform: scale(1.1);
     }
   </style>
 </section>
