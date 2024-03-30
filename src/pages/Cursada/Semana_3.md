@@ -19,6 +19,16 @@ videos:
   - nombre: Definimos un objeto
     url: https://youtu.be/aAfjr8-1-0Y
 
+ejercicios:
+  - name: Práctica Mutual MMMM
+    classroom: https://classroom.github.com/a/6KRUMHj_
+    comentarios:
+      - name: Ejercicio tipo parcial para practicar en casa y en clases.
+  - name: Práctica Hogar
+    classroom: https://classroom.github.com/a/4vaaa6Q4
+    comentarios:
+      - name: Otro ejercicio tipo parcial para practicar en casa y en clases.
+
 horarios:
   - Dia: Martes 26 de Marzo
     Modalidad: PRESENCIAL
