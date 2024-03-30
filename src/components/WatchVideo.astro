@@ -1,0 +1,35 @@
+---
+const { title, url, urlYoutube } = Astro.props
+---
+
+<div class="container flex w-full flex-col items-center justify-center">
+  <div class="sub-container w-3/4">
+    <h5 class="mb-5">{title}</h5>
+    <iframe
+      class="aspect-video w-full rounded-md"
+      src={url}
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen></iframe>
+    <p class="m-auto mt-3 w-full text-xs">
+      Error en la reproducción del video? Intenta verlo en YouTube ingresando <a href={urlYoutube} target="_blank"
+        >aquí</a
+      >.
+    </p>
+  </div>
+</div>
+
+<style>
+  .container {
+    margin-bottom: 50px !important;
+    margin-top: 50px !important;
+  }
+
+  @media (max-width: 549px) {
+    .sub-container {
+      width: 100%;
+    }
+  }
+</style>
