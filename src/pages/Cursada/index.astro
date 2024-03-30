@@ -1,0 +1,40 @@
+---
+import CardSemana from '../../components/CardSemana.astro'
+import DefaultLayout from '../../layouts/DefaultLayout.astro'
+
+const semanas = await Astro.glob('./*.md') //Para buscar todos los archivos .md en la carpeta
+---
+
+<DefaultLayout title="Cursada">
+  <section class="my-12">
+    <div class="space-content container">
+      <h1>Cursada</h1>
+      <ul>
+        {
+          semanas.reverse().map((semana) => (
+            <li>
+              <CardSemana frontmatter={semana.frontmatter} url={semana.url} />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</DefaultLayout>
+
+<style lang="scss">
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+
+    @media (min-width: 550px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+    }
+
+    @media (min-width: 950px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
