@@ -3,13 +3,14 @@ import { Breadcrumbs } from 'accessible-astro-components'
 import DefaultLayout from './DefaultLayout.astro'
 import { BreadcrumbsItem } from 'accessible-astro-components'
 import { PATH, PATH_CURSADA } from '../../paths.js'
+import LayoutSemanas from './LayoutSemanas.astro'
 
 const { frontmatter } = Astro.props
 
 const { title, descripcion, videos, horarios } = frontmatter
 ---
 
-<DefaultLayout title={title}>
+<LayoutSemanas title={title}>
   <div class="container">
     <div class="mt-12">
       <Breadcrumbs>
@@ -56,4 +57,4 @@ const { title, descripcion, videos, horarios } = frontmatter
       <slot />
     </div>
   </div>
-</DefaultLayout>
+</LayoutSemanas>
