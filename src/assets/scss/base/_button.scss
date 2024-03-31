@@ -35,6 +35,16 @@
       border-color: var(--secondary-400);
     }
   }
+  &.color-tertiary {
+    background-color: var(--tertiary-100);
+    border-color: (var(--tertiary-100));
+
+    &:hover,
+    &:focus {
+      background-color: var(--tertiary-300);
+      border-color: var(--tertiary-300);
+    }
+  }
 
   &.color-neutral {
     background-color: var(--neutral-500);
