@@ -1,10 +1,11 @@
 ---
 const semanas = await Astro.glob('../pages/Cursada/*.md')
+const currentPage = Astro.url.pathname.split('/').find((e) => e.includes('Semana'))
 ---
 
-<aside id="logo-sidebar" class="sticky left-0 top-0 h-screen w-48 border-r-2 bg-black">
+<aside class="sticky left-0 top-0 h-screen w-48 border-r-2 bg-black">
   <div class="mt-5 h-full overflow-y-auto px-3 pb-4">
-    <h5 class="mb-5">Semanas</h5>
+    <h5 class="mb-5 mr-7">Semanas</h5>
     <ul class="space-y-2 font-medium">
       {/* 'reverse()' es para que ponga a ultima semana arriba de todo */}
       {
@@ -12,7 +13,10 @@ const semanas = await Astro.glob('../pages/Cursada/*.md')
           <li>
             <a
               href={semana.url}
-              class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              class={
+                'group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700 ' +
+                (currentPage == semana.url.split('/').slice(-1).toString() ? 'bg-gray-200 dark:bg-gray-700' : '')
+              }
             >
               <span class="ms-3">{semana.frontmatter.title}</span>
             </a>
@@ -47,12 +51,6 @@ const semanas = await Astro.glob('../pages/Cursada/*.md')
 
   span {
     color: var(--font-color);
-  }
-
-  @media (min-width: 550px) {
-    aside {
-      display: block;
-    }
   }
 
   @media (max-width: 549px) {
