@@ -31,6 +31,15 @@ ejercicios:
     classroom: https://classroom.github.com/a/4vaaa6Q4
     comentarios:
       - name: Otro ejercicio tipo parcial para practicar en casa y en clases.
+      - name: Otro ejercicio tipo parcial para practicar en casa y en clases.
+  - name: Práctica ejercicio
+    classroom: https://classroom.github.com/a/4vaaa6Q4
+    comentarios:
+      - name: Otro ejercicio tipo parcial para practicar en casa y en clases.
+  - name: Ejercicio ejemplo 2
+    classroom: https://classroom.github.com/a/4vaaa6Q4
+    comentarios:
+      - name: Otro ejercicio tipo parcial para practicar en casa y en clases.
 
 horarios:
   - Dia: Martes 26 de Marzo

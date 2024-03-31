@@ -6,6 +6,7 @@ import { PATH, PATH_CURSADA } from '../../paths.js'
 import LayoutSemanas from './LayoutSemanas.astro'
 import WatchVideo from '../components/WatchVideo.astro'
 import VideosDeSemana from '../components/VideosDeSemana.astro'
+import ActividadesDeSemana from '../components/ActividadesDeSemana.astro'
 
 const { frontmatter } = Astro.props
 
@@ -29,19 +30,7 @@ const { title, descripcion, videos, horarios, ejercicios } = frontmatter
       <br />
       <p>{descripcion}</p>
       <VideosDeSemana videos={videos} />
-      <h3 id="ejercicios">Ejercicios</h3>
-      {
-        ejercicios
-          ? ejercicios.map((ejercicio) => (
-              <>
-                <h5>{ejercicio.name}</h5>
-                <a href={ejercicio.classroom}>{ejercicio.classroom}</a>
-                <p>{ejercicio.comentarios.name}</p>
-              </>
-            ))
-          : null
-      }
-      <br />
+      <ActividadesDeSemana ejercicios={ejercicios} />
       <h2>Horarios:</h2>
       <ul>
         {
