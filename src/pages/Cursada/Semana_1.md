@@ -13,11 +13,14 @@ descripcion: Hola!
 
 videos:
   - nombre: Qué es un objeto, qué es un mensaje
-    url: https://youtu.be/zZe0AaSKdyo
+    url: https://www.youtube.com/embed/zZe0AaSKdyo
+    urlYoutube: https://youtu.be/zZe0AaSKdyo
   - nombre: Interactuamos con un objeto
-    url: https://youtu.be/7hXl2kJs2GUs
+    url: https://www.youtube.com/embed/7hXl2kJs2GU?si=VEYm5HRk7qAOHjfL
+    urlYoutube: https://youtu.be/7hXl2kJs2GUs
   - nombre: Definimos un objeto
-    url: https://youtu.be/aAfjr8-1-0Y
+    url: https://www.youtube.com/embed/aAfjr8-1-0Y
+    urlYoutube: https://youtu.be/aAfjr8-1-0Y
 
 horarios:
   - Dia: Martes 26 de Marzo
