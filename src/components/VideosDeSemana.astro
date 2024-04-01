@@ -1,15 +1,14 @@
 ---
+import CardSecciones from './CardSecciones.astro'
 import WatchVideo from './WatchVideo.astro'
 
 const { videos } = Astro.props
 ---
 
-<div
-  class="m-auto rounded-md bg-slate-200 p-5 shadow-md shadow-zinc-400 dark:bg-zinc-800 dark:text-white dark:shadow-black"
->
+<CardSecciones>
   <h2 id="videos" class="ml-3">Videos</h2>
   {videos.map((video) => <WatchVideo title={video.nombre} url={video.url} urlYoutube={video.urlYoutube} />)}
-</div>
+</CardSecciones>
 
 <style>
   h3 {

@@ -1,12 +1,11 @@
 ---
 import CardEjercicio from './CardEjercicio.astro'
+import CardSecciones from './CardSecciones.astro'
 
 const { ejercicios } = Astro.props
 ---
 
-<section
-  class="rounded-md bg-slate-200 p-5 shadow-md shadow-zinc-400 dark:bg-zinc-800 dark:text-white dark:shadow-black"
->
+<CardSecciones>
   <h3 id="ejercicios" class="mb-4 p-2">Ejercicios</h3>
   <ul class="m-auto">
     {
@@ -23,7 +22,7 @@ const { ejercicios } = Astro.props
       )
     }
   </ul>
-</section>
+</CardSecciones>
 
 <style lang="scss">
   ul {

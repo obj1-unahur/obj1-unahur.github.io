@@ -9,14 +9,18 @@ const { src = `${PATH}/UNAHUR-LOGO.png` } = Astro.props
     <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
       <div class="flex flex-col items-center gap-8 md:items-start">
         <h1 class="text-center text-4xl md:text-6xl lg:text-8xl">
-          <span class="text-gradient">Programación con Objetos I</span>
+          <span class="text-gradient select-none">Programación con Objetos I</span>
         </h1>
         <div class="button-container min-[500px] flex flex-col justify-center gap-3 md:flex-row md:flex-wrap">
           <a class="button has-icon" href={PATH_CURSADA}>
             <Icon name="ion:star-outline" />
             Cursada
           </a>
-          <a class="button has-icon color-secondary" href="">
+          <a
+            class="button has-icon color-secondary"
+            href="https://docs.google.com/spreadsheets/d/13rFU2mObqdFF_2Ocimey_oHJ0Ldv-Gx0S1N4cfHKO4Q/edit#gid=1006593733"
+            target="_blank"
+          >
             <Icon name="ion:bookmark-outline" />
             Cronograma
           </a>
@@ -30,7 +34,9 @@ const { src = `${PATH}/UNAHUR-LOGO.png` } = Astro.props
           </a>
         </div>
       </div>
-      <img class="ml-40 hidden lg:block" src={src} alt="" decoding="async" />
+      <div class="flex flex-row justify-end">
+        <img class="hidden lg:block" src={src} alt="" decoding="async" />
+      </div>
     </div>
   </div>
 

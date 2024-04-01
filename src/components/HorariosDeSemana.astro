@@ -1,12 +1,11 @@
 ---
 import CardHorario from './CardHorario.astro'
+import CardSecciones from './CardSecciones.astro'
 
 const { horarios } = Astro.props
 ---
 
-<section
-  class="rounded-md bg-slate-200 p-5 shadow-md shadow-zinc-400 dark:bg-zinc-800 dark:text-white dark:shadow-black"
->
+<CardSecciones>
   <h3 class="mb-4 p-2">Horarios</h3>
   <ul>
     {
@@ -25,4 +24,4 @@ const { horarios } = Astro.props
       ))
     }
   </ul>
-</section>
+</CardSecciones>
