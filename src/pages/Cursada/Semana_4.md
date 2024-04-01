@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/PostCursadaLayout.astro
+layout: src/layouts/PostCursadaLayout.astro
 title: Semana 4
 
 descripcion: Hola!
