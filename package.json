@@ -17,6 +17,7 @@
     "@astrojs/mdx": "^2.0.2",
     "@astrojs/partytown": "^2.0.2",
     "@astrojs/tailwind": "^5.1.0",
+    "@iconify-json/fluent": "^1.1.51",
     "@iconify-json/ion": "^1.1.15",
     "@iconify-json/mdi": "^1.1.64",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
