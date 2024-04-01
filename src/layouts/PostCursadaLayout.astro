@@ -7,6 +7,7 @@ import LayoutSemanas from './LayoutSemanas.astro'
 import WatchVideo from '@components/WatchVideo.astro'
 import VideosDeSemana from '@components/VideosDeSemana.astro'
 import ActividadesDeSemana from '@components/ActividadesDeSemana.astro'
+import HorariosDeSemana from '@components/HorariosDeSemana.astro'
 
 const { frontmatter } = Astro.props
 
@@ -27,26 +28,10 @@ const { title, descripcion, videos, horarios, ejercicios } = frontmatter
   <div class="container">
     <div class="space-content my-12">
       <h1>{title}</h1>
-      <br />
       <p>{descripcion}</p>
       <VideosDeSemana videos={videos} />
       <ActividadesDeSemana ejercicios={ejercicios} />
-      <h2>Horarios:</h2>
-      <ul>
-        {
-          horarios.map((horario) => (
-            <li>
-              <p>Día: {horario.Dia}</p>
-              <p>Modalidad: {horario.Modalidad}</p>
-              <p>Hora: {horario.Hora}</p>
-              <p>
-                URL del Meet: <a href={horario.URL}>{horario.URL}</a>
-              </p>
-            </li>
-          ))
-        }
-      </ul>
-      <br />
+      <HorariosDeSemana horarios={horarios} />
       <slot />
     </div>
   </div>

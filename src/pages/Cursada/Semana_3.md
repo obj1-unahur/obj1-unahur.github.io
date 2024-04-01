@@ -42,30 +42,28 @@ ejercicios:
       - name: Otro ejercicio tipo parcial para practicar en casa y en clases.
 
 horarios:
-  - Dia: Martes 26 de Marzo
+  - Comision: Comisión 1 T.Noche
+    Dia: Martes 26 de Marzo
     Modalidad: PRESENCIAL
-    Hora: 18.00hs.
-    Lugar: Aula TA-209 (Edificio Trabajo Argentino, 2do piso)
-  - Dia: Sábado 30 de Marzo
+    Hora: 18.00hs
+    Aula: Aula TA-209
+    Edificio: (Edificio Trabajo Argentino, 2do piso)
+
+  - Comision: Comisión 2 T.Mañana
+    Dia: Sábado 30 de Marzo
     Modalidad: VIRTUAL
-    Hora: 10.00hs.
+    Hora: 10.00hs
     URL: https://us06web.zoom.us/j/88953425033
 
-  - Dia: Miércoles 27 de Marzo
+  - Comision: Comisión 3 T.Noche Rosario
+    Dia: Miércoles 27 de Marzo
     Modalidad: VIRTUAL
-    Hora: 8.00hs.
+    Hora: 8.00hs
     URL: https://meet.google.com/wxc-ioxx-nah
-  - Dia: Sábado 30 de Marzo
-    Modalidad: VIRTUAL
-    Hora: 10.00hs.
-    URL: https://us06web.zoom.us/j/88953425033
 
-  - Dia: Martes 26 de Marzo
+  - Comision: Comisión 4 T.Mañana Rosario
+    Dia: Sábado 30 de Marzo
     Modalidad: VIRTUAL
-    Hora: 18.00hs.
-    URL: https://meet.google.com/wxc-ioxx-nah
-  - Dia: Sábado 30 de Marzo
-    Modalidad: VIRTUAL
-    Hora: 10.00hs.
+    Hora: 10.00hs
     URL: https://us06web.zoom.us/j/88953425033
 ---

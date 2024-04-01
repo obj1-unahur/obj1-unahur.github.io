@@ -55,10 +55,6 @@ body {
     color: var(--action-color);
     text-decoration: none;
 
-    &:visited {
-      color: var(--action-color);
-    }
-
     &:hover,
     &:focus {
       color: var(--action-color-state);

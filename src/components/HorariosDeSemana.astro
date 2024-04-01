@@ -1,0 +1,28 @@
+---
+import CardHorario from './CardHorario.astro'
+
+const { horarios } = Astro.props
+---
+
+<section
+  class="rounded-md bg-slate-200 p-5 shadow-md shadow-zinc-400 dark:bg-zinc-800 dark:text-white dark:shadow-black"
+>
+  <h3 class="mb-4 p-2">Horarios</h3>
+  <ul>
+    {
+      horarios.map((horario) => (
+        <li>
+          <CardHorario
+            comision={horario.Comision}
+            modalidad={horario.Modalidad}
+            dia={horario.Dia}
+            hora={horario.Hora}
+            url={horario.URL}
+            aula={horario.Aula}
+            edificio={horario.Edificio}
+          />
+        </li>
+      ))
+    }
+  </ul>
+</section>
