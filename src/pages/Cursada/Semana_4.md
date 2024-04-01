@@ -2,6 +2,8 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 4
 
+inicio: 2024-04-15
+
 descripcion: Hola!
   ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!
 
