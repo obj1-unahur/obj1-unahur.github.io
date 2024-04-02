@@ -3,7 +3,7 @@ import Navigation from '@components/Navigation.astro'
 import { SkipLinks } from 'accessible-astro-components'
 import { Icon } from 'astro-icon/components'
 
-import { PATH, PATH_CURSADA, PATH_CONTRATO_PEDAGOGICO } from '@/paths'
+import { PATH, PATH_CURSADA } from '@/paths'
 ---
 
 <header>
@@ -14,9 +14,6 @@ import { PATH, PATH_CURSADA, PATH_CONTRATO_PEDAGOGICO } from '@/paths'
 		</li>
 		<li class="menu-item">
 			<a href={PATH_CURSADA}>Cursada</a>
-		</li>
-		<li class="menu-item">
-			<a href={PATH_CONTRATO_PEDAGOGICO}>Contrato pedagógico</a>
 		</li>
 		<li class="menu-item has-dropdown">
 			<button
