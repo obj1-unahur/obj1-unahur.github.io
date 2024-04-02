@@ -11,11 +11,20 @@ const semanas = await Astro.glob('./*.md') //Para buscar todos los archivos .md 
       <h1>Cursada</h1>
       <ul>
         {
-          semanas.reverse().map((semana) => (
-            <li>
-              <CardSemana frontmatter={semana.frontmatter} url={semana.url} />
-            </li>
-          ))
+          semanas
+            .reverse()
+            .filter((semana) => {
+              // Solo mostramos las clases de las semanas cuya fecha de inicio sea inferior a la fecha actual
+              // por un tema de compatibilidad, también mostramos las clases que no especifican fecha de inicio
+              const inicio = new Date(semana.frontmatter.inicio)
+              const hoy = new Date()
+              return hoy >= inicio || !semana.frontmatter.inicio
+            })
+            .map((semana) => (
+              <li>
+                <CardSemana frontmatter={semana.frontmatter} url={semana.url} />
+              </li>
+            ))
         }
       </ul>
     </div>

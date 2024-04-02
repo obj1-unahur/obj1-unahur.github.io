@@ -9,19 +9,28 @@ const currentPage = Astro.url.pathname.split('/').find((e) => e.includes('Semana
     <ul class="space-y-2 font-medium">
       {/* 'reverse()' es para que ponga a ultima semana arriba de todo */}
       {
-        semanas.reverse().map((semana) => (
-          <li>
-            <a
-              href={semana.url}
-              class={
-                'group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700 ' +
-                (currentPage == semana.url.split('/').slice(-1).toString() ? 'bg-gray-200 dark:bg-gray-700' : '')
-              }
-            >
-              <span class="ms-3">{semana.frontmatter.title}</span>
-            </a>
-          </li>
-        ))
+        semanas
+          .reverse()
+          .filter((semana) => {
+            // Solo mostramos las clases de las semanas cuya fecha de inicio sea inferior a la fecha actual
+            // por un tema de compatibilidad, también mostramos las clases que no especifican fecha de inicio
+            const inicio = new Date(semana.frontmatter.inicio)
+            const hoy = new Date()
+            return hoy >= inicio || !semana.frontmatter.inicio
+          })
+          .map((semana) => (
+            <li>
+              <a
+                href={semana.url}
+                class={
+                  'group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700 ' +
+                  (currentPage == semana.url.split('/').slice(-1).toString() ? 'bg-gray-200 dark:bg-gray-700' : '')
+                }
+              >
+                <span class="ms-3">{semana.frontmatter.title}</span>
+              </a>
+            </li>
+          ))
       }
     </ul>
   </div>
