@@ -5,8 +5,7 @@ import CardSecciones from './CardSecciones.astro'
 const { horarios } = Astro.props
 ---
 
-<CardSecciones>
-	<h3 class="mb-4 p-2">Horarios</h3>
+<CardSecciones title="Horarios">
 	<ul>
 		{
 			horarios.map((horario) => (
