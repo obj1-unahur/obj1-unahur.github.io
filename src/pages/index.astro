@@ -3,6 +3,7 @@ import DefaultLayout from '@layouts/DefaultLayout.astro'
 import Hero from '@components/Hero.astro'
 import CardSecciones from '@/components/CardSecciones.astro'
 import { PATH_CURSADA } from '@/paths.js'
+import { Icon } from 'astro-icon/components'
 ---
 
 <DefaultLayout title="Inicio">
@@ -67,17 +68,21 @@ import { PATH_CURSADA } from '@/paths.js'
 						Las clases serán de la siguiente forma según la comisión a la que
 						perteneces:
 					</li>
-					<li>
-						<ul>
-							<li>
-								<b>Turno Noche:</b> Todos los martes a las 18hs. PRESENCIAL y los
-								días sábado será virtual a las 10hs.
-							</li>
-							<li>
-								<b>Turno Mañana:</b> Todos los miércoles a las 8hs. PRESENCIAL y
-								los días sábado será virtual a las 10hs.
-							</li>
-						</ul>
+					<li class="flex items-center">
+						<Icon
+							name="ion:arrow-forward"
+							class="mr-2"
+						/>
+						<b>Turno Noche:</b> Todos los martes a las 18hs. PRESENCIAL y los días
+						sábado será virtual a las 10hs.
+					</li>
+					<li class="flex items-center">
+						<Icon
+							name="ion:arrow-forward"
+							class="mr-2"
+						/>
+						<b>Turno Mañana:</b> Todos los miércoles a las 8hs. PRESENCIAL y los
+						días sábado será virtual a las 10hs.
 					</li>
 					<li>
 						Este cuatrimestre los profesores somos <b
@@ -114,14 +119,14 @@ import { PATH_CURSADA } from '@/paths.js'
 					>.
 				</p>
 				<ul>
-					<li>
-						Si aún no tenes cuenta debes registrarte aingresando <a
+					<li class="list-disc">
+						Si aún no tenes cuenta debes registrarte ingresando <a
 							href="https://www.discordapp.com/"
 							target="_blank"
 							>aquí</a
 						>
 					</li>
-					<li>
+					<li class="list-disc">
 						Una vez registrado y dentro de Discord, por única vez y si no lo
 						hiciste antes, debes entrar a este link y asegurarte de Aceptar la
 						invitación al servidor de la carrera <a
@@ -130,7 +135,7 @@ import { PATH_CURSADA } from '@/paths.js'
 							>InformaticaUNAHUR</a
 						>.
 					</li>
-					<li>
+					<li class="list-disc">
 						Luego, siguiendo este enlace: <a
 							href="https://discord.com/channels/656909199510601744/1088949265306501130"
 							target="_blank"
