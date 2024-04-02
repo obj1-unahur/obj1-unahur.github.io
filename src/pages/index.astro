@@ -6,140 +6,171 @@ import { PATH_CURSADA } from '@/paths.js'
 ---
 
 <DefaultLayout title="Inicio">
-  <Hero />
-  <section class="my-64">
-    <div class="container">
-      <CardSecciones>
-        <h2 class="mb-15 text-center text-4xl sm:text-6xl">¡Bienvenido/a!</h2>
-        <p class="text-center">
-          Si llegaste hasta este sitio es muy probable que estes inscripto en Programación con Objetos I, de la
-          Licenciatura en Informática y/o Tecnicatura en Programación de la Universidad Nacional de Hurlingham. Aquí
-          encontrarás casi todo lo necesario para tu cursada. Decimos casi porque hay mucho material que “vive” en otras
-          páginas, pero este sitio funcionará como punto de partida para llegar allí.
-        </p>
-        <p class="text-center">
-          Arrancamos el cuatrimestre con una modalidad de cursada mixta, donde tendremos clases presenciales y
-          virtuales. Hay que estar atento/a al <a
-            href="https://docs.google.com/spreadsheets/d/13rFU2mObqdFF_2Ocimey_oHJ0Ldv-Gx0S1N4cfHKO4Q/edit#gid=1006593733"
-            target="_blank">cronograma</a
-          > de la cursada por si en algún momento se hace algún cambio.
-        </p>
-        <p class="text-center">
-          Si ya viniste varias veces, probablemente quieras ir a la sección <a href={PATH_CURSADA}>cursada</a> o ver el <a
-            href="">material</a
-          > que tenemos disponible.
-        </p>
-      </CardSecciones>
-      <div class="m-auto mt-6 text-center">
-        <p>
-          <b
-            >Antes de seguir, es imprescindible que completes el formulario de inscripción que nos ayudará a organizar
-            la cursada de la mejor manera posible.</b
-          >
-        </p>
-        <a
-          class="button color-tertiary mt-3"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSd5FuN_qImYgf8ZnfQEFUvDbZHvXFj_i0Pb0N-5UIdMEXZMfQ/viewform"
-          target="_blank">Ir al formulario</a
-        >
-      </div>
-      <br />
-      <CardSecciones>
-        <h2>Datos de las cursada</h2>
-        <ul>
-          <li>
-            Modalidad Mixta - <a
-              href="https://docs.google.com/spreadsheets/d/13rFU2mObqdFF_2Ocimey_oHJ0Ldv-Gx0S1N4cfHKO4Q/edit#gid=1006593733"
-              target="_blank">Cronograma de Clases</a>
-          </li>
-          <li>
-            2 Comisiones (C1-Turno Noche / C2-Turno Mañana), pero es la misma materia y utilizamos la misma página
-          </li>
-          <li>Las clases serán de la siguiente forma según la comisión a la que perteneces:</li>
-          <li>
-            <ul>
-              <li>
-                <b>Turno Noche:</b> Todos los martes a las 18hs. PRESENCIAL y los días sábado será virtual a las 10hs.
-              </li>
-              <li>
-                <b>Turno Mañana:</b> Todos los miércoles a las 8hs. PRESENCIAL y los días sábado será virtual a las 10hs.
-              </li>
-            </ul>
-          </li>
-          <li>
-            Este cuatrimestre los profesores somos <b
-              ><a href="https://www.youtube.com/watch?v=Mz30L5TGsfY" target="_blank">Gerardo González</a>, Lucas
-              Spigariol, Cristian Ciarallo y <a href="https://www.youtube.com/watch?v=iPU9JsnCkB0" target="_blank"
-                >Hernán Coniglio</a
-              ></b
-            >. Nos acompañan como ayudantes Valentino Chiappani, Manuel Nuñez, Lucian Coniglio.
-          </li>
-          <li>
-            Las clases de práctica serán los días sábado, a las 10hs para ambos turnos, en modalidad virtual.
-            Encontrarán el detalle semana a semana en la sección <a href={PATH_CURSADA}>cursada</a>.
-          </li>
-        </ul>
-      </CardSecciones>
-      <br />
-      <CardSecciones>
-        <h2>Canales de comunicación</h2>
-        <p>
-          Vamos a utilizar esta página para subir material, fechas importantes y todo lo relacionado a la cursada. Tal
-          vez sea una buena idea agregarla a los favoritos de tu navegador.
-        </p>
-        <p class="text-left">
-          Para tener una comunicación más fluida vamos a utilizar un canal de <a href="https://www.discordapp.com/"
-            >Discord</a
-          >.
-        </p>
-        <ul>
-          <li>
-            Si aún no tenes cuenta debes registrarte aingresando <a href="https://www.discordapp.com/" target="_blank"
-              >aquí</a>
-          </li>
-          <li>
-            Una vez registrado y dentro de Discord, por única vez y si no lo hiciste antes, debes entrar a este link y
-            asegurarte de Aceptar la invitación al servidor de la carrera <a
-              href="https://discord.gg/tqyHtPt"
-              target="_blank">InformaticaUNAHUR</a
-            >.
-          </li>
-          <li>
-            Luego, siguiendo este enlace: <a
-              href="https://discord.com/channels/656909199510601744/1088949265306501130"
-              target="_blank">matricularse-materias-discord</a
-            > podrás matricularte en los canales de las materias que estés cursando reaccionando al número que corresponda
-            a cada una. Para esta materia, corresponde <b>(753) Programación de Objetos I</b>. Asegurate de hacerlo solo
-            1 vez, ya que si le das varias veces click te vas a desmatricular y no vas a poder ver los canales de la
-            materia.
-          </li>
-        </ul>
-        <p class="text-left">
-          Aunque toda la comunicación sobre la materia irá apareciendo en esta página, por si llegaste hasta acá desde
-          un enlace externo a la Unahur, te dejamos el link al <a
-            href="https://campus2023.unahur.edu.ar/login/index.php">campus de la Universidad</a
-          >. Es importante que también lo revises regularmente si sos estudiante de esta Universidad.
-        </p>
-      </CardSecciones>
-    </div>
-  </section>
+	<Hero />
+	<section class="my-64">
+		<div class="container">
+			<CardSecciones>
+				<h2 class="mb-15 text-center text-4xl sm:text-6xl">¡Bienvenido/a!</h2>
+				<p class="text-center">
+					Si llegaste hasta este sitio es muy probable que estes inscripto en
+					Programación con Objetos I, de la Licenciatura en Informática y/o
+					Tecnicatura en Programación de la Universidad Nacional de Hurlingham.
+					Aquí encontrarás casi todo lo necesario para tu cursada. Decimos casi
+					porque hay mucho material que “vive” en otras páginas, pero este sitio
+					funcionará como punto de partida para llegar allí.
+				</p>
+				<p class="text-center">
+					Arrancamos el cuatrimestre con una modalidad de cursada mixta, donde
+					tendremos clases presenciales y virtuales. Hay que estar atento/a al <a
+						href="https://docs.google.com/spreadsheets/d/13rFU2mObqdFF_2Ocimey_oHJ0Ldv-Gx0S1N4cfHKO4Q/edit#gid=1006593733"
+						target="_blank"
+						>cronograma</a
+					> de la cursada por si en algún momento se hace algún cambio.
+				</p>
+				<p class="text-center">
+					Si ya viniste varias veces, probablemente quieras ir a la sección <a
+						href={PATH_CURSADA}>cursada</a
+					> o ver el <a href="">material</a> que tenemos disponible.
+				</p>
+			</CardSecciones>
+			<div class="m-auto mt-6 text-center">
+				<p>
+					<b
+						>Antes de seguir, es imprescindible que completes el formulario de
+						inscripción que nos ayudará a organizar la cursada de la mejor
+						manera posible.</b
+					>
+				</p>
+				<a
+					class="button color-tertiary mt-3"
+					href="https://docs.google.com/forms/d/e/1FAIpQLSd5FuN_qImYgf8ZnfQEFUvDbZHvXFj_i0Pb0N-5UIdMEXZMfQ/viewform"
+					target="_blank"
+					>Ir al formulario</a
+				>
+			</div>
+			<br />
+			<CardSecciones>
+				<h2>Datos de las cursada</h2>
+				<ul>
+					<li>
+						Modalidad Mixta - <a
+							href="https://docs.google.com/spreadsheets/d/13rFU2mObqdFF_2Ocimey_oHJ0Ldv-Gx0S1N4cfHKO4Q/edit#gid=1006593733"
+							target="_blank"
+							>Cronograma de Clases</a
+						>
+					</li>
+					<li>
+						2 Comisiones (C1-Turno Noche / C2-Turno Mañana), pero es la misma
+						materia y utilizamos la misma página
+					</li>
+					<li>
+						Las clases serán de la siguiente forma según la comisión a la que
+						perteneces:
+					</li>
+					<li>
+						<ul>
+							<li>
+								<b>Turno Noche:</b> Todos los martes a las 18hs. PRESENCIAL y los
+								días sábado será virtual a las 10hs.
+							</li>
+							<li>
+								<b>Turno Mañana:</b> Todos los miércoles a las 8hs. PRESENCIAL y
+								los días sábado será virtual a las 10hs.
+							</li>
+						</ul>
+					</li>
+					<li>
+						Este cuatrimestre los profesores somos <b
+							><a
+								href="https://www.youtube.com/watch?v=Mz30L5TGsfY"
+								target="_blank"
+								>Gerardo González</a
+							>, Lucas Spigariol, Cristian Ciarallo y <a
+								href="https://www.youtube.com/watch?v=iPU9JsnCkB0"
+								target="_blank"
+								>Hernán Coniglio</a
+							></b
+						>. Nos acompañan como ayudantes Valentino Chiappani, Manuel Nuñez,
+						Lucian Coniglio.
+					</li>
+					<li>
+						Las clases de práctica serán los días sábado, a las 10hs para ambos
+						turnos, en modalidad virtual. Encontrarán el detalle semana a semana
+						en la sección <a href={PATH_CURSADA}>cursada</a>.
+					</li>
+				</ul>
+			</CardSecciones>
+			<br />
+			<CardSecciones>
+				<h2>Canales de comunicación</h2>
+				<p>
+					Vamos a utilizar esta página para subir material, fechas importantes y
+					todo lo relacionado a la cursada. Tal vez sea una buena idea agregarla
+					a los favoritos de tu navegador.
+				</p>
+				<p class="text-left">
+					Para tener una comunicación más fluida vamos a utilizar un canal de <a
+						href="https://www.discordapp.com/">Discord</a
+					>.
+				</p>
+				<ul>
+					<li>
+						Si aún no tenes cuenta debes registrarte aingresando <a
+							href="https://www.discordapp.com/"
+							target="_blank"
+							>aquí</a
+						>
+					</li>
+					<li>
+						Una vez registrado y dentro de Discord, por única vez y si no lo
+						hiciste antes, debes entrar a este link y asegurarte de Aceptar la
+						invitación al servidor de la carrera <a
+							href="https://discord.gg/tqyHtPt"
+							target="_blank"
+							>InformaticaUNAHUR</a
+						>.
+					</li>
+					<li>
+						Luego, siguiendo este enlace: <a
+							href="https://discord.com/channels/656909199510601744/1088949265306501130"
+							target="_blank"
+							>matricularse-materias-discord</a
+						> podrás matricularte en los canales de las materias que estés cursando
+						reaccionando al número que corresponda a cada una. Para esta materia,
+						corresponde <b>(753) Programación de Objetos I</b>. Asegurate de
+						hacerlo solo 1 vez, ya que si le das varias veces click te vas a
+						desmatricular y no vas a poder ver los canales de la materia.
+					</li>
+				</ul>
+				<p class="text-left">
+					Aunque toda la comunicación sobre la materia irá apareciendo en esta
+					página, por si llegaste hasta acá desde un enlace externo a la Unahur,
+					te dejamos el link al <a
+						href="https://campus2023.unahur.edu.ar/login/index.php"
+						>campus de la Universidad</a
+					>. Es importante que también lo revises regularmente si sos estudiante
+					de esta Universidad.
+				</p>
+			</CardSecciones>
+		</div>
+	</section>
 </DefaultLayout>
 
 <style>
-  p {
-    margin-top: 0.7rem;
-    margin-bottom: 0.7rem;
-  }
-  h2 {
-    margin-bottom: 1.5rem;
-  }
+	p {
+		margin-top: 0.7rem;
+		margin-bottom: 0.7rem;
+	}
+	h2 {
+		margin-bottom: 1.5rem;
+	}
 
-  a {
-    transition: transform 0.2s ease-in-out;
-    cursor: pointer;
-  }
+	a {
+		transition: transform 0.2s ease-in-out;
+		cursor: pointer;
+	}
 
-  a:hover {
-    transform: scale(1.1);
-  }
+	a:hover {
+		transform: scale(1.1);
+	}
 </style>

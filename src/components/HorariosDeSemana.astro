@@ -6,22 +6,22 @@ const { horarios } = Astro.props
 ---
 
 <CardSecciones>
-  <h3 class="mb-4 p-2">Horarios</h3>
-  <ul>
-    {
-      horarios.map((horario) => (
-        <li>
-          <CardHorario
-            comision={horario.Comision}
-            modalidad={horario.Modalidad}
-            dia={horario.Dia}
-            hora={horario.Hora}
-            url={horario.URL}
-            aula={horario.Aula}
-            edificio={horario.Edificio}
-          />
-        </li>
-      ))
-    }
-  </ul>
+	<h3 class="mb-4 p-2">Horarios</h3>
+	<ul>
+		{
+			horarios.map((horario) => (
+				<li>
+					<CardHorario
+						comision={horario.Comision}
+						modalidad={horario.Modalidad}
+						dia={horario.Dia}
+						hora={horario.Hora}
+						url={horario.URL}
+						aula={horario.Aula}
+						edificio={horario.Edificio}
+					/>
+				</li>
+			))
+		}
+	</ul>
 </CardSecciones>
