@@ -3,43 +3,54 @@ import DefaultLayout from '@layouts/DefaultLayout.astro'
 ---
 
 <DefaultLayout>
-  <center class="mt-10">
-    <h1>Iniciar Sesion</h1>
-    <div class="flex justify-center">
-      <form id="login-form" class="color-secondary mb-4 w-1/3 rounded px-8 pb-8 pt-6 shadow-xl shadow-cyan-950">
-        <div class="mb-4">
-          <label for="email" class="mb-2 block text-sm font-bold text-white">Email</label>
-          <input
-            id="login-email"
-            type="email"
-            name="email"
-            required
-            class="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
-          />
-        </div>
-        <div class="mb-6">
-          <label for="password" class="mb-2 block text-sm font-bold text-white">Contraseña</label>
-          <input
-            id="login-password"
-            type="password"
-            name="password"
-            required
-            class="focus:shadow-outline mb-3 w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
-          />
-        </div>
-        <div class="flex items-center justify-between">
-          <button
-            id="sign-in"
-            type="submit"
-            class="focus:shadow-outline w-full rounded bg-teal-500 px-4 py-2 font-bold text-white hover:bg-teal-700 focus:outline-none"
-          >
-            Ingresar
-          </button>
-        </div>
-      </form>
-    </div>
-    <div class="mt-5">
-      <p>Todavia no te registraste? Ingresa <a href="/signUp">aqui</a> para hacerlo</p>
-    </div>
-  </center>
+	<center class="mt-10">
+		<h1>Iniciar Sesion</h1>
+		<div class="flex justify-center">
+			<form
+				id="login-form"
+				class="color-secondary mb-4 w-1/3 rounded px-8 pb-8 pt-6 shadow-xl shadow-cyan-950">
+				<div class="mb-4">
+					<label
+						for="email"
+						class="mb-2 block text-sm font-bold text-white"
+						>Email</label
+					>
+					<input
+						id="login-email"
+						type="email"
+						name="email"
+						required
+						class="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+					/>
+				</div>
+				<div class="mb-6">
+					<label
+						for="password"
+						class="mb-2 block text-sm font-bold text-white"
+						>Contraseña</label
+					>
+					<input
+						id="login-password"
+						type="password"
+						name="password"
+						required
+						class="focus:shadow-outline mb-3 w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+					/>
+				</div>
+				<div class="flex items-center justify-between">
+					<button
+						id="sign-in"
+						type="submit"
+						class="focus:shadow-outline w-full rounded bg-teal-500 px-4 py-2 font-bold text-white hover:bg-teal-700 focus:outline-none">
+						Ingresar
+					</button>
+				</div>
+			</form>
+		</div>
+		<div class="mt-5">
+			<p>
+				Todavia no te registraste? Ingresa <a href="/signUp">aqui</a> para hacerlo
+			</p>
+		</div>
+	</center>
 </DefaultLayout>

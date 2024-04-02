@@ -1,8 +1,10 @@
 {
   "tabWidth": 2,
   "semi": false,
+  "useTabs": true,
   "singleQuote": true,
-  "printWidth": 120,
+  "bracketSameLine": true,
+  "singleAttributePerLine":true,
   "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
   "pluginSearchDirs": false
 }

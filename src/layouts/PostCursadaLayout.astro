@@ -15,24 +15,33 @@ const { title, descripcion, videos, horarios, ejercicios } = frontmatter
 ---
 
 <LayoutSemanas title={title}>
-  <div class="container">
-    <div class="mt-12">
-      <Breadcrumbs>
-        <BreadcrumbsItem href={PATH} label="Inicio" />
-        <BreadcrumbsItem href={PATH_CURSADA} label="Cursada" />
-        <BreadcrumbsItem currentPage={true} label={title} />
-      </Breadcrumbs>
-    </div>
-  </div>
+	<div class="container">
+		<div class="mt-12">
+			<Breadcrumbs>
+				<BreadcrumbsItem
+					href={PATH}
+					label="Inicio"
+				/>
+				<BreadcrumbsItem
+					href={PATH_CURSADA}
+					label="Cursada"
+				/>
+				<BreadcrumbsItem
+					currentPage={true}
+					label={title}
+				/>
+			</Breadcrumbs>
+		</div>
+	</div>
 
-  <div class="container">
-    <div class="space-content my-12">
-      <h1>{title}</h1>
-      <p>{descripcion}</p>
-      <VideosDeSemana videos={videos} />
-      <ActividadesDeSemana ejercicios={ejercicios} />
-      <HorariosDeSemana horarios={horarios} />
-      <slot />
-    </div>
-  </div>
+	<div class="container">
+		<div class="space-content my-12">
+			<h1>{title}</h1>
+			<p>{descripcion}</p>
+			<VideosDeSemana videos={videos} />
+			<ActividadesDeSemana ejercicios={ejercicios} />
+			<HorariosDeSemana horarios={horarios} />
+			<slot />
+		</div>
+	</div>
 </LayoutSemanas>

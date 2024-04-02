@@ -6,62 +6,62 @@
 
 ul:not([class]),
 ol:not([class]) {
-  margin-left: 1rem;
+	margin-left: 1rem;
 
-  ul,
-  ol {
-    padding: 0.5rem 1rem 0;
-  }
+	ul,
+	ol {
+		padding: 0.5rem 1rem 0;
+	}
 
-  li {
-    margin-bottom: 0.5rem;
-  }
+	li {
+		margin-bottom: 0.5rem;
+	}
 }
 
 ul:not([class]) {
-  > li::marker {
-    display: block;
-    color: var(--primary-800);
-  }
+	> li::marker {
+		display: block;
+		color: var(--primary-800);
+	}
 }
 
 ol.incremented {
-  counter-reset: item;
+	counter-reset: item;
 
-  ol {
-    counter-reset: item;
-  }
+	ol {
+		counter-reset: item;
+	}
 
-  ol,
-  ul {
-    margin: 0.75rem 0 0 1rem;
-  }
+	ol,
+	ul {
+		margin: 0.75rem 0 0 1rem;
+	}
 
-  li {
-    display: block;
-    margin-bottom: 0.5rem;
+	li {
+		display: block;
+		margin-bottom: 0.5rem;
 
-    @include breakpoint(medium) {
-      margin-bottom: 0.75rem;
-    }
+		@include breakpoint(medium) {
+			margin-bottom: 0.75rem;
+		}
 
-    &::before {
-      content: counters(item, '.') '. ';
-      counter-increment: item;
-    }
+		&::before {
+			content: counters(item, '.') '. ';
+			counter-increment: item;
+		}
 
-    &:last-child {
-      margin-bottom: 0;
-    }
+		&:last-child {
+			margin-bottom: 0;
+		}
 
-    p {
-      display: inline;
-    }
-  }
+		p {
+			display: inline;
+		}
+	}
 
-  ul {
-    li::before {
-      content: '';
-    }
-  }
+	ul {
+		li::before {
+			content: '';
+		}
+	}
 }

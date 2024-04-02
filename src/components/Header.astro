@@ -7,58 +7,68 @@ import { PATH, PATH_CURSADA } from '@/paths'
 ---
 
 <header>
-  <SkipLinks />
-  <Navigation>
-    <li class="menu-item">
-      <a href={PATH}>Inicio</a>
-    </li>
-    <li class="menu-item">
-      <a href={PATH_CURSADA}>Cursada</a>
-    </li>
-    <li class="menu-item has-dropdown">
-      <button aria-haspopup="true" aria-expanded="false">Utilidad</button>
-      <ul class="dropdown-menu">
-        <li class="submenu-item">
-          <a href="/mdx-page/">Material</a>
-        </li>
-        <li class="submenu-item">
-          <a href="/markdown-page/">Videos</a>
-        </li>
-        <li class="submenu-item">
-          <a target="_blank" href="https://uqbar-project.github.io/website-wollok-ts/">Wollok docs</a>
-        </li>
-      </ul>
-    </li>
+	<SkipLinks />
+	<Navigation>
+		<li class="menu-item">
+			<a href={PATH}>Inicio</a>
+		</li>
+		<li class="menu-item">
+			<a href={PATH_CURSADA}>Cursada</a>
+		</li>
+		<li class="menu-item has-dropdown">
+			<button
+				aria-haspopup="true"
+				aria-expanded="false"
+				>Utilidad</button
+			>
+			<ul class="dropdown-menu">
+				<li class="submenu-item">
+					<a href="/mdx-page/">Material</a>
+				</li>
+				<li class="submenu-item">
+					<a href="/markdown-page/">Videos</a>
+				</li>
+				<li class="submenu-item">
+					<a
+						target="_blank"
+						href="https://uqbar-project.github.io/website-wollok-ts/"
+						>Wollok docs</a
+					>
+				</li>
+			</ul>
+		</li>
 
-    <li class="menu-item type-icon">
-      <a href="https://github.com/obj1-unahur/objetos-web" title="Go to the GitHub page">
-        <Icon name="ion:logo-github" />
-      </a>
-    </li>
-  </Navigation>
+		<li class="menu-item type-icon">
+			<a
+				href="https://github.com/obj1-unahur/objetos-web"
+				title="Go to the GitHub page">
+				<Icon name="ion:logo-github" />
+			</a>
+		</li>
+	</Navigation>
 </header>
 
 <style lang="scss" is:global>
-  @use '../assets/scss/base/outline' as *;
+	@use '../assets/scss/base/outline' as *;
 
-  header {
-    .type-icon a {
-      display: block;
+	header {
+		.type-icon a {
+			display: block;
 
-      [data-icon] {
-        height: auto;
-        margin-top: -4px;
-        width: 30px;
+			[data-icon] {
+				height: auto;
+				margin-top: -4px;
+				width: 30px;
 
-        path {
-          fill: var(--action-color);
-        }
-      }
-    }
+				path {
+					fill: var(--action-color);
+				}
+			}
+		}
 
-    .btn-ingresar {
-      background-color: var(--action-color);
-      color: #20292c !important;
-    }
-  }
+		.btn-ingresar {
+			background-color: var(--action-color);
+			color: #20292c !important;
+		}
+	}
 </style>

@@ -1,93 +1,95 @@
 ---
-const { comision, modalidad, dia, hora, url, aula, edificio, props } = Astro.props
+const { comision, modalidad, dia, hora, url, aula, edificio, props } =
+	Astro.props
 ---
 
 <article
-  class="m-3 mx-auto max-w-md overflow-hidden rounded-xl bg-slate-100 shadow-md dark:bg-zinc-700 dark:text-white md:max-w-2xl"
->
-  <div class="contenedor grid auto-rows-min grid-cols-2 grid-rows-2 content-center items-center gap-1 p-4">
-    <div class="comision col-span-3 row-span-1 text-left text-xl font-semibold uppercase tracking-wide text-indigo-500">
-      {comision}
-    </div>
-    <div class="modalidad col-span-3 row-span-2 text-lg font-semibold uppercase tracking-wide text-indigo-500">
-      {modalidad}
-    </div>
-    {
-      url ? (
-        <a
-          href={url}
-          class="boton flex flex-row items-center justify-center rounded-lg bg-[#8a3bbf] p-3 font-bold hover:bg-[#bc72ee] dark:bg-[#16aaa3] dark:hover:bg-[#178092]"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="3em"
-            height="3em"
-            viewBox="0 0 24 24"
-            class="mr-3 h-12 w-12 fill-white dark:fill-zinc-800"
-          >
-            <path
-              fill="white"
-              d="M6.75 6.5A2.25 2.25 0 0 0 4.5 8.75v6.5a2.25 2.25 0 0 0 2.25 2.25h6.5a2.25 2.25 0 0 0 2.25-2.25v-.725l3.386 1.88A.75.75 0 0 0 20 15.75V8.255a.75.75 0 0 0-1.114-.656L15.5 9.477V8.75a2.25 2.25 0 0 0-2.25-2.25zm8.75 4.692l3-1.664v4.947l-3-1.666zM14 8.75v6.5a.75.75 0 0 1-.75.75h-6.5a.75.75 0 0 1-.75-.75v-6.5A.75.75 0 0 1 6.75 8h6.5a.75.75 0 0 1 .75.75M6.416 20.922h.002l.003.002l.008.004l.024.011l.084.039c.07.031.172.075.303.126c.26.102.637.235 1.117.367c.961.265 2.34.527 4.042.529a15.15 15.15 0 0 0 4.045-.525c.48-.133.857-.268 1.118-.37a6.894 6.894 0 0 0 .387-.167c.337-.162.544-.68.371-1.025a.75.75 0 0 0-1.006-.333l-.01.004l-.054.025c-.05.023-.131.058-.239.1a9.663 9.663 0 0 1-.967.32A13.66 13.66 0 0 1 12 20.5a13.875 13.875 0 0 1-3.646-.475a9.794 9.794 0 0 1-.968-.318a5.753 5.753 0 0 1-.294-.124l-.01-.005a.75.75 0 0 0-.667 1.344m1.54-18.398c.962-.267 2.342-.53 4.045-.528c1.702.003 3.082.265 4.043.53c.48.134.857.267 1.117.37a7.19 7.19 0 0 1 .387.165l.025.012l.008.004l.002.001h.001s.597.35.337 1.007a.75.75 0 0 1-1.004.337h-.002l-.01-.005a5.648 5.648 0 0 0-.293-.125a9.777 9.777 0 0 0-.968-.32A13.823 13.823 0 0 0 12 3.497a13.604 13.604 0 0 0-3.642.473a9.638 9.638 0 0 0-.967.32a5.591 5.591 0 0 0-.293.126l-.01.005a.75.75 0 1 1-.675-1.34h.003l.002-.002l.008-.004l.025-.012l.084-.039c.07-.032.173-.076.303-.128c.26-.103.638-.238 1.119-.371m-.87 1.896"
-            />
-          </svg>
-          <span class="dark:zinc-800 text-white">Unirse a la clase</span>
-        </a>
-      ) : null
-    }
-    {
-      aula && edificio ? (
-        <div class="info mt-2 flex flex-col rounded-lg bg-slate-100 p-2 dark:bg-zinc-600">
-          <p class="p-1 text-left font-bold dark:text-white">{aula}</p>
-          <p class="p-1 text-left font-bold dark:text-white">{edificio}</p>
-        </div>
-      ) : null
-    }
-    <div class="horario m-auto min-w-64 rounded-lg bg-slate-200 p-2 pr-4 text-center dark:bg-zinc-800">
-      <p class="text-4xl font-bold">{hora}</p>
-      <p class="text-lg">{dia}</p>
-    </div>
-  </div>
+	class="m-3 mx-auto max-w-md overflow-hidden rounded-xl bg-slate-100 shadow-md dark:bg-zinc-700 dark:text-white md:max-w-2xl">
+	<div
+		class="contenedor grid auto-rows-min grid-cols-2 grid-rows-2 content-center items-center gap-1 p-4">
+		<div
+			class="comision col-span-3 row-span-1 text-left text-xl font-semibold uppercase tracking-wide text-indigo-500">
+			{comision}
+		</div>
+		<div
+			class="modalidad col-span-3 row-span-2 text-lg font-semibold uppercase tracking-wide text-indigo-500">
+			{modalidad}
+		</div>
+		{
+			url ? (
+				<a
+					href={url}
+					class="boton flex flex-row items-center justify-center rounded-lg bg-[#8a3bbf] p-3 font-bold hover:bg-[#bc72ee] dark:bg-[#16aaa3] dark:hover:bg-[#178092]">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="3em"
+						height="3em"
+						viewBox="0 0 24 24"
+						class="mr-3 h-12 w-12 fill-white dark:fill-zinc-800">
+						<path
+							fill="white"
+							d="M6.75 6.5A2.25 2.25 0 0 0 4.5 8.75v6.5a2.25 2.25 0 0 0 2.25 2.25h6.5a2.25 2.25 0 0 0 2.25-2.25v-.725l3.386 1.88A.75.75 0 0 0 20 15.75V8.255a.75.75 0 0 0-1.114-.656L15.5 9.477V8.75a2.25 2.25 0 0 0-2.25-2.25zm8.75 4.692l3-1.664v4.947l-3-1.666zM14 8.75v6.5a.75.75 0 0 1-.75.75h-6.5a.75.75 0 0 1-.75-.75v-6.5A.75.75 0 0 1 6.75 8h6.5a.75.75 0 0 1 .75.75M6.416 20.922h.002l.003.002l.008.004l.024.011l.084.039c.07.031.172.075.303.126c.26.102.637.235 1.117.367c.961.265 2.34.527 4.042.529a15.15 15.15 0 0 0 4.045-.525c.48-.133.857-.268 1.118-.37a6.894 6.894 0 0 0 .387-.167c.337-.162.544-.68.371-1.025a.75.75 0 0 0-1.006-.333l-.01.004l-.054.025c-.05.023-.131.058-.239.1a9.663 9.663 0 0 1-.967.32A13.66 13.66 0 0 1 12 20.5a13.875 13.875 0 0 1-3.646-.475a9.794 9.794 0 0 1-.968-.318a5.753 5.753 0 0 1-.294-.124l-.01-.005a.75.75 0 0 0-.667 1.344m1.54-18.398c.962-.267 2.342-.53 4.045-.528c1.702.003 3.082.265 4.043.53c.48.134.857.267 1.117.37a7.19 7.19 0 0 1 .387.165l.025.012l.008.004l.002.001h.001s.597.35.337 1.007a.75.75 0 0 1-1.004.337h-.002l-.01-.005a5.648 5.648 0 0 0-.293-.125a9.777 9.777 0 0 0-.968-.32A13.823 13.823 0 0 0 12 3.497a13.604 13.604 0 0 0-3.642.473a9.638 9.638 0 0 0-.967.32a5.591 5.591 0 0 0-.293.126l-.01.005a.75.75 0 1 1-.675-1.34h.003l.002-.002l.008-.004l.025-.012l.084-.039c.07-.032.173-.076.303-.128c.26-.103.638-.238 1.119-.371m-.87 1.896"
+						/>
+					</svg>
+					<span class="dark:zinc-800 text-white">Unirse a la clase</span>
+				</a>
+			) : null
+		}
+		{
+			aula && edificio ? (
+				<div class="info mt-2 flex flex-col rounded-lg bg-slate-100 p-2 dark:bg-zinc-600">
+					<p class="p-1 text-left font-bold dark:text-white">{aula}</p>
+					<p class="p-1 text-left font-bold dark:text-white">{edificio}</p>
+				</div>
+			) : null
+		}
+		<div
+			class="horario m-auto min-w-64 rounded-lg bg-slate-200 p-2 pr-4 text-center dark:bg-zinc-800">
+			<p class="text-4xl font-bold">{hora}</p>
+			<p class="text-lg">{dia}</p>
+		</div>
+	</div>
 </article>
 
 <style lang="scss">
-  .modalidad {
-    color: var(--font-color);
-  }
-  .comision {
-    color: var(--action-color);
-  }
+	.modalidad {
+		color: var(--font-color);
+	}
+	.comision {
+		color: var(--action-color);
+	}
 
-  @media (max-width: 550px) {
-    .contenedor {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto auto;
-    }
+	@media (max-width: 550px) {
+		.contenedor {
+			grid-template-columns: 1fr;
+			grid-template-rows: auto auto auto auto;
+		}
 
-    .comision {
-      margin-bottom: 10px;
-      grid-column: 1 / span 1;
-      grid-row: 1 / span 1;
-    }
+		.comision {
+			margin-bottom: 10px;
+			grid-column: 1 / span 1;
+			grid-row: 1 / span 1;
+		}
 
-    .horario {
-      margin-bottom: 10px;
-      grid-column: 1 / span 1;
-      grid-row: 2 / span 1;
-    }
+		.horario {
+			margin-bottom: 10px;
+			grid-column: 1 / span 1;
+			grid-row: 2 / span 1;
+		}
 
-    .modalidad {
-      grid-column: 1 / span 1;
-      grid-row: 3 / span 1;
-    }
+		.modalidad {
+			grid-column: 1 / span 1;
+			grid-row: 3 / span 1;
+		}
 
-    .boton {
-      grid-column: 1 / span 1;
-      grid-row: 4 / span 1;
-    }
+		.boton {
+			grid-column: 1 / span 1;
+			grid-row: 4 / span 1;
+		}
 
-    .info {
-      grid-column: 1 / span 1;
-      grid-row: 5 / span 1;
-    }
-  }
+		.info {
+			grid-column: 1 / span 1;
+			grid-row: 5 / span 1;
+		}
+	}
 </style>
