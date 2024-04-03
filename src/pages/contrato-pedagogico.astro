@@ -4,149 +4,135 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro'
 ---
 
 <DefaultLayout title="Contrato pedagógico">
-	<section>
-		<div class="container">
-			<CardSecciones>
-				<h3 class="mb-10 text-center text-3xl sm:text-5xl">
-					Contrato pedagógico
-				</h3>
-				<p class="text-center">
-					Todo lo aquí expuesto está (o debería estar) en consonancia con las
-					normativas de la Universidad. En particular, te recomendamos que leas
-					al menos una vez en tu carrera el régimen de convivencia y el régimen
-					académico.
-				</p>
-				<p class="text-center">
-					Es responsabilidad de todos los actores cumplir y hacer cumplir ambas
-					normativas, te pedimos por favor que hables con nosotros si pensás que
-					estamos fallando en algo.
-				</p>
-			</CardSecciones>
-			<br />
-			<CardSecciones>
-				<h3>Instancias de evaluación</h3>
-				<p>
-					Antes de seguir, te recomendamos que veas este video resumen del
-					régimen académico, que te va a ayudar a entender un poco más cómo se
-					juega tu aprobación en la materia.
-				</p>
-				<p>
-					Contaremos con dos instancias de evaluación formal (o sea, dos
-					momentos en que le ponemos una nota numérica a tu trabajo), una hacia
-					mitad del semestre y otra hacia el final.
-				</p>
-				<p>
-					La primera será un parcial bastante “clásico”: de carácter individual,
-					pensado para ser resuelto durante una clase utilizando la computadora.
-					La segunda será un trabajo práctico grupal (probablemente alguna
-					especie de juego), que se entregará por etapas y deberá ser
-					“defendido” de manera individual - básicamente para comprobar que todo
-					el grupo haya participado.
-				</p>
-				<p>
-					Para poder estar en condiciones de rendir el parcial y aprobar el TP
-					Final, será necesario que trabajen en las entregas previas, ver
-					sección siguiente.
-				</p>
-			</CardSecciones>
-			<br />
-			<CardSecciones>
-				<h3>Entregas</h3>
-				<p>
-					Durante el desarrollo de esta materia, los y las estudiantes fijarán
-					los contenidos a través de una serie de ejercicios prácticos
-					semanales. Estas actividades, tanto individuales como grupales, serán
-					entregadas como parte de la cursada y constituirán la clave para
-					alcanzar el objetivo. A través de estas entregas, podrán asegurar y
-					demostrar que están progresando adecuadamente en el aprendizaje de los
-					temas propuestos. Algunas de estas se realizarán mediante la
-					plataforma <a
-						href="https://mumuki.io/unahur-obj1/join/mRpjWQ"
-						target="_blank"
-						>Mumuki</a
-					> y otras a través de <a
-						href="https://github.com/"
-						target="_blank"
-						>GitHub</a
-					>, todas en formato digital. Consideramos que encontrarte cara a cara
-					con un problema que tenés que resolver es una muy buena forma de medir
-					efectivamente cuánto aprendiste.
-				</p>
-			</CardSecciones>
-			<br />
-			<CardSecciones>
-				<h3>Aprobación</h3>
-				<p>
-					Como lo establece el régimen académico (que está linkeado más arriba),
-					hay varias formas de aprobar una materia. Elaboramos aquí algunos
-					ejemplos, pero insistimos en la recomendación de que leas el régimen
-					académico completo:
-				</p>
-				<ul>
-					<li class="list-disc">
-						6 en el parcial + 8 en el TP = <b> promoción directa</b> (promedio 7,
-						notas mayores o iguales a 6);
-					</li>
-					<li class="list-disc">
-						7 en el parcial + 6 en el TP = <b> recupera el TP</b> o <b
-							>rinde evaluación integradora</b
-						> (no alcanza el promedio, debe ser 7 sin redondear);
-					</li>
-					<li class="list-disc">
-						5 en el parcial + 10 en el TP = <b>recupera el parcial</b> o <b
-							>rinde evaluación integradora</b
-						> (la nota del parcial es menor que 6);
-					</li>
-					<li class="list-disc">
-						4 en el parcial + 5 en el TP = <b>recupera ambas instancias</b> o <b
-							>rinde evaluación integradora</b
-						> (no alcanza el promedio y las notas son inferiores a 6);
-					</li>
-					<li class="list-disc">
-						menos de 4 en UNA instancia de evaluación = <b
-							>recupera esa instancia</b
-						>;
-					</li>
-					<li class="list-disc">
-						menos de 4 en AMBAS instancias de evaluación = <b
-							>recupera ambas instancias</b
-						>.
-					</li>
-				</ul>
-			</CardSecciones>
-			<br />
-			<CardSecciones>
-				<h3>Fechas</h3>
-				<p>
-					Ver el calendario <a
-						href="http://www.unahur.edu.ar/es/calendario-academico"
-						target="_blank"
-						>académico de la Universidad</a
+	<div class="container">
+		<CardSecciones>
+			<h3 class="mb-10 text-center text-3xl sm:text-5xl">
+				Contrato pedagógico
+			</h3>
+			<p class="text-center">
+				Todo lo aquí expuesto está (o debería estar) en consonancia con las
+				normativas de la Universidad. En particular, te recomendamos que leas al
+				menos una vez en tu carrera el régimen de convivencia y el régimen
+				académico.
+			</p>
+			<p class="text-center">
+				Es responsabilidad de todos los actores cumplir y hacer cumplir ambas
+				normativas, te pedimos por favor que hables con nosotros si pensás que
+				estamos fallando en algo.
+			</p>
+		</CardSecciones>
+		<CardSecciones title="Instancias de evaluación">
+			<p>
+				Antes de seguir, te recomendamos que veas este video resumen del régimen
+				académico, que te va a ayudar a entender un poco más cómo se juega tu
+				aprobación en la materia.
+			</p>
+			<p>
+				Contaremos con dos instancias de evaluación formal (o sea, dos momentos
+				en que le ponemos una nota numérica a tu trabajo), una hacia mitad del
+				semestre y otra hacia el final.
+			</p>
+			<p>
+				La primera será un parcial bastante “clásico”: de carácter individual,
+				pensado para ser resuelto durante una clase utilizando la computadora.
+				La segunda será un trabajo práctico grupal (probablemente alguna especie
+				de juego), que se entregará por etapas y deberá ser “defendido” de
+				manera individual - básicamente para comprobar que todo el grupo haya
+				participado.
+			</p>
+			<p>
+				Para poder estar en condiciones de rendir el parcial y aprobar el TP
+				Final, será necesario que trabajen en las entregas previas, ver sección
+				siguiente.
+			</p>
+		</CardSecciones>
+		<CardSecciones title="Entregas">
+			<p>
+				Durante el desarrollo de esta materia, los y las estudiantes fijarán los
+				contenidos a través de una serie de ejercicios prácticos semanales.
+				Estas actividades, tanto individuales como grupales, serán entregadas
+				como parte de la cursada y constituirán la clave para alcanzar el
+				objetivo. A través de estas entregas, podrán asegurar y demostrar que
+				están progresando adecuadamente en el aprendizaje de los temas
+				propuestos. Algunas de estas se realizarán mediante la plataforma <a
+					href="https://mumuki.io/unahur-obj1/join/mRpjWQ"
+					target="_blank"
+					>Mumuki</a
+				> y otras a través de <a
+					href="https://github.com/"
+					target="_blank"
+					>GitHub</a
+				>, todas en formato digital. Consideramos que encontrarte cara a cara
+				con un problema que tenés que resolver es una muy buena forma de medir
+				efectivamente cuánto aprendiste.
+			</p>
+		</CardSecciones>
+		<CardSecciones title="Aprobación">
+			<p>
+				Como lo establece el régimen académico (que está linkeado más arriba),
+				hay varias formas de aprobar una materia. Elaboramos aquí algunos
+				ejemplos, pero insistimos en la recomendación de que leas el régimen
+				académico completo:
+			</p>
+			<ul>
+				<li class="list-disc">
+					6 en el parcial + 8 en el TP = <b> promoción directa</b> (promedio 7, notas
+					mayores o iguales a 6);
+				</li>
+				<li class="list-disc">
+					7 en el parcial + 6 en el TP = <b> recupera el TP</b> o <b
+						>rinde evaluación integradora</b
+					> (no alcanza el promedio, debe ser 7 sin redondear);
+				</li>
+				<li class="list-disc">
+					5 en el parcial + 10 en el TP = <b>recupera el parcial</b> o <b
+						>rinde evaluación integradora</b
+					> (la nota del parcial es menor que 6);
+				</li>
+				<li class="list-disc">
+					4 en el parcial + 5 en el TP = <b>recupera ambas instancias</b> o <b
+						>rinde evaluación integradora</b
+					> (no alcanza el promedio y las notas son inferiores a 6);
+				</li>
+				<li class="list-disc">
+					menos de 4 en UNA instancia de evaluación = <b
+						>recupera esa instancia</b
+					>;
+				</li>
+				<li class="list-disc">
+					menos de 4 en AMBAS instancias de evaluación = <b
+						>recupera ambas instancias</b
 					>.
-				</p>
-			</CardSecciones>
-			<br />
-			<CardSecciones>
-				<h3>Programa</h3>
-				<p>
-					Podés descargarlo haciendo clic <a
-						href="https://obj1-unahur.github.io/assets/pdf/programa-obj1.pdf"
-						target="_blank"
-						>aquí</a
-					>.
-				</p>
-			</CardSecciones>
-			<br />
-		</div>
-	</section>
-</DefaultLayout>
+				</li>
+			</ul>
+		</CardSecciones>
+		<CardSecciones title="Fechas">
+			<p>
+				Ver el calendario <a
+					href="http://www.unahur.edu.ar/es/calendario-academico"
+					target="_blank"
+					>académico de la Universidad</a
+				>.
+			</p>
+		</CardSecciones>
+		<CardSecciones title="Programa">
+			<p>
+				Podés descargarlo haciendo clic <a
+					href="https://obj1-unahur.github.io/assets/pdf/programa-obj1.pdf"
+					target="_blank"
+					>aquí</a
+				>.
+			</p>
+		</CardSecciones>
+	</div>
 
-<style>
-	p {
-		margin-bottom: 0.5rem;
-		margin-top: 0.5rem;
-	}
-	h3 {
-		margin-bottom: 1rem;
-	}
-</style>
+	<style>
+		p {
+			margin-bottom: 0.5rem;
+			margin-top: 0.5rem;
+		}
+		h3 {
+			margin-bottom: 1rem;
+		}
+	</style>
+</DefaultLayout>

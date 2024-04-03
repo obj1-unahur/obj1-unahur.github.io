@@ -8,10 +8,19 @@ import WatchVideo from '@components/WatchVideo.astro'
 import VideosDeSemana from '@components/VideosDeSemana.astro'
 import ActividadesDeSemana from '@components/ActividadesDeSemana.astro'
 import HorariosDeSemana from '@components/HorariosDeSemana.astro'
+import CardSecciones from '@/components/CardSecciones.astro'
 
 const { frontmatter } = Astro.props
 
-const { title, descripcion, videos, horarios, ejercicios } = frontmatter
+const {
+	title,
+	descripcion,
+	videos,
+	horarios,
+	ejercicios,
+	atencion,
+	importante,
+} = frontmatter
 ---
 
 <LayoutSemanas title={title}>
@@ -35,8 +44,26 @@ const { title, descripcion, videos, horarios, ejercicios } = frontmatter
 	</div>
 
 	<div class="container">
-		<div class="space-content my-12">
+		<div class="my-12">
 			<h1>{title}</h1>
+			{
+				atencion ? (
+					<CardSecciones
+						title="Atención"
+						atencion>
+						{atencion}
+					</CardSecciones>
+				) : null
+			}
+			{
+				importante ? (
+					<CardSecciones
+						title="Importante"
+						importante>
+						{importante}
+					</CardSecciones>
+				) : null
+			}
 			<p>{descripcion}</p>
 			<VideosDeSemana videos={videos} />
 			<ActividadesDeSemana ejercicios={ejercicios} />

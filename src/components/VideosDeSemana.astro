@@ -5,12 +5,9 @@ import WatchVideo from './WatchVideo.astro'
 const { videos } = Astro.props
 ---
 
-<CardSecciones>
-	<h2
-		id="videos"
-		class="ml-3">
-		Videos
-	</h2>
+<CardSecciones
+	title="Videos"
+	id="videos">
 	{
 		videos.map((video) => (
 			<WatchVideo
@@ -21,9 +18,3 @@ const { videos } = Astro.props
 		))
 	}
 </CardSecciones>
-
-<style>
-	h3 {
-		margin-bottom: 50px !important;
-	}
-</style>

@@ -5,12 +5,9 @@ import CardSecciones from './CardSecciones.astro'
 const { ejercicios } = Astro.props
 ---
 
-<CardSecciones>
-	<h3
-		id="ejercicios"
-		class="mb-4 p-2">
-		Ejercicios
-	</h3>
+<CardSecciones
+	title="Ejercicios"
+	id="ejercicios">
 	<ul class="m-auto">
 		{
 			ejercicios ? (
