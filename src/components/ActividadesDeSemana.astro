@@ -5,40 +5,45 @@ import CardSecciones from './CardSecciones.astro'
 const { ejercicios } = Astro.props
 ---
 
-<CardSecciones>
-  <h3 id="ejercicios" class="mb-4 p-2">Ejercicios</h3>
-  <ul class="m-auto">
-    {
-      ejercicios ? (
-        ejercicios.map((ejercicio) => (
-          <li class="flex justify-center">
-            <CardEjercicio title={ejercicio.name} comentarios={ejercicio.comentarios} urlGitHub={ejercicio.classroom} />
-          </li>
-        ))
-      ) : (
-        <p class="m-auto flex w-full">
-          <strong>Esta semana no hay ejercicios</strong>
-        </p>
-      )
-    }
-  </ul>
+<CardSecciones
+	title="Ejercicios"
+	id="ejercicios">
+	<ul class="m-auto">
+		{
+			ejercicios ? (
+				ejercicios.map((ejercicio) => (
+					<li class="flex justify-center">
+						<CardEjercicio
+							title={ejercicio.name}
+							comentarios={ejercicio.comentarios}
+							urlGitHub={ejercicio.classroom}
+						/>
+					</li>
+				))
+			) : (
+				<p class="m-auto flex w-full">
+					<strong>Esta semana no hay ejercicios</strong>
+				</p>
+			)
+		}
+	</ul>
 </CardSecciones>
 
 <style lang="scss">
-  ul {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
-    justify-items: center;
+	ul {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 1rem;
+		justify-items: center;
 
-    @media (min-width: 550px) {
-      grid-template-columns: repeat(1, 1fr);
-      grid-gap: 1rem;
-    }
+		@media (min-width: 550px) {
+			grid-template-columns: repeat(1, 1fr);
+			grid-gap: 1rem;
+		}
 
-    @media (min-width: 950px) {
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 1rem;
-    }
-  }
+		@media (min-width: 950px) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 1rem;
+		}
+	}
 </style>

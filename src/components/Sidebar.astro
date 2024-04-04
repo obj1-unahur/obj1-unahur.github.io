@@ -1,70 +1,77 @@
 ---
 const semanas = await Astro.glob('../pages/Cursada/*.md')
-const currentPage = Astro.url.pathname.split('/').find((e) => e.includes('Semana'))
+const currentPage = Astro.url.pathname
+	.split('/')
+	.find((e) => e.includes('Semana'))
 ---
 
 <aside class="sticky left-0 top-0 h-screen w-48 border-r-2 bg-black">
-  <div class="mt-5 h-full overflow-y-auto px-3 pb-4">
-    <h5 class="mb-5 mr-7">Semanas</h5>
-    <ul class="space-y-2 font-medium">
-      {/* 'reverse()' es para que ponga a ultima semana arriba de todo */}
-      {
-        semanas
-          .reverse()
-          .filter((semana) => {
-            // Solo mostramos las clases de las semanas cuya fecha de inicio sea inferior a la fecha actual
-            // por un tema de compatibilidad, también mostramos las clases que no especifican fecha de inicio
-            const inicio = new Date(semana.frontmatter.inicio)
-            const hoy = new Date()
-            return hoy >= inicio || !semana.frontmatter.inicio
-          })
-          .map((semana) => (
-            <li>
-              <a
-                href={semana.url}
-                class={
-                  'group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700 ' +
-                  (currentPage == semana.url.split('/').slice(-1).toString() ? 'bg-gray-200 dark:bg-gray-700' : '')
-                }
-              >
-                <span class="ms-3">{semana.frontmatter.title}</span>
-              </a>
-            </li>
-          ))
-      }
-    </ul>
-  </div>
+	<div class="mt-5 h-full overflow-y-auto px-3 pb-4">
+		<h5 class="mb-5 mr-7">Semanas</h5>
+		<ul class="space-y-2 font-medium">
+			{/* 'reverse()' es para que ponga a ultima semana arriba de todo */}
+			{
+				semanas
+					.reverse()
+					.filter((semana) => {
+						// Solo mostramos las clases de las semanas cuya fecha de inicio sea inferior a la fecha actual
+						// por un tema de compatibilidad, también mostramos las clases que no especifican fecha de inicio
+						const inicio = new Date(semana.frontmatter.inicio)
+						const hoy = new Date()
+						return hoy >= inicio || !semana.frontmatter.inicio
+					})
+					.map((semana) => (
+						<li>
+							<a
+								href={semana.url}
+								class={
+									'group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700 ' +
+									(currentPage == semana.url.split('/').slice(-1).toString()
+										? 'bg-gray-200 dark:bg-gray-700'
+										: '')
+								}>
+								<span class="ms-3">{semana.frontmatter.title}</span>
+							</a>
+						</li>
+					))
+			}
+		</ul>
+	</div>
 </aside>
 
 <style>
-  h5 {
-    color: var(--action-color);
-  }
+	h5 {
+		color: var(--action-color);
+	}
 
-  aside {
-    color: var(--font-color);
-    background-color: var(--background);
-    border-color: transparent;
-  }
+	aside {
+		color: var(--font-color);
+		background-color: var(--background);
+		border-color: transparent;
+	}
 
-  aside::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    /* Adjust these values for border width and desired gradient direction */
-    background-image: linear-gradient(to top, var(--action-color), var(--background));
-  }
+	aside::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 2px;
+		height: 100%;
+		/* Adjust these values for border width and desired gradient direction */
+		background-image: linear-gradient(
+			to top,
+			var(--action-color),
+			var(--background)
+		);
+	}
 
-  span {
-    color: var(--font-color);
-  }
+	span {
+		color: var(--font-color);
+	}
 
-  @media (max-width: 549px) {
-    aside {
-      display: none;
-    }
-  }
+	@media (max-width: 549px) {
+		aside {
+			display: none;
+		}
+	}
 </style>

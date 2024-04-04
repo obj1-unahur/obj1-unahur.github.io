@@ -5,44 +5,42 @@ const { title, descripcion } = frontmatter // 'frontmatter' devuelve un JSON con
 ---
 
 <a href={url}>
-  <div
-    class="w-92 relative h-56 rounded-md bg-slate-200 hover:bg-slate-300 dark:bg-zinc-800 dark:text-white dark:hover:bg-zinc-700"
-  >
-    <div class="flex flex-col p-4">
-      <h4 class="mb-4 block font-sans font-semibold leading-snug tracking-normal antialiased dark:text-white">
-        {title}
-      </h4>
-      <p class="line-clamp-4">
-        {descripcion}
-      </p>
-    </div>
-    <div class="flex-start p-2 pt-0">
-      {
-        frontmatter.videos ? (
-          <a
-            href={url + '/#videos'}
-            class="mr-3 rounded-md bg-[#d494ff] px-4 py-1 text-center align-middle hover:bg-[#bc72ee] dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800"
-          >
-            Videos
-          </a>
-        ) : null
-      }
-      {
-        frontmatter.ejercicios ? (
-          <a
-            href={url + '/#ejercicios'}
-            class="mr-3 rounded-md bg-[#d494ff] px-4 py-1 text-center align-middle hover:bg-[#bc72ee] dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800"
-          >
-            Ejercicios
-          </a>
-        ) : null
-      }
-    </div>
-  </div>
+	<div
+		class="w-92 relative h-56 rounded-md bg-slate-200 hover:bg-slate-300 dark:bg-zinc-800 dark:text-white dark:hover:bg-zinc-700">
+		<div class="flex flex-col p-4">
+			<h4
+				class="mb-4 block font-sans font-semibold leading-snug tracking-normal antialiased dark:text-white">
+				{title}
+			</h4>
+			<p class="line-clamp-4">
+				{descripcion}
+			</p>
+		</div>
+		<div class="flex-start p-2 pt-0">
+			{
+				frontmatter.videos ? (
+					<a
+						href={url + '/#videos'}
+						class="mr-3 rounded-md bg-[#d494ff] px-4 py-1 text-center align-middle hover:bg-[#bc72ee] dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800">
+						Videos
+					</a>
+				) : null
+			}
+			{
+				frontmatter.ejercicios ? (
+					<a
+						href={url + '/#ejercicios'}
+						class="mr-3 rounded-md bg-[#d494ff] px-4 py-1 text-center align-middle hover:bg-[#bc72ee] dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800">
+						Ejercicios
+					</a>
+				) : null
+			}
+		</div>
+	</div>
 </a>
 
 <style>
-  a {
-    color: var(--action-color);
-  }
+	a {
+		color: var(--action-color);
+	}
 </style>

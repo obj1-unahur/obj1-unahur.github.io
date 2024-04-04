@@ -8,31 +8,67 @@ import WatchVideo from '@components/WatchVideo.astro'
 import VideosDeSemana from '@components/VideosDeSemana.astro'
 import ActividadesDeSemana from '@components/ActividadesDeSemana.astro'
 import HorariosDeSemana from '@components/HorariosDeSemana.astro'
+import CardSecciones from '@/components/CardSecciones.astro'
 
 const { frontmatter } = Astro.props
 
-const { title, descripcion, videos, horarios, ejercicios } = frontmatter
+const {
+	title,
+	descripcion,
+	videos,
+	horarios,
+	ejercicios,
+	atencion,
+	importante,
+} = frontmatter
 ---
 
 <LayoutSemanas title={title}>
-  <div class="container">
-    <div class="mt-12">
-      <Breadcrumbs>
-        <BreadcrumbsItem href={PATH} label="Inicio" />
-        <BreadcrumbsItem href={PATH_CURSADA} label="Cursada" />
-        <BreadcrumbsItem currentPage={true} label={title} />
-      </Breadcrumbs>
-    </div>
-  </div>
+	<div class="container">
+		<div class="mt-12">
+			<Breadcrumbs>
+				<BreadcrumbsItem
+					href={PATH}
+					label="Inicio"
+				/>
+				<BreadcrumbsItem
+					href={PATH_CURSADA}
+					label="Cursada"
+				/>
+				<BreadcrumbsItem
+					currentPage={true}
+					label={title}
+				/>
+			</Breadcrumbs>
+		</div>
+	</div>
 
-  <div class="container">
-    <div class="space-content my-12">
-      <h1>{title}</h1>
-      <p>{descripcion}</p>
-      <VideosDeSemana videos={videos} />
-      <ActividadesDeSemana ejercicios={ejercicios} />
-      <HorariosDeSemana horarios={horarios} />
-      <slot />
-    </div>
-  </div>
+	<div class="container">
+		<div class="my-12">
+			<h1>{title}</h1>
+			{
+				atencion ? (
+					<CardSecciones
+						title="Atención"
+						atencion>
+						{atencion}
+					</CardSecciones>
+				) : null
+			}
+			{
+				importante ? (
+					<CardSecciones
+						title="Importante"
+						importante>
+						{importante}
+					</CardSecciones>
+				) : null
+			}
+			<p>{descripcion}</p>
+			<VideosDeSemana videos={videos} />
+			<ActividadesDeSemana ejercicios={ejercicios} />
+			<HorariosDeSemana horarios={horarios} />
+			<slot />
+		</div>
+	</div>
 </LayoutSemanas>
