@@ -23,14 +23,11 @@ importante:
 
 videos:
   - nombre: Qué es un objeto, qué es un mensaje
-    url: https://www.youtube.com/embed/zZe0AaSKdyo
-    urlYoutube: https://youtu.be/zZe0AaSKdyo
+    urlYoutube: https://www.youtube.com/watch?v=zZe0AaSKdyo
   - nombre: Interactuamos con un objeto
-    url: https://www.youtube.com/embed/7hXl2kJs2GU?si=VEYm5HRk7qAOHjfL
-    urlYoutube: https://youtu.be/7hXl2kJs2GUs
+    urlYoutube: https://www.youtube.com/watch?v=7hXl2kJs2GU
   - nombre: Definimos un objeto
-    url: https://www.youtube.com/embed/aAfjr8-1-0Y
-    urlYoutube: https://youtu.be/aAfjr8-1-0Y
+    urlYoutube: https://www.youtube.com/watch?v=aAfjr8-1-0Y
 
 ejercicios:
   - name: Práctica Mutual MMMM

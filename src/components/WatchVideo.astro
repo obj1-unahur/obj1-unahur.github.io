@@ -1,5 +1,15 @@
 ---
-const { title, url, urlYoutube } = Astro.props
+const { title, urlYoutube } = Astro.props
+
+function getIframeUrl(youtubeUrl) {
+	const match = youtubeUrl.match(
+		/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=|embed\/)([a-zA-Z0-9-_]{11})/
+	)
+	if (match && match[1]) {
+		return `https://www.youtube.com/embed/${match[1]}`
+	}
+	return null
+}
 ---
 
 <div class="container flex w-full flex-col items-center justify-center">
@@ -7,7 +17,7 @@ const { title, url, urlYoutube } = Astro.props
 		<h5 class="mb-5">{title}</h5>
 		<iframe
 			class="aspect-video w-full rounded-md"
-			src={url}
+			src={getIframeUrl(urlYoutube)}
 			title="YouTube video player"
 			frameborder="0"
 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
