@@ -3,7 +3,12 @@ import Navigation from '@components/Navigation.astro'
 import { SkipLinks } from 'accessible-astro-components'
 import { Icon } from 'astro-icon/components'
 
-import { PATH, PATH_CURSADA, PATH_CONTRATO_PEDAGOGICO } from '@/paths'
+import {
+	PATH,
+	PATH_CURSADA,
+	PATH_CONTRATO_PEDAGOGICO,
+	PATH_VIDEOS,
+} from '@/paths'
 ---
 
 <header>
@@ -29,7 +34,7 @@ import { PATH, PATH_CURSADA, PATH_CONTRATO_PEDAGOGICO } from '@/paths'
 					<a href="/mdx-page/">Material</a>
 				</li>
 				<li class="submenu-item">
-					<a href="/markdown-page/">Videos</a>
+					<a href={PATH_VIDEOS}>Videos</a>
 				</li>
 				<li class="submenu-item">
 					<a

@@ -1,0 +1,30 @@
+---
+import WatchVideo from '@/components/WatchVideo.astro'
+import DefaultLayout from '@layouts/DefaultLayout.astro'
+import VideosDeSemana from '@/components/VideosDeSemana.astro'
+const videosMd = await Astro.glob('./videos.md')
+---
+
+<DefaultLayout title="Videos">
+	<div class="container">
+		<h3 class="mb-10 text-center text-3xl sm:text-5xl">Videos</h3>
+		{videosMd.map((video) => <VideosDeSemana videos={video.frontmatter} />)}
+	</div>
+</DefaultLayout>
+
+<style lang="scss">
+	ul {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 4rem;
+
+		@media (min-width: 550px) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 2rem;
+		}
+
+		@media (min-width: 950px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+</style>
