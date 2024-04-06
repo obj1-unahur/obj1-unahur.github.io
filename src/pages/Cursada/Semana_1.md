@@ -13,14 +13,6 @@ descripcion: Hola!
 
   Es muy importante que te suscribas al canal de Discord de la materia, las instrucciones están en la sección **[Inicio](/)** de esta página.
 
-videos:
-  - nombre: Qué es un objeto, qué es un mensaje
-    urlYoutube: https://www.youtube.com/watch?v=zZe0AaSKdyo
-  - nombre: Interactuamos con un objeto
-    urlYoutube: https://www.youtube.com/watch?v=7hXl2kJs2GU
-  - nombre: Definimos un objeto
-    urlYoutube: https://www.youtube.com/watch?v=aAfjr8-1-0Y
-
 horarios:
   - Comision: Comisión 1 T.Noche
     Dia: Martes 26 de Marzo

@@ -65,7 +65,7 @@ const {
 				) : null
 			}
 			<p>{descripcion}</p>
-			<VideosDeSemana videos={videos} />
+			{videos ? <VideosDeSemana videos={videos} /> : null}
 			<ActividadesDeSemana ejercicios={ejercicios} />
 			<HorariosDeSemana horarios={horarios} />
 			<slot />
