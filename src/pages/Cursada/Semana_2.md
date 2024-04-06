@@ -41,9 +41,8 @@ horarios:
     Hora: 8.00hs
     URL: https://meet.google.com/wxc-ioxx-nah
 
-  - Comision: Comisión 4 T.Mañana Rosario
-    Dia: Sábado 30 de Marzo
-    Modalidad: VIRTUAL
+  - Comision: Comisión 2 T.Mañana
+    Dia: Miércoles 27 de Marzo
     Hora: 10.00hs
-    URL: https://us06web.zoom.us/j/88953425033
+    Mensaje: NO HAY CLASES POR FERIADO
 ---

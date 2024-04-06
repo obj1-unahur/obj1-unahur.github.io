@@ -1,20 +1,23 @@
 ---
-const { comision, modalidad, dia, hora, url, aula, edificio, props } =
+const { comision, modalidad, dia, hora, url, aula, edificio, mensaje } =
 	Astro.props
 ---
 
 <article
 	class="m-3 mx-auto max-w-md overflow-hidden rounded-xl bg-slate-100 shadow-md dark:bg-zinc-700 dark:text-white md:max-w-2xl">
-	<div
-		class="contenedor grid auto-rows-min grid-cols-2 grid-rows-2 content-center items-center gap-1 p-4">
+	<div class="contenedor content-center items-center gap-1 p-4">
 		<div
-			class="comision col-span-3 row-span-1 text-left text-xl font-semibold uppercase tracking-wide text-indigo-500">
+			class="comision text-left text-xl font-semibold uppercase tracking-wide text-indigo-500">
 			{comision}
 		</div>
-		<div
-			class="modalidad col-span-3 row-span-2 text-lg font-semibold uppercase tracking-wide text-indigo-500">
-			{modalidad}
-		</div>
+		{
+			modalidad ? (
+				<div class="modalidad text-lg font-semibold uppercase tracking-wide text-indigo-500">
+					{modalidad}
+				</div>
+			) : null
+		}
+
 		{
 			url ? (
 				<a
@@ -43,53 +46,78 @@ const { comision, modalidad, dia, hora, url, aula, edificio, props } =
 				</div>
 			) : null
 		}
-		<div
-			class="horario m-auto min-w-64 rounded-lg bg-slate-200 p-2 pr-4 text-center dark:bg-zinc-800">
-			<p class="text-4xl font-bold">{hora}</p>
-			<p class="text-lg">{dia}</p>
-		</div>
+		{
+			mensaje ? (
+				<div class="info rounded-lg bg-slate-200 p-3 dark:bg-zinc-800">
+					<p class="text-center font-bold dark:text-white">{mensaje}</p>
+				</div>
+			) : null
+		}
+		{
+			hora && dia ? (
+				<div class="horario m-auto min-w-64 rounded-lg bg-slate-200 p-2 pr-4 text-center dark:bg-zinc-800">
+					<p class="text-4xl font-bold">{hora}</p>
+					<p class="text-lg">{dia}</p>
+				</div>
+			) : null
+		}
 	</div>
 </article>
 
 <style lang="scss">
-	.modalidad {
-		color: var(--font-color);
+	.contenedor {
+		display: grid;
+		grid-template-rows: auto auto auto auto;
+		grid-template-columns: 1fr;
+		gap: 10px;
+		grid-template-areas:
+			'com com'
+			'mod mod'
+			'path time'
+			'path time';
+	}
+
+	.horario {
+		grid-area: time;
+	}
+	.boton {
+		grid-area: path;
 	}
 	.comision {
 		color: var(--action-color);
+		grid-area: com;
+	}
+	.modalidad {
+		color: var(--font-color);
+		grid-area: mod;
+	}
+	.info {
+		grid-area: path;
 	}
 
 	@media (max-width: 550px) {
 		.contenedor {
-			grid-template-columns: 1fr;
-			grid-template-rows: auto auto auto auto;
+			grid-template-rows: auto auto auto;
+			grid-template-areas:
+				'com'
+				'mod'
+				'time'
+				'path';
 		}
-
-		.comision {
-			margin-bottom: 10px;
-			grid-column: 1 / span 1;
-			grid-row: 1 / span 1;
-		}
-
 		.horario {
-			margin-bottom: 10px;
-			grid-column: 1 / span 1;
-			grid-row: 2 / span 1;
+			grid-area: time;
 		}
-
-		.modalidad {
-			grid-column: 1 / span 1;
-			grid-row: 3 / span 1;
-		}
-
 		.boton {
-			grid-column: 1 / span 1;
-			grid-row: 4 / span 1;
+			grid-area: path;
 		}
-
+		.comision {
+			grid-area: com;
+		}
+		.modalidad {
+			grid-area: mod;
+		}
 		.info {
-			grid-column: 1 / span 1;
-			grid-row: 5 / span 1;
+			grid-area: path;
 		}
 	}
 </style>
