@@ -1,0 +1,67 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const { textToCopy } = Astro.props
+---
+
+<div class="m-auto mb-5 min-w-72">
+	<div
+		class="relative flex min-h-11 items-start justify-between rounded-md bg-slate-300 text-white dark:bg-zinc-900">
+		<pre
+			id="code"
+			class="text-to-copy border-transparent p-2 text-sm text-black dark:text-gray-300 sm:text-base">{textToCopy}</pre>
+		<button
+			class="button-copy absolute right-0 top-0 h-11 rounded-md border-transparent px-3 text-gray-300 hover:bg-slate-400 dark:bg-zinc-900 dark:hover:bg-zinc-700"
+			><Icon
+				id="icon"
+				name="ion:clipboard-outline"
+			/></button
+		>
+		<span
+			class="message-copy absolute -top-7 right-0 hidden rounded-md bg-slate-400 px-2 py-1 text-xs dark:bg-zinc-900"
+			>Copy</span
+		>
+	</div>
+</div>
+
+<script>
+	const $buttonCopy = document.querySelectorAll('.button-copy')
+
+	$buttonCopy.forEach((button) =>
+		button.addEventListener('click', async () => {
+			let $textToCopy = button.previousElementSibling
+			let $messageCopy = button.nextElementSibling
+			await navigator.clipboard.writeText($textToCopy.textContent)
+
+			$messageCopy.classList.remove('hidden')
+			$messageCopy.classList.add('show')
+
+			setTimeout(() => {
+				$messageCopy.classList.remove('show')
+				$messageCopy.classList.add('hidden')
+			}, 1000)
+		})
+	)
+</script>
+
+<style>
+	#icon {
+		color: var(--action-color);
+	}
+
+	@keyframes fade-message {
+		0% {
+			opacity: 1;
+		}
+		25% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+
+	.message-copy.show {
+		animation: fade-message 1s ease-in-out;
+	}
+</style>

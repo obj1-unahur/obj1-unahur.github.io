@@ -1,0 +1,237 @@
+---
+import CardSecciones from '@/components/CardSecciones.astro'
+import SeccionListaCopyCode from '@/components/SeccionListaCopyCode.astro'
+import Separador from '@/components/Separador.astro'
+import TablaDeActividades from '@/components/TablaDeActividades.astro'
+import DefaultLayout from '@/layouts/DefaultLayout.astro'
+import { Icon } from 'astro-icon/components'
+
+const elementosComunes = await Astro.glob(
+	'../content/SintaxisWollok/sintaxis_basica_wollok.md'
+)
+const {
+	sintaxisBasica,
+	operadoresLogicosYMatematicos,
+	opSimplesCollList,
+	opAvanCollList,
+	mensajeDeColl,
+	comandosBasicGit,
+} = elementosComunes[0].frontmatter
+---
+
+<DefaultLayout>
+	<h3 class="mb-10 text-center text-3xl sm:text-5xl">Material</h3>
+	<section class="mx-4">
+		<CardSecciones title="Wollok">
+			<p>
+				Vas a tener que instalarte Wollok. Leé detalladamente las instrucciones
+				para poder instalar Wollok en tu máquina. Es <b>muy importante</b> que primero
+				cumplas con el pre-requisito de instalar <a
+					href="https://www.wollok.org/instalacion/#jdk-18"
+					target="_blank"
+					>Java Development Kit 1.8</a
+				> que se indica en la página.
+			</p>
+			<p>
+				En principio recomendamos los apuntes <a
+					href="https://uqbar-project.github.io/website-wollok-ts/documentation/introduction/"
+					target="_blank"
+					>publicados en el sitio de Wollok</a
+				>. Además, tenemos estos recursos:
+			</p>
+			<br />
+			<SeccionListaCopyCode
+				title="Sintaxis basica"
+				lista={sintaxisBasica}
+			/>
+			<SeccionListaCopyCode
+				title="Operadores lógicos y matemáticos"
+				lista={operadoresLogicosYMatematicos}
+			/>
+			<SeccionListaCopyCode
+				title="Operaciones simples sin efecto sobre colecciones/listas"
+				lista={opSimplesCollList}
+			/>
+			<SeccionListaCopyCode
+				title="Operaciones avanzadas (de orden superior) sin efecto sobre colecciones/listas"
+				lista={opAvanCollList}
+			/>
+			<SeccionListaCopyCode
+				title="Mensajes de colecciones con efecto"
+				lista={mensajeDeColl}
+			/>
+			<article id="links">
+				<p
+					id="uno"
+					class="flex items-center">
+					Tambien podes descargar este mismo resumen de la sintaxis de Wollok
+					para tenerlo a mano.
+				</p>
+				<a
+					id="linkUno"
+					href="https://docs.google.com/document/d/11BEzE5o-0wRyvidwV-NV6JTQbf0s00ZLYNkjn_G8fio/edit?usp=sharing"
+					target="_blank"
+					class="rounded-md bg-slate-300 hover:bg-slate-400 dark:bg-zinc-900 dark:hover:bg-zinc-700"
+					>Ver recurso<Icon name="ion:arrow-up-right-box-outline" /></a
+				>
+				<p
+					id="dos"
+					class="flex items-center">
+					Acá hay recurso para tener a mano cuando empecemos a trabajar con
+					colecciones (Sobre todo las últimas páginas que sirven de machete para
+					recordar qué operaciones existen).
+				</p>
+				<a
+					id="linkDos"
+					href="https://obj1-unahur.github.io/guias/guia10-extras.pdf"
+					target="_blank"
+					class="rounded-md bg-slate-300 hover:bg-slate-400 dark:bg-zinc-900 dark:hover:bg-zinc-700"
+					>Ver recurso<Icon name="ion:arrow-up-right-box-outline" /></a
+				>
+			</article>
+		</CardSecciones>
+
+		<CardSecciones title="Git">
+			<p>
+				En esta materia utilizamos <a
+					href="https://git-scm.com/"
+					target="_blank"
+					>Git</a
+				> como herramienta para el control de versiones del código que vas a ir produciendo.
+				El manejo que necesitás es básico, y está explicado en la guía rápida que
+				te ofrecemos más abajo. El resto de los recursos pueden serte útiles si querés
+				profundizar en el conocimiento de la herramienta.
+			</p>
+			<p>
+				Acá van a poder ver los comandos mas comunes que estaremos utilizando en
+				Git:
+			</p>
+			<SeccionListaCopyCode
+				title="Comandos basicos de Git"
+				lista={comandosBasicGit}
+			/>
+			<center
+				><b>Aclaración</b>: El "--global" SOLO se utiliza en PC PERSONALES, NO
+				en la Universidad.</center
+			>
+			<Separador />
+			<article id="links">
+				<p
+					id="uno"
+					class="flex items-center">
+					Guía rápida de cómo usar Git (Lo mínimo que tenés que saber para poder
+					trabajar).
+				</p>
+				<a
+					id="linkUno"
+					href="https://github.com/obj1-unahur-2018s2/docs/wiki/Guia-r%C3%A1pida-de-GIT"
+					target="_blank"
+					class="rounded-md bg-slate-300 hover:bg-slate-400 dark:bg-zinc-900 dark:hover:bg-zinc-700"
+					>Ver recurso<Icon name="ion:arrow-up-right-box-outline" /></a
+				>
+				<p
+					id="dos"
+					class="flex items-center">
+					Otro apunte sobre Git (Un poco más extenso que el anterior, explica
+					con más detalle algunos comandos).
+				</p>
+				<a
+					id="linkDos"
+					href="https://docs.google.com/document/d/1ozqfYCwt-37stynmgAd5wJlNOFKWYQeIZoeqXpAEs0I/edit"
+					target="_blank"
+					class="rounded-md bg-slate-300 hover:bg-slate-400 dark:bg-zinc-900 dark:hover:bg-zinc-700"
+					>Ver recurso<Icon name="ion:arrow-up-right-box-outline" /></a
+				>
+				<p
+					id="tres"
+					class="flex items-center">
+					Tutorial interactivo de Git (Mucho más completo que los anteriores.
+					Funciona sin conexión a internet, hay que instalarlo e incluye una
+					primera parte que explica cómo bajarse Git. Por defecto viene en
+					inglés pero se puede poner en español).
+				</p>
+				<a
+					id="linkTres"
+					href="https://github.com/jlord/git-it-electron"
+					target="_blank"
+					class="rounded-md bg-slate-300 hover:bg-slate-400 dark:bg-zinc-900 dark:hover:bg-zinc-700"
+					>Ver recurso<Icon name="ion:arrow-up-right-box-outline" /></a
+				>
+				<p
+					id="tres"
+					class="flex items-center">
+					Machete de comandos de Git (Resumen de los comandos más utilizados de
+					GIT.).
+				</p>
+				<a
+					id="linkTres"
+					href="https://obj1-unahur.github.io/assets/pdf/ComandosBasicosDeGit.pdf"
+					target="_blank"
+					class="rounded-md bg-slate-300 hover:bg-slate-400 dark:bg-zinc-900 dark:hover:bg-zinc-700"
+					>Ver recurso<Icon name="ion:arrow-up-right-box-outline" /></a
+				>
+			</article>
+		</CardSecciones>
+
+		<CardSecciones title="Guías de ejercicios adicionales">
+			Ejercicios en formato “tradicional”, que (aún) no tienen un proyecto en
+			GitHub listo para clonar y empezar a trabajar.
+			<TablaDeActividades />
+		</CardSecciones>
+	</section>
+</DefaultLayout>
+
+<style lang="scss">
+	p {
+		margin-bottom: 10px;
+	}
+	#links a {
+		transition: transform 0.2s ease-in-out;
+		margin: auto;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1.25rem;
+	}
+
+	a:hover {
+		transform: scale(1.05);
+	}
+
+	#links {
+		display: grid;
+		gap: 1rem;
+		grid-template-rows: auto;
+		grid-template-columns: 1.5fr 0.3fr;
+		grid-template-areas:
+			'uno linkUno'
+			'dos linkDos';
+
+		@media (max-width: 1000px) {
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+			grid-gap: 1rem;
+			grid-template-areas:
+				'uno'
+				'linkUno'
+				'dos'
+				'linkDos';
+		}
+	}
+
+	#uno {
+		grid-area: uno;
+	}
+
+	#linkUno {
+		grid-area: linkUno;
+	}
+	#dos {
+		grid-area: dos;
+	}
+	#linkDos {
+		grid-area: linkDos;
+	}
+</style>

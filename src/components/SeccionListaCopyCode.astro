@@ -1,0 +1,20 @@
+---
+import Separador from './Separador.astro'
+import CardCopyCode from './CardCopyCode.astro'
+
+const { title, lista } = Astro.props
+---
+
+<article class="m-auto sm:mr-9">
+	<h3 class="mb-5">{title}</h3>
+	{
+		lista.map((elemento) => (
+			<div class="mb-10 sm:ml-10">
+				<p class="mb-5 text-lg font-bold">{elemento.titulo}</p>
+				<CardCopyCode textToCopy={elemento.codigo} />
+				{elemento.descripcion && <p>{elemento.descripcion}</p>}
+			</div>
+		))
+	}
+</article>
+<Separador />
