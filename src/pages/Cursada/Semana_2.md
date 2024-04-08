@@ -34,11 +34,10 @@ horarios:
     Hora: 8.00hs
     URL: https://meet.google.com/wxc-ioxx-nah
 
-  - Comision: Comisión 4 T.Mañana Rosario
-    Dia: Sábado 30 de Marzo
-    Modalidad: VIRTUAL
+  - Comision: Comisión 2 T.Mañana
+    Dia: Miércoles 27 de Marzo
     Hora: 10.00hs
-    URL: https://us06web.zoom.us/j/88953425033
+    Mensaje: NO HAY CLASES POR FERIADO
 ---
 
 - En esta semana, empezamos a armar programas en los que intervienen varios objetos, y estudiar cómo pueden relacionarse entre ellos. En particular, vamos a ver qué es el polimorfismo en objetos, y a empezar a hablar de las ventajas que nos da para construir programas. Relacionado con esto, también vamos a hablar de cómo se refleja la idea de contrato en la programación con objetos.

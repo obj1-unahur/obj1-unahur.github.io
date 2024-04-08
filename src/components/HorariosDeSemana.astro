@@ -11,6 +11,7 @@ const { horarios } = Astro.props
 			horarios.map((horario) => (
 				<li>
 					<CardHorario
+						mensaje={horario.Mensaje}
 						comision={horario.Comision}
 						modalidad={horario.Modalidad}
 						dia={horario.Dia}
