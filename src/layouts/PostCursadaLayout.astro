@@ -1,10 +1,8 @@
 ---
 import { Breadcrumbs } from 'accessible-astro-components'
-import DefaultLayout from './DefaultLayout.astro'
 import { BreadcrumbsItem } from 'accessible-astro-components'
 import { PATH, PATH_CURSADA } from '@/paths.js'
 import LayoutSemanas from './LayoutSemanas.astro'
-import WatchVideo from '@components/WatchVideo.astro'
 import VideosDeSemana from '@components/VideosDeSemana.astro'
 import ActividadesDeSemana from '@components/ActividadesDeSemana.astro'
 import HorariosDeSemana from '@components/HorariosDeSemana.astro'
@@ -12,15 +10,8 @@ import CardSecciones from '@/components/CardSecciones.astro'
 
 const { frontmatter } = Astro.props
 
-const {
-	title,
-	descripcion,
-	videos,
-	horarios,
-	ejercicios,
-	atencion,
-	importante,
-} = frontmatter
+const { title, videos, horarios, ejercicios, atencion, importante } =
+	frontmatter
 ---
 
 <LayoutSemanas title={title}>
@@ -45,7 +36,7 @@ const {
 
 	<div class="container">
 		<div class="my-12">
-			<h1>{title}</h1>
+			<h1 class="pb-3">{title}</h1>
 			{
 				atencion ? (
 					<CardSecciones
@@ -64,11 +55,15 @@ const {
 					</CardSecciones>
 				) : null
 			}
-			<p>{descripcion}</p>
-			{videos ? <VideosDeSemana videos={videos} /> : null}
+			<div class="pb-2">
+				<slot />
+			</div>
+			<VideosDeSemana
+				titulo="Videos"
+				videos={videos}
+			/>
 			<ActividadesDeSemana ejercicios={ejercicios} />
 			<HorariosDeSemana horarios={horarios} />
-			<slot />
 		</div>
 	</div>
 </LayoutSemanas>
