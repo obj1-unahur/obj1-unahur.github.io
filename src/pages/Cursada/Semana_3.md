@@ -4,14 +4,7 @@ title: Semana 3
 
 inicio: 2024-04-02
 
-descripcion:
-  En esta semana, empezamos a armar programas en los que intervienen varios objetos, y estudiar cómo pueden relacionarse entre ellos. En particular, vamos a ver qué es el polimorfismo en objetos, y a empezar a hablar de las ventajas que nos da para construir programas. Relacionado con esto, también vamos a hablar de cómo se refleja la idea de contrato en la programación con objetos.
-
-  Uf, bastantes cosas … que vamos a ir profundizando y repasando más adelante, el objetivo de esta semana es introducir algunas ideas que vamos a desarrollar durante todo el curso. También les dejamos algunos videos de cursadas anteriores que tocan los mismos temas que vamos a ver durante las clases.
-
-  Vamos a comenzar a trabajar con GIT. Para eso, deberán “clonarse” el repositorio aceptando la asignación que figura más abajo como GIT - Presentación Personal. Si aún no estás registrado en github, en el momento que intentes aceptar la asignación se te indicará como registrarte. Es muy importante que tomes nota del usuario con el que te vas a registrar, el email y la contraseña. Luego veremos que también será necesario generar un token para utilizar GIT en tu PC o en las PCs de la Universidad.
-
-  Por último, les dejamos los ejercicios de esta semana, que deberán realizar en el IDE de Wollok aceptando la asignación, y luego clonándose el repositorio en sus PCs. Lo resuelven en Wollok, y luego suben la solución realizando el push. Les dejamos un video corto explicando el procedimiento.
+descripcion: En esta semana, empezamos a armar programas en los que intervienen varios objetos, y estudiar cómo pueden relacionarse entre ellos. En particular, vamos a ver qué es el polimorfismo en objetos, y a empezar a hablar de las ventajas que nos da para construir programas. Relacionado con esto, también vamos a hablar de cómo se refleja la idea de contrato en la programación con objetos.
 
 atencion:
   Debido al gran número de estudiantes inscritos en la Comisión 1 UNAHUR turno noche, hemos decidido dividirla en dos grupos para asegurar una experiencia educativa más efectiva y personalizada. Esta medida permitirá que, al menos cada 15 días los martes, puedan asistir a clases PRESENCIALES en los laboratorios de la universidad, contribuyendo significativamente a su aprendizaje práctico y desarrollo de las habilidades; irán alternando entre virtual y presencial (NO es optativa la modalidad).
@@ -74,3 +67,10 @@ horarios:
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/88953425033
 ---
+
+- En esta semana, empezamos a armar programas en los que intervienen varios objetos, y estudiar cómo pueden relacionarse entre ellos. En particular, vamos a ver qué es el polimorfismo en objetos, y a empezar a hablar de las ventajas que nos da para construir programas. Relacionado con esto, también vamos a hablar de cómo se refleja la idea de contrato en la programación con objetos.
+- Uf, bastantes cosas … que vamos a ir profundizando y repasando más adelante, el objetivo de esta semana es introducir algunas ideas que vamos a desarrollar durante todo el curso. También les dejamos algunos videos de cursadas anteriores que tocan los mismos temas que vamos a ver durante las clases.
+- -
+- Vamos a comenzar a trabajar con GIT. Para eso, deberán “clonarse” el repositorio aceptando la asignación que figura más abajo como GIT - Presentación Personal. Si aún no estás registrado en github, en el momento que intentes aceptar la asignación se te indicará como registrarte. Es muy importante que tomes nota del usuario con el que te vas a registrar, el email y la contraseña. Luego veremos que también será necesario generar un token para utilizar GIT en tu PC o en las PCs de la Universidad.
+
+- Por último, les dejamos los ejercicios de esta semana, que deberán realizar en el IDE de Wollok aceptando la asignación, y luego clonándose el repositorio en sus PCs. Lo resuelven en Wollok, y luego suben la solución realizando el push. Les dejamos un video corto explicando el procedimiento.
