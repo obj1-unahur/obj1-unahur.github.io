@@ -6,10 +6,6 @@ inicio: 2024-03-30
 
 descripcion: ¡Hola! ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!
 
-videos:
-  - nombre: Qué es un objeto, qué es un mensaje
-    urlYoutube: https://www.youtube.com/watch?v=zZe0AaSKdyo
-    
 horarios:
   - Comision: Comisión 1 T.Noche
     Dia: Martes 26 de Marzo
