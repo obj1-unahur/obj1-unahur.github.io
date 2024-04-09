@@ -3,6 +3,7 @@ import { DarkMode } from 'accessible-astro-components'
 import { Image } from 'astro:assets'
 import logo from '../assets/img/ObjLogo.png'
 import { PATH } from '@/paths.js'
+import ResponsiveToggle from './ResponsiveToggle.astro'
 ---
 
 <div
@@ -29,6 +30,7 @@ import { PATH } from '@/paths.js'
 				</ul>
 			</nav>
 			<DarkMode />
+			<ResponsiveToggle />
 		</div>
 		<nav
 			class="mobile-menu"
