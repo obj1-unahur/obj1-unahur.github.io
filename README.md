@@ -14,7 +14,7 @@
 | `layout`      | Ruta del layout `src/layouts/PostCursadaLayout.astro`|`No`|
 | `title`       | El titulo de la semana. Ej: `Semana 1`  |`No`|
 | `inicio`      | Fecha de publicacion del archivo `AAAA-MM-DD`     |`No`|
-| `descripcion` | La descripcion de la semana |`No`|
+| `descripcion` | La descripcion de la card de la semana |`No`|
 | `atencion` | Cartel de atencion (color rojo) |`Si`|
 | `importante` | Cartel de mensaje importante (color azul) |`Si`|
 | `videos`      | Los videos de la semana |`Si`|
@@ -34,12 +34,14 @@
 | `horarios:Edificio`|`(Si es presencial)` El edificio en donde se encuentra el aula. Ej: `Edificio Trabajo Argentino, 2do piso`|`Si es presencial, No`|
 | `horarios:URL`|`(Si es virtual)` La URL de la reunion.|`Si es virtual, No`|
 | `horarios:Mensaje`|`(Si es no hay clases)` Cartel para poner un mensaje en lugar de un Aula/link.|`Si no hay clases, No`|
+| `Cuerpo del Markdown` | Explicacion de la semana |`Si`|
 
 
 ### Ejemplo de archivo
 
 Es importante prestar atencion a la identacion de los elementos y a cual lleva el guion (-), ya que solo el primero debe llevarlo para formar la Card
 ```
+---
     layout: src/layouts/PostCursadaLayout.astro
 
     title: Semana 1
@@ -50,7 +52,7 @@ Es importante prestar atencion a la identacion de los elementos y a cual lleva e
 
     importante: Un mensaje importante
 
-    descripcion: ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!
+    descripcion: ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1! <-- Descripcion SOLO de la card
 
     videos:
       - nombre: Qué es un objeto, qué es un mensaje
@@ -86,9 +88,24 @@ Es importante prestar atencion a la identacion de los elementos y a cual lleva e
         Dia: Miércoles 27 de Marzo
         Hora: 10.00hs
         Mensaje: NO HAY CLASES POR FERIADO
+---
+
+* Hola! ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!
+
+* Todos los días lunes se publicará en este espacio el material de la semana en curso, donde encontrarás los videos de apoyo a la teoría, videos de clases virtuales, los ejercicios a realizar y los temas que vamos a estar viendo.
+* * 
+* En esta semana comenzaremos a conocer los objetos y mensajes en el paradigma de objetos. A continuación encontrarás videos que nos intruducen en el tema.
+
+* Es muy importante que te suscribas al canal de Discord de la materia, las instrucciones están en la sección Inicio de esta página.
+
 ```
 
 ---
+
+#### Como agregar parrafos
+
+Para separar los parrafos en el cuerpo del Markdown se tiene que usar el astrisco (*) para iniciar un nuevo parrafo. Si se usan dos asteriscos esto sera interpretado como un salto de linea mas largo que los saltos entre parrafos (**)
+
 #### Como se puede apreciar existen tres tipos de horarios:
 
 1) Si la clase es Presencial
