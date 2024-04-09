@@ -4,22 +4,7 @@ title: Semana 1
 
 inicio: 2024-03-30
 
-descripcion: Hola!
-  ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!
-
-  Todos los días lunes se publicará en este espacio el material de la semana en curso, donde encontrarás los videos de apoyo a la teoría, videos de clases virtuales, los ejercicios a realizar y los temas que vamos a estar viendo.
-
-  En esta semana comenzaremos a conocer los objetos y mensajes en el paradigma de objetos. A continuación encontrarás videos que nos intruducen en el tema.
-
-  Es muy importante que te suscribas al canal de Discord de la materia, las instrucciones están en la sección **[Inicio](/)** de esta página.
-
-videos:
-  - nombre: Qué es un objeto, qué es un mensaje
-    urlYoutube: https://www.youtube.com/watch?v=zZe0AaSKdyo
-  - nombre: Interactuamos con un objeto
-    urlYoutube: https://www.youtube.com/watch?v=7hXl2kJs2GU
-  - nombre: Definimos un objeto
-    urlYoutube: https://www.youtube.com/watch?v=aAfjr8-1-0Y
+descripcion: ¡Hola! ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!
 
 horarios:
   - Comision: Comisión 1 T.Noche
@@ -47,3 +32,9 @@ horarios:
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/88953425033
 ---
+
+- ¡Hola!
+- ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!
+- Todos los días lunes se publicará en este espacio el material de la semana en curso, donde encontrarás los videos de apoyo a la teoría, videos de clases virtuales, los ejercicios a realizar y los temas que vamos a estar viendo.
+- En esta semana comenzaremos a conocer los objetos y mensajes en el paradigma de objetos. A continuación encontrarás videos que nos intruducen en el tema.
+- Es muy importante que te suscribas al canal de Discord de la materia, las instrucciones están en la sección **[Inicio](/objetos-web)** de esta página.

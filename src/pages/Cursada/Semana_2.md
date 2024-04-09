@@ -4,14 +4,7 @@ title: Semana 2
 
 inicio: 2024-04-01
 
-descripcion: Hola!
-  ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!
-
-  Todos los días lunes se publicará en este espacio el material de la semana en curso, donde encontrarás los videos de apoyo a la teoría, videos de clases virtuales, los ejercicios a realizar y los temas que vamos a estar viendo.
-
-  En esta semana comenzaremos a conocer los objetos y mensajes en el paradigma de objetos. A continuación encontrarás videos que nos intruducen en el tema.
-
-  Es muy importante que te suscribas al canal de Discord de la materia, las instrucciones están en la sección **[Inicio](/)** de esta página.
+descripcion: En esta semana, empezamos a armar programas en los que intervienen varios objetos, y estudiar cómo pueden relacionarse entre ellos. En particular, vamos a ver qué es el polimorfismo en objetos, y a empezar a hablar de las ventajas que nos da para construir programas. Relacionado con esto, también vamos a hablar de cómo se refleja la idea de contrato en la programación con objetos.
 
 videos:
   - nombre: Qué es un objeto, qué es un mensaje
@@ -41,9 +34,12 @@ horarios:
     Hora: 8.00hs
     URL: https://meet.google.com/wxc-ioxx-nah
 
-  - Comision: Comisión 4 T.Mañana Rosario
-    Dia: Sábado 30 de Marzo
-    Modalidad: VIRTUAL
+  - Comision: Comisión 2 T.Mañana
+    Dia: Miércoles 27 de Marzo
     Hora: 10.00hs
-    URL: https://us06web.zoom.us/j/88953425033
+    Mensaje: NO HAY CLASES POR FERIADO
 ---
+
+- En esta semana, empezamos a armar programas en los que intervienen varios objetos, y estudiar cómo pueden relacionarse entre ellos. En particular, vamos a ver qué es el polimorfismo en objetos, y a empezar a hablar de las ventajas que nos da para construir programas. Relacionado con esto, también vamos a hablar de cómo se refleja la idea de contrato en la programación con objetos.
+
+- Uf, bastantes cosas … que vamos a ir profundizando y repasando más adelante, el objetivo de esta semana es introducir algunas ideas que vamos a desarrollar durante todo el curso. También les dejamos algunos videos de cursadas anteriores que tocan los mismos temas que vamos a ver durante las clases.
