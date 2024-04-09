@@ -58,10 +58,14 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 			<div class="pb-2">
 				<slot />
 			</div>
-			<VideosDeSemana
-				titulo="Videos"
-				videos={videos}
-			/>
+			{
+				videos && (
+					<VideosDeSemana
+						titulo="Videos"
+						videos={videos}
+					/>
+				)
+			}
 			<ActividadesDeSemana ejercicios={ejercicios} />
 			<HorariosDeSemana horarios={horarios} />
 		</div>
