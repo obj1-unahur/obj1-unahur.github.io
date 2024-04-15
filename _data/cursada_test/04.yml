@@ -1,0 +1,68 @@
+descripcion: |
+  Esta semana seguimos trabajando los conceptos que ya vimos, profundizando en el tema test automáticos, y seguimos jugando con  Wollok Game. 
+  Les dejamos 2 videos cortos sobre Game para ir fijando los conceptos que fuimos viendo en clase.<br>
+  También hay videos que refuerzan los conceptos de referencias y polimorfismo, recomendamos que los vean y analicen en detalle y cualquier duda estamos en Discord.<br> 
+  Y les dejamos el primer TP Individual para entregar, que se llama "Viajes en auto". Aceptan la asignación como lo venimos haciendo en las clases anteriores, y la entrega será haciendo push al repositorio de github de c/u. <br>
+
+  La comisión de los días miércoles empezará a conocer el concepto de colecciones en objetos y también que son los closures. En próximas semanas, seguiremos bajando a detalle esos temas también en las otras comisiones ya que entra en el 1er TP Grupal. 
+
+  Por otro lado, vayan organizándose en grupos, que deberán ser de un mínimo de 4 y máximo 6 integrantes **de la misma comisión**. La siguiente semana publicaremos en esta página el primer trabajo práctico grupal.<br>
+
+  
+
+videos:
+  - nombre: Arrancando con Wollok Game 1
+    url: https://youtu.be/9mBGMNL4SXE
+  - nombre: Arrancando con Wollok Game 2
+    url: https://youtu.be/ZWN_gFg2fK8
+  - nombre: Referencias - usando el ejercicio de gustos.
+    url: https://youtu.be/CGO3htDNY-8
+  - nombre: Empanadas Giménez parte 1 - Giménez, dos empleados, un test
+    url: https://youtu.be/Kalojrle0kk
+  - nombre: Empanadas Giménez parte 2 - que hace cada empleado cuando cobra, uso de self
+    url: https://youtu.be/3dWYlQw6TXA
+
+conferencia:
+
+  horario0: <br>
+            --> **Martes 16 de Abril** > **VIRTUAL** **18.00hs.** -> [**Link a la clase**](https://meet.google.com/wxc-ioxx-nah) <br>
+
+  horario1: <br>
+            --> **Martes 16 de Abril** > **PRESENCIAL** **18.00hs.** - Aula MA-111 (Edificio Malvinas Argentinas 1er.piso) <br>
+
+  horario2: <br>
+            --> **Martes 16 de Abril** > **VIRTUAL** **18.00hs.** -> [**Link a la clase**](https://meet.google.com/wxc-ioxx-nah) <br>
+
+  horario3: <br>
+            --> **Miércoles 17 de Abril** > **PRESENCIAL** **8.00hs.** - Aula MA-113 (Edificio Malvinas Argentinas 1er.piso) <br>
+
+  horario4: <br>
+            --> **Sábado 6 de Abril** > **VIRTUAL** **10.00hs.** -> [**Link a la clase**](https://us06web.zoom.us/j/86409613061) <br>
+
+
+entrega:
+  fecha: 2024-04-22T23:59
+  ejercicios:
+    - name: Viajes en auto
+      classroom: https://classroom.github.com/a/bGxNmGNd
+      comentarios: 
+        - name: Aceptar la asignación para que les genere el repositorio Invidivual. Este quedará como privado, y la entrega será haciendo push al mismo (ojo que tiene vencimiento 22/4 23:59). También hay que hacer los test correspondientes.
+
+ejercicios:
+  - name: Empanadas Gimenez - Polimorfismo
+    classroom: https://classroom.github.com/a/GFsKDol6
+    comentarios: 
+      - name: Para practicar en casa, haciendo el push al reposotorio inidividual del Class-room (definan y hagan también los test). Luego pueden comparar con la solución que está en los videos de esta semana.
+
+  - name: AFA - Asociación de Festejos Argentinos
+    classroom: https://classroom.github.com/a/XB614U36
+    comentarios: 
+      - name: Otro ejercicio para practicar, aceptando la asignación. Leer completo y analizar bien el dominio antes de lanzarse a codear.
+
+
+  - name: Dino Game
+    repo: wollok/DinoGame
+    comentarios: 
+      - name: Este es para que puedan ver el Repo con el juego DINO. Pueden clonarlo y jugar con el código, y si quieren, hacerle mejoras y proponerlas!
+
+
