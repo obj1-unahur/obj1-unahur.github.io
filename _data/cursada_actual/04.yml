@@ -64,3 +64,8 @@ ejercicios:
       - name: Este es para que puedan ver el Repo con el juego DINO. Pueden clonarlo y jugar con el código, y si quieren, hacerle mejoras y proponerlas!
 
 
+  - name: Personajes Frutas y Juegos
+    classroom: https://classroom.github.com/a/PF9tsQud
+    comentarios: 
+      - name: Otro ejercicio más para practicar, aceptando la asignación. Tiene mucho de polimorfismo, y hay que hacer también los test.
+
