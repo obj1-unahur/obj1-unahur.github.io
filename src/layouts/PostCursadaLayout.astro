@@ -58,6 +58,7 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 			<div class="pb-2">
 				<slot />
 			</div>
+			<HorariosDeSemana horarios={horarios} />
 			{
 				videos && (
 					<VideosDeSemana
@@ -67,7 +68,6 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 				)
 			}
 			<ActividadesDeSemana ejercicios={ejercicios} />
-			<HorariosDeSemana horarios={horarios} />
 		</div>
 	</div>
 </LayoutSemanas>
