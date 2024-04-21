@@ -1,0 +1,67 @@
+descripcion: 
+  Esta semana aprenderemos a usar **closures** y **colecciones** en la programación con objetos.  
+  Como no podría ser de otra forma, vamos a representarlos como objetos. <br> Los closures nos permitirán definir nuevos objetos a partir de un bloque de código, y veremos que eso es muy útil, por ejemplo, para diferir su ejecución. <br> 
+  Los objetos que representan a las colecciones (listas y conjuntos) "ya vienen" en Wollok, son fáciles de armar, y tienen un montón de mensajes útiles. Recomendamos **muy fuertemente** que se vayan amigando con ellos; lo que usaremos en la materia está en el apunte que figura en esta página, pestaña **Material**, [**Guía sobre colecciones y closures**](https://objetos1wollokunq.gitlab.io/material/guia-colecciones-basicas.pdf).
+  
+  
+  Muchos de estos mensajes resuelven casos de _recorrido_ sobre colecciones en forma sencilla ... obviamiente, una vez que los aprendemos a usar. Para poder hacer recorridos de esta forma, es donde vamos a necesitar la asistencia de los **closures** o **bloques de código**. 
+  
+  
+  Hay toda una serie de videos cortos sobre el tema de bloques y recorridos que van a encontrar en la sección Videos.
+
+  
+  Aprender a manejar listas y conjuntos, nos permite encarar enunciados un poco más ambiciosos. La propuesta es que vean los videos de esta semana, y se animen a hacer los ejercicios que les proponemos.<br>
+
+
+  ---------------
+  -**ATENCIÓN:**-
+  ---------------<br>
+  _**El martes 23/4/24, la comunidad universitaria marcha a plaza de mayo en "#defensadelauniversidadpública" por lo tanto no habrá clase presencial ni virtual. Estén atentos a novedades en el Discord, ya que vamos a organizarnos para recuperar parte de la clase en otro día y horario.**_
+  
+
+videos:
+
+  - nombre: Introducción a listas
+    url: https://youtu.be/Nm3-USo-p_c
+  - nombre: Qué es eso de los bloques
+    url: https://youtu.be/e0vUqLxhKdA
+  - nombre: Recorridos usando listas y bloques - intro + recorridos con condición
+    url: https://youtu.be/GVr4UA_DgjY
+  - nombre: Recorridos usando listas y bloques - recorridos con transformación
+    url: https://youtu.be/CeSixTiENVU
+  - nombre: Recorridos usando listas y bloques - recorridos con indicación
+    url: https://youtu.be/hX8PMSeryMA
+  - nombre: Conjuntos
+    url: https://youtu.be/vLSs5-OYRIU
+
+
+conferencia:
+  horario0: <br>
+            --> **Martes 23 de Abril** > **NO HAY CLASES**<br>
+
+  horario1: <br>
+            --> **Martes 23 de Abril** > **NO HAY CLASES**<br>
+
+  horario2: <br>
+            --> **Martes 23 de Abril** > **NO HAY CLASES**<br>
+
+  horario3: <br>
+            --> **Miércoles 24 de Abril** > **PRESENCIAL** **8.00hs.** - Aula MA-113 (Edificio Malvinas Argentinas 1er.piso) <br>
+
+  horario4: <br>
+            --> **Sábado 27 de Abril** > **VIRTUAL** **10.00hs.** -> [**Link a la clase**](https://us06web.zoom.us/j/86409613061) <br>
+
+
+ejercicios:
+  - name: Golosinas - Colecciones
+    classroom: https://classroom.github.com/a/8-l5KfFE
+    comentarios: 
+      - name: classroom para trabajar en clase
+  - name: Casa de Pepe y Julián
+    classroom: https://classroom.github.com/a/RjCodZLa
+    comentarios: 
+      - name: este vayan haciéndolo parte por parte, se va complicando
+
+
+    
+
