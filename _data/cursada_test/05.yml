@@ -4,13 +4,9 @@ descripcion:
   Los objetos que representan a las colecciones (listas y conjuntos) "ya vienen" en Wollok, son fáciles de armar, y tienen un montón de mensajes útiles. Recomendamos **muy fuertemente** que se vayan amigando con ellos; lo que usaremos en la materia está en el apunte que figura en esta página, pestaña **Material**, [**Guía sobre colecciones y closures**](https://objetos1wollokunq.gitlab.io/material/guia-colecciones-basicas.pdf).
   
   
-  Muchos de estos mensajes resuelven casos de _recorrido_ sobre colecciones en forma sencilla ... obviamiente, una vez que los aprendemos a usar. Para poder hacer recorridos de esta forma, es donde vamos a necesitar la asistencia de los **closures** o **bloques de código**. 
   
   
-  Hay toda una serie de videos cortos sobre el tema de bloques y recorridos que van a encontrar en la sección Videos.
-
-  
-  Aprender a manejar listas y conjuntos, nos permite encarar enunciados un poco más ambiciosos. La propuesta es que vean los videos de esta semana, y se animen a hacer los ejercicios que les proponemos.<br>
+  Aprender a manejar listas y conjuntos, nos permite encarar enunciados un poco más ambiciosos. La propuesta es que vean los videos de esta semana, y se animen a intentar hacer los ejercicios que les proponemos. Las comisiones de turno noche tendrán la clase formal el martes 30/4, y la Comisión 2 (turno mañana) ya tiene herramientas para empezar a resolverlos.<br>
 
 
   ---------------
