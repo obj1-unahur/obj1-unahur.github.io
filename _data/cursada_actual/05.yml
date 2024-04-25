@@ -1,4 +1,4 @@
-descripcion: 
+descripcion: |
   Esta semana aprenderemos a usar **closures** y **colecciones** en la programación con objetos.  
   Como no podría ser de otra forma, vamos a representarlos como objetos. <br> Los closures nos permitirán definir nuevos objetos a partir de un bloque de código, y veremos que eso es muy útil, por ejemplo, para diferir su ejecución. <br> 
   Los objetos que representan a las colecciones (listas y conjuntos) "ya vienen" en Wollok, son fáciles de armar, y tienen un montón de mensajes útiles. Recomendamos **muy fuertemente** que se vayan amigando con ellos; lo que usaremos en la materia está en el apunte que figura en esta página, pestaña **Material**, [**Guía sobre colecciones y closures**](https://objetos1wollokunq.gitlab.io/material/guia-colecciones-basicas.pdf).
@@ -9,11 +9,14 @@ descripcion:
   Aprender a manejar listas y conjuntos, nos permite encarar enunciados un poco más ambiciosos. La propuesta es que vean los videos de esta semana, y se animen a intentar hacer los ejercicios que les proponemos. Las comisiones de turno noche tendrán la clase formal el martes 30/4, y la Comisión 2 (turno mañana) ya tiene herramientas para empezar a resolverlos.<br>
 
 
-  ---------------
-  -**ATENCIÓN:**-
-  ---------------<br>
-  _**El martes 23/4/24, la comunidad universitaria marcha a plaza de mayo en "#defensadelauniversidadpública" por lo tanto no habrá clase presencial ni virtual. Estén atentos a novedades en el Discord, ya que vamos a organizarnos para hacer una clase de consulta en día y horario a definir.**_
+  **ATENCIÓN:**<br>
+  **----------------**<br>
+  **El martes 23/4/24, la comunidad universitaria marcha a plaza de mayo en "#defensadelauniversidadpública" por lo tanto no habrá clase presencial ni virtual. Estén atentos a novedades en el Discord, ya que vamos a organizarnos para hacer una clase de consulta en día y horario a definir.**_<br>
   
+  ### Tutorías para todas las comisiones
+    **Miércoles 24 de Abril** > **VIRTUAL** **15.00hs.** -> [**Link a la clase**](https://meet.google.com/ban-fwrr-agh) <br>
+
+
 
 videos:
 
