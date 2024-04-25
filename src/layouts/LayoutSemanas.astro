@@ -1,15 +1,44 @@
 ---
-import Sidebar from '@components/Sidebar.astro'
+import AsideMenu from '@components/AsideMenu.astro'
 import DefaultLayout from './DefaultLayout.astro'
+
+let semanas = await Astro.glob('../pages/Cursada/*.md')
+
+// Solo mostramos las clases de las semanas cuya fecha de inicio sea inferior a la fecha actual
+// por un tema de compatibilidad, también mostramos las clases que no especifican fecha de inicio
+semanas = semanas.reverse().filter((semana) => {
+	const inicio = new Date(semana.frontmatter.inicio)
+	const hoy = new Date()
+	return hoy >= inicio || !semana.frontmatter.inicio
+})
 
 const { title } = Astro.props
 ---
 
 <DefaultLayout title={title}>
 	<div class="flex">
-		<Sidebar />
+		<aside
+			class="sticky left-0 top-0 h-screen w-48 rounded-lg bg-gradient-to-t from-slate-200 to-[--background] dark:from-zinc-800 dark:to-[--background]">
+			<AsideMenu
+				title="Semanas"
+				data={semanas}
+			/>
+		</aside>
 		<div class="sm:m-auto">
 			<slot />
 		</div>
 	</div>
 </DefaultLayout>
+
+<style>
+	@media (max-width: 775px) {
+		aside {
+			display: none;
+		}
+	}
+	@media (max-width: 1200px) {
+		aside {
+			min-width: 8rem;
+		}
+	}
+</style>

@@ -1,0 +1,19 @@
+---
+import SideMenuItem from '@components/SideMenuItem.astro'
+
+const { data, title } = Astro.props
+---
+
+<nav class="w-min-48 ml-1 mt-5 flex flex-1 flex-col gap-2 pr-2">
+	<h5 class="px-2">{title}</h5>
+	<ul>
+		{
+			data &&
+				data.map((d) => (
+					<SideMenuItem href={d.url}>
+						{d.title || d.frontmatter.title}
+					</SideMenuItem>
+				))
+		}
+	</ul>
+</nav>
