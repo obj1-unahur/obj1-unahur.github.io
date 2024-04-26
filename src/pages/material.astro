@@ -6,12 +6,12 @@ import Separador from '@/components/Separador.astro'
 import TablaDeActividades from '@/components/TablaDeActividades.astro'
 import DefaultLayout from '@/layouts/DefaultLayout.astro'
 import { Icon } from 'astro-icon/components'
-import Wollok from '../content/SintaxisWollok/Wollok.json'
-import Git from '../content/SintaxisWollok/Git.json'
-import Ejercicios from '../content/SintaxisWollok/Ejercicios.json'
+import Wollok from '../content/Wollok.json'
+import Git from '../content/Git.json'
+import Ejercicios from '../content/Ejercicios.json'
 
 const elementosComunes = await Astro.glob(
-	'../content/SintaxisWollok/sintaxis_basica_wollok.md'
+	'../content/sintaxis_basica_wollok.md'
 )
 const {
 	sintaxisBasica,
