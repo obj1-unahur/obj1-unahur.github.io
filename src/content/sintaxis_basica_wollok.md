@@ -164,7 +164,7 @@ opAvanCollList:
       codigo: coleccion.flatMap(bloqueDe1)
 
     - titulo: Reducir/plegar a izquierda
-      codigo: coleccion.fold(valorInicial, bloqueDe2)
+      codigo: coleccion.fold(valInicial, blqDe2)
 
     - titulo: Primer elemento que cumple condición
       codigo: "coleccion.find(bloqueBoolDe1) 

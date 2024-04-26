@@ -135,16 +135,7 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"SintaxisWollok": {
-"sintaxis_basica_wollok.md": {
-	id: "sintaxis_basica_wollok.md";
-  slug: "sintaxis_basica_wollok";
-  body: string;
-  collection: "SintaxisWollok";
-  data: any
-} & { render(): Render[".md"] };
-};
-
+		
 	};
 
 	type DataEntryMap = {
