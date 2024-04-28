@@ -1,0 +1,62 @@
+descripcion: |
+  Esta semana veremos formalmente el tema de closures y colecciones con las comisiones de turno noche, y turno mañana seguirá practicando lo visto en la última clase. 
+  
+  Hay dos videos de cuatrimestres anteriores donde volvemos sobre el ejercicio de golosinas, para entender qué hicimos comparando la visión interna, que se ve en el diagrama dinámico, con la externa, que se ve en el código. 
+    
+  Volvemos a insistir sobre los conceptos básicos: división de tareas en distintos objetos, contrato, polimorfismo, definición del estado (la memoria) de un objeto.  
+  En el último, repasamos las operaciones que resuelven recorridos, y planteamos cómo usar la idea de tipo para elegir cuál de las operaciones (filter / map / all / any / etc.) usar en cada caso. La noción de tipo los va a acompañar durante toda su carrera como programadorxs, es importante que se vayan haciendo amigxs :-)
+
+  **Atención que lanzamos el primer TP Grupal** <br>
+  El primer enunciado ya lo tienen disponible y se llama "Camión de Transporte". Vayan tranqui, tienen 2 semanas para hacerlo. La fecha límite de entrega es 13/5/24. **Antes de aceptar la asignación, leer las instrucciones** ya que deben tener previamente armados los grupos y deberán ser de mínimo 4 y máximo 6 integrantes.<br>
+  Cualquier duda nos consultan por el canal de Discord.
+
+  
+
+videos:
+  - nombre: Visiones interna y externa - modelo más complejo, se agrega lucila
+    url: https://youtu.be/okf2VCfjvx4
+  - nombre: Pensar en los tipos para elegir qué operación me resuelve un recorrido
+    url: https://youtu.be/cLfp2T_LSjg
+
+
+
+conferencia:
+
+  horario0: <br>
+            --> **Martes 30 de Abril** > **VIRTUAL** **18.00hs.** -> [**Link a la clase**](https://meet.google.com/ban-fwrr-agh) <br>
+
+  horario1: <br>
+            --> **Martes 30 de Abril** > **PRESENCIAL** **18.00hs.** - Aula MA-111 (Edificio Malvinas Argentinas 1er.piso) <br>
+
+  horario2: <br>
+            --> **Martes 30 de Abril** > **VIRTUAL** **18.00hs.** -> [**Link a la clase**](https://meet.google.com/ban-fwrr-agh) <br>
+
+  horario3: <br>
+            --> **Miércoles 1 de Mayo** > **FERIADO no hay Clases** <br>
+
+  horario4: <br>
+            --> **Sábado 4 de Mayo** > **VIRTUAL** **10.00hs.** -> [**Link a la clase**](https://us06web.zoom.us/j/86409613061) <br>
+
+
+entrega:
+  fecha: 2024-05-13T23:59
+  ejercicios:
+    - name: Camión de transporte TP Grupal
+      classroom: https://classroom.github.com/a/6RCCrLLL
+      comentarios: 
+        - name: INSTRUCCIONES-> Un/a integrante del grupo acepta la asignación y procede a dar de alta el grupo (tengan acordado el nombre previamente), luego el resto de los/as integrantes también aceptan la asignación, y se unen a su grupo. La entrega la realizan haciendo push al reposotorio grupal desde cualquiera de los usuarios github del grupo. Podrán hacer los push hasta la fecha/hora límite indicada.
+
+
+ejercicios:
+  - name: Colecciones de Antigüedades
+    classroom: https://classroom.github.com/a/TYihl2Cp
+    comentarios: 
+      - name: classroom para trabajar en clase
+  - name: Producción Máquina
+    classroom: https://classroom.github.com/a/oUcgdkMr
+    comentarios: 
+      - name: Para practicar con colecciones. 
+  - name: Registro de Abatidos COD
+    classroom: https://classroom.github.com/a/nl5VW0o0
+    comentarios: 
+      - name: Muy similar en estructura al de Producción Maquina, pero agrega una complejidad en los objetos de la colección. 
