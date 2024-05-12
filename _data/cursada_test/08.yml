@@ -1,0 +1,62 @@
+descripcion: |
+  Esta semana empezamos a trabajar con **clases**, un concepto que nos va a permitir tener muchos objetos que comparten su definición de memoria y métodos. Esto para poder tener por ej. muchos chocolatines sin tener que definir los objetos `chocolatin1`, `chocolatin2`, etc..
+
+  Hay varios videos de cursadas anteriores sobre clases, son cuatro. Además de ir agregando conceptos, se va repitiendo la idea principal varias veces, traten de mirárselos en orden.
+
+  En los ejercicios propuestos para esta clase tenemos _**Flotas de Rodados**_ que es bastante largo y se pone bueno con los desafíos, además pide implementar una solución con Game, así pueden seguir practicando con esa librería. También dejamos otro que se llama _**Servicios Profesionales**_. 
+  
+  Hagan todos los ejercicios, es la forma que tenemos de estudiar en esta materia y recuerden aprovechar el canal de consultas de Discord para discutir soluciones o consultar todas las dudas que se les presenten.
+
+  ### TP Game Final
+  Vamos adelantando el repo donde deberán desarrollar el **>** [**TP Game Grupal**](https://classroom.github.com/a/Teao5j3j) **<** que corresponde a la segunda evaluación parcial de esta cursada. El juego que deberá desarrollar cada equipo es de libre elección, y por ahora les dejamos estas consideraciones (más adelante les daremos algunos detalles más)
+  - Debe ser un juego desarrollado en Wollok Game que se pueda jugar en cualquier computadora que tenga instalado el entorno de Wollok.
+  - Debe tener al menos 2 niveles de dificultad y las instrucciones de juego en algún lugar que sea visible (en el mismo juego) y el jugador pueda ver y memorizar antes de comenzar a jugar.
+  - Deben participar todos/as los/as integrantes del grupo en el desarrollo del juego, ya que en la defensa se les pedirá a cada uno/a que explique como fue implementada cada parte del juego.
+  - Deben utilizar todos los conceptos vistos en la materia> objetos, clases, herencia, polimorfismo, colecciones, closures, etc.
+  - Por lo indicado en el punto anterior, lo que recomendamos es que no pongan ahora todo el esfuerzo en el juego, ya que quedan aún muchos conceptos por afianzar y aprender. Hay varios TPs que deberán resolver antes de empezar a codificar la solución del Game, pero pensamos que ya podrían ir discutiendo en grupo la idea de lo que irán a desarrollar y consultar con los profes.
+
+
+
+videos:
+
+  - nombre: clases - motivación - Mariano quiere 3 caramelos
+    url: https://youtu.be/m-D-Q6BNNfE
+  - nombre: clases - concepto e introducción - muchos caramelos para Mariano
+    url: https://youtu.be/uFdeBhzaXBA
+  - nombre: clases - cómo usarlas en los tests
+    url: https://youtu.be/0pggtvrIXYY
+  - nombre: clases - cómo es el self ahora que tenemos clases
+    url: https://youtu.be/I6bOjRAr3Wo
+
+
+
+conferencia:
+
+  horario0: <br>
+            --> **Martes 14 de Mayo** > **VIRTUAL** **18.00hs.** -> [**Link a la clase**](https://meet.google.com/ban-fwrr-agh) <br>
+
+  horario1: <br>
+            --> **Martes 14 de Mayo** > **PRESENCIAL** **18.00hs.** - Aula MA-111 (Edificio Malvinas Argentinas 1er.piso) <br>
+
+  horario2: <br>
+            --> **Martes 14 de Mayo** > **VIRTUAL** **18.00hs.** -> [**Link a la clase**](https://meet.google.com/ban-fwrr-agh) <br>
+
+  horario3: <br>
+            --> **Miércoles 15 de Mayo** > **PRESENCIAL** **8.00hs.** - Aula MA-113 (Edificio Malvinas Argentinas 1er.piso) <br>
+
+  horario4: <br>
+            --> **Sábado 18 de Mayo** > **VIRTUAL** **10.00hs.** -> [**Link a la clase**](https://us06web.zoom.us/j/86409613061) <br>
+
+
+ejercicios:
+
+  - name: Flotas de rodados - Con Desafíos + Plus Game
+    classroom: https://classroom.github.com/a/-UzIYOLI
+    comentarios:
+    - name: Ejercicio que tiene todo lo visto hasta ahora, incluso una parte con Game. Vayan haciéndolo parte por parte.
+
+  - name: Servicios Profesionales
+    classroom: https://classroom.github.com/a/saBk8chs
+    comentarios:
+    - name: Otro buen ejercicio para practicar lo que venimos viendo y ahora usando clases.
+
