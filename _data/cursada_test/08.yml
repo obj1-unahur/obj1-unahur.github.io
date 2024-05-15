@@ -15,7 +15,9 @@ descripcion: |
   - Deben utilizar todos los conceptos vistos en la materia> objetos, clases, herencia, polimorfismo, colecciones, closures, etc.
   - Por lo indicado en el punto anterior, lo que recomendamos es que no pongan ahora todo el esfuerzo en el juego, ya que quedan aún muchos conceptos por afianzar y aprender. Hay varios TPs que deberán resolver antes de empezar a codificar la solución del Game, pero pensamos que ya podrían ir discutiendo en grupo la idea de lo que irán a desarrollar y consultar con los profes.
 
-
+  ### Tutoría de la semana
+  Les dejamos en la sección **Videos** la grabación con el paso a paso de la resolución (como sabemos, hablamos de una posible solución) del ejercicio de Camión de transporte y también el repositorio para que realicen la autocorrección y consulten luego por Discord todas las dudas que tengan: <br>
+  [**Repositorio con la solución**](https://github.com/obj1-unahur-2024s1/camionDeTransporteTPGrupal-profesobj1)
 
 videos:
 
@@ -27,6 +29,8 @@ videos:
     url: https://youtu.be/0pggtvrIXYY
   - nombre: clases - cómo es el self ahora que tenemos clases
     url: https://youtu.be/I6bOjRAr3Wo
+  - nombre: Solución al ejercicio Camión de Transporte - TP Grupal **(Nuevo)**
+    url: https://youtu.be/br3CLdOJY4o
 
 
 
