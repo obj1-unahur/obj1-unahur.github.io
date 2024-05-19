@@ -29,7 +29,7 @@ Dejamos aquí algunos videos de cursadas anteriores que sirven para repasar y ta
 {% endif %}
 
 {% if semana.conferencia.horario0 %}
-**Comisión 1 T.Noche**: {{semana.conferencia.horario0}}
+**_Comisión 1 T.Noche_**: {{semana.conferencia.horario0}}
 {% endif %}
 
 {% if semana.conferencia.url0 %}
@@ -37,7 +37,7 @@ Dejamos aquí algunos videos de cursadas anteriores que sirven para repasar y ta
 {% endif %}
 
 {% if semana.conferencia.horario1 %}
-**Comisión 1B T.Noche**: {{semana.conferencia.horario1}}
+**_Comisión 1B T.Noche_**: {{semana.conferencia.horario1}}
 {% endif %}
 
 {% if semana.conferencia.url1 %}
@@ -45,7 +45,7 @@ Dejamos aquí algunos videos de cursadas anteriores que sirven para repasar y ta
 {% endif %}
 
 {% if semana.conferencia.horario2 %}
-**Comisión Rosario T.Noche**: {{semana.conferencia.horario2}}
+**_Comisión Rosario T.Noche_**: {{semana.conferencia.horario2}}
 {% endif %}
 
 {% if semana.conferencia.url2 %}
@@ -53,7 +53,7 @@ Dejamos aquí algunos videos de cursadas anteriores que sirven para repasar y ta
 {% endif %}
 
 {% if semana.conferencia.horario3 %}
-**Comisión 2 T.Mañana**: {{semana.conferencia.horario3}}
+**_Comisión 2 T.Mañana_**: {{semana.conferencia.horario3}}
 {% endif %}
 
 {% if semana.conferencia.url3 %}
@@ -62,7 +62,7 @@ Dejamos aquí algunos videos de cursadas anteriores que sirven para repasar y ta
 
 
 {% if semana.conferencia.horario4 %}
-**Todas las Comisiones**: {{semana.conferencia.horario4}}
+**_Todas las Comisiones_**: {{semana.conferencia.horario4}}
 {% endif %}
 
 {% if semana.conferencia.url4 %}
