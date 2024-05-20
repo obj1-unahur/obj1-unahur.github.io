@@ -57,12 +57,17 @@ const KeycloakComponent = () => {
 	return (
 		<div>
 			{authenticated ? (
-				<div>
-					<p>¡Autenticado como {userName}!</p>
-					<button onClick={handleLogout}>Cerrar Sesión</button>
-				</div>
+				<button
+					className="bg-red-600"
+					onClick={handleLogout}>
+					Cerrar Sesión
+				</button>
 			) : (
-				<button onClick={handleLogin}>Iniciar Sesión</button>
+				<button
+					className="bg-green-700"
+					onClick={handleLogin}>
+					Iniciar Sesión
+				</button>
 			)}
 		</div>
 	)
