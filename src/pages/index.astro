@@ -4,17 +4,19 @@ import Hero from '@components/Hero.astro'
 import CardSecciones from '@/components/CardSecciones.astro'
 import { PATH_CURSADA } from '@/paths.js'
 import { Icon } from 'astro-icon/components'
+import KeycloakComponent from '../components/Keycloak'
 ---
 
 <DefaultLayout
 	title="Objetos 1"
 	description="Universidad Nacional de Hurlingham, materia Programación con Objetos I"
 	author="Objetos I">
+	<KeycloakComponent client:only />
 	<Hero />
 	<section class="my-64">
 		<div class="container">
 			<CardSecciones>
-				<h2 class="mb-15 text-center text-4xl sm:text-6xl">¡Bienvenido/a!</h2>
+				<h2 class="mb-15 text-center text-4xl sm:text-6xl">Bienvenidos/a!</h2>
 				<p class="text-center">
 					Si llegaste hasta este sitio es muy probable que estes inscripto en
 					Programación con Objetos I, de la Licenciatura en Informática y/o
@@ -179,3 +181,4 @@ import { Icon } from 'astro-icon/components'
 		transform: scale(1.1);
 	}
 </style>
+@/components/app

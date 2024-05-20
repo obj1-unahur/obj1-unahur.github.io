@@ -3,6 +3,7 @@ import mdx from '@astrojs/mdx';
 import tailwind from '@astrojs/tailwind';
 import compress from 'astro-compress';
 import icon from 'astro-icon';
+import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,7 +13,7 @@ export default defineConfig({
   site: 'https://obj1-unahur.github.io',
   base: '/objetos-web',
   compressHTML: false,
-  integrations: [mdx(), icon(), tailwind({
+  integrations: [react(),mdx(), icon(), tailwind({
     applyBaseStyles: false
   }), compress()]
 });
