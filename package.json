@@ -44,7 +44,7 @@
   },
   "lint-staged": {
     "src/**/*.js": "eslint --cache --fix",
-    "src/**/*.{js,css,md,astro}": "prettier --write"
+    "src/**/*.{js,css,md,astro,js,jsx}": "prettier --write"
   },
   "dependencies": {
     "@astrojs/react": "^3.3.4",
