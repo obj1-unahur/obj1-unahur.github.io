@@ -1,0 +1,53 @@
+descripcion: |
+  Esta semana paramos un poco la pelota, y reforzamos el trabajo con los conceptos vistos hasta ahora, integrando objetos, clases e instancias.
+
+  Algunos de los videos de cuatrimestres anteriores son para seguir pensando y trabajando los conceptos que vimos, y cómo aplicarlos a resolver distintas situaciones. En particular, en uno se resuelve la parte de bultos de la entrega de camión de transporte, que es un caso en el que hay que agregar métodos en objetos que ya vienen definidos de partes anteriores de la consigna.  
+  Los otros dos son de dos características del lenguaje que sirven para poder "escribir más corto" algunas cosas.
+
+  **Atención que esta semana hay nuevo ejercicio Grupal con Entrega**. <br> 
+  Se llama _**Depósito de Bicicletas**_ y está pensado especialmente para que puedan evaluar como vienen hasta acá con la materia. Deberían poder resolverlo al menos hasta la parte de Desafíos.
+ 
+  
+videos:
+  - nombre: ¿Cómo es esto del polimorfismo ahora que tenemos clases e instancias? 
+    url: https://youtu.be/Wy6odKeE-4o
+  - nombre: var property, una forma de ahorrarse un poco de código
+    url: https://youtu.be/A5YahcZZ7Is
+  - nombre: resolución de bultos en camión de transporte - hay que agregarle más consultas a objetos que ya teníamos
+    url: https://youtu.be/c27MMRweTZM
+  - nombre: expresión ternaria - un lindo truquito para escribir un poco menos, y entender un poco más
+    url: https://youtu.be/1XdYc-91Vtg
+
+
+conferencia:
+
+  horario0: <br>
+            --> **Martes 21 de Mayo** > **PRESENCIAL** **18.00hs.** - Aula MA-111 (Edificio Malvinas Argentinas 1er.piso) <br>
+
+  horario1: <br>
+            --> **Martes 21 de Mayo** > **VIRTUAL** **18.00hs.** -> [**Link a la clase**](https://meet.google.com/ban-fwrr-agh) <br>
+
+  horario2: <br>
+            --> **Martes 21 de Mayo** > **VIRTUAL** **18.00hs.** -> [**Link a la clase**](https://meet.google.com/ban-fwrr-agh) <br>
+
+  horario3: <br>
+            --> **Miércoles 22 de Mayo** > **PRESENCIAL** **8.00hs.** - Aula MA-113 (Edificio Malvinas Argentinas 1er.piso) <br>
+
+  horario4: <br>
+            --> **Sábado 25 de Mayo** > **FERIADO no hay Clases** <br>
+
+
+entrega:
+  fecha: 2024-05-27T23:59
+  ejercicios:
+    - name: Depósito de Bicicletas TP Grupal
+      classroom: https://classroom.github.com/a/bQV5sAi1
+      comentarios: 
+        - name: TP Grupal. Podrán hacer todos los commit y push que hagan falta hasta el día y hora límite. 
+
+
+ejercicios:
+  - name: Infraestructura Ferroviaria
+    classroom: https://classroom.github.com/a/pdphy7do
+    comentarios:
+    - name: Para trabajar con clases, que incluye partes picantitas para resolver.
