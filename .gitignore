@@ -1,6 +1,6 @@
 # build output
 dist
-
+docker
 # dependencies
 node_modules/
 .snowpack/

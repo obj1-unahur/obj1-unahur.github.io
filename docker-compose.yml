@@ -1,0 +1,35 @@
+version: '3.1'
+
+services:
+  baseDeDatos:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: admin1234
+      POSTGRES_DB: objetos1
+    volumes:
+      - ./docker/postgres/data:/var/lib/postgresql/data
+      - ./docker/postgres/init:/docker-entrypoint-initdb.d/
+    ports:
+      - '5432:5432'
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:21.1
+    restart: always
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_DB: postgres
+      KC_DB_URL_DATABASE: objetos1
+      KC_DB_URL_HOST: baseDeDatos
+      KC_DB_USERNAME: postgres
+      KC_DB_PASSWORD: admin1234
+    volumes:
+      - ./docker/keycloak/init:/opt/keycloak/data/import
+    depends_on:
+      - baseDeDatos
+    ports:
+      - 8080:8080
+      - 8443:8443
+    command:
+      - start-dev

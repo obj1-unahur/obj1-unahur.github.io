@@ -9,7 +9,7 @@ const KeycloakComponent = () => {
 	useEffect(() => {
 		const initOptions = {
 			url: 'http://localhost:8080/',
-			realm: 'objetos',
+			realm: 'UNAHUR',
 			clientId: 'front',
 		}
 
