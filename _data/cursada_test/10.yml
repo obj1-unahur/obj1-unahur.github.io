@@ -1,0 +1,46 @@
+descripcion: |
+  Esta semana comenzamos con el último concepto fuerte de la cursada: **Herencia**. Hay dos videos bien puntuales sobre esto, y otro video más para seguir aprendiendo técnicas de codificación.
+
+  Les dejamos 2 nuevos ejercicios **"Golosinas - Clases - Herencia"** y **"Plagas"** que incorporan el concepto de herencia para que practiquen.
+  
+  El ejercicio de golosinas ya lo vimos antes, pero ahora se incorporan nuevos requisitos para trabajar con clases y herencia.
+
+
+videos:
+  - nombre: Herencia Parte 1 - una clase puede heredar de otra
+    url: https://youtu.be/SA7s_yIk-fc
+  - nombre: Herencia Parte 2 - super
+    url: https://youtu.be/xCwNJ8N0bGs
+  - nombre: Herencia Parte 3 - jerarquía de herencia
+    url: https://youtu.be/akiTj8ZZhPU
+  - nombre: Nueva Instancia dentro de una expresión
+    url: https://youtu.be/01ewdTUk658
+
+
+conferencia:
+
+  horario0: <br>
+            --> **Martes 28 de Mayo** > **VIRTUAL** **18.15hs.** -> [**Link a la clase**](https://meet.google.com/ban-fwrr-agh) <br>
+
+  horario1: <br>
+            --> **Martes 28 de Mayo** > **PRESENCIAL** **18.00hs.** - Aula MA-111 (Edificio Malvinas Argentinas 1er.piso) <br>
+
+  horario2: <br>
+            --> **Martes 28 de Mayo** > **VIRTUAL** **18.00hs.** -> [**Link a la clase**](https://meet.google.com/ban-fwrr-agh) <br>
+
+  horario3: <br>
+            --> **Miércoles 29 de Mayo** > **PRESENCIAL** **8.00hs.** - Aula MA-113 (Edificio Malvinas Argentinas 1er.piso) <br>
+
+  horario4: <br>
+            --> **Sábado 1 de Junio** > **VIRTUAL** **10.00hs.** -> [**Link a la clase**](https://us06web.zoom.us/j/86409613061) <br>
+
+
+ejercicios:
+  - name: Golosinas - clases y herencia
+    classroom: https://classroom.github.com/a/4840pcGt
+    comentarios: 
+        - name: El ejercicio que usamos en los videos de herencia, para que lo puedan practicar. Están implementadas las clases de cada golosina, está para arrancar con el enunciado.
+  - name: Plagas - clases y herencia
+    classroom: https://classroom.github.com/a/cNLvFV0E
+    comentarios: 
+      - name: Ejercio con el cual deben practicar durante la semana herencia y modelado.
