@@ -1,0 +1,48 @@
+descripcion: |
+  Esta semana seguimos trabajando el concepto de **Herencia de Clases**. Entramos en el terreno donde es necesario afianzar los conocimientos adquiridos y comprender la diferencia entre lo dinámico/estado (las instancias) y lo estático/código (las clases).
+  Hay varios videos que complementan y cierran el tema **Herencia de Clases** con nuevos conceptos como lookup method.
+
+  El ejercicio **Semillas** tiene todo lo que vimos hasta ahora, deberán resolverlo completo en grupo.
+  
+  También les dejamos el ejercicio **Naves Espaciales** que está explicado en los videos de esta semana, para que lo vayan haciendo de manera individual y practiquen herencia de clases.
+  
+
+videos:
+  - nombre: Herencia -  Naves Espaciales Parte I
+    url: https://youtu.be/hmO-G8OLuXY
+  - nombre: Herencia - Naves Espaciales Parte II
+    url: https://youtu.be/5orRG9AW4b8
+  - nombre: Herencia -  Naves Espaciales Parte III
+    url: https://youtu.be/fFf9Kxu9PWs
+  - nombre: Herencia - Naves Espaciales Parte IV
+    url: https://youtu.be/FDhPs8Gqsz8
+  
+
+conferencia:
+
+  horario0: <br>
+            --> **Martes 4 de Junio** > **PRESENCIAL** **18.15hs.** - Aula MA-111 (Edificio Malvinas Argentinas 1er.piso) <br>
+
+  horario1: <br>
+            --> **Martes 4 de Junio** > **VIRTUAL** **18.00hs.** -> [**Link a la clase**](https://meet.google.com/ban-fwrr-agh) <br>
+
+  horario2: <br>
+            --> **Martes 4 de Junio** > **VIRTUAL** **18.00hs.** -> [**Link a la clase**](https://meet.google.com/ban-fwrr-agh) <br>
+
+  horario3: <br>
+            --> **Miércoles 5 de Junio** > **PRESENCIAL** **8.00hs.** - Aula MA-113 (Edificio Malvinas Argentinas 1er.piso) <br>
+
+  horario4: <br>
+            --> **Sábado 8 de Junio** > **VIRTUAL** **10.00hs.** -> [**Link a la clase**](https://us06web.zoom.us/j/86409613061) <br>
+
+
+ejercicios:
+  - name: Naves Espaciales
+    classroom: https://classroom.github.com/a/sv7r6e4x
+    comentarios: 
+        - name: Ejercicio individual para practicar herencia de clases
+  - name: Semillas
+    classroom: https://classroom.github.com/a/Dr_C6jbT
+    comentarios: 
+      - name: Ejercicio **GRUPAL** para practicar los conceptos que vimos hasta ahora, incluyendo clases y herencia. 
+
