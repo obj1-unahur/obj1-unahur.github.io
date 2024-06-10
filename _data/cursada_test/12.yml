@@ -1,0 +1,43 @@
+descripcion: |
+  Esta semana es para practicar fuerte para el parcial, que será en modalidad PRESENCIAL los días:
+  
+  - **_Comisiones 1 y 1B_**: Martes 18/6/24 18:00hs.
+  - **_Comisión 2_**: Miércoles 19/6/24 8:00hs.
+  - **_Comisión 1Rosario_**: Sábado 29/6/24 10hs.
+
+  Les estamos dejando 2 ejercicios para que resuelvan en forma individual. Recuerden la recomendación de tomarse el tiempo de leer primero muy bien todo el dominio del problema y luego ir resolviendo por etapas, identificando bien donde es realmente necesario definir atributos o se debe resolver mediante métodos. Y atención con indicar como "property" todos los atributos, porque puede ser un error dejar declarado un setter y/o getter que no corresponda. <br> 
+  Aprovechen el canal de Discord para enviar sus consultas que siempre encontrarán compañeros/as, profes y colaboradores/as dispuestos/as a ayudar y evacuar dudas. <br>
+  
+    **ATENCIÓN:**<br>
+  **----------------**<br>
+  **Con motivo del paro anunciado para los días martes 11/6 y miércoles 12/6, les informamos que no habrá clases presenciales. En el horario de las cursadas de comisión turno noche, se abrirá espacio de consulta Virtual donde los docentes se conectarán para responder dudas sobre la resolución de los ejercicios de esta semana.**<br>
+  
+
+conferencia:
+
+  horario0: <br>
+            --> **Martes 11 de Junio** > **CLASE DE CONSULTAS / DUDAS** **18.00hs.** -> [**Link a la clase**](https://meet.google.com/ban-fwrr-agh) <br>
+
+  horario1: <br>
+            --> **Martes 11 de Junio** > **CLASE DE CONSULTAS / DUDAS** **18.00hs.** -> [**Link a la clase**](https://meet.google.com/ban-fwrr-agh) <br>
+
+  horario2: <br>
+            --> **Martes 11 de Junio** > **CLASE DE CONSULTAS / DUDAS** **18.00hs.** -> [**Link a la clase**](https://meet.google.com/ban-fwrr-agh) <br>
+
+  horario3: <br>
+            --> **Miércoles 12 de Junio** > **A CONFIRMAR** <br>
+
+  horario4: <br>
+            --> **Sábado 15 de Junio** > **VIRTUAL** **10.00hs.** -> [**Link a la clase**](https://us06web.zoom.us/j/86409613061) <br>
+
+ejercicios:
+  - name: Práctica Mutual MMMM  
+    classroom: https://classroom.github.com/a/jtmPgUHB
+    comentarios: 
+        - name: Ejercicio tipo parcial para practicar en casa y en clases.
+  - name: Práctica Hogar  
+    classroom: https://classroom.github.com/a/yUW8FxSr
+    comentarios: 
+        - name: Otro ejercicio para practicar.
+      
+
