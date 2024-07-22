@@ -58,7 +58,7 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 			<div class="pb-2">
 				<slot />
 			</div>
-			<HorariosDeSemana horarios={horarios} />
+			{horarios ? <HorariosDeSemana horarios={horarios} /> : null}
 			{
 				videos && (
 					<VideosDeSemana
