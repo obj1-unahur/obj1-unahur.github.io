@@ -10,7 +10,6 @@ export default defineConfig({
     service: passthroughImageService()
   },
   site: 'https://obj1-unahur.github.io',
-  base: '/objetos-web',
   compressHTML: false,
   integrations: [mdx(), icon(), tailwind({
     applyBaseStyles: false

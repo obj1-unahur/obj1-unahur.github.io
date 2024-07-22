@@ -3,7 +3,6 @@ import '@astrojs/tailwind/base.css'
 import '../assets/scss/globals.scss'
 import SiteMeta from '@components/SiteMeta.astro'
 import Header from '@components/Header.astro'
-import { PATH } from '@/paths'
 
 const {
 	title = 'Astro',
@@ -31,7 +30,7 @@ const {
 		<link
 			rel="icon"
 			type="image/svg+xml"
-			href={PATH + '/LOGO.png'}
+			href={'/LOGO.png'}
 		/>
 
 		<SiteMeta
