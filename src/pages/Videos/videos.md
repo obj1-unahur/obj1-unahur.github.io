@@ -3,7 +3,7 @@
   urlYoutube: https://www.youtube.com/watch?v=5WcvLokJrmY
 
 - nombre: Instalación Wollok - Linux
-  urlYoutube: https://www.youtube.com/watch?v=lkrlQ-O3dHU
+  urlYoutube: https://www.youtube.com/watch?v=DCG-syufqhU
 
 - nombre: Instalación Wollok - Windows
   urlYoutube: https://www.youtube.com/watch?v=ynmaFpcMwCs
