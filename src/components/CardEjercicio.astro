@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components'
 
-const { title, comentarios, urlGitHub } = Astro.props
+const { title, comentarios, urlGitHub, repoUrl, defaultBranch } = Astro.props
 ---
 
 <div class="feature m-3">
@@ -21,6 +21,13 @@ const { title, comentarios, urlGitHub } = Astro.props
 			class="is-mobile has-icon button">
 			<Icon name="ion:logo-github" />Ir al repositorio</a
 		>
+		<a
+			href={`https://github.com/${repoUrl}/blob/${defaultBranch}/README.md`}
+			target="_blank"
+			class="has-icon button preview-button">
+			<Icon name="ion:eye" />
+			Preview Dominio
+		</a>
 	</div>
 </div>
 
@@ -84,11 +91,17 @@ const { title, comentarios, urlGitHub } = Astro.props
 		margin-top: 10px;
 		margin-bottom: 10px;
 		padding: 10px;
+		text-align: center;
 	}
 
 	a:hover {
 		background-color: black !important;
 	}
+
+	.preview-button:visited {
+		color: lightgray; /* Elige un color visible que se adapte a tu diseño */
+	}
+
 	.is-mobile {
 		@media (max-width: 550px) {
 			width: 12rem;
@@ -99,6 +112,7 @@ const { title, comentarios, urlGitHub } = Astro.props
 			display: none;
 		}
 	}
+
 	.is-desktop {
 		@media (max-width: 550px) {
 			display: none;

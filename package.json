@@ -45,5 +45,8 @@
   "lint-staged": {
     "src/**/*.js": "eslint --cache --fix",
     "src/**/*.{js,css,md,astro}": "prettier --write"
+  },
+  "dependencies": {
+    "marked": "^13.0.3"
   }
 }

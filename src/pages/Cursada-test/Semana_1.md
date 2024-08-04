@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 1
 
-inicio: 2024-03-30
+inicio: 2024-07-10
 
 descripcion: ¡Hola! ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!
 
@@ -31,10 +31,18 @@ horarios:
     Modalidad: VIRTUAL
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/88953425033
+
+ejercicios:
+  - name: Práctica Mutual MMMM
+    classroom: https://classroom.github.com/a/6KRUMHj_
+    repoUrl: 'obj1-unahur-2024s1/practicaMutualMMMM' # Asegúrate de poner aquí el URL del repo sin el "https://github.com/"
+    defaultBranch: 'master' # Especifica la rama por defecto del repo
+    comentarios:
+      - name: Ejercicio tipo parcial para practicar en casa y en clases.
 ---
 
 - ¡Hola!
 - ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!
 - Todos los días lunes se publicará en este espacio el material de la semana en curso, donde encontrarás los videos de apoyo a la teoría, videos de clases virtuales, los ejercicios a realizar y los temas que vamos a estar viendo.
-- En esta semana comenzaremos a conocer los objetos y mensajes en el paradigma de objetos. A continuación encontrarás videos que nos intruducen en el tema.
-- Es muy importante que te suscribas al canal de Discord de la materia, las instrucciones están en la sección **[Inicio](/objetos-web)** de esta página.
+- En esta semana comenzaremos a conocer los objetos y mensajes en el paradigma de objetos. A continuación encontrarás videos que nos introducen en el tema.
+- Es muy importante que te suscribas al canal de Discord de la materia, las instrucciones están en la sección **[Inicio](/)** de esta página.
