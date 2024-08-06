@@ -15,15 +15,20 @@ videos:
 ejercicios:
   - name: Práctica Mutual MMMM
     classroom: https://classroom.github.com/a/6KRUMHj_
+    repoUrl: 'obj1-unahur-2024s1/practicaMutualMMMM' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'master' # Acá va la rama default del repo
     comentarios:
       - name: Ejercicio tipo parcial para practicar en casa y en clases.
   - name: Práctica Hogar
     classroom: https://classroom.github.com/a/4vaaa6Q4
+    repoUrl: 'obj1-unahur-2024s1/practicaMutualMMMM' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'master' # Acá va la rama default del repo
     comentarios:
-      - name: Otro ejercicio tipo parcial para practicar en casa y en clases.
       - name: Otro ejercicio tipo parcial para practicar en casa y en clases.
   - name: Práctica ejercicio
     classroom: https://classroom.github.com/a/4vaaa6Q4
+    repoUrl: 'obj1-unahur-2024s1/practicaMutualMMMM' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'master' # Acá va la rama default del repo
     comentarios:
       - name: Otro ejercicio tipo parcial para practicar en casa y en clases.
   - name: Ejercicio ejemplo 2

@@ -35,6 +35,14 @@ videos:
     urlYoutube: https://www.youtube.com/watch?v=7hXl2kJs2GU
   - nombre: Definimos un objeto
     urlYoutube: https://www.youtube.com/watch?v=aAfjr8-1-0Y
+
+ejercicios:
+  - name: Presentación Personal
+    classroom: https://classroom.github.com/a/2OEgNqR0
+    repoUrl: 'obj1-unahur-2024s2/PresentacionPersonal' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'main' # Acá va la rama default del repo
+    comentarios:
+      - name: Ejercicio para practicar con github.
 ---
 
 - ¡Hola!

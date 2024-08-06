@@ -35,8 +35,8 @@ horarios:
 ejercicios:
   - name: Práctica Mutual MMMM
     classroom: https://classroom.github.com/a/6KRUMHj_
-    repoUrl: 'obj1-unahur-2024s1/practicaMutualMMMM' # Asegúrate de poner aquí el URL del repo sin el "https://github.com/"
-    defaultBranch: 'master' # Especifica la rama por defecto del repo
+    repoUrl: 'obj1-unahur-2024s1/practicaMutualMMMM' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'master' # Acá va la rama default del repo
     comentarios:
       - name: Ejercicio tipo parcial para practicar en casa y en clases.
 ---
