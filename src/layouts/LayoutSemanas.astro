@@ -2,7 +2,7 @@
 import AsideMenu from '@components/AsideMenu.astro'
 import DefaultLayout from './DefaultLayout.astro'
 
-let semanas = await Astro.glob('../pages/Cursada/*.md')
+let semanas = await Astro.glob('../pages/cursada/*.md')
 
 // Solo mostramos las clases de las semanas cuya fecha de inicio sea inferior a la fecha actual
 // por un tema de compatibilidad, también mostramos las clases que no especifican fecha de inicio
