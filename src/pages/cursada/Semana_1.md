@@ -14,19 +14,17 @@ horarios:
     Aula: Aula a confirmar
     Edificio: (a confirmar)
 
-  - Comision: Comisión 1B T.Noche
-    Dia: Martes 13 de Agosto
-    Modalidad: PRESENCIAL
-    Hora: 18.00hs
-    Aula: Aula a confirmar
-    Edificio: (a confirmar)
-
   - Comision: Comisión 2 T.Mañana
     Dia: Miércoles 14 de Agosto
     Modalidad: PRESENCIAL
     Hora: 08.00hs
     Aula: Aula MA-113
     Edificio: (Edificio Malvinas Argentinas, 1er piso)
+
+  - Comision: Comisiones 1 y 2
+    Dia: Sábado 17 de Agosto
+    Hora: 10.00hs
+    Mensaje: NO HAY CLASES POR FERIADO
 
 videos:
   - nombre: Qué es un objeto, qué es un mensaje
