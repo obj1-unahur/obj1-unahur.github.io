@@ -11,8 +11,8 @@ horarios:
     Dia: Martes 13 de Agosto
     Modalidad: PRESENCIAL
     Hora: 18.00hs
-    Aula: Aula a confirmar
-    Edificio: (a confirmar)
+    Aula: Auditorio
+    Edificio: (Edificio Trabajo Argentino)
 
   - Comision: Comisión 2 T.Mañana
     Dia: Miércoles 14 de Agosto
