@@ -48,3 +48,4 @@ ejercicios:
 - Todos los días lunes se publicará en este espacio las actividades de la semana, días y horarios de cursada, videos de apoyo a la teoría, videos de clases virtuales, los ejercicios a realizar y los temas que vamos a estar viendo. También servirá de cartelera de avisos con las novedades importantes.
 - En esta semana comenzaremos a conocer los objetos y mensajes en el paradigma de objetos. A continuación encontrarás videos que nos introducen en el tema.
 - Es muy importante que te suscribas al canal de Discord de la materia, las instrucciones están en la sección **[Inicio](/)** de esta página.
+- Además te contamos que la primer clase de la Comisión 1 (Turno Noche) será el día martes 13 de Agosto en el Auditorio del Edificio Trabajo Argentino; acá te dejamos el plano para que puedas ubicarte mejor: <a href="https://unahur.edu.ar/wp-content/uploads/2024/01/PLANO-2024-1.pdf" target="_blank">Ver Plano</a>
