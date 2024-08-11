@@ -36,7 +36,7 @@ videos:
 
 ejercicios:
   - name: Presentación Personal
-    classroom: https://classroom.github.com/a/2OEgNqR0
+    classroom: https://classroom.github.com/a/fUSIi0tC
     repoUrl: 'obj1-unahur-2024s2/PresentacionPersonal' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
