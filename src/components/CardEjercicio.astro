@@ -8,7 +8,21 @@ const { title, comentarios, urlGitHub, repoUrl, defaultBranch } = Astro.props
 	<div class="flex h-full w-full flex-col">
 		<h3 class="p-2 text-xl">{title}</h3>
 		<ul>
-			{comentarios.map((comentario) => <li>{comentario.name}</li>)}
+			{
+				comentarios.map((comentario) => (
+					<li>
+						{comentario.name}
+						{comentario.url && (
+							<a
+								class="has-icon button preview-button"
+								href={comentario.url}
+								target="_blank">
+								Ver el Ejemplo
+							</a>
+						)}
+					</li>
+				))
+			}
 		</ul>
 		<a
 			href={urlGitHub}

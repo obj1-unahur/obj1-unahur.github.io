@@ -40,7 +40,8 @@ ejercicios:
     repoUrl: 'obj1-unahur-2024s2/PresentacionPersonal' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
-      - name: Ejercicio para practicar con github.
+      - name: Ejercicio para practicar con github. Les dejamos un ejermplo, aunque esperamos que nos sorprendan con algo bien personal y creativo!
+      - url: https://github.com/obj1-unahur-2023s1/presentacion-personal-BrankoMuruaga.git
 ---
 
 - ¡Hola!
