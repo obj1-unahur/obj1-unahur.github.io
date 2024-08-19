@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 4
 
-inicio: 2024-04-21
+inicio: 2024-10-21
 
 descripcion: Esta semana aprenderemos a usar closures y colecciones en la programación con objetos. Como no podría ser de otra forma, vamos a representarlos como objetos.
 

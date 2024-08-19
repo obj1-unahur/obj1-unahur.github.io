@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 3
 
-inicio: 2024-04-02
+inicio: 2024-10-02
 
 descripcion: En esta semana, empezamos a armar programas en los que intervienen varios objetos, y estudiar cómo pueden relacionarse entre ellos. En particular, vamos a ver qué es el polimorfismo en objetos, y a empezar a hablar de las ventajas que nos da para construir programas. Relacionado con esto, también vamos a hablar de cómo se refleja la idea de contrato en la programación con objetos.
 
