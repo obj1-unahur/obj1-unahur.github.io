@@ -29,6 +29,12 @@ horarios:
     Modalidad: VIRTUAL
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/81450588625
+
+videos:
+  - nombre: Instalación Wollok en Windows
+    urlYoutube: https://www.youtube.com/watch?v=kPxbjL7WUHc
+  - nombre: Instalación Wollok en Linux
+    urlYoutube: https://www.youtube.com/watch?v=DCG-syufqhU
 ---
 
 - En esta semana, vamos a asegurarnos de realizar la instalación y configuración completa de las herramientas que utilizaremos durante la cursada.
