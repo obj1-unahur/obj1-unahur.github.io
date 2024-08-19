@@ -39,7 +39,7 @@ videos:
 
 - En esta semana, vamos a asegurarnos de realizar la instalación y configuración completa de las herramientas que utilizaremos durante la cursada.
 
-- El lenguaje que usaremos se llama Wollok. Wollok es un lenguaje de programación para ser utilizado en el dictado de materias iniciales de programación orientada a objetos. Es un proyecto open source desarrollado por Fundación Uqbar, un grupo de docentes de distintas universidades nacionales de Argentina, para ser usado en sus clases. Lleva 7 años en las aulas y se estima que lo usaron más de 100 docentes y más de 4.200 estudiantes. Incluye la propuesta Wollok Game, que propone ir adquiriendo los conceptos del paradigma OO junto con el diseño de un juego didáctico, que en las clases siguientes les iremos contando.
+- El lenguaje que usaremos se llama Wollok. Wollok es un lenguaje de programación para ser utilizado en el dictado de materias iniciales de programación orientada a objetos. Es un proyecto open source desarrollado por Fundación Uqbar, un grupo de docentes de distintas universidades nacionales de Argentina, para ser usado en sus clases. Lleva 7 años en las aulas y se estima que lo usaron más de 100 docentes y más de 4.200 estudiantes. Incluye la propuesta Wollok Game, que propone ir adquiriendo los conceptos del paradigma orientado a objetos junto con el diseño de un juego didáctico, que en las clases siguientes les iremos contando.
 
 - Las instrucciones de instalación las encuentran en los <a href="/videos" target="_blank">Videos</a>
   y <a href="https://www.wollok.org/getting_started/installation/" target="_blank">Wollok docs Instalación</a>
