@@ -29,10 +29,6 @@ horarios:
 videos:
   - nombre: Qué es un objeto, qué es un mensaje
     urlYoutube: https://www.youtube.com/watch?v=zZe0AaSKdyo
-  - nombre: Interactuamos con un objeto
-    urlYoutube: https://www.youtube.com/watch?v=7hXl2kJs2GU
-  - nombre: Definimos un objeto
-    urlYoutube: https://www.youtube.com/watch?v=aAfjr8-1-0Y
 
 ejercicios:
   - name: Presentación Personal
