@@ -10,7 +10,7 @@ const KeycloakComponent = () => {
 		const initOptions = {
 			url: 'http://localhost:8080/',
 			realm: 'UNAHUR',
-			clientId: 'front',
+			clientId: 'front2',
 		}
 
 		const kc = new Keycloak(initOptions)
