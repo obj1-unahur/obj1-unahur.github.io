@@ -35,6 +35,8 @@ videos:
     urlYoutube: https://www.youtube.com/watch?v=kPxbjL7WUHc
   - nombre: Instalación Wollok en Linux
     urlYoutube: https://www.youtube.com/watch?v=DCG-syufqhU
+  - nombre: Grabación clase Sábado 24/8/24
+    urlYoutube: https://www.youtube.com/watch?v=DbF44E-wRh0
 ---
 
 - En esta semana, vamos a asegurarnos de realizar la instalación y configuración completa de las herramientas que utilizaremos durante la cursada.
