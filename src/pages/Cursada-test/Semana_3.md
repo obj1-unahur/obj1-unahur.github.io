@@ -4,7 +4,7 @@ title: Semana 3
 
 inicio: 2024-08-25
 
-descripcion: En esta semana, vamos aprender a modelar y desarrollar situaciones concretas simples dentro del paradigma de la programación con objetos, su estado interno, comportamiento, las relaciones entre distintos objetos y comprender el concepto de Polimorfismo.
+descripcion: En esta semana, vamos a aprender a modelar y desarrollar situaciones concretas simples dentro del paradigma de la programación con objetos, su estado interno, comportamiento, las relaciones entre distintos objetos y comprender el concepto de Polimorfismo.
 
 horarios:
   - Comision: Comisión 1A T.Noche
@@ -48,7 +48,7 @@ ejercicios:
       - name: Ejercicio para entregar (FECHA LÍMITE viernes 6/9) haciendo push sobre el repositorio con la asignación correspondiente.
 ---
 
-- En esta semana, vamos aprender a modelar y desarrollar situaciones concretas simples dentro del paradigma de la programación con objetos, su estado interno, referencias, comportamiento, las relaciones entre distintos objetos y el concepto de Polimorfismo.
+- En esta semana, vamos a aprender a modelar y desarrollar situaciones concretas simples dentro del paradigma de la programación con objetos, su estado interno, referencias, comportamiento, las relaciones entre distintos objetos y el concepto de Polimorfismo.
 
 - Ya conversamos la primer clase sobre la idea de pensar a los objetos como representaciones computacionales de "entes" que exhiben un comportamiento. Poseen un estado interno que les permite recordar valores a los que llamaremos atributos y hablamos sobre la noción de mensaje como punto de acceso al comportamiento. Veremos la forma de programar los métodos como código que se ejecuta cuando un objeto recibe un mensaje.
 
