@@ -42,7 +42,7 @@ ejercicios:
       - name: Ejercicio para entregar (FECHA LÍMITE viernes 6/9) haciendo push sobre el repositorio con la asignación correspondiente.
   - name: Bolichito
     classroom: https://classroom.github.com/a/3BiZjzbl
-    repoUrl: 'obj1-unahur-2024s2/obj1-unahur-2024s2-bolichito-bolichito' # Acá va la URL del repo sin el "https://github.com/"
+    repoUrl: 'obj1-unahur-2024s2/obj1-unahur-2024s2-bolichitoygustos-bolichito' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Ejercicio para practicar en casa y en clase.
