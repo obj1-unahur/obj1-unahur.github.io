@@ -11,17 +11,31 @@ const { ejercicios } = Astro.props
 	<ul class="m-auto">
 		{
 			ejercicios ? (
-				ejercicios.map((ejercicio) => (
-					<li class="flex justify-center">
-						<CardEjercicio
-							title={ejercicio.name}
-							comentarios={ejercicio.comentarios}
-							urlGitHub={ejercicio.classroom}
-							repoUrl={ejercicio.repoUrl}
-							defaultBranch={ejercicio.defaultBranch}
-						/>
-					</li>
-				))
+				ejercicios.map(
+					({
+						name,
+						comentarios,
+						ejemploUrl,
+						classroom,
+						repoUrl,
+						defaultBranch,
+						fechaDeEntrega,
+						obligatorio,
+					}) => (
+						<li class="flex w-full justify-center">
+							<CardEjercicio
+								title={name}
+								comentarios={comentarios}
+								urlGitHub={classroom}
+								repoUrl={repoUrl}
+								ejemploUrl={ejemploUrl}
+								defaultBranch={defaultBranch}
+								fechaDeEntrega={fechaDeEntrega}
+								obligatorio={obligatorio}
+							/>
+						</li>
+					)
+				)
 			) : (
 				<p class="m-auto flex w-full">
 					<strong>Esta semana no hay ejercicios</strong>

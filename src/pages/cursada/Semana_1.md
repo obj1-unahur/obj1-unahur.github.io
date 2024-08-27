@@ -34,10 +34,10 @@ ejercicios:
   - name: Presentación Personal
     classroom: https://classroom.github.com/a/nIxo5hCt
     repoUrl: 'obj1-unahur-2024s2/presentacion_Personal' # Acá va la URL del repo sin el "https://github.com/"
+    ejemploUrl: https://github.com/obj1-unahur-2023s1/presentacion-personal-BrankoMuruaga.git
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Ejercicio para practicar con github. Les dejamos un ejermplo, aunque esperamos que nos sorprendan con algo bien personal y creativo!
-      - url: https://github.com/obj1-unahur-2023s1/presentacion-personal-BrankoMuruaga.git
 ---
 
 - ¡Hola!
