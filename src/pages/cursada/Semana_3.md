@@ -33,6 +33,10 @@ horarios:
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/81450588625
 
+videos:
+  - nombre: Grabación clase virtual martes 27/8/24 Comisión 1A
+    urlYoutube: https://www.youtube.com/watch?v=5TD6L8pdXgA
+
 ejercicios:
   - name: El Lobo Feroz
     classroom: https://classroom.github.com/a/sTOBeZpZ
