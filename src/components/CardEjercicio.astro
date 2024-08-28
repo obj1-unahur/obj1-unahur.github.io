@@ -1,35 +1,69 @@
 ---
 import { Icon } from 'astro-icon/components'
 
-const { title, comentarios, urlGitHub, repoUrl, defaultBranch } = Astro.props
+const {
+	title,
+	comentarios,
+	ejemploUrl,
+	urlGitHub,
+	repoUrl,
+	defaultBranch,
+	fechaDeEntrega,
+	obligatorio,
+} = Astro.props
 ---
 
 <div class="feature m-3">
 	<div class="flex h-full w-full flex-col">
+		{
+			obligatorio && (
+				<div class="obligatorio-container">
+					<span class="text-obligatorio">Esta actividad es obligatoria</span>
+					<Icon
+						class="icon-obligatorio"
+						name="ion:alert-outline"
+					/>
+				</div>
+			)
+		}
 		<h3 class="p-2 text-xl">{title}</h3>
 		<ul>
-			{
-				comentarios.map((comentario) => (
-					<li>
-						{comentario.name}
-						{comentario.url && (
-							<a
-								class="has-icon button preview-button"
-								href={comentario.url}
-								target="_blank">
-								Ver el Ejemplo
-							</a>
-						)}
-					</li>
-				))
-			}
+			{comentarios.map(({ name }) => <li>{name}</li>)}
 		</ul>
+
+		{
+			fechaDeEntrega && (
+				<p class="p-2 text-lg font-bold">
+					Fecha de entrega: <span class="font-thin">{fechaDeEntrega}</span>
+				</p>
+			)
+		}
+
+		{
+			ejemploUrl && (
+				<a
+					class="has-icon button preview-button"
+					href={ejemploUrl}
+					target="_blank">
+					<Icon name="ion:arrow-up-right-box-outline" />
+					Ver el Ejemplo
+				</a>
+			)
+		}
+
 		<a
 			href={urlGitHub}
 			target="_blank"
 			class="has-icon button preview-button">
 			<Icon name="ion:logo-github" />
 			Aceptar la asignación
+		</a>
+		<a
+			href={`https://github.com/${repoUrl}/blob/${defaultBranch}/README.md`}
+			target="_blank"
+			class="has-icon button preview-button">
+			<Icon name="ion:eye" />
+			Consigna
 		</a>
 		<!-- 
 		<a
@@ -38,13 +72,6 @@ const { title, comentarios, urlGitHub, repoUrl, defaultBranch } = Astro.props
 			<Icon name="ion:logo-github" />Ir al repositorio</a
 		>
 		-->
-		<a
-			href={`https://github.com/${repoUrl}/blob/${defaultBranch}/README.md`}
-			target="_blank"
-			class="has-icon button preview-button">
-			<Icon name="ion:eye" />
-			Consigna
-		</a>
 	</div>
 </div>
 
@@ -137,5 +164,52 @@ const { title, comentarios, urlGitHub, repoUrl, defaultBranch } = Astro.props
 		@media (min-width: 550px) {
 			display: flex;
 		}
+	}
+	.obligatorio-container {
+		position: absolute !important;
+		top: 0;
+		right: -3rem;
+		transform: translateY(-100%);
+		display: flex;
+		align-items: center;
+		justify-content: end;
+		background-color: var(--action-color);
+		border-radius: 50%;
+		width: 45px; /* Tamaño inicial del contenedor */
+		height: 45px; /* Altura inicial para mantener el ícono centrado */
+		overflow: hidden;
+		transition: width 0.6s ease, border-radius 0.7s ease;
+
+		&:hover,
+		&:focus-within {
+			width: 275px; /* Tamaño expandido del contenedor */
+			border-radius: 10px; /* Ajusta la curva de las esquinas al expandir */
+		}
+
+		&:hover .text-obligatorio,
+		&:focus-within .text-obligatorio {
+			opacity: 1;
+			transform: translateX(-10%);
+			transition: transform 0.4s ease 0.2s, opacity 0.1s ease 0.3s; /* Añade un pequeño retraso para que la animación del texto inicie después de la expansión */
+		}
+	}
+
+	.icon-obligatorio {
+		height: 45px;
+		width: 45px;
+		color: var(--dark-100);
+	}
+
+	.text-obligatorio {
+		position: absolute;
+		right: 10px; /* Ajusta para que el texto se alinee correctamente cuando aparezca */
+		white-space: nowrap; /* Evita que el texto se rompa en líneas múltiples */
+		font-size: 1rem;
+		color: var(--dark-100);
+		font-weight: bold;
+		transform: translateX(-100%); /* Inicia fuera de la vista a la derecha */
+		opacity: 0;
+		z-index: 0;
+		transition: transform 0.5s ease, opacity 0.1s ease;
 	}
 </style>

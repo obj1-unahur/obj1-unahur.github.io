@@ -23,8 +23,12 @@
 | `ejercicios`| Los ejercicios de la semana |`Si`|
 | `ejercicios:-name`| El titulo del ejercicio |`Si hay ejercicio, No`|
 | `ejercicios:classroom`| El link a Github|`Si hay ejercicio, No`|
+| `ejercicios:repoUrl`| la URL del repo sin el "https://github.com/"|`Si hay ejercicio, No`|
+| `ejercicios:defaultBranch`| La rama default del repo|`Si hay ejercicio, No`|
+| `ejercicios:fechaDeEntrega`| La fecha limite para entregar el ejercicio|`Si`|
 | `ejercicios:comentarios`| Una lista de comentarios para el ejercicio|`Si`|
 | `ejercicios:comentarios:-name`| Un comentario del ejercicio|`Si hay comentario de ejercicio, No`|
+| `ejercicios:obligatorio`| Si el ejericio es obligatorio o no|`Si`|
 | `horarios`| Los horarios de la cursada |`No`|
 | `horarios:-Comision`| El nombre de la comision. Ej: `Comisión 1 T.Noche`|`No`|
 | `horarios:Dia`| El dia de la cursada. Ej: `Martes 26 de Marzo`|`No`|

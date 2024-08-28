@@ -42,8 +42,10 @@ ejercicios:
     classroom: https://classroom.github.com/a/sTOBeZpZ
     repoUrl: 'obj1-unahur/elLoboFeroz' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
+    fechaDeEntrega: Viernes 06/09
     comentarios:
-      - name: Ejercicio para entregar (FECHA LÍMITE viernes 6/9) haciendo push sobre el repositorio con la asignación correspondiente.
+      - name: Ejercicio para entregar haciendo push sobre el repositorio con la asignación correspondiente.
+    obligatorio: true
   - name: Bolichito
     classroom: https://classroom.github.com/a/3BiZjzbl
     repoUrl: 'obj1-unahur-2024s2/obj1-unahur-2024s2-bolichitoygustos-bolichito' # Acá va la URL del repo sin el "https://github.com/"
