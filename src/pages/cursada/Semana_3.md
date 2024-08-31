@@ -52,11 +52,11 @@ ejercicios:
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Ejercicio para practicar en casa y en clase.
-  - name: Personajes Y Elmentos
+  - name: Personajes Y Elementos
     repoUrl: 'obj1-unahur-2024s2/PersonajesYElementos' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
-      - name: Ejercicio para practicar para el día Sábado.
+      - name: Ejercicio para practicar para el día Sábado. Solo Consigna
 ---
 
 - En esta semana, vamos a aprender a modelar y desarrollar situaciones concretas simples dentro del paradigma de la programación con objetos, su estado interno, referencias, comportamiento, las relaciones entre distintos objetos y el concepto de Polimorfismo.
