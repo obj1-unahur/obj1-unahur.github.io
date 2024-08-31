@@ -36,6 +36,8 @@ horarios:
 videos:
   - nombre: Grabación clase virtual martes 27/8/24 Comisión 1A
     urlYoutube: https://www.youtube.com/watch?v=5TD6L8pdXgA
+  - nombre: Grabación clase virtual Sábado 31/8/24 Todas las Comisiones
+    urlYoutube: https://youtu.be/kjrAvPrslGE
 
 ejercicios:
   - name: El Lobo Feroz
