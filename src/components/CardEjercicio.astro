@@ -51,13 +51,18 @@ const {
 			)
 		}
 
-		<a
-			href={urlGitHub}
-			target="_blank"
-			class="has-icon button preview-button">
-			<Icon name="ion:logo-github" />
-			Aceptar la asignación
-		</a>
+		{
+			urlGitHub && (
+				<a
+					href={urlGitHub}
+					target="_blank"
+					class="has-icon button preview-button">
+					<Icon name="ion:logo-github" />
+					Aceptar la asignación
+				</a>
+			)
+		}
+
 		<a
 			href={`https://github.com/${repoUrl}/blob/${defaultBranch}/README.md`}
 			target="_blank"
