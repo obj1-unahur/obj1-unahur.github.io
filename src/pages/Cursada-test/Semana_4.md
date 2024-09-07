@@ -33,6 +33,14 @@ horarios:
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/81450588625
 
+videos:
+  - nombre: Grabación 03/9/24 - Comisión 1B - Wollok Game - Parte I
+    urlYoutube: https://www.youtube.com/watch?v=yglZdiBT4u4
+  - nombre: Grabación 03/9/24 - Comisión 1B - Wollok Game - Parte II
+    urlYoutube: https://www.youtube.com/watch?v=Hhb_4TswFZY
+  - nombre: Grabación sábado 7/9/24 - Solución loboFeroz y Test
+    urlYoutube: https://www.youtube.com/watch?v=--mQDBZx14A
+
 ejercicios:
   - name: Tom y Jerry (y Nibbles también!)
     classroom: https://classroom.github.com/a/3xA5KAWk
