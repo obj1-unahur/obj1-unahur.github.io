@@ -40,6 +40,11 @@ ejercicios:
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Seguimos practicando con las fases 2 y 3 del ejercicio de Game, que incluye el uso de closures.
+  - name: Dino Game (Reloaded)
+    repoUrl: 'obj1-unahur-2024s2/DinoGameTS' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'main' # Acá va la rama default del repo
+    comentarios:
+      - name: El juego DINO de la semana pasada con correcciones y recargado. Pueden clonarlo, jugar con el código, y programar las propuestas de trabajo!
 ---
 
 - En esta semana vamos a conocer a los Closures, que son bloques de código que pueden convertirse en un objeto y que pueden diferir su ejecución. Eso nos va a ayudar a programar cosas más interesantes e interactivas también en Wollok Game!
