@@ -45,5 +45,3 @@ ejercicios:
 - En esta semana vamos a conocer a los Closures, que son bloques de código que pueden convertirse en un objeto y que pueden diferir su ejecución. Eso nos va a ayudar a programar cosas más interesantes e interactivas también en Wollok Game!
 
 - A los closures también se los llama expresiones Lambda. Estos "cachos" de código pueden tener, además, 1 o más parámetros que nos permiten convertir una porción de código en un objeto, dándonos el beneficio de diferir su ejecución, ya que el lugar donde se escribe el código puede no ser el mismo donde se pide la ejecución. Incluso, el código podría no ejecutarse nunca.
-
--
