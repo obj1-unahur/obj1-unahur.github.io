@@ -33,6 +33,12 @@ horarios:
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/81450588625
 
+videos:
+  - nombre: Grabación 10/9/24 - Comisión 1A - Closures y Wollok Game - Parte I
+    urlYoutube: https://www.youtube.com/watch?v=25TqNbzTveQ
+  - nombre: Grabación 10/9/24 - Comisión 1A - Closures y Wollok Game - Parte II
+    urlYoutube: https://www.youtube.com/watch?v=Sz05mWeyZp8
+
 ejercicios:
   - name: El Juego de Pepita
     classroom: https://classroom.github.com/a/VGZZEQr6
