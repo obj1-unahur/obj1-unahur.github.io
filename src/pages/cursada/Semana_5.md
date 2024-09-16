@@ -38,6 +38,8 @@ videos:
     urlYoutube: https://www.youtube.com/watch?v=25TqNbzTveQ
   - nombre: Grabación 10/9/24 - Comisión 1A - Closures y Wollok Game - Parte II
     urlYoutube: https://www.youtube.com/watch?v=Sz05mWeyZp8
+  - nombre: Grabación sábado 14/9/24 - Todas las comisiones
+    urlYoutube: https://www.youtube.com/watch?v=fzj9I0_cqbg
 
 ejercicios:
   - name: El Juego de Pepita
