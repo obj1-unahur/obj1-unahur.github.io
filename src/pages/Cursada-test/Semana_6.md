@@ -1,6 +1,6 @@
 ---
 layout: src/layouts/PostCursadaLayout.astro
-title: Semana 5
+title: Semana 6
 
 inicio: 2024-08-25
 
