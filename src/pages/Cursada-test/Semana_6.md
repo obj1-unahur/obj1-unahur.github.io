@@ -40,7 +40,7 @@ videos:
     urlYoutube: https://www.youtube.com/watch?v=o88LDqxxnz4
 
 ejercicios:
-  - name: Willy Wonka y la fábrica de software - Colecciones
+  - name: Willy Wonka y la fábrica de software (TP Grupal Colecciones)
     classroom: https://classroom.github.com/a/QAWvHr
     repoUrl: 'wollok/coleccionesWillyWonka' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'master' # Acá va la rama default del repo
