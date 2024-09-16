@@ -40,11 +40,11 @@ videos:
     urlYoutube: https://www.youtube.com/watch?v=o88LDqxxnz4
 
 ejercicios:
-  - name: Willy Wonka y la fábrica de software - Colecciones
-    classroom: https://classroom.github.com/a/QAWvHr
-    repoUrl: 'wollok/coleccionesWillyWonka' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'master' # Acá va la rama default del repo
-    fechaDeEntrega: Viernes 27/09
+  - name: Camión de Transporte (TP Grupal para practicar)
+    classroom: https://classroom.github.com/a/QAWvHr1p
+    repoUrl: 'obj1-unahur/camionDeTransporte' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'main' # Acá va la rama default del repo
+    fechaDeEntrega: Viernes 20/09
     comentarios:
       - name: INSTRUCCIONES-> Un/a integrante del grupo acepta la asignación y procede a dar de alta el grupo (tengan acordado el nombre previamente), luego el resto de los/as integrantes también aceptan la asignación, y se unen a su grupo. La entrega la realizan haciendo push al reposotorio grupal desde cualquiera de los usuarios github del grupo. Podrán hacer los push hasta la fecha/hora límite indicada.
     obligatorio: true
