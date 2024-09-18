@@ -44,6 +44,12 @@ horarios:
 videos:
   - nombre: Como crear nuevo grupo en github classroom y unirse (aceptar asignaciones)
     urlYoutube: https://www.youtube.com/watch?v=o88LDqxxnz4
+  - nombre: Grabación 17/9/24 - Comisión 1B - Colecciones - Parte I
+    urlYoutube: https://www.youtube.com/watch?v=RXJAvN7gfDE
+  - nombre: Grabación 17/9/24 - Comisión 1B - Coleccines - Parte II
+    urlYoutube: https://www.youtube.com/watch?v=pza6TvbGFMc
+  
+
 
 ejercicios:
   - name: La fábrica de software de Willy Wonka (TP Grupal Colecciones)
