@@ -48,8 +48,8 @@ videos:
     urlYoutube: https://www.youtube.com/watch?v=RXJAvN7gfDE
   - nombre: Grabación 17/9/24 - Comisión 1B - Coleccines - Parte II
     urlYoutube: https://www.youtube.com/watch?v=pza6TvbGFMc
-  
-
+  - nombre: Clase sábado 21/9/24 - Todas las comisiones (Colecciones)
+    urlYoutube: https://www.youtube.com/watch?v=Xj4pQMjE8MU
 
 ejercicios:
   - name: La fábrica de software de Willy Wonka (TP Grupal Colecciones)
@@ -71,7 +71,7 @@ ejercicios:
 
 - Esta semana vamos a aprender sobre Colecciones, que son (por supuesto) objetos que nos permiten agrupar y mantener referencias a una cantidad indeterminada de otros objetos.
 
-- En Wollok, las encontramos de 2 sabores: Las listas y los conjuntos. Veremos las diferencias entre ambos y cuales son los mensajes básicos que entienden, con y sin efecto. Recomendamos ir viendo el apunte que mencionamos la semana pasada sobre closures y colecciones que está disponible en la sección Material de esta página en este link:
+- En Wollok, por ahora probaremos de 2 sabores: Las listas y los conjuntos. Veremos las diferencias entre ambos y cuales son los mensajes básicos que entienden, con y sin efecto. Recomendamos ir viendo el apunte que mencionamos la semana pasada sobre closures y colecciones que está disponible en la sección Material de esta página en este link:
   <a href="https://objetos1wollokunq.gitlab.io/material/guia-colecciones-basicas.pdf" target="_blank">Closures y Colecciones</a>
 
 - Y también contaremos con un espacio especial de consulta/tutoría este viernes 20/9 a las 19hs para aquellos/as que tengan dudas o se atrasaron con la materia, aprovechen el espacio para ponerse al día!
