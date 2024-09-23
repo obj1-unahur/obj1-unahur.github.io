@@ -39,14 +39,10 @@ horarios:
     Hora: 15.00hs
     URL: https://meet.google.com/bob-cguz-qmq
 
-videos:
-  - nombre: Como crear nuevo grupo en github classroom y unirse (aceptar asignaciones)
-    urlYoutube: https://www.youtube.com/watch?v=o88LDqxxnz4
-
 ejercicios:
   - name: Camión de Transporte
     classroom: https://classroom.github.com/a/zSvg1Hqa
-    repoUrl: 'obj1-unahur/camionDeTransporte' # Acá va la URL del repo sin el "https://github.com/"
+    repoUrl: 'obj1-unahur-2024s2/obj1-unahur-2024s2-camiondetransporte-camionDeTransporte' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Para practicar en casa y en clase.
