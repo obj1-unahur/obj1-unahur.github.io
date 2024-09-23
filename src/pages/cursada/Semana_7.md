@@ -10,13 +10,13 @@ horarios:
   - Comision: Comisión 1A T.Noche
     Dia: Martes 24 de Septiembre
     Modalidad: VIRTUAL
-    Hora: 18.15hs
+    Hora: 18.00hs
     URL: https://meet.google.com/nbd-fvja-vhj
 
   - Comision: Comisión 1B T.Noche
     Dia: Martes 24 de Septiembre
     Modalidad: PRESENCIAL
-    Hora: 18.00hs
+    Hora: 18.15hs
     Aula: Aula MA-113
     Edificio: (Edificio Malvinas Argentinas, 1er piso)
 
