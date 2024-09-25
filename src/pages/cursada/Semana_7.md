@@ -39,6 +39,10 @@ horarios:
     Hora: 15.00hs
     URL: https://meet.google.com/bob-cguz-qmq
 
+videos:
+  - nombre: Clase martes 24/9/24 - Comisión 1A (Colecciones)
+    urlYoutube: https://www.youtube.com/watch?v=0onamPbjvA8
+
 ejercicios:
   - name: Camión de Transporte
     classroom: https://classroom.github.com/a/zSvg1Hqa
