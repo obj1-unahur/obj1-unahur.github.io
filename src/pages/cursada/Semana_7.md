@@ -6,6 +6,8 @@ inicio: 2024-08-25
 
 descripcion: Esta semana aprenderemos a resolver problemas más complejos con colecciones y conoceremos otro tipo de colección que son los diccionarios. También veremos como usar rangos para resolver algunas situaciones donde se requiere obtener parte de los elementos de una colección.
 
+atencion: Les informamos que se traslada el parcial de la Comisión 2 (Turno Mañana) al día sábado 5/10/24 de 10:00 a 12:00hs, debido al paro y movilización anunciado para el día miércoles 2/10. La modalidad será virtual, si algún o alguna estudiante no dispone del recurso PC/internet para poder realizar el exámen, deberá ponerse en contacto vía Discord con alguno de los profesores (antes del 30/9) para reservar aula en la Unahur. Las comisiones 1A y 1B (turno noche) no tendrán actividad el día 5/10.
+
 horarios:
   - Comision: Comisión 1A T.Noche
     Dia: Martes 24 de Septiembre
