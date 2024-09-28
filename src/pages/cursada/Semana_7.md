@@ -59,6 +59,13 @@ ejercicios:
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Otro ejercicio más para practicar en casa y/o en clase.
+
+  - name: Academina de Magia
+    classroom: https://classroom.github.com/a/D1VMYjOw
+    repoUrl: 'obj1-unahur-2024s2/obj1-unahur-2024s2-academiamagia-academiamagia' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'main' # Acá va la rama default del repo
+    comentarios:
+      - name: Ejercicio de práctica para el Parcial.
 ---
 
 - Esta semana aprenderemos a resolver problemas más complejos con colecciones y conoceremos otro tipo de colección que son los diccionarios. También veremos como usar rangos para resolver algunas situaciones donde se requiere obtener parte de los elementos de una colección.
