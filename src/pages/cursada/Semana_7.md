@@ -44,7 +44,7 @@ horarios:
 videos:
   - nombre: Clase martes 24/9/24 - Comisión 1A (Colecciones)
     urlYoutube: https://www.youtube.com/watch?v=0onamPbjvA8
-  - nombre: Clase martes 28/9/24 - Práctica del parcial
+  - nombre: Clase sábado 28/9/24 - Práctica del parcial
     urlYoutube: https://www.youtube.com/watch?v=Cx2ny87709A
 
 ejercicios:

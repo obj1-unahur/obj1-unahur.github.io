@@ -44,6 +44,8 @@ horarios:
 videos:
   - nombre: Clase martes 24/9/24 - Comisión 1A (Colecciones)
     urlYoutube: https://www.youtube.com/watch?v=0onamPbjvA8
+  - nombre: Clase sábado 28/9/24 - Práctica del parcial
+    urlYoutube: https://www.youtube.com/watch?v=Cx2ny87709A
 
 ejercicios:
   - name: Camión de Transporte
@@ -59,6 +61,13 @@ ejercicios:
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Otro ejercicio más para practicar en casa y/o en clase.
+
+  - name: Academina de Magia
+    classroom: https://classroom.github.com/a/D1VMYjOw
+    repoUrl: 'obj1-unahur-2024s2/obj1-unahur-2024s2-academiamagia-academiamagia' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'main' # Acá va la rama default del repo
+    comentarios:
+      - name: Ejercicio de práctica para el Parcial.
 ---
 
 - Esta semana aprenderemos a resolver problemas más complejos con colecciones y conoceremos otro tipo de colección que son los diccionarios. También veremos como usar rangos para resolver algunas situaciones donde se requiere obtener parte de los elementos de una colección.
