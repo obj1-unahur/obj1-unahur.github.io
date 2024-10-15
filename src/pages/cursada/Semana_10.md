@@ -6,7 +6,9 @@ inicio: 2024-08-25
 
 descripcion: Esta semana continuamos viendo "clases" y realizaremos la validación de los juegos que irán a desarrollar en cada grupo. También seguiremos con tema test avanzados.
 
-importante: El sábado 19/10/24 será el recuperatorio del 1er Parcial en modalidad PRESENCIAL. Además, les contamos que hoy se realizarán diversas actividades de visibilidad en el contexto del conflicto por el presupuesto de las Universidades Públicas. Esta cátedra resolvió realizar lo siguiente el día de hoy martes 15/10 --> Estudiantes y docentes se concentran en Av. Vergara 2222 (edificio de Personal UNAHUR) a las 17hs. para participar de asamblea y finalizada la misma (alrededor de las 18hs) vamos caminando a la Universidad, edificio Malvinas, a retomar las clases de comisión 1A en Laboratorio MA-113. Pueden participar estudiantes de las 3 comisiones (1A, 1B, 2). Comisión 1B tiene clase virtual como estaba planificado, pero quienes deseen participar presencial pueden hacerlo, al igual que comisión 2.
+importante: El sábado 19/10/24 será el recuperatorio del 1er Parcial en modalidad PRESENCIAL. Además, les contamos que hoy se realizarán diversas actividades de visibilidad en el contexto del conflicto por el presupuesto de las Universidades Públicas. Esta cátedra resolvió realizar lo siguiente el día de hoy martes 15/10 --> Estudiantes y docentes se concentran a las 17hs en la UNAHUR, de ahí vamos caminando hasta en Av. Vergara 2222 (edificio de Personal UNAHUR) para participar de asamblea y finalizada la misma (alrededor de las 18hs) volvemos caminando a la Universidad, edificio Malvinas, a retomar las clases de comisión 1A en Laboratorio MA-113. 
+Pueden participar estudiantes de las 3 comisiones (1A, 1B, 2). 
+Comisión 1B tiene clase virtual como estaba planificado, pero quienes deseen participar presencial pueden hacerlo, al igual que comisión 2. 
 
 horarios:
   - Comision: Comisión 1A T.Noche
