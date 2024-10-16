@@ -6,6 +6,8 @@ inicio: 2024-08-25
 
 descripcion: Esta semana continuamos viendo "clases" y realizaremos la validación de los juegos que irán a desarrollar en cada grupo. También seguiremos con tema test avanzados.
 
+atencion: Quienes vayan a rendir recuperatorio de Objetos 1 del 1er Parcial este sábado 19/10, por favor deben registrarse en el siguiente formulario lo antes posible --> https://forms.gle/MLKU8CcvoRVJSEAW6
+
 importante: El sábado 19/10/24 será el recuperatorio del 1er Parcial en modalidad PRESENCIAL. Además, les contamos que hoy se realizarán diversas actividades de visibilidad en el contexto del conflicto por el presupuesto de las Universidades Públicas. Esta cátedra resolvió realizar lo siguiente el día de hoy martes 15/10 --> Estudiantes y docentes se concentran a las 17hs en la UNAHUR, de ahí vamos caminando hasta en Av. Vergara 2222 (edificio de Personal UNAHUR) para participar de asamblea y finalizada la misma (alrededor de las 18hs) volvemos caminando a la Universidad, edificio Malvinas, a retomar las clases de comisión 1A en Laboratorio MA-113. Pueden participar estudiantes de las 3 comisiones (1A, 1B, 2). Comisión 1B tiene clase virtual como estaba planificado, pero quienes deseen participar presencial pueden hacerlo, al igual que comisión 2.
 
 horarios:
@@ -54,7 +56,7 @@ ejercicios:
 
 - Esta semana continuamos viendo "clases" y realizaremos la validación de los juegos que irán a desarrollar en cada grupo. También seguiremos con tema test avanzados. Recomendamos la lectura previa de la documentación disponible en la página oficial de Wollok: <a href="https://www.wollok.org/documentation/tests/" target="_blank">Wollok docs Tests</a>
 
-- El día **sábado 19/10** será el **recuperatorio del 1er PARCIAL** en modalidad **Presencial**. Los temas que entran son hasta colecciones completo y es para las 3 comisiones (1A, 1B y 2) en el aula MA-113. Comienza a las 10hs y la duración será de 2hs.
+- El día **sábado 19/10** será el **recuperatorio del 1er PARCIAL** en modalidad **Presencial**. Los temas que entran son hasta colecciones completo y es para las 3 comisiones (1A, 1B y 2) en el aula MA-113. Comienza a las 10hs y la duración será de 2hs. **Quienes vayan a rendir por favor deben registrarse en el siguiente formulario lo antes posible: https://forms.gle/MLKU8CcvoRVJSEAW6**
 
 - Quienes tengan notebook con puerto y cable de red y wollok funcionando, pueden llevarla para rendir; consideren llevar también los adaptadores y accesorios que requieran para conectarse, teniendo en cuenta que no habrá red Wifi disponible.
 
