@@ -6,7 +6,7 @@ inicio: 2024-08-25
 
 descripcion: Esta semana vamos a empezar a ver el tema Herencia, que nos va a permitir la definición de nuevas clases basadas en clases existentes, estableciendo jerarquías de Superclase y Subclase. Vamos a poder agregar nuevas variables y métodos, y también redefinir métodos..
 
-atencion: Esta semana no habrá clases el día martes 22/10 debido al paro docente y no docente anunciado para los días 21 y 22 de octubre. Los días miércoles 23 y sábado 26 hay clase normal. Les dejamos videos de cursadas anteriores donde se explica y ejemplifica los conceptos de esta semana.
+atencion: Esta semana no habrá clases el día martes 22/10 debido al paro docente y no docente anunciado para los días 21 y 22 de octubre. Los días miércoles 23 y sábado 26 habrá clase Virtual ambos días. Les dejamos videos de cursadas anteriores donde se explica y ejemplifica los conceptos de esta semana.
 
 horarios:
   - Comision: Comisión 1A T.Noche
@@ -21,16 +21,15 @@ horarios:
 
   - Comision: Comisión 2 T.Mañana
     Dia: Miércoles 23 de Octubre
-    Modalidad: PRESENCIAL
+    Modalidad: VIRTUAL
     Hora: 08.00hs
-    Aula: Aula MA-113
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+    URL: https://us06web.zoom.us/j/81450588625
 
   - Comision: Comisiones 1A, 1B y 2
     Dia: Sábado 26 de Octubre
     Modalidad: VIRTUAL
     Hora: 10.00hs
-    URL: https://meet.google.com/bob-cguz-qmq
+    URL: https://us06web.zoom.us/j/81450588625
 
 videos:
   - nombre: Herencia Parte 1 - una clase puede heredar de otra.
@@ -62,7 +61,7 @@ ejercicios:
 
 - También veremos el concepto de lookup method como mecanismo por el cual se determina, para el envío de un mensaje, qué método se debe ejecutar.
 
-- Los conceptos están explicados y ejemplificados en los videos que están subidos en esta semana. También dejamos 2 ejercicios para practicar el tema Herencia. Cualquier consulta estaremos respondiendo por el canal de Discord.
+- Los conceptos están explicados y ejemplificados en los videos que están subidos en esta semana y también se subirá el video de la clase virtual del miércoles turno mañana para que Turno noche lo mire antes de la clase del sábado 26.
 
 - Respecto al TP Game Integrador, el juego que deberá desarrollar cada equipo es de libre elección, y les dejamos estos requerimientos (más adelante se podrá indicar más detalles):
   1. Debe ser un juego desarrollado en Wollok Game que se pueda jugar en cualquier computadora que tenga instalado el entorno de Wollok.
