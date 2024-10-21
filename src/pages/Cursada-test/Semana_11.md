@@ -4,7 +4,7 @@ title: Semana 11
 
 inicio: 2024-08-25
 
-descripcion: Esta semana vamos a empezar a ver el tema Herencia simple como herramienta que potencia y amplia el polimorfismo. También el concepto de redefinición de métodos y la pseudovariable super.
+descripcion: Esta semana vamos a empezar a ver el tema Herencia, que nos va a permitir la definición de nuevas clases basadas en clases existentes, estableciendo jerarquías de Superclase y Subclase. Vamos a poder agregar nuevas variables y métodos, y también redefinir métodos..
 
 atencion: Esta semana no habrá clases el día martes 22/10 debido al paro docente y no docente anunciado para los días 21 y 22 de octubre. Los días miércoles 23 y sábado 26 hay clase normal. Les dejamos videos de cursadas anteriores donde se explica y ejemplifica los conceptos de esta semana.
 
@@ -58,9 +58,7 @@ ejercicios:
       - name: TP individual para practicar en clase y en casa.
 ---
 
-- Esta semana vamos a empezar a ver el tema Herencia simple como herramienta que potencia y amplia el polimorfismo. También el concepto de redefinición de métodos y la pseudovariable super.
-
-- La herencia nos va a facilitar la definición de nuevas clases basadas en clases existentes; establecer jerarquías de Superclase y Subclase, que nos va a permitir agregar nuevas variables y métodos, y además, modificar métodos heredados.
+- Esta semana vamos a empezar a ver el tema Herencia, que nos va a permitir la definición de nuevas clases basadas en clases existentes, estableciendo jerarquías de Superclase y Subclase. Vamos a poder agregar nuevas variables y métodos, y también redefinir métodos.
 
 - También veremos el concepto de lookup method como mecanismo por el cual se determina, para el envío de un mensaje, qué método se debe ejecutar.
 
