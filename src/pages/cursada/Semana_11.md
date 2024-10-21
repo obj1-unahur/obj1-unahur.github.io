@@ -65,3 +65,9 @@ ejercicios:
 - También veremos el concepto de lookup method como mecanismo por el cual se determina, para el envío de un mensaje, qué método se debe ejecutar.
 
 - Los conceptos están explicados y ejemplificados en los videos que están subidos en esta semana. También dejamos 2 ejercicios para practicar el tema Herencia. Cualquier consulta estaremos respondiendo por el canal de Discord.
+
+- Respecto al TP Game Integrador, el juego que deberá desarrollar cada equipo es de libre elección, y les dejamos estos requerimientos (más adelante se podrá indicar más detalles):
+  1. Debe ser un juego desarrollado en Wollok Game que se pueda jugar en cualquier computadora que tenga instalado el entorno de Wollok.
+  2. Debe tener al menos 2 niveles de dificultad y las instrucciones de juego en algún lugar que sea visible (en el mismo juego) y el jugador pueda ver y memorizar antes de comenzar a jugar.
+  3. Deben participar todos/as los/as integrantes del grupo en el desarrollo del juego, ya que en la defensa se les pedirá a cada uno/a que explique como fue implementada cada parte del juego.
+  4. Deben utilizar todos los conceptos vistos en la materia> objetos, clases, herencia, polimorfismo, colecciones, closures, etc.
