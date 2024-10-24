@@ -32,13 +32,17 @@ horarios:
     URL: https://us06web.zoom.us/j/81450588625
 
 videos:
-  - nombre: Herencia Parte 1 - una clase puede heredar de otra.
+  - nombre: Grabacion de la clase miércoles 23/10 (Explicacion Herencia).
+    urlYoutube: https://www.youtube.com/watch?v=9YgX65dVhCE
+  - nombre: Herencia con Wollok Game.
+    urlYoutube: https://www.youtube.com/watch?v=ZRIBsSFNwqs
+  - nombre: Herencia Parte 1 - una clase puede heredar de otra. (Videos complementarios).
     urlYoutube: https://www.youtube.com/watch?v=SA7s_yIk-fc
-  - nombre: Herencia Parte 2 - super.
+  - nombre: Herencia Parte 2 - super. Videos complementarios.
     urlYoutube: https://www.youtube.com/watch?v=xCwNJ8N0bGs
-  - nombre: Herencia Parte 3 - jerarquía de herencia.
+  - nombre: Herencia Parte 3 - jerarquía de herencia. (Videos complementarios).
     urlYoutube: https://www.youtube.com/watch?v=akiTj8ZZhPU
-  - nombre: Nueva Instancia dentro de una expresión.
+  - nombre: Nueva Instancia dentro de una expresión. (Videos complementarios).
     urlYoutube: https://www.youtube.com/watch?v=01ewdTUk658
 
 ejercicios:
