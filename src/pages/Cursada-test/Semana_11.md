@@ -32,6 +32,8 @@ horarios:
     URL: https://us06web.zoom.us/j/81450588625
 
 videos:
+  - nombre: Grabacion de la clase sábado 26/10 (Ejercicio con Herencia).
+    urlYoutube: https://www.youtube.com/watch?v=4PvSce7UNew
   - nombre: Grabacion de la clase miércoles 23/10 (Explicacion Herencia).
     urlYoutube: https://www.youtube.com/watch?v=9YgX65dVhCE
   - nombre: Herencia con Wollok Game.
