@@ -6,6 +6,8 @@ inicio: 2024-08-25
 
 descripcion: Esta semana seguimos trabajando el concepto de Herencia de Clases. Entramos en el terreno donde es necesario afianzar los conocimientos adquiridos y comprender la diferencia entre lo dinámico/estado (las instancias) y lo estático/código (las clases).
 
+atencion: Esta semana no habrá clases el día miércoles 30/10 debido al paro docente. La clase virtual del martes 29/10 a la noche se va a grabar y además los/as alumnos/as del miércoles están invitados a asistir virtualmente a dicha clase.
+
 horarios:
   - Comision: Comisión 1A T.Noche
     Dia: Martes 29 de Octubre
@@ -22,10 +24,8 @@ horarios:
 
   - Comision: Comisión 2 T.Mañana
     Dia: Miércoles 30 de Octubre
-    Modalidad: PRESENCIAL
     Hora: 08.00hs
-    Aula: Aula MA-113
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+    Mensaje: NO HAY CLASES POR PARO
 
   - Comision: Comisiones 1A, 1B y 2
     Dia: Sábado 02 de Noviembre
