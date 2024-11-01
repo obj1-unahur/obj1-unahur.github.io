@@ -31,7 +31,7 @@ horarios:
     Dia: Sábado 02 de Noviembre
     Modalidad: VIRTUAL
     Hora: 10.00hs
-    URL: https://us06web.zoom.us/j/81450588625
+    URL: https://utn.zoom.us/j/6622200730?omn=97126165385
 
 ejercicios:
   - name: Semillas (TP Grupal Herencia)
