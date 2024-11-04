@@ -33,6 +33,10 @@ horarios:
     Hora: 10.00hs
     URL: https://utn.zoom.us/j/6622200730?omn=97126165385
 
+videos:
+  - nombre: Grabacion de la clase sábado 2/11 (Game con clases y herencia).
+    urlYoutube: https://www.youtube.com/watch?v=yJQQqJl7H9k
+
 ejercicios:
   - name: Semillas (TP Grupal Herencia)
     classroom: https://classroom.github.com/a/dKtEBoHf
