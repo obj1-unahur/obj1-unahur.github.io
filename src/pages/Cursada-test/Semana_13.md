@@ -58,4 +58,4 @@ ejercicios:
 
 - Esta semana es para practicar fuerte para el 2do parcial, que será los días 12/11 para turno noche y 13/11 para turno mañana.
 
-- Dejamos 2 ejercicios para que resuelvan en forma individual. Recuerden la recomendación de tomarse el tiempo de leer primero muy bien todo el dominio del problema y luego ir resolviendo por etapas, identificando bien a los objetos (y clases), donde es realmente necesario definir atributos o se debe resolver mediante métodos. Atención también con poner todos los atributos "property" porque puede ser un error dejar expuestos el setter y/o getter donde no correstponda.
+- Dejamos varios ejercicios para que resuelvan en forma individual. Recuerden la recomendación de tomarse el tiempo de leer primero muy bien todo el dominio del problema y luego ir resolviendo por etapas, identificando bien a los objetos (y clases), donde es realmente necesario definir atributos o se debe resolver mediante métodos. Atención también con poner todos los atributos "property" porque puede ser un error dejar expuestos el setter y/o getter donde no correstponda.
