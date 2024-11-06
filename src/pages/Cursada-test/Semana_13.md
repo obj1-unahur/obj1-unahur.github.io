@@ -33,6 +33,12 @@ horarios:
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/81450588625
 
+videos:
+  - nombre: Grabación clase martes 5/11 - Parte 1.
+    urlYoutube: https://www.youtube.com/watch?v=MDEhrIGFEeE
+  - nombre: Grabación clase martes 5/11 - Parte 2.
+    urlYoutube: https://www.youtube.com/watch?v=H5Bhe6pcUaI
+
 ejercicios:
   - name: Práctica Mutual MMMM
     classroom: https://classroom.github.com/a/kNiKLWsB
