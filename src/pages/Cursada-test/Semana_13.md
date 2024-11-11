@@ -38,6 +38,8 @@ videos:
     urlYoutube: https://www.youtube.com/watch?v=MDEhrIGFEeE
   - nombre: Grabación clase martes 5/11 - Parte 2.
     urlYoutube: https://www.youtube.com/watch?v=H5Bhe6pcUaI
+  - nombre: Grabación clase sabado 9/11 - Práctica 2do Parcial
+    urlYoutube: https://www.youtube.com/watch?v=FFfDOVsUHo0
 
 ejercicios:
   - name: Práctica Mutual MMMM
