@@ -18,7 +18,7 @@ horarios:
     Dia: Miércoles 13 de Noviembre
     Modalidad: PARCIAL PRESENCIAL
     Hora: 08.00hs
-    Aula: Aulas MA-113 / MA-109
+    Aula: Aulas MA-113
     Edificio: (Edificio Malvinas Argentinas, 1er piso)
 
   - Comision: Comisiones 1A, 1B y 2
