@@ -11,8 +11,8 @@ horarios:
     Dia: Martes 19 de Noviembre
     Modalidad: PRESENCIAL
     Hora: 18.00hs
-    Aula: Aula a confirmar
-    Edificio: (Edificio a confirmar)
+    Aula: Aula TA-015
+    Edificio: (Edificio Trabajo Argentino)
 
   - Comision: Comisión 1B T.Noche
     Dia: Martes 19 de Noviembre
