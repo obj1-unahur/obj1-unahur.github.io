@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 14
 
-inicio: 2024-08-25
+inicio: 2025-08-25
 
 descripcion: Semana de 2do PARCIAL PRESENCIAL. Entran todos los temas vistos en la materia. Comisiones Turno noche 1A y 1B, el lugar de encuentro será el día martes 12/11 en el aula MA-113 a las 18hs. Comisión 2 el día miércoles 13/11, aula MA-113 a las 8hs.
 

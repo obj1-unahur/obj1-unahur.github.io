@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 9
 
-inicio: 2024-08-25
+inicio: 2025-08-25
 
 descripcion: En esta semana veremos el concepto de Clase como patrón o modelo para crear objetos, que describe completa y detalladamente la estructura de información y comportamiento que tendrá todo objeto de la clase.
 

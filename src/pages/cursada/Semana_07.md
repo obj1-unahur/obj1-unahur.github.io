@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 7
 
-inicio: 2024-08-25
+inicio: 2025-08-25
 
 descripcion: Esta semana aprenderemos a resolver problemas más complejos con colecciones y conoceremos otro tipo de colección que son los diccionarios. También veremos como usar rangos para resolver algunas situaciones donde se requiere obtener parte de los elementos de una colección.
 

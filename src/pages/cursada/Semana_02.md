@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 2
 
-inicio: 2024-08-19
+inicio: 2025-08-19
 
 descripcion: En esta semana, vamos a asegurarnos de realizar la instalación y configuración completa de las herramientas que utilizaremos durante la cursada.
 

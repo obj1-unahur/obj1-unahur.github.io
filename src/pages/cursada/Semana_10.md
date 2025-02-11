@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 10
 
-inicio: 2024-08-25
+inicio: 2025-08-25
 
 descripcion: Esta semana continuamos viendo "clases" y realizaremos la validación de los juegos que irán a desarrollar en cada grupo. También seguiremos con tema test avanzados.
 

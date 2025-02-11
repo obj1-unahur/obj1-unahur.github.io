@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 13
 
-inicio: 2024-08-25
+inicio: 2025-08-25
 
 descripcion: Esta semana es para practicar fuerte para el 2do parcial, que será los días 12/11 para turno noche y 13/11 para turno mañana.
 
