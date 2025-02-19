@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 4
 
-inicio: 2025-08-25
+inicio: 2024-08-25
 
 descripcion: Esta semana vamos a seguir practicando en clase el clonado de repos y la resolución de ejercicios en el IDE. Aprenderemos sobre test unitarios y también incorporamos el uso de la librería GAME para hacer juegos en Wollok!!!
 

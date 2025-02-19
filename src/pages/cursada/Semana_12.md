@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 12
 
-inicio: 2025-08-25
+inicio: 2024-08-25
 
 descripcion: Esta semana seguimos trabajando el concepto de Herencia de Clases. Entramos en el terreno donde es necesario afianzar los conocimientos adquiridos y comprender la diferencia entre lo dinámico/estado (las instancias) y lo estático/código (las clases).
 

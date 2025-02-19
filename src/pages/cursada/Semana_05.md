@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 5
 
-inicio: 2025-08-25
+inicio: 2024-08-25
 
 descripcion: En esta semana vamos a conocer a los Closures, que son bloques de código que pueden convertirse en un objeto y que pueden diferir su ejecución. Eso nos va a ayudar a programar cosas más interesantes e interactivas también en Wollok Game!
 

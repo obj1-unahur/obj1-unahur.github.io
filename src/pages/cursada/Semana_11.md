@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 11
 
-inicio: 2025-08-25
+inicio: 2024-08-25
 
 descripcion: Esta semana vamos a empezar a ver el tema Herencia, que nos va a permitir la definición de nuevas clases basadas en clases existentes, estableciendo jerarquías de Superclase y Subclase. Vamos a poder agregar nuevas variables y métodos, y también redefinir métodos..
 

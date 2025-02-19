@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 8
 
-inicio: 2025-08-25
+inicio: 2024-08-25
 
 descripcion: Semana de PARCIAL. Los temas que entran son hasta colecciones completo, incluyendo también lo tratado en la clase del sábado 28-9. Comisiones Turno noche 1A y 1B, el lugar de encuentro presencial será el día martes 1/10 en el aula MA-113 a las 18hs.
 

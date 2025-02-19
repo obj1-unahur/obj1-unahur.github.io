@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 6
 
-inicio: 2025-08-25
+inicio: 2024-08-25
 
 descripcion: Esta semana vamos a aprender sobre Colecciones, que son (por supuesto) objetos que nos permiten agrupar y mantener referencias a una cantidad indeterminada de otros objetos.
 
