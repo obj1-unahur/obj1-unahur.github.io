@@ -1,0 +1,45 @@
+---
+import CardSolucion from '@/components/CardSolucion.astro'
+import DefaultLayout from '@layouts/DefaultLayout.astro'
+
+const soluciones = await Astro.glob('./*.md') //Para buscar todos los archivos .md en la carpeta
+const titles = soluciones.at(0).frontmatter
+---
+
+<DefaultLayout
+	title="Ejercicios resueltos - Objetos I"
+	description="Universidad Nacional de Hurlingham, cursada / semana de Programación con Objetos I"
+	author="Objetos I">
+	<section class="my-12">
+		<div class="space-content container">
+			<h1>Ejercicios resueltos</h1>
+			<div class="flex flex-row flex-wrap">
+				{
+					titles.map((solucion) => (
+						<CardSolucion
+							title={solucion.title}
+							urlGitHub={solucion.url}
+						/>
+					))
+				}
+			</div>
+		</div>
+	</section>
+</DefaultLayout>
+
+<style lang="scss">
+	ul {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 4rem;
+
+		@media (min-width: 550px) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 2rem;
+		}
+
+		@media (min-width: 950px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+</style>

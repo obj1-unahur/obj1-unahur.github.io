@@ -1,0 +1,157 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const { title, urlGitHub } = Astro.props
+---
+
+<div class="feature float-start m-3">
+	<div class="flex flex-col text-center">
+		<h1>{title}</h1>
+		<a
+			href={urlGitHub}
+			target="_blank"
+			class="has-icon button preview-button justify-center">
+			<Icon name="ion:logo-github" />
+			Ver ejercicio resuelto
+		</a>
+	</div>
+</div>
+
+<style lang="scss">
+	@use '../assets/scss/base/breakpoint' as *;
+
+	.feature {
+		position: relative;
+		width: calc(100% - 0.5rem);
+		padding: 2rem;
+
+		> * {
+			position: relative;
+			z-index: 2;
+		}
+
+		@include breakpoint(large) {
+			width: 45%;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+		}
+
+		&::before {
+			inset: 0;
+			background-color: var(--neutral-100);
+			border: 3px solid var(--neutral-700);
+			border-radius: 1rem;
+			box-shadow: 0 0 0 6px var(--neutral-100);
+			z-index: 1;
+		}
+
+		&::after {
+			background-color: var(--action-color);
+			inset: 1rem -0.85rem -0.85rem 1rem;
+			border-radius: 1rem;
+			z-index: 0;
+		}
+	}
+
+	:global(.feature [data-icon]) {
+		height: auto;
+		width: 4rem;
+		color: var(--action-color);
+	}
+
+	:global(.darkmode .feature::before) {
+		background-color: var(--dark-100);
+		box-shadow: 0 0 0 6px var(--dark-100);
+	}
+
+	a {
+		background-color: var(--neutral-900) !important;
+		border-width: 0;
+		width: 95%;
+		color: white;
+		margin: auto;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding: 10px;
+		text-align: center;
+	}
+
+	a:hover {
+		background-color: black !important;
+	}
+
+	.preview-button:visited {
+		color: lightgray; /* Elige un color visible que se adapte a tu diseño */
+	}
+
+	.is-mobile {
+		@media (max-width: 550px) {
+			width: 12rem;
+			height: 3rem;
+			display: flex;
+		}
+		@media (min-width: 550px) {
+			display: none;
+		}
+	}
+
+	.is-desktop {
+		@media (max-width: 550px) {
+			display: none;
+		}
+		@media (min-width: 550px) {
+			display: flex;
+		}
+	}
+	.obligatorio-container {
+		position: absolute !important;
+		top: 0;
+		right: -3rem;
+		transform: translateY(-100%);
+		display: flex;
+		align-items: center;
+		justify-content: end;
+		background-color: var(--action-color);
+		border-radius: 50%;
+		width: 45px; /* Tamaño inicial del contenedor */
+		height: 45px; /* Altura inicial para mantener el ícono centrado */
+		overflow: hidden;
+		transition: width 0.6s ease, border-radius 0.7s ease;
+
+		&:hover,
+		&:focus-within {
+			width: 275px; /* Tamaño expandido del contenedor */
+			border-radius: 10px; /* Ajusta la curva de las esquinas al expandir */
+		}
+
+		&:hover .text-obligatorio,
+		&:focus-within .text-obligatorio {
+			opacity: 1;
+			transform: translateX(-10%);
+			transition: transform 0.4s ease 0.2s, opacity 0.1s ease 0.3s; /* Añade un pequeño retraso para que la animación del texto inicie después de la expansión */
+		}
+	}
+
+	.icon-obligatorio {
+		height: 45px;
+		width: 45px;
+		color: var(--dark-100);
+	}
+
+	.text-obligatorio {
+		position: absolute;
+		right: 10px; /* Ajusta para que el texto se alinee correctamente cuando aparezca */
+		white-space: nowrap; /* Evita que el texto se rompa en líneas múltiples */
+		font-size: 1rem;
+		color: var(--dark-100);
+		font-weight: bold;
+		transform: translateX(-100%); /* Inicia fuera de la vista a la derecha */
+		opacity: 0;
+		z-index: 0;
+		transition: transform 0.5s ease, opacity 0.1s ease;
+	}
+</style>
