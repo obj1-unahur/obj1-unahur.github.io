@@ -1,12 +1,13 @@
 ---
 import { Icon } from 'astro-icon/components'
 
-const { title, urlGitHub } = Astro.props
+const { title, urlGitHub, description } = Astro.props
 ---
 
 <div class="feature float-start m-3">
 	<div class="flex flex-col text-center">
 		<h1>{title}</h1>
+		<p>{description}</p>
 		<a
 			href={urlGitHub}
 			target="_blank"
