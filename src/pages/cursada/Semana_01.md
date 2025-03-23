@@ -7,33 +7,36 @@ inicio: 2024-08-03
 descripcion: ¡Hola! ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!
 
 horarios:
-  - Comision: Comisión 1 T.Noche
-    Dia: Martes 13 de Agosto
-    Modalidad: PRESENCIAL
+  - Comision: Comisión 2 - Lunes T.Noche
+    Dia: Lunes 24 de Marzo
     Hora: 18.00hs
-    Aula: Auditorio
-    Edificio: (Edificio Trabajo Argentino)
+    Mensaje: NO HAY CLASES POR FERIADO
 
-  - Comision: Comisión 2 T.Mañana
-    Dia: Miércoles 14 de Agosto
+  - Comision: Comisión 3 - Martes T.Tarde
+    Dia: Martes 25 de Marzo
     Modalidad: PRESENCIAL
-    Hora: 08.00hs
+    Hora: 14.00hs
     Aula: Aula MA-113
     Edificio: (Edificio Malvinas Argentinas, 1er piso)
 
-  - Comision: Comisiones 1 y 2
-    Dia: Sábado 17 de Agosto
-    Hora: 10.00hs
-    Mensaje: NO HAY CLASES POR FERIADO
+  - Comision: Comisión 4 - Miércoles T.Mañana
+    Dia: Miercoles 26 de Marzo
+    Modalidad: PRESENCIAL
+    Hora: 8.00hs
+    Aula: Aula MA-113
+    Edificio: (Edificio Malvinas Argentinas, 1er piso)
 
-videos:
-  - nombre: Qué es un objeto, qué es un mensaje
-    urlYoutube: https://www.youtube.com/watch?v=zZe0AaSKdyo
+  - Comision: Comisión 1 - Jueves T.Noche
+    Dia: Jueves 27 de Marzo
+    Modalidad: PRESENCIAL
+    Hora: 18.00hs
+    Aula: Aula MA-113
+    Edificio: (Edificio Malvinas Argentinas, 1er piso)
 
 ejercicios:
   - name: Presentación Personal
-    classroom: https://classroom.github.com/a/nIxo5hCt
-    repoUrl: 'obj1-unahur-2024s2/presentacion_Personal' # Acá va la URL del repo sin el "https://github.com/"
+    classroom: https://classroom.github.com/a/DwNQLbZo
+    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-presentacionpersonal-PresentacionPersonal' # Acá va la URL del repo sin el "https://github.com/"
     ejemploUrl: https://github.com/obj1-unahur-2023s1/presentacion-personal-BrankoMuruaga.git
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
@@ -43,6 +46,6 @@ ejercicios:
 - ¡Hola!
 - ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!
 - Todos los días lunes se publicará en este espacio las actividades de la semana, días y horarios de cursada, videos de apoyo a la teoría, videos de clases virtuales, los ejercicios a realizar y los temas que vamos a estar viendo. También servirá de cartelera de avisos con las novedades importantes.
-- En esta semana comenzaremos a conocer los objetos y mensajes en el paradigma de objetos. A continuación encontrarás videos que nos introducen en el tema.
 - Es muy importante que te suscribas al canal de Discord de la materia, las instrucciones están en la sección **[Inicio](/)** de esta página.
-- Además te contamos que la primer clase de la Comisión 1 (Turno Noche) será el día martes 13 de Agosto en el Auditorio del Edificio Trabajo Argentino; acá te dejamos el plano para que puedas ubicarte mejor: <a href="https://unahur.edu.ar/wp-content/uploads/2024/01/PLANO-2024-1.pdf" target="_blank">Ver Plano</a>
+- Les dejamos el plano para que puedan ubicarse en las aulas de la Universidad: <a href="https://unahur.edu.ar/wp-content/uploads/2024/01/PLANO-2024-1.pdf" target="_blank">Ver Plano</a>
+- En esta semana comenzaremos a conocer los objetos y mensajes en el paradigma de objetos, y también veremos las herramientas que se utilizarán en la cursada, comenzando por GIT como el manejador de las versiones del código que iremos produciendo. Github será la plataforma elegida por esta cátedra para almacenar el código fuente y los ejercicios a realizar.
