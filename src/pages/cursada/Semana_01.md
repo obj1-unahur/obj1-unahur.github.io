@@ -16,22 +16,28 @@ horarios:
     Dia: Martes 25 de Marzo
     Modalidad: PRESENCIAL
     Hora: 14.00hs
-    Aula: Aula MA-113
+    Aula: Aula MA-110
     Edificio: (Edificio Malvinas Argentinas, 1er piso)
 
   - Comision: Comisión 4 - Miércoles T.Mañana
     Dia: Miercoles 26 de Marzo
     Modalidad: PRESENCIAL
     Hora: 8.00hs
-    Aula: Aula MA-113
+    Aula: Aula MA-110
     Edificio: (Edificio Malvinas Argentinas, 1er piso)
 
   - Comision: Comisión 1 - Jueves T.Noche
     Dia: Jueves 27 de Marzo
     Modalidad: PRESENCIAL
     Hora: 18.00hs
-    Aula: Aula MA-113
+    Aula: Aula MA-110
     Edificio: (Edificio Malvinas Argentinas, 1er piso)
+
+  - Comision: Todas las Comisiones
+    Dia: Sábado 29 de Marzo
+    Modalidad: VIRTUAL
+    Hora: 10.00hs
+    URL: https://us06web.zoom.us/j/81450588625
 
 ejercicios:
   - name: Presentación Personal
