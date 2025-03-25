@@ -23,7 +23,7 @@ horarios:
     Dia: Miercoles 26 de Marzo
     Modalidad: PRESENCIAL
     Hora: 8.00hs
-    Aula: Aula MA-110
+    Aula: Aula MA-107
     Edificio: (Edificio Malvinas Argentinas, 1er piso)
 
   - Comision: Comisión 1 - Jueves T.Noche
