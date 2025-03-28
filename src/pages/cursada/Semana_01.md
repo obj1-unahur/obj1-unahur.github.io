@@ -37,7 +37,7 @@ horarios:
     Dia: Sábado 29 de Marzo
     Modalidad: VIRTUAL
     Hora: 10.00hs
-    URL: https://us06web.zoom.us/j/81450588625
+    URL: https://us06web.zoom.us/j/83754849667
 
 ejercicios:
   - name: Presentación Personal
