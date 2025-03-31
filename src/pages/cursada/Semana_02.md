@@ -17,7 +17,7 @@ horarios:
     Dia: Martes 1 de Abril
     Modalidad: PRESENCIAL
     Hora: 14.00hs
-    Aula: Aula MA-110
+    Aula: Aula MA-113
     Edificio: Edificio Malvinas Argentinas, 1er piso
 
   - Comision: Comisión 4 - Miércoles T.Mañana
