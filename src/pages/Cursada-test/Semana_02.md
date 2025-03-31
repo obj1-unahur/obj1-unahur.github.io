@@ -6,37 +6,67 @@ inicio: 2024-08-19
 
 descripcion: En esta semana, vamos a asegurarnos de realizar la instalación y configuración completa de las herramientas que utilizaremos durante la cursada.
 
-atencion: Esta semana no habrá clases los días martes 20/8 y miércoles 21/8, con motivo del paro docente y no docente anunciado. El sábado hay clase virtual normal.
-
 horarios:
-  - Comision: Comisión 1A T.Noche
-    Dia: Martes 20 de Agosto
+  - Comision: Comisión 2 - Lunes T.Noche
+    Dia: Lunes 31 de Marzo
     Hora: 18.00hs
-    Mensaje: NO HAY CLASES POR PARO
+    Aula: LAB LP-206
+    Edificio: Edificio La Patria - dirección La Patria 3800 (esquina Los Toldos)
 
-  - Comision: Comisión 1B T.Noche
-    Dia: Martes 20 de Agosto
+  - Comision: Comisión 3 - Martes T.Tarde
+    Dia: Martes 1 de Abril
+    Modalidad: PRESENCIAL
+    Hora: 14.00hs
+    Aula: Aula MA-110
+    Edificio: Edificio Malvinas Argentinas, 1er piso
+
+  - Comision: Comisión 4 - Miércoles T.Mañana
+    Dia: Miercoles 2 de Abril
+    Hora: 8.00hs
+    Mensaje: NO HAY CLASES POR FERIADO
+
+  - Comision: Comisión 1 - Jueves T.Noche
+    Dia: Jueves 3 de Abril
+    Modalidad: PRESENCIAL
     Hora: 18.00hs
-    Mensaje: NO HAY CLASES POR PARO
+    Aula: Aula MA-110
+    Edificio: Edificio Malvinas Argentinas, 1er piso
 
-  - Comision: Comisión 2 T.Mañana
-    Dia: Miércoles 21 de Agosto
-    Hora: 08.00hs
-    Mensaje: NO HAY CLASES POR PARO
-
-  - Comision: Comisiones 1A, 1B y 2
-    Dia: Sábado 24 de Agosto
+  - Comision: Todas las Comisiones
+    Dia: Sábado 5 de Abril
     Modalidad: VIRTUAL
     Hora: 10.00hs
-    URL: https://us06web.zoom.us/j/81450588625
+    URL: https://us06web.zoom.us/j/83754849667
 
 videos:
   - nombre: Instalación Wollok en Windows
     urlYoutube: https://www.youtube.com/watch?v=kPxbjL7WUHc
   - nombre: Instalación Wollok en Linux
     urlYoutube: https://www.youtube.com/watch?v=DCG-syufqhU
-  - nombre: Grabación clase Sábado 24/8/24
-    urlYoutube: https://www.youtube.com/watch?v=DbF44E-wRh0
+  - nombre: Grabación clase Sábado 29/3/25
+    urlYoutube: https://www.youtube.com/watch?v=hly5dO6z4Ls
+
+ejercicios:
+  - name: El Lobo Feroz
+    classroom: https://classroom.github.com/a/xl0TvvZN
+    repoUrl: 'obj1-unahur/elLoboFeroz' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'main' # Acá va la rama default del repo
+    fechaDeEntrega: Viernes 11/04
+    comentarios:
+      - name: Ejercicio para entregar haciendo push sobre el repositorio con la asignación correspondiente.
+    obligatorio: true
+  - name: Bolichito
+    classroom: https://classroom.github.com/a/3i35HrDc
+    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-bolichito-bolichito' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'main' # Acá va la rama default del repo
+    comentarios:
+      - name: Ejercicio para practicar en casa y en clase.
+  - name: Personajes Y Elementos
+    classroom: https://classroom.github.com/a/vINqSsxk
+    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-personajesyelementos-personajesYElementos' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'main' # Acá va la rama default del repo
+    comentarios:
+      - name: Ejercicio para practicar con objetos.
 ---
 
 - En esta semana, vamos a asegurarnos de realizar la instalación y configuración completa de las herramientas que utilizaremos durante la cursada.
@@ -48,3 +78,5 @@ videos:
   que están disponibles en esta página en la sección **Utilidad**▼.
 
 - También deberán instalarse GIT como herramienta para el control de versiones del código que van a ir produciendo. El manejo que necesitan para esta materia es el básico, y está explicado en varias guías que están en la sección <a href="/material#ComandosBasicos" target="_blank">**Utilidad**▼ Material> ComandosGit</a>
+
+- Y en las clases comenzaremos a realizar los primeros programas en wollok.
