@@ -61,9 +61,9 @@ ejercicios:
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Ejercicio para practicar en casa y en clase.
-  - name: Personajes Y Elementos
-    classroom: https://classroom.github.com/a/vINqSsxk
-    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-personajesyelementos-personajesYElementos' # Acá va la URL del repo sin el "https://github.com/"
+  - name: Juego Personajes Y Elementos
+    classroom: https://classroom.github.com/a/hwpUEARc
+    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-juegopersonajesyelementos-juegoPersonajesYElementos' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Ejercicio para practicar con objetos.
