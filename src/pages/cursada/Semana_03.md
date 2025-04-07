@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 3
 
-inicio: 2025-08-25
+inicio: 2024-08-25
 
 descripcion: En esta semana, vamos a aprender a modelar y desarrollar situaciones concretas simples dentro del paradigma de la programación con objetos, su estado interno, comportamiento, las relaciones entre distintos objetos y comprender el concepto de Polimorfismo.
 
