@@ -39,6 +39,10 @@ horarios:
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/83754849667
 
+videos:
+  - nombre: Grabación clase Sábado 29/3/25
+    urlYoutube: https://www.youtube.com/watch?v=hly5dO6z4Ls
+
 ejercicios:
   - name: Presentación Personal
     classroom: https://classroom.github.com/a/DwNQLbZo
