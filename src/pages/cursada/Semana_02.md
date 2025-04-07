@@ -43,6 +43,12 @@ videos:
     urlYoutube: https://www.youtube.com/watch?v=kPxbjL7WUHc
   - nombre: Instalación Wollok en Linux
     urlYoutube: https://www.youtube.com/watch?v=DCG-syufqhU
+  - nombre: Grabación clase Sábado 5/4/25 Parte 1
+    urlYoutube: https://www.youtube.com/watch?v=le8PPyfzldo
+  - nombre: Grabación clase Sábado 5/4/25 Parte 2
+    urlYoutube: https://www.youtube.com/watch?v=eR2AD7FFUi4
+  - nombre: Grabación clase Sábado 5/4/25 Parte 3
+    urlYoutube: https://www.youtube.com/watch?v=llv1iF_8Svc
 
 ejercicios:
   - name: El Lobo Feroz

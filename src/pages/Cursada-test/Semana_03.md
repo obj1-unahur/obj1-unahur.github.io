@@ -22,8 +22,10 @@ horarios:
 
   - Comision: Comisión 4 - Miércoles T.Mañana
     Dia: Miercoles 9 de Abril
+    Modalidad: PRESENCIAL
     Hora: 8.00hs
-    Mensaje: NO HAY CLASES POR FERIADO
+    Aula: LAB LP-207
+    Edificio: Edificio La Patria - dirección La Patria 3800 (esquina Los Toldos)
 
   - Comision: Comisión 1 - Jueves T.Noche
     Dia: Jueves 10 de Abril
@@ -45,6 +47,13 @@ ejercicios:
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Ejercicio para practicar con polimorfismo.
+
+  - name: El Alambique Viajero
+    classroom: https://classroom.github.com/a/kX4bcoQG
+    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-elalambiqueviajero1-elAlambiqueViajero1' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'main' # Acá va la rama default del repo
+    comentarios:
+      - name: Otro ejercicio para practicar con polimorfismo.
 ---
 
 - Esta semana vamos a seguir practicando en clase el clonado de repos y la resolución de ejercicios en el IDE y aprenderemos también sobre test unitarios.
