@@ -6,6 +6,8 @@ inicio: 2024-08-25
 
 descripcion: En esta semana, vamos a aprender a modelar y desarrollar situaciones concretas simples dentro del paradigma de la programación con objetos, su estado interno, comportamiento, las relaciones entre distintos objetos y comprender el concepto de Polimorfismo.
 
+atencion: Debido al paro anunciado para el día jueves 10/4, esta semana no habrá clase presencial para la Comisión 1 (jueves 18hs). Como excepción, se realizará un encuentro virtual de 19 a 21hs para ver el tema Polimorfismo, ya que luego habrá varios feriados que caen día jueves.
+
 horarios:
   - Comision: Comisión 2 - Lunes T.Noche
     Dia: Lunes 7 de Abril
@@ -29,10 +31,9 @@ horarios:
 
   - Comision: Comisión 1 - Jueves T.Noche
     Dia: Jueves 10 de Abril
-    Modalidad: PRESENCIAL
-    Hora: 18.00hs
-    Aula: Aula MA-110
-    Edificio: Edificio Malvinas Argentinas, 1er piso
+    Modalidad: VIRTUAL
+    Hora: 19.00hs
+    URL: https://us06web.zoom.us/j/83754849667
 
   - Comision: Todas las Comisiones
     Dia: Sábado 12 de Abril
