@@ -41,6 +41,10 @@ horarios:
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/83754849667
 
+videos:
+  - nombre: Grabación clase Sábado 12/4/25
+    urlYoutube: https://www.youtube.com/watch?v=TFJhvosqOEg
+
 ejercicios:
   - name: Tom y Jerry (y Nibbles también!)
     classroom: https://classroom.github.com/a/qU7MhcP9
