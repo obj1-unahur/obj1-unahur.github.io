@@ -33,9 +33,8 @@ horarios:
 
   - Comision: Todas las Comisiones
     Dia: Sábado 19 de Abril
-    Modalidad: VIRTUAL
     Hora: 10.00hs
-    URL: https://us06web.zoom.us/j/83754849667
+    Mensaje: NO HAY CLASES POR FERIADO
 
 ejercicios:
   - name: TP2(Polimorfismo) - Viajes Olaechea - Ejercicio para entregar haciendo push sobre el repositorio con la asignación correspondiente.
