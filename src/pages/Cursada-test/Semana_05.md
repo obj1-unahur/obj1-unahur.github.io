@@ -4,57 +4,57 @@ title: Semana 5
 
 inicio: 2024-08-25
 
-descripcion: En esta semana vamos a conocer a los Closures, que son bloques de código que pueden convertirse en un objeto y que pueden diferir su ejecución. Eso nos va a ayudar a programar cosas más interesantes e interactivas también en Wollok Game!
+descripcion: En esta semana vamos a conocer a los Closures, que son bloques de código que pueden convertirse en un objeto y que pueden diferir su ejecución. Eso nos va a ayudar a programar cosas más interesantes e interactivas y nos va a ser muy útil en Wollok Game!
 
 horarios:
-  - Comision: Comisión 1A T.Noche
-    Dia: Martes 10 de Septiembre
-    Modalidad: VIRTUAL
+  - Comision: Comisión 2 - Lunes T.Noche
+    Dia: Lunes 21 de Abril
     Hora: 18.00hs
-    URL: https://meet.google.com/nbd-fvja-vhj
+    Aula: LAB LP-206
+    Edificio: Edificio La Patria - dirección La Patria 3800 (esquina Los Toldos)
 
-  - Comision: Comisión 1B T.Noche
-    Dia: Martes 10 de Septiembre
+  - Comision: Comisión 3 - Martes T.Tarde
+    Dia: Martes 22 de Abril
+    Modalidad: PRESENCIAL
+    Hora: 14.00hs
+    Aula: Aula MA-113
+    Edificio: Edificio Malvinas Argentinas, 1er piso
+
+  - Comision: Comisión 4 - Miércoles T.Mañana
+    Dia: Miercoles 23 de Abril
+    Modalidad: PRESENCIAL
+    Hora: 8.00hs
+    Aula: LAB LP-207
+    Edificio: Edificio La Patria - dirección La Patria 3800 (esquina Los Toldos)
+
+  - Comision: Comisión 1 - Jueves T.Noche
+    Dia: Jueves 24 de Abril
     Modalidad: PRESENCIAL
     Hora: 18.00hs
-    Aula: Aula MA-113
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+    Aula: Aula MA-110
+    Edificio: Edificio Malvinas Argentinas, 1er piso
 
-  - Comision: Comisión 2 T.Mañana
-    Dia: Miércoles 11 de Septiembre
-    Modalidad: PRESENCIAL
-    Hora: 08.00hs
-    Aula: Aula MA-113
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
-
-  - Comision: Comisiones 1A, 1B y 2
-    Dia: Sábado 14 de Septiembre
+  - Comision: Todas las Comisiones
+    Dia: Sábado 26 de Abril
     Modalidad: VIRTUAL
     Hora: 10.00hs
-    URL: https://us06web.zoom.us/j/81450588625
-
-videos:
-  - nombre: Grabación 10/9/24 - Comisión 1A - Closures y Wollok Game - Parte I
-    urlYoutube: https://www.youtube.com/watch?v=25TqNbzTveQ
-  - nombre: Grabación 10/9/24 - Comisión 1A - Closures y Wollok Game - Parte II
-    urlYoutube: https://www.youtube.com/watch?v=Sz05mWeyZp8
-  - nombre: Grabación sábado 14/9/24 - Todas las comisiones
-    urlYoutube: https://www.youtube.com/watch?v=fzj9I0_cqbg
+    URL: https://us06web.zoom.us/j/83754849667
 
 ejercicios:
   - name: El Juego de Pepita
-    classroom: https://classroom.github.com/a/VGZZEQr6
-    repoUrl: 'obj1-unahur-2024s2/obj1-unahur-2024s2-eljuegodepepita-elJuegoDePepita' # Acá va la URL del repo sin el "https://github.com/"
+    classroom: https://classroom.github.com/a/65qebtKo
+    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-eljuegodepepita-elJuegoDePepita' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
-      - name: Seguimos practicando con las fases 2 y 3 del ejercicio de Game, que incluye el uso de closures.
-  - name: Dino Game (Reloaded)
-    repoUrl: 'obj1-unahur-2024s2/DinoGameTS' # Acá va la URL del repo sin el "https://github.com/"
+      - name: Presentamos un ejercicio que utiliza Game, que incluye el uso de closures.
+  - name: Dino Game
+    classroom: https://classroom.github.com/a/Jvvtl29K
+    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-DinoGame' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
-      - name: El juego DINO de la semana pasada con correcciones y recargado. Pueden clonarlo, jugar con el código, y programar las propuestas de trabajo!
+      - name: El juego DINO. Pueden aceptar la asignación y clonarlo, jugar con el código, y programar las propuestas de trabajo!
 ---
 
-- En esta semana vamos a conocer a los Closures, que son bloques de código que pueden convertirse en un objeto y que pueden diferir su ejecución. Eso nos va a ayudar a programar cosas más interesantes e interactivas también en Wollok Game!
+- En esta semana vamos a conocer a los Closures, que son bloques de código que pueden convertirse en un objeto y que pueden diferir su ejecución. Eso nos va a ayudar a programar cosas más interesantes e interactivas y nos va a ser muy útil en Wollok Game!
 
 - A los closures también se los llama expresiones Lambda. Estos "cachos" de código pueden tener, además, 1 o más parámetros que nos permiten convertir una porción de código en un objeto, dándonos el beneficio de diferir su ejecución, ya que el lugar donde se escribe el código puede no ser el mismo donde se pide la ejecución. Incluso, el código podría no ejecutarse nunca.
