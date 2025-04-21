@@ -43,13 +43,13 @@ horarios:
 ejercicios:
   - name: Mensajeros de Película
     classroom: https://classroom.github.com/a/xHg9TWAb
-    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-mensajeros' # Acá va la URL del repo sin el "https://github.com/"
+    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-mensajeros-mensajeros' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Ejercicio que introduce el mamejo de bloques y colecciones.
   - name: Bebidas Parte 2
     classroom: https://classroom.github.com/a/X0ioFi0i
-    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-coleccionesBebidas' # Acá va la URL del repo sin el "https://github.com/"
+    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-coleccionesbebidas-coleccionesBebidas' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Segunda parte del ejercicio Bebidas, que agrega el manejo de bloques y colecciones.
@@ -61,7 +61,7 @@ ejercicios:
       - name: Presentamos un ejercicio que utiliza Game, que incluye el uso de closures.
   - name: Dino Game
     classroom: https://classroom.github.com/a/Jvvtl29K
-    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-DinoGame' # Acá va la URL del repo sin el "https://github.com/"
+    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-dinogame-DinoGame' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: El juego DINO. Pueden aceptar la asignación y clonarlo, jugar con el código, y programar las propuestas de trabajo!
