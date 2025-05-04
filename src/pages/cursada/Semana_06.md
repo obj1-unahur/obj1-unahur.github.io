@@ -39,6 +39,10 @@ horarios:
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/83754849667
 
+videos:
+  - nombre: Grabación clase Sábado 3/5/25
+    urlYoutube: https://www.youtube.com/watch?v=a1BY7gTk1yI
+
 ejercicios:
   - name: Matrix El Elegido
     classroom: https://classroom.github.com/a/Gf58gFPn
