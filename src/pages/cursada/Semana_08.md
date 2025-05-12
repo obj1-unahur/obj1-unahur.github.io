@@ -30,7 +30,7 @@ horarios:
 
   - Comision: Comisión 1 - Jueves T.Noche
     Dia: Jueves 15 de Mayo
-    Modalidad: PRESENCIAL
+    Modalidad: CLASE PRESENCIAL
     Hora: 18.00hs
     Aula: Aula MA-110
     Edificio: Edificio Malvinas Argentinas, 1er piso
