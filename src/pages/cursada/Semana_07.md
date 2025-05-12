@@ -47,6 +47,8 @@ horarios:
 videos:
   - nombre: Como crear nuevo grupo en github classroom y unirse (aceptar asignaciones)
     urlYoutube: https://www.youtube.com/watch?v=o88LDqxxnz4
+  - nombre: Grabación clase Sabado 10/5/25
+    urlYoutube: https://www.youtube.com/watch?v=oiclNokhy8c
 
 ejercicios:
   - name: El Alambique Viajero
