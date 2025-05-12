@@ -18,7 +18,7 @@ horarios:
     Dia: Martes 13 de Mayo
     Modalidad: PARCIAL PRESENCIAL
     Hora: 14.00hs
-    Aula: Aula MA-113
+    Aula: Aula MA-113 / 112
     Edificio: Edificio Malvinas Argentinas, 1er piso
 
   - Comision: Comisión 4 - Miércoles T.Mañana

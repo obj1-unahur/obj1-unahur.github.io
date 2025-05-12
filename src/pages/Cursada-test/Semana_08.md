@@ -18,7 +18,7 @@ horarios:
     Dia: Martes 13 de Mayo
     Modalidad: PARCIAL PRESENCIAL
     Hora: 14.00hs
-    Aula: Aula MA-113
+    Aula: Aula MA-113 / 112
     Edificio: Edificio Malvinas Argentinas, 1er piso
 
   - Comision: Comisión 4 - Miércoles T.Mañana
@@ -37,7 +37,7 @@ horarios:
 
   - Comision: Todas las Comisiones
     Dia: Sábado 17 de Mayo
-    Modalidad: VIRTUAL
+    Modalidad: CLASE VIRTUAL
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/83754849667
 ---
