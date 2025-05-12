@@ -9,21 +9,21 @@ descripcion: Semana de PARCIAL para las comisiones 2, 3 y 4. Los temas que entra
 horarios:
   - Comision: Comisión 2 - Lunes T.Noche
     Dia: Lunes 12 de Mayo
-    Modalidad: PRESENCIAL
+    Modalidad: PARCIAL PRESENCIAL
     Hora: 18.00hs
     Aula: LAB LP-206 / 204 / 207
     Edificio: Edificio La Patria - dirección La Patria 3800 (esquina Los Toldos)
 
   - Comision: Comisión 3 - Martes T.Tarde
     Dia: Martes 13 de Mayo
-    Modalidad: PRESENCIAL
+    Modalidad: PARCIAL PRESENCIAL
     Hora: 14.00hs
     Aula: Aula MA-113
     Edificio: Edificio Malvinas Argentinas, 1er piso
 
   - Comision: Comisión 4 - Miércoles T.Mañana
     Dia: Miercoles 14 de Mayo
-    Modalidad: PRESENCIAL
+    Modalidad: PARCIAL PRESENCIAL
     Hora: 8.00hs
     Aula: LAB LP-207
     Edificio: Edificio La Patria - dirección La Patria 3800 (esquina Los Toldos)
@@ -37,7 +37,7 @@ horarios:
 
   - Comision: Todas las Comisiones
     Dia: Sábado 17 de Mayo
-    Modalidad: VIRTUAL
+    Modalidad: CLASE VIRTUAL
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/83754849667
 ---
