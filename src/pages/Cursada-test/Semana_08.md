@@ -40,6 +40,10 @@ horarios:
     Modalidad: CLASE VIRTUAL
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/83754849667
+
+videos:
+  - nombre: Grabación clase Sabado 17/5/25
+    urlYoutube: https://www.youtube.com/watch?v=8Ylk1M69XAo
 ---
 
 - Semana de PARCIAL para las comisiones 2, 3 y 4. Los temas que entran son hasta colecciones completo.
