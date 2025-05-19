@@ -4,9 +4,9 @@ title: Semana 9
 
 inicio: 2024-08-25
 
-descripcion: En esta semana la Comisión 1 (JUEVES de 18 a 22) tiene PARCIAL PRESENCIAL. Con el resto de las comisiones veremos el concepto de Clase como patrón o modelo para crear objetos, que describe completa y detalladamente la estructura de información y comportamiento que tendrá todo objeto de la clase.
+descripcion: En esta semana veremos el concepto de Clase como patrón o modelo para crear objetos, que describe completa y detalladamente la estructura de información y comportamiento que tendrá todo objeto de la clase.
 
-atencion: Como excepción, esta semana la comisión 2 (LUNES 18HS) tendrá clase VIRTUAL.
+atencion: El parcial de Comisión 1 será el día sábado 24/5 a las 10hs. El jueves 22/5 Comisión 1 tendrá clase virtual. Esta semana la Comisión 2 (LUNES 18HS) tendrá clase VIRTUAL.
 
 importante: Les vamos dejando el repositorio base para aceptar la asignación grupal del TPGameIntegrador (obligatorio). Vayan discutiendo en grupo esta semana que juego tienen pensado hacer y cualquier duda nos consultan a los profes.
 
@@ -33,12 +33,18 @@ horarios:
 
   - Comision: Comisión 1 - Jueves T.Noche
     Dia: Jueves 22 de Mayo
-    Modalidad: PARCIAL PRESENCIAL
+    Modalidad: CLASE VIRTUAL
     Hora: 18.00hs
-    Aula: Aula MA-110 y A confirmar
+    URL: https://us06web.zoom.us/j/83754849667
+
+  - Comision: Comisión 1
+    Dia: Sabado 24 de Mayo
+    Modalidad: PARCIAL PRESENCIAL
+    Hora: 10.00hs
+    Aula: Aula MA-113 / 112
     Edificio: Edificio Malvinas Argentinas, 1er piso
 
-  - Comision: Todas las Comisiones
+  - Comision: Comisiones 2, 3 y 4
     Dia: Sábado 24 de Mayo
     Modalidad: CLASE VIRTUAL
     Hora: 10.00hs
@@ -78,7 +84,7 @@ ejercicios:
     obligatorio: true
 ---
 
-- En esta semana la comisión 1 (jueves de 18 a 22) tiene PARCIAL PRESENCIAL. Con el resto de las comisiones veremos el concepto de Clase como patrón o modelo para crear objetos, que describe completa y detalladamente la estructura de información y comportamiento que tendrá todo objeto de la clase.
+- En esta semana veremos el concepto de Clase como patrón o modelo para crear objetos, que describe completa y detalladamente la estructura de información y comportamiento que tendrá todo objeto de la clase..
 
 - También aprenderemos el concepto de instanciación como creación de objetos a partir de una clase. Constructores de clase y "quién" es ahora self.
 
