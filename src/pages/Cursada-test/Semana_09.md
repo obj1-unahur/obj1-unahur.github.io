@@ -50,6 +50,14 @@ horarios:
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/83754849667
 
+videos:
+  - nombre: Grabación clase Jueves 22/5/25 Parte 1
+    urlYoutube: https://www.youtube.com/watch?v=B89PXd5VOGs
+  - nombre: Grabación clase Jueves 22/5/25 Parte 2
+    urlYoutube: https://www.youtube.com/watch?v=2lwTCQLe7_M
+  - nombre: Grabación clase Sabado 24/5/25
+    urlYoutube: https://www.youtube.com/watch?v=KuRLxuSdWJw
+
 ejercicios:
   - name: Infraestructura Ferroviaria (TP Grupal Clases)
     classroom: https://classroom.github.com/a/EONe3S0I
