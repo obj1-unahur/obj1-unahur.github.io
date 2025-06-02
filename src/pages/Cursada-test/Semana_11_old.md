@@ -6,45 +6,36 @@ inicio: 2024-08-25
 
 descripcion: Esta semana vamos a empezar a ver el tema Herencia, que nos va a permitir la definición de nuevas clases basadas en clases existentes, estableciendo jerarquías de Superclase y Subclase. Vamos a poder agregar nuevas variables y métodos, y también redefinir métodos..
 
-atencion: Este sábado 7/6 será el recuperatorio del 1er Parcial en el horario de 9 a 11hs. Las aulas designadas son MA-113, MA-112 y MA-111. No habrá clase virtual este sábado 7/6.
+atencion: Esta semana no habrá clases el día martes 22/10 debido al paro docente y no docente anunciado para los días 21 y 22 de octubre. Los días miércoles 23 y sábado 26 habrá clase Virtual ambos días. Les dejamos videos de cursadas anteriores donde se explica y ejemplifica los conceptos de esta semana.
 
 horarios:
-  - Comision: Comisión 2 - Lunes T.Noche
-    Dia: Lunes 2 de junio
-    Modalidad: CLASE PRESENCIAL
+  - Comision: Comisión 1A T.Noche
+    Dia: Martes 22 de Octubre
     Hora: 18.00hs
-    Aula: LAB LP-206
-    Edificio: Edificio La Patria - dirección La Patria 3800 (esquina Los Toldos)
+    Mensaje: NO HAY CLASES POR PARO
 
-  - Comision: Comisión 3 - Martes T.Tarde
-    Dia: Martes 3 de junio
-    Modalidad: CLASE PRESENCIAL
-    Hora: 14.00hs
-    Aula: Aula MA-113
-    Edificio: Edificio Malvinas Argentinas, 1er piso
-
-  - Comision: Comisión 4 - Miércoles T.Mañana
-    Dia: Miercoles 4 de junio
-    Modalidad: CLASE PRESENCIAL
-    Hora: 8.00hs
-    Aula: LAB LP-207
-    Edificio: Edificio La Patria - dirección La Patria 3800 (esquina Los Toldos)
-
-  - Comision: Comisión 1 - Jueves T.Noche
-    Dia: Jueves 5 de junio
-    Modalidad: CLASE PRESENCIAL
+  - Comision: Comisión 1B T.Noche
+    Dia: Martes 22 de Octubre
     Hora: 18.00hs
-    Aula: Aula MA-110
-    Edificio: Edificio Malvinas Argentinas, 1er piso
+    Mensaje: NO HAY CLASES POR PARO
 
-  - Comision: Todas las Comisiones
-    Dia: Sábado 7 de junio
-    Modalidad: Recuperatorio 1er Parcial PRESENCIAL
-    Hora: 9.00hs
-    Aula: Aula MA-113 / 112 / 111
-    Edificio: Edificio Malvinas Argentinas, 1er piso
+  - Comision: Comisión 2 T.Mañana
+    Dia: Miércoles 23 de Octubre
+    Modalidad: VIRTUAL
+    Hora: 08.00hs
+    URL: https://us06web.zoom.us/j/81450588625
+
+  - Comision: Comisiones 1A, 1B y 2
+    Dia: Sábado 26 de Octubre
+    Modalidad: VIRTUAL
+    Hora: 10.00hs
+    URL: https://us06web.zoom.us/j/81450588625
 
 videos:
+  - nombre: Grabacion de la clase sábado 26/10 (Ejercicio con Herencia).
+    urlYoutube: https://www.youtube.com/watch?v=4PvSce7UNew
+  - nombre: Grabacion de la clase miércoles 23/10 (Explicacion Herencia).
+    urlYoutube: https://www.youtube.com/watch?v=9YgX65dVhCE
   - nombre: Herencia con Wollok Game.
     urlYoutube: https://www.youtube.com/watch?v=ZRIBsSFNwqs
   - nombre: Herencia Parte 1 - una clase puede heredar de otra. (Videos complementarios).
@@ -58,15 +49,15 @@ videos:
 
 ejercicios:
   - name: Golosinas - Clases y Herencia
-    classroom: https://classroom.github.com/a/p5J1tUm7
-    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-herenciagolosinas-herenciaGolosinas' # Acá va la URL del repo sin el "https://github.com/"
+    classroom: https://classroom.github.com/a/4633ciLp
+    repoUrl: 'obj1-unahur-2024s2/obj1-unahur-2024s2-herenciagolosinas-herenciaGolosinas' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: El ejercicio de los videos de herencia, para que lo puedan practicar. Están implementadas las clases de cada golosina, está para arrancar con el enunciado.
 
   - name: Plagas - Herencia
-    classroom: https://classroom.github.com/a/ymSe3eFU
-    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-plagasherencia-herenciaPlagas' # Acá va la URL del repo sin el "https://github.com/"
+    classroom: https://classroom.github.com/a/obB8ZXN-
+    repoUrl: 'obj1-unahur-2024s2/obj1-unahur-2024s2-herenciaplagas-herenciaPlagas' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: TP individual para practicar en clase y en casa.
