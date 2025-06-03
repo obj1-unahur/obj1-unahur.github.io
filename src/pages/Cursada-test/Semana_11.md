@@ -64,6 +64,13 @@ ejercicios:
     comentarios:
       - name: El ejercicio de los videos de herencia, para que lo puedan practicar. Están implementadas las clases de cada golosina, está para arrancar con el enunciado.
 
+  - name: Golosinas - Colecciones (la primer parte)
+    classroom: https://classroom.github.com/a/MDKF7yd7
+    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-coleccionesgolosinas-coleccionesGolosinas' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'main' # Acá va la rama default del repo
+    comentarios:
+      - name: Primer parte del ejercicio de golosinas, con el enunciado y de cero para practicar.
+
   - name: Plagas - Herencia
     classroom: https://classroom.github.com/a/ymSe3eFU
     repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-plagasherencia-herenciaPlagas' # Acá va la URL del repo sin el "https://github.com/"
