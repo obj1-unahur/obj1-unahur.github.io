@@ -6,6 +6,8 @@ inicio: 2024-08-25
 
 descripcion: Esta semana seguimos trabajando el concepto de Herencia de Clases. Entramos en el terreno donde es necesario afianzar los conocimientos adquiridos y comprender la diferencia entre lo dinámico/estado (las instancias) y lo estático/código (las clases).
 
+atencion: La clase de este miércoles 11/6 a la mañana será en modalidad VIRTUAL. Estén atentos/as al Discord y la página de la materia por si alguna otra clase debe cambiar su modalidad.
+
 horarios:
   - Comision: Comisión 2 - Lunes T.Noche
     Dia: Lunes 9 de junio
@@ -23,10 +25,9 @@ horarios:
 
   - Comision: Comisión 4 - Miércoles T.Mañana
     Dia: Miercoles 11 de junio
-    Modalidad: CLASE PRESENCIAL
+    Modalidad: CLASE VIRTUAL
     Hora: 8.00hs
-    Aula: LAB LP-207
-    Edificio: Edificio La Patria - dirección La Patria 3800 (esquina Los Toldos)
+    URL: https://us06web.zoom.us/j/83754849667
 
   - Comision: Comisión 1 - Jueves T.Noche
     Dia: Jueves 12 de junio
