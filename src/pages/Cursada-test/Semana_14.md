@@ -47,7 +47,28 @@ ejercicios:
     repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-planetaseneluniverso-planetasEnElUniverso' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
+      - name: Para seguir practicando.
+
+  - name: Yaaar!!
+    classroom: https://classroom.github.com/a/8idbsWxN
+    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-yaaar-yaaar' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'main' # Acá va la rama default del repo
+    comentarios:
       - name: Otro ejercicio para seguir practicando.
+
+  - name: May 4th be with you - Nuevo episodio
+    classroom: https://classroom.github.com/a/r1E_faCK
+    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-may4thbewithyou-may4thbewithyou' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'main' # Acá va la rama default del repo
+    comentarios:
+      - name: Otro ejercicio más para seguir practicando.
+
+  - name: Escuela de Magia y Hechicería
+    classroom: https://classroom.github.com/a/nBmxpYT1
+    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-escuelademagia-escuelaDeMagia' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'main' # Acá va la rama default del repo
+    comentarios:
+      - name: ¿Querían más? Ahí va otro más para practicar!
 ---
 
 - Semana de 2do PARCIAL PRESENCIAL para las comisiones 1, 2 y 3. Entran todos los temas vistos en la materia.
