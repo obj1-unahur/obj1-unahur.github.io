@@ -4,39 +4,53 @@ title: Semana 14
 
 inicio: 2024-08-25
 
-descripcion: Semana de 2do PARCIAL PRESENCIAL. Entran todos los temas vistos en la materia. Comisiones Turno noche 1A y 1B, el lugar de encuentro será el día martes 12/11 en el aula MA-113 a las 18hs. Comisión 2 el día miércoles 13/11, aula MA-113 a las 8hs.
+descripcion: Semana de 2do PARCIAL PRESENCIAL para las comisiones 1, 2 y 3. Entran todos los temas vistos en la materia.
 
 horarios:
-  - Comision: Comisiones 1A y 1B T.Noche
-    Dia: Martes 12 de Noviembre
+  - Comision: Comisión 2 - Lunes T.Noche
+    Dia: Lunes 23 de junio
     Modalidad: PARCIAL PRESENCIAL
     Hora: 18.00hs
-    Aula: Aulas MA-113 / MA-109
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+    Aula: Aula MA-113
+    Edificio: Edificio Malvinas Argentinas, 1er piso
 
-  - Comision: Comisión 2 T.Mañana
-    Dia: Miércoles 13 de Noviembre
+  - Comision: Comisión 3 - Martes T.Tarde
+    Dia: Martes 24 de junio
     Modalidad: PARCIAL PRESENCIAL
-    Hora: 08.00hs
-    Aula: Aulas MA-113
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+    Hora: 14.00hs
+    Aula: Aula MA-113
+    Edificio: Edificio Malvinas Argentinas, 1er piso
 
-  - Comision: Comisiones 1A, 1B y 2
-    Dia: Sábado 16 de Noviembre
-    Modalidad: VIRTUAL
+  - Comision: Comisión 4 - Miércoles T.Mañana
+    Dia: Miercoles 25 de junio
+    Modalidad: CLASE PRESENCIAL
+    Hora: 8.00hs
+    Aula: LAB LP-207
+    Edificio: Edificio La Patria - dirección La Patria 3800 (esquina Los Toldos)
+
+  - Comision: Comisión 1 - Jueves T.Noche
+    Dia: Jueves 26 de junio
+    Modalidad: PARCIAL PRESENCIAL
+    Hora: 18.00hs
+    Aula: Aula MA-110
+    Edificio: Edificio Malvinas Argentinas, 1er piso
+
+  - Comision: Todas las Comisiones
+    Dia: Sábado 28 de junio
+    Modalidad: CLASE VIRTUAL
     Hora: 10.00hs
-    URL: https://us06web.zoom.us/j/81450588625
+    URL: https://us06web.zoom.us/j/83754849667
 
 ejercicios:
   - name: Planetas en el universo
-    classroom: https://classroom.github.com/a/t9YSUkVm
-    repoUrl: 'obj1-unahur-2024s2/obj1-unahur-2024s2-planetaseneluniverso-planetasEnElUniverso' # Acá va la URL del repo sin el "https://github.com/"
+    classroom: https://classroom.github.com/a/dxnp52Bm
+    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-planetaseneluniverso-planetasEnElUniverso' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Otro ejercicio para seguir practicando.
 ---
 
-- Semana de 2do PARCIAL PRESENCIAL. Entran todos los temas vistos en la materia. Comisiones Turno noche 1A y 1B, el lugar de encuentro será el día martes 12/11 en el aula MA-113 a las 18hs. Comisión 2 el día miércoles 13/11, aula MA-113 a las 8hs.
+- Semana de 2do PARCIAL PRESENCIAL para las comisiones 1, 2 y 3. Entran todos los temas vistos en la materia.
 
 - Quienes tengan notebook con puerto y cable de red y wollok funcionando, pueden llevarla para rendir el parcial; consideren llevar también los adaptadores y accesorios que requieran para conectarse, teniendo en cuenta que no habrá red Wifi disponible.
 

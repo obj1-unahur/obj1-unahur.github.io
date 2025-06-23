@@ -39,6 +39,10 @@ horarios:
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/83754849667
 
+videos:
+  - nombre: Clase virtual sabado 21/6
+    urlYoutube: https://www.youtube.com/watch?v=L80R1FmZoXE
+
 ejercicios:
   - name: Práctica Mutual MMMM
     classroom: https://classroom.github.com/a/UAgGcZMK
