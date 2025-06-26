@@ -32,7 +32,7 @@ horarios:
     Dia: Jueves 26 de junio
     Modalidad: PARCIAL PRESENCIAL
     Hora: 18.00hs
-    Aula: Aula MA-110
+    Aula: Aula MA-110 y MA-111
     Edificio: Edificio Malvinas Argentinas, 1er piso
 
   - Comision: Todas las Comisiones
