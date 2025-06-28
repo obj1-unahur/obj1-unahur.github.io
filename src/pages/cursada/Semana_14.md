@@ -41,6 +41,10 @@ horarios:
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/83754849667
 
+videos:
+  - nombre: Grabación clase Sabado 28/6/25
+    urlYoutube: https://www.youtube.com/watch?v=Yy9t-qNzr-M
+
 ejercicios:
   - name: Planetas en el universo
     classroom: https://classroom.github.com/a/dxnp52Bm
