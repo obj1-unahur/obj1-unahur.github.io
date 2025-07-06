@@ -12,16 +12,16 @@ const { title, descripcion } = frontmatter // 'frontmatter' devuelve un JSON con
 				class="mb-4 block font-sans font-semibold leading-snug tracking-normal antialiased dark:text-white">
 				{title}
 			</h4>
-			<p class="line-clamp-4">
+			<p class="line-clamp-4 text-black dark:text-white">
 				{descripcion}
 			</p>
 		</div>
-		<div class="flex-start p-2 pt-0">
+		<div class="flex-start p-2 pt-0 text-center">
 			{
 				frontmatter.videos ? (
 					<a
 						href={url + '/#videos'}
-						class="mr-3 rounded-md bg-[#d494ff] px-4 py-1 text-center align-middle hover:bg-[#bc72ee] dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800">
+						class="boton mr-3 rounded-md bg-[var(--primary-300)] px-4 py-1 text-center align-middle dark:bg-[var(--secondary-500)] dark:text-white ">
 						Videos
 					</a>
 				) : null
@@ -30,7 +30,7 @@ const { title, descripcion } = frontmatter // 'frontmatter' devuelve un JSON con
 				frontmatter.ejercicios ? (
 					<a
 						href={url + '/#ejercicios'}
-						class="mr-3 rounded-md bg-[#d494ff] px-4 py-1 text-center align-middle hover:bg-[#bc72ee] dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800">
+						class="boton mr-3 rounded-md bg-[var(--primary-300)] px-4  py-1 text-center align-middle dark:bg-[var(--secondary-500)] dark:text-white ">
 						Ejercicios
 					</a>
 				) : null
@@ -40,7 +40,14 @@ const { title, descripcion } = frontmatter // 'frontmatter' devuelve un JSON con
 </a>
 
 <style>
-	a {
-		color: var(--action-color);
+	.boton {
+		color: var(--neutral-300);
+		display: inline-block;
+		transition: transform 0.2s ease-in-out;
+	}
+
+	.boton:hover {
+		transform: scale(1.3);
+		color: var(--neutral-100);
 	}
 </style>

@@ -22,7 +22,7 @@ const { comision, modalidad, dia, hora, url, aula, edificio, mensaje } =
 			url ? (
 				<a
 					href={url}
-					class="boton flex flex-row items-center justify-center rounded-lg bg-[#8a3bbf] p-3 font-bold hover:bg-[#bc72ee] dark:bg-[#16aaa3] dark:hover:bg-[#178092]">
+					class="boton flex flex-row items-center justify-center rounded-lg bg-[var(--primary-300)] p-3 font-bold  dark:bg-[#16aaa3] dark:hover:bg-[#178092]">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="3em"
@@ -40,7 +40,7 @@ const { comision, modalidad, dia, hora, url, aula, edificio, mensaje } =
 		}
 		{
 			aula && edificio ? (
-				<div class="info mt-2 flex flex-col rounded-lg bg-slate-100 p-2 dark:bg-zinc-600">
+				<div class="recuadro info mt-2 flex flex-col rounded-lg bg-slate-100 p-2 dark:bg-zinc-600">
 					<p class="p-1 text-left font-bold dark:text-white">{aula}</p>
 					<p class="p-1 text-left font-bold dark:text-white">{edificio}</p>
 				</div>
@@ -48,14 +48,14 @@ const { comision, modalidad, dia, hora, url, aula, edificio, mensaje } =
 		}
 		{
 			mensaje ? (
-				<div class="info rounded-lg bg-slate-200 p-3 dark:bg-zinc-800">
+				<div class="recuadro info rounded-lg bg-slate-200 p-3 dark:bg-zinc-800">
 					<p class="text-center font-bold dark:text-white">{mensaje}</p>
 				</div>
 			) : null
 		}
 		{
 			hora && dia ? (
-				<div class="horario m-auto min-w-64 rounded-lg bg-slate-200 p-2 pr-4 text-center dark:bg-zinc-800">
+				<div class="recuadro horario m-auto min-w-64 rounded-lg bg-slate-200 p-2 pr-4 text-center dark:bg-zinc-800">
 					<p class="text-4xl font-bold">{hora}</p>
 					<p class="text-lg">{dia}</p>
 				</div>
@@ -93,6 +93,9 @@ const { comision, modalidad, dia, hora, url, aula, edificio, mensaje } =
 	}
 	.info {
 		grid-area: path;
+	}
+	.recuadro {
+		background-color: var(--neutral-500);
 	}
 
 	@media (max-width: 550px) {
