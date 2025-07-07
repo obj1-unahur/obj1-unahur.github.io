@@ -40,6 +40,10 @@ horarios:
     Modalidad: CLASE VIRTUAL
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/83754849667
+
+videos:
+  - nombre: Grabación clase Sabado 5/7/25
+    urlYoutube: https://www.youtube.com/watch?v=fBwq1RYZZ4E
 ---
 
 - Esta semana es para la presentación y defensa de los TP Game Grupales.
