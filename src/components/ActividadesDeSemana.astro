@@ -21,6 +21,7 @@ const { ejercicios } = Astro.props
 						defaultBranch,
 						fechaDeEntrega,
 						obligatorio,
+						consultas,
 					}) => (
 						<li class="flex w-full justify-center">
 							<CardEjercicio
@@ -32,6 +33,7 @@ const { ejercicios } = Astro.props
 								defaultBranch={defaultBranch}
 								fechaDeEntrega={fechaDeEntrega}
 								obligatorio={obligatorio}
+								consultas={consultas}
 							/>
 						</li>
 					)
