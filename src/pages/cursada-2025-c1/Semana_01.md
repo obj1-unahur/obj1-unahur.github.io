@@ -7,48 +7,46 @@ inicio: 2024-08-03
 descripcion: ¡Hola! ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!
 
 horarios:
-  - Comision: Comisión 1 - Lunes T.Noche
-    Dia: Lunes 11 de Agosto
-    Modalidad: CLASE PRESENCIAL
-    Hora: 18.00hs
-    Aula: Aula A confirmar
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
-
   - Comision: Comisión 2 - Lunes T.Noche
-    Dia: Lunes 11 de Agosto
-    Modalidad: CLASE PRESENCIAL
+    Dia: Lunes 24 de Marzo
     Hora: 18.00hs
-    Aula: Aula A confirmar
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
-
-  - Comision: Comisión 3 - Jueves T.Noche
-    Dia: Jueves 14 de Agosto
-    Modalidad: CLASE PRESENCIAL
-    Hora: 18.00hs
-    Aula: Aula A confirmar
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
-
-  - Comision: Comisión 4 - Viernes T.Mañana
-    Dia: Viernes 15 de Agosto
-    Hora: 8.00hs
     Mensaje: NO HAY CLASES POR FERIADO
 
+  - Comision: Comisión 3 - Martes T.Tarde
+    Dia: Martes 25 de Marzo
+    Modalidad: PRESENCIAL
+    Hora: 14.00hs
+    Aula: Aula MA-110
+    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+
+  - Comision: Comisión 4 - Miércoles T.Mañana
+    Dia: Miercoles 26 de Marzo
+    Modalidad: PRESENCIAL
+    Hora: 8.00hs
+    Aula: Aula MA-107
+    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+
+  - Comision: Comisión 1 - Jueves T.Noche
+    Dia: Jueves 27 de Marzo
+    Modalidad: PRESENCIAL
+    Hora: 18.00hs
+    Aula: Aula MA-110
+    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+
   - Comision: Todas las Comisiones
-    Dia: Sábado 16 de Agosto
+    Dia: Sábado 29 de Marzo
     Modalidad: VIRTUAL
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/83754849667
 
 videos:
-  - nombre: Instalación Wollok en Windows
-    urlYoutube: https://www.youtube.com/watch?v=kPxbjL7WUHc
-  - nombre: Instalación Wollok en Linux
-    urlYoutube: https://www.youtube.com/watch?v=DCG-syufqhU
+  - nombre: Grabación clase Sábado 29/3/25
+    urlYoutube: https://www.youtube.com/watch?v=hly5dO6z4Ls
 
 ejercicios:
   - name: Presentación Personal
-    classroom: https://classroom.github.com/a/mqKHUhOx
-    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-presentacionpersonal-PresentacionPersonal' # Acá va la URL del repo sin el "https://github.com/"
+    classroom: https://classroom.github.com/a/DwNQLbZo
+    repoUrl: 'obj1-unahur-2025s1/obj1-unahur-2025s1-presentacionpersonal-PresentacionPersonal' # Acá va la URL del repo sin el "https://github.com/"
     ejemploUrl: https://github.com/obj1-unahur-2023s1/presentacion-personal-BrankoMuruaga.git
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
@@ -61,4 +59,3 @@ ejercicios:
 - Es muy importante que te suscribas al canal de Discord de la materia, las instrucciones están en la sección **[Inicio](/)** de esta página.
 - Les dejamos el plano para que puedan ubicarse en las aulas de la Universidad: <a href="https://unahur.edu.ar/wp-content/uploads/2024/01/PLANO-2024-1.pdf" target="_blank">Ver Plano</a>
 - En esta semana comenzaremos a conocer los objetos y mensajes en el paradigma de objetos, y también veremos las herramientas que se utilizarán en la cursada, comenzando por GIT como el manejador de las versiones del código que iremos produciendo. Github será la plataforma elegida por esta cátedra para almacenar el código fuente y los ejercicios a realizar.
-- El lenguaje que usaremos se llama Wollok. Wollok es un lenguaje de programación para ser utilizado en el dictado de materias iniciales de programación orientada a objetos. Es un proyecto open source desarrollado por Fundación Uqbar, un grupo de docentes de distintas universidades nacionales de Argentina, para ser usado en sus clases. Incluye la propuesta Wollok Game, que propone ir adquiriendo los conceptos del paradigma orientado a objetos junto con el diseño de un juego didáctico, que en las clases siguientes les iremos contando.

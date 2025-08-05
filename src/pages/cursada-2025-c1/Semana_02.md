@@ -7,36 +7,33 @@ inicio: 2024-08-19
 descripcion: En esta semana, vamos a asegurarnos de realizar la instalación y configuración completa de las herramientas que utilizaremos durante la cursada.
 
 horarios:
-  - Comision: Comisión 1 - Lunes T.Noche
-    Dia: Lunes 18 de Agosto
-    Modalidad: CLASE PRESENCIAL
-    Hora: 18.00hs
-    Aula: Aula A confirmar
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
-
   - Comision: Comisión 2 - Lunes T.Noche
-    Dia: Lunes 18 de Agosto
-    Modalidad: CLASE PRESENCIAL
+    Dia: Lunes 31 de Marzo
     Hora: 18.00hs
-    Aula: Aula A confirmar
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+    Aula: LAB LP-206
+    Edificio: Edificio La Patria - dirección La Patria 3800 (esquina Los Toldos)
 
-  - Comision: Comisión 3 - Jueves T.Noche
-    Dia: Jueves 21 de Agosto
-    Modalidad: CLASE PRESENCIAL
-    Hora: 18.00hs
-    Aula: Aula A confirmar
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+  - Comision: Comisión 3 - Martes T.Tarde
+    Dia: Martes 1 de Abril
+    Modalidad: PRESENCIAL
+    Hora: 14.00hs
+    Aula: Aula MA-113
+    Edificio: Edificio Malvinas Argentinas, 1er piso
 
-  - Comision: Comisión 4 - Viernes T.Mañana
-    Dia: Viernes 22 de Agosto
-    Modalidad: CLASE PRESENCIAL
+  - Comision: Comisión 4 - Miércoles T.Mañana
+    Dia: Miercoles 2 de Abril
     Hora: 8.00hs
-    Aula: Aula A confirmar
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+    Mensaje: NO HAY CLASES POR FERIADO
+
+  - Comision: Comisión 1 - Jueves T.Noche
+    Dia: Jueves 3 de Abril
+    Modalidad: PRESENCIAL
+    Hora: 18.00hs
+    Aula: Aula MA-110
+    Edificio: Edificio Malvinas Argentinas, 1er piso
 
   - Comision: Todas las Comisiones
-    Dia: Sábado 23 de Agosto
+    Dia: Sábado 5 de Abril
     Modalidad: VIRTUAL
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/83754849667
@@ -46,6 +43,12 @@ videos:
     urlYoutube: https://www.youtube.com/watch?v=kPxbjL7WUHc
   - nombre: Instalación Wollok en Linux
     urlYoutube: https://www.youtube.com/watch?v=DCG-syufqhU
+  - nombre: Grabación clase Sábado 5/4/25 Parte 1
+    urlYoutube: https://www.youtube.com/watch?v=le8PPyfzldo
+  - nombre: Grabación clase Sábado 5/4/25 Parte 2
+    urlYoutube: https://www.youtube.com/watch?v=eR2AD7FFUi4
+  - nombre: Grabación clase Sábado 5/4/25 Parte 3
+    urlYoutube: https://www.youtube.com/watch?v=llv1iF_8Svc
 
 ejercicios:
   - name: El Lobo Feroz
