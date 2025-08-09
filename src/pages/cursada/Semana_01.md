@@ -6,20 +6,18 @@ inicio: 2024-08-03
 
 descripcion: ¡Hola! ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!
 
+atencion: Esta semana no habrá clases los días lunes 11/8 y viernes 15/8, pero les vamos a dejar algunas actividades para que vayan conociendo la materia.
+
 horarios:
   - Comision: Comisión 1 - Lunes T.Noche
     Dia: Lunes 11 de Agosto
-    Modalidad: CLASE PRESENCIAL
     Hora: 18.00hs
-    Aula: Aula A confirmar
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+    Mensaje: NO HAY CLASES POR PARO
 
   - Comision: Comisión 2 - Lunes T.Noche
     Dia: Lunes 11 de Agosto
-    Modalidad: CLASE PRESENCIAL
     Hora: 18.00hs
-    Aula: Aula A confirmar
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+    Mensaje: NO HAY CLASES POR PARO
 
   - Comision: Comisión 3 - Jueves T.Noche
     Dia: Jueves 14 de Agosto
