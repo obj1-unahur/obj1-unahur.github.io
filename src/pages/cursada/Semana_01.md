@@ -23,7 +23,7 @@ horarios:
     Dia: Jueves 14 de Agosto
     Modalidad: CLASE PRESENCIAL
     Hora: 18.00hs
-    Aula: Aula A confirmar
+    Aula: Aula MA-109
     Edificio: (Edificio Malvinas Argentinas, 1er piso)
 
   - Comision: Comisión 4 - Viernes T.Mañana
