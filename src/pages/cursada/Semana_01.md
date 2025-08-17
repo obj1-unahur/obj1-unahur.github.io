@@ -23,7 +23,7 @@ horarios:
     Dia: Jueves 14 de Agosto
     Modalidad: CLASE PRESENCIAL
     Hora: 18.00hs
-    Aula: Aula MA-109
+    Aula: Aula MA-113
     Edificio: (Edificio Malvinas Argentinas, 1er piso)
 
   - Comision: Comisión 4 - Viernes T.Mañana
@@ -38,6 +38,8 @@ horarios:
     URL: https://us06web.zoom.us/j/83754849667
 
 videos:
+  - nombre: Grabación clase sábado 16/8/25
+    urlYoutube: https://www.youtube.com/watch?v=fSXblMoK7qY
   - nombre: Instalación Wollok en Windows
     urlYoutube: https://www.youtube.com/watch?v=kPxbjL7WUHc
   - nombre: Instalación Wollok en Linux
