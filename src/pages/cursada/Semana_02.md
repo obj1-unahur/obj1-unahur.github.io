@@ -2,24 +2,24 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 2
 
-inicio: 2025-08-19
+inicio: 2025-08-18
 
-descripcion: En esta semana, vamos a asegurarnos de realizar la instalación y configuración completa de las herramientas que utilizaremos durante la cursada.
+descripcion: Esta semana daremos inicio al estudio de la programación orientada a objetos y aprenderemos cómo los objetos se comunican entre sí.
 
 horarios:
   - Comision: Comisión 1 - Lunes T.Noche
     Dia: Lunes 18 de Agosto
     Modalidad: CLASE PRESENCIAL
     Hora: 18.00hs
-    Aula: Aula A confirmar
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+    Aula: LAB LP-206
+    Edificio: Edificio La Patria - dirección La Patria 3800 (esquina Los Toldos)
 
   - Comision: Comisión 2 - Lunes T.Noche
     Dia: Lunes 18 de Agosto
     Modalidad: CLASE PRESENCIAL
     Hora: 18.00hs
-    Aula: Aula A confirmar
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+    Aula: LAB LP-207
+    Edificio: Edificio La Patria - dirección La Patria 3800 (esquina Los Toldos)
 
   - Comision: Comisión 3 - Jueves T.Noche
     Dia: Jueves 21 de Agosto
@@ -33,13 +33,13 @@ horarios:
     Modalidad: CLASE PRESENCIAL
     Hora: 8.00hs
     Aula: Aula A confirmar
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+    Edificio: (Edificio A confirmar)
 
   - Comision: Todas las Comisiones
     Dia: Sábado 23 de Agosto
     Modalidad: VIRTUAL
     Hora: 10.00hs
-    URL: https://us06web.zoom.us/j/83754849667
+    URL: https://us06web.zoom.us/j/87187879948
 
 ejercicios:
   - name: El Lobo Feroz (TP 1 Objetos (individual))
@@ -68,7 +68,8 @@ ejercicios:
 
   - -Exhibe un comportamiento (acciones que puede realizar).
   - -Posee un estado interno (valores que recuerda, también llamados atributos).
-    La comunicación entre objetos se realiza mediante mensajes, que son el punto de acceso al comportamiento que ofrecen. Estos mensajes se implementan a través de métodos, que son fragmentos de código que se ejecutan cuando un objeto recibe un mensaje.
+
+- La comunicación entre objetos se realiza mediante mensajes, que son el punto de acceso al comportamiento que ofrecen. Estos mensajes se implementan a través de métodos, que son fragmentos de código que se ejecutan cuando un objeto recibe un mensaje.
 
 - Recuerden que ya deberían tener instalado GIT como herramienta para el control de versiones del código y el software completo para usar Wollok, ya que esta semana empezaremos a realizar los primeros programas en el lenguaje.
 
