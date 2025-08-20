@@ -32,8 +32,8 @@ horarios:
     Dia: Viernes 22 de Agosto
     Modalidad: CLASE PRESENCIAL
     Hora: 8.00hs
-    Aula: Aula A confirmar
-    Edificio: (Edificio A confirmar)
+    Aula: Aula MA-109
+    Edificio: (Edificio Malvinas Argentinas, 1er piso)
 
   - Comision: Todas las Comisiones
     Dia: Sábado 23 de Agosto
