@@ -41,6 +41,10 @@ horarios:
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/87187879948
 
+videos:
+  - nombre: Grabación clase sábado 23/8/25
+    urlYoutube: https://www.youtube.com/watch?v=VqFvAuzNFzs
+
 ejercicios:
   - name: El Lobo Feroz (TP 1 Objetos (individual))
     classroom: https://classroom.github.com/a/TotuxJpA
