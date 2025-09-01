@@ -41,6 +41,10 @@ horarios:
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/87187879948
 
+videos:
+  - nombre: Grabación clase sábado 30/8/25
+    urlYoutube: https://www.youtube.com/watch?v=-B0t6m0eauI
+
 ejercicios:
   - name: Tom y Jerry (y Nibbles también!)
     classroom: https://classroom.github.com/a/DX-qfaY-
@@ -58,5 +62,4 @@ ejercicios:
 ---
 
 - En esta semana, continuamos modelando y desarrollando situaciones concretas simples dentro del paradigma de la programación con objetos, su estado interno, comportamiento, las relaciones entre distintos objetos y planteamos la introducción al concepto de **Polimorfismo** que se define como _la capacidad de un objeto de ser intercambiable con otro, sin que un tercero que los usa se vea afectado_.
-  
 - Además, vamos a seguir practicando en clase el clonado de repos y la resolución de ejercicios en el VSCode. Por último, para la clase virtual del sábado aprenderemos sobre test unitarios. En Wollok, los **tests unitarios automatizados** son herramientas que permiten probar el código de manera confiable y profesional, verificando el comportamiento esperado de los objetos. Estos tests se centran en unidades específicas del código y se ejecutan automáticamente, asegurando independencia entre ellos al reiniciar el ambiente antes de cada prueba. Se definen en archivos separados con extensión `.wtest`, permitiendo ejecutar todos los _tests_ y obtener informes de los resultados. De manera introductoria les dejamos el link de la documentación de como se realizan las pruebas en Wollok: <a href="https://www.wollok.org/documentation/tests/" target="_blank">Documentación Test Inicial</a> para que vayan investigando.
