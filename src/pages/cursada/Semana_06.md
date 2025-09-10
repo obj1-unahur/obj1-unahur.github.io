@@ -48,6 +48,13 @@ ejercicios:
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Ejercicio para practicar con colecciones y bloques.
+
+  - name: El Juego de Pepita
+    classroom: https://classroom.github.com/a/FOM8djAX
+    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-eljuegodepepita-elJuegoDePepita' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'main' # Acá va la rama default del repo
+    comentarios:
+      - name: Presentamos un ejercicio que utiliza Game, que incluye el uso de closures.
 ---
 
 - Esta semana vamos a aprender sobre Colecciones, que son (por supuesto) objetos que nos permiten agrupar y mantener referencias a una cantidad indeterminada de otros objetos.

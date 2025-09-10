@@ -54,12 +54,7 @@ ejercicios:
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Segunda parte del ejercicio Bebidas, que agrega el manejo de bloques y colecciones.
-  - name: El Juego de Pepita
-    classroom: https://classroom.github.com/a/FOM8djAX
-    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-eljuegodepepita-elJuegoDePepita' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
-    comentarios:
-      - name: Presentamos un ejercicio que utiliza Game, que incluye el uso de closures.
+
   - name: Dino Game
     classroom: https://classroom.github.com/a/GkSSoQ_r
     repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-dinogame-DinoGame-1' # Acá va la URL del repo sin el "https://github.com/"
