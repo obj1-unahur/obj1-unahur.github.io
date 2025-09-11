@@ -6,6 +6,8 @@ inicio: 2025-09-01
 
 descripcion: En esta semana vamos a conocer a los Closures, que son bloques de código que pueden convertirse en un objeto y que pueden diferir su ejecución. Eso nos va a ayudar a programar cosas más interesantes e interactivas y nos va a ser muy útil en Wollok Game! También incorporamos el uso de colecciones.
 
+atencion: Debido al paro anunciado para el día viernes 12/9, queda suspendida la clase de esta semana de comisión 4. Estén atentos/as a las indicaciones que se darán en Discord.
+
 horarios:
   - Comision: Comisión 1 - Lunes T.Noche
     Dia: Lunes 8 de Septiembre
@@ -30,10 +32,8 @@ horarios:
 
   - Comision: Comisión 4 - Viernes T.Mañana
     Dia: Viernes 12 de Septiembre
-    Modalidad: CLASE PRESENCIAL
     Hora: 8.00hs
-    Aula: Aula MA-109
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+    Mensaje: NO HAY CLASES POR PARO
 
   - Comision: Todas las Comisiones
     Dia: Sábado 13 de Septiembre

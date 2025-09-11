@@ -4,7 +4,7 @@ title: Semana 6
 
 inicio: 2025-09-20
 
-descripcion: Esta semana vamos a aprender sobre Colecciones, que son (por supuesto) objetos que nos permiten agrupar y mantener referencias a una cantidad indeterminada de otros objetos.
+descripcion: Esta semana profundizaremos en las colecciones, objetos que permiten agrupar y manejar referencias a muchos otros. Son una herramienta clave en la programación orientada a objetos y, al dominarlas, podrán organizar mejor sus programas y avanzar hacia soluciones más completas y útiles.
 
 horarios:
   - Comision: Comisión 1 - Lunes T.Noche
@@ -57,7 +57,7 @@ ejercicios:
       - name: Presentamos un ejercicio que utiliza Game, que incluye el uso de closures.
 ---
 
-- Esta semana vamos a aprender sobre Colecciones, que son (por supuesto) objetos que nos permiten agrupar y mantener referencias a una cantidad indeterminada de otros objetos.
+- Esta semana profundizaremos en las colecciones, objetos que permiten agrupar y manejar referencias a muchos otros. Son una herramienta clave en la programación orientada a objetos y, al dominarlas, podrán organizar mejor sus programas y avanzar hacia soluciones más completas y útiles.
 
 - En Wollok, por ahora probaremos de 2 sabores: Las listas y los conjuntos. Veremos las diferencias entre ambos y cuales son los mensajes básicos que entienden, con y sin efecto. Recomendamos ir viendo el apunte que mencionamos en alguna de las clases de la semana pasada sobre closures y colecciones que está disponible en la sección Material de esta página en este link:
   <a href="https://objetos1wollokunq.gitlab.io/material/guia-colecciones-basicas.pdf" target="_blank">Closures y Colecciones</a>
