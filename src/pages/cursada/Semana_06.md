@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 6
 
-inicio: 2025-09-20
+inicio: 2025-09-14
 
 descripcion: Esta semana profundizaremos en las colecciones, objetos que permiten agrupar y manejar referencias a muchos otros. Son una herramienta clave en la programación orientada a objetos y, al dominarlas, podrán organizar mejor sus programas y avanzar hacia soluciones más completas y útiles.
 

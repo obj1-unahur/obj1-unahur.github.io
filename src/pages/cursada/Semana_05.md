@@ -41,6 +41,10 @@ horarios:
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/87187879948
 
+videos:
+  - nombre: Grabación clase sábado 13/9/25
+    urlYoutube: https://www.youtube.com/watch?v=Qn6lSdpdyyo
+
 ejercicios:
   - name: Mensajeros de Película
     classroom: https://classroom.github.com/a/QyUxnjcN
