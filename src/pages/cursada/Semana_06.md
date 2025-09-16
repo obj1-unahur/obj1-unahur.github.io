@@ -41,7 +41,20 @@ horarios:
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/87187879948
 
+videos:
+  - nombre: Como crear nuevo grupo en github classroom y unirse (aceptar asignaciones)
+    urlYoutube: https://www.youtube.com/watch?v=o88LDqxxnz4
+
 ejercicios:
+  - name: Academia de Magia (TP Grupal Colecciones)
+    classroom: https://classroom.github.com/a/8C_btK1T
+    repoUrl: 'obj1-unahur/academiaDeMagia' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'main' # Acá va la rama default del repo
+    fechaDeEntrega: Viernes 26/09
+    comentarios:
+      - name: INSTRUCCIONES-> Un/a integrante del grupo acepta la asignación y procede a dar de alta el grupo (tengan acordado el nombre previamente), luego el resto de los/as integrantes también aceptan la asignación, y se unen a su grupo. La entrega la realizan haciendo push al reposotorio grupal desde cualquiera de los usuarios github del grupo. Podrán hacer los push hasta la fecha/hora límite indicada.
+    obligatorio: true
+
   - name: Matrix El Elegido
     classroom: https://classroom.github.com/a/tVsdScFC
     repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-matrixelelegido-matrixElElegido' # Acá va la URL del repo sin el "https://github.com/"
