@@ -45,6 +45,11 @@ videos:
   - nombre: Como crear nuevo grupo en github classroom y unirse (aceptar asignaciones)
     urlYoutube: https://www.youtube.com/watch?v=o88LDqxxnz4
 
+  - nombre: Grabación clase sábado 20/9/25 Parte 1
+    urlYoutube: https://www.youtube.com/watch?v=5JGYGPUcHsQ
+  - nombre: Grabación clase sábado 20/9/25 Parte 2
+    urlYoutube: https://www.youtube.com/watch?v=24IhXFCj-Uw
+
 ejercicios:
   - name: Academia de Magia (TP Grupal Colecciones)
     classroom: https://classroom.github.com/a/8C_btK1T
