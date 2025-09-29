@@ -32,8 +32,8 @@ horarios:
     Dia: Viernes 3 de Octubre
     Modalidad: PARCIAL PRESENCIAL
     Hora: 8.00hs
-    Aula: Aula a Designar
-    Edificio: A Designar
+    Aula: Aula MA-109
+    Edificio: (Edificio Malvinas Argentinas, 1er piso)
 
   - Comision: Todas las Comisiones
     Dia: Sábado 4 de Octubre
