@@ -41,6 +41,10 @@ horarios:
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/87187879948
 
+videos:
+  - nombre: Grabación clase sábado 27/9/25
+    urlYoutube: https://www.youtube.com/watch?v=Fo34C_alKIE
+
 ejercicios:
   - name: El Alambique Viajero
     classroom: https://classroom.github.com/a/xnk1VreA
