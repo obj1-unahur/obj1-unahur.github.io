@@ -82,4 +82,4 @@ ejercicios:
 
 - También aprenderemos el concepto de instanciación como creación de objetos a partir de una clase. Constructores de clase y "quién" es ahora self.
 
-- Les dejamos un video de referencia para el tema de la semana, que los van a ayudar a entender mejor la clase del sábado. No es obligatorio verlos, pero para el que quiera les damos ese material de apoyo.
+- Les dejamos unos videos de referencia para el tema de la semana, que los van a ayudar a entender mejor la clase del sábado. El primero es una explicación conceptual sobre el tema, es viejo, pero es más corto. Luego, dejamos una clase del cuatrimestre pasado sobre el tema, es un poco más larga, pero es más cercano y tiene la resolución de un ejercicio. No es obligatorio verlos, pero para el que quiera les damos ese material de apoyo.
