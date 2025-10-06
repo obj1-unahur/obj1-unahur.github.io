@@ -34,10 +34,8 @@ horarios:
 
   - Comision: Comisión 4 - Viernes T.Mañana
     Dia: Viernes 10 de Octubre
-    Modalidad: PRESENCIAL
-    Hora: 8.00hs
-    Aula: Aula MA-109
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+    Hora: Sin actividad
+    Mensaje: NO HAY CLASES POR FERIADO
 
   - Comision: Todas las Comisiones
     Dia: Sábado 11 de Octubre
