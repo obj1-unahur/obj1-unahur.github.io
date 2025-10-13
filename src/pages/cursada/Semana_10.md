@@ -4,7 +4,7 @@ title: Semana 10
 
 inicio: 2024-08-25
 
-descripcion: Esta semana continuamos viendo "clases" y seguiremos con tema test avanzados.
+descripcion: Esta semana continuamos viendo "clases" y seguiremos con tema test avanzados. El sábado 18/10 será el recuperatorio del 1er parcial presencial.
 atencion: Este sábado 18/10 será el recuperatorio del 1er parcial en forma presencial y no habrá clase virtual.
 
 horarios:
