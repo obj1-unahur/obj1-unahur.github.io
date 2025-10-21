@@ -6,6 +6,8 @@ inicio: 2025-10-20
 
 descripcion: Esta semana vamos a empezar a trabajar con el concepto de Herencia, que nos va a permitir la definición de nuevas clases basadas en clases existentes, estableciendo jerarquías de Superclase y Subclase. Vamos a poder agregar nuevas variables y métodos, y también redefinir métodos.
 
+importante: Para las comisiones 1 y 2 el TP obligatorio se entregará el 31/10. Para las comisiones 3 y 4 se entregará el 07/11.
+
 horarios:
   - Comision: Comisión 1 - Lunes T.Noche
     Dia: Lunes 20 de Octubre
@@ -54,6 +56,15 @@ videos:
     urlYoutube: https://www.youtube.com/watch?v=01ewdTUk658
 
 ejercicios:
+  - name: Semillas (TP Grupal Herencia)
+    classroom: https://classroom.github.com/a/xM3eCOIQ
+    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-herencia-semillas-herencia-Semillas' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'main' # Acá va la rama default del repo
+    fechaDeEntrega: Ver sección 'Importante'
+    comentarios:
+      - name: TP Grupal de entrega obligatoria que incluye todos los temas vistos incluyendo herencia.
+    obligatorio: true
+
   - name: Golosinas - Colecciones (la primer parte)
     classroom: https://classroom.github.com/a/yPoqYTwa
     repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-coleccionesgolosinas-coleccionesGolosinas' # Acá va la URL del repo sin el "https://github.com/"
@@ -86,4 +97,3 @@ ejercicios:
 - Esta semana vamos a empezar a trabajar con el concepto de Herencia, que nos va a permitir la definición de nuevas clases basadas en clases existentes, estableciendo jerarquías de Superclase y Subclase. Vamos a poder agregar nuevas variables y métodos, y también redefinir métodos.
 
 - También veremos el concepto de lookup method como mecanismo por el cual se determina, para el envío de un mensaje, qué método se debe ejecutar.
-
