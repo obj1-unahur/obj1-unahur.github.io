@@ -44,7 +44,7 @@ horarios:
 ejercicios:
   - name: Naves Espaciales
     classroom: https://classroom.github.com/a/FN2PBzAi
-    repoUrl: 'obj1-unahur-2025s2-herencia-naves-herencia-NavesEspaciales' # Acá va la URL del repo sin el "https://github.com/"
+    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-herencia-naves-herencia-NavesEspaciales' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Para practicar Herencia de Clases en clase y Clase Abstracta.
