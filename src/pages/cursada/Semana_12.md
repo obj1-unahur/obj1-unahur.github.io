@@ -48,6 +48,13 @@ ejercicios:
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Para practicar Herencia de Clases en clase y Clase Abstracta.
+
+  - name: Pack de Viajes
+    classroom: https://classroom.github.com/a/Drmc7oCz
+    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-tipo-2do-parcial-packs-de-viajes-parcial-agenciaDeViajes' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'main' # Acá va la rama default del repo
+    comentarios:
+      - name: Ejercicio tipo parcial para practicar Herencia de Clases y Clase Abstracta, la solución la vamos a desarrollar junto con el repaso para el segundo parcial en la clase del sábado.
 ---
 
 - Esta semana seguimos trabajando el concepto de Herencia de Clases. Entramos en el terreno donde es necesario afianzar los conocimientos adquiridos y comprender la diferencia entre lo dinámico/estado (las instancias) y lo estático/código (las clases). Trabajaremos sobre clase abstracta y manejo de errores.
