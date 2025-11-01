@@ -50,6 +50,8 @@ videos:
     urlYoutube: https://www.youtube.com/watch?v=B89PXd5VOGs
   - nombre: Clase del cuatri pasado sobre Clases - Parte 2
     urlYoutube: https://www.youtube.com/watch?v=2lwTCQLe7_M
+  - nombre: Grabación clase sábado 11/10/25
+    urlYoutube: https://www.youtube.com/watch?v=_glG4IjXpJ4
 
 ejercicios:
   - name: Infraestructura Ferroviaria (TP Grupal Clases)

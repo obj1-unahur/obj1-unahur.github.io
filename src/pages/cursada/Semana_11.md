@@ -54,6 +54,8 @@ videos:
     urlYoutube: https://www.youtube.com/watch?v=akiTj8ZZhPU
   - nombre: Nueva Instancia dentro de una expresión. (Videos complementarios).
     urlYoutube: https://www.youtube.com/watch?v=01ewdTUk658
+  - nombre: Grabación clase sábado 25/10/25
+    urlYoutube: https://www.youtube.com/watch?v=H9lRnz4fz-o
 
 ejercicios:
   - name: Semillas (TP Grupal Herencia)
