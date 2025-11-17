@@ -40,6 +40,10 @@ horarios:
     Modalidad: VIRTUAL
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/87187879948
+
+videos:
+  - nombre: Grabación de la clase del sábado 15/11/2025.
+    urlYoutube: https://www.youtube.com/watch?v=bt_geAxnACU
 ---
 
 - Semana de 2do PARCIAL PRESENCIAL para las comisiones 3 y 4. Entran todos los temas vistos en la materia.
