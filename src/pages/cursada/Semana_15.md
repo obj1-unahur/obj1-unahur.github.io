@@ -36,7 +36,7 @@ horarios:
   - Comision: Todas las Comisiones
     Dia: Sábado 22 de Noviembre
     Modalidad: VIRTUAL
-    Hora: 10.00hs
+    Hora: 14.00hs
     URL: https://us06web.zoom.us/j/87187879948
 ---
 
