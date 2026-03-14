@@ -44,7 +44,7 @@ horarios:
 videos:
   - nombre: Grabación de la clase del sábado 01/11/2025.
     urlYoutube: https://drive.google.com/file/d/1a7Y9CC3l3nAnDyviJ72nlCuiH7z0JXut/view?usp=sharing
-    
+
 ejercicios:
   - name: Naves Espaciales
     classroom: https://classroom.github.com/a/FN2PBzAi
