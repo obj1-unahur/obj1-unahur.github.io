@@ -59,8 +59,8 @@ videos:
     urlYoutube: https://www.youtube.com/watch?v=kPxbjL7WUHc
   - nombre: Instalación Wollok en Linux
     urlYoutube: https://www.youtube.com/watch?v=DCG-syufqhU
-
-#   AGREGAR VIDEO EXPLICANDO COMO ACEPTAR ASIGNACIONES DE GITHUB CLASSROOM
+  - nombre: Como aceptar asignaciones (ejercicios) de github classroom
+    urlYoutube: https://www.youtube.com/watch?v=pKIhUX51nkw
 
 ejercicios:
   - name: Presentación Personal
@@ -74,9 +74,9 @@ ejercicios:
 
 - ¡Hola!
 - ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!
-- Todos los días lunes se publicará en este espacio las actividades de la semana, días y horarios de cursada, videos de apoyo a la teoría, los ejercicios a realizar y los temas que vamos a estar viendo. También servirá de cartelera de avisos con las novedades importantes.
+- Todos los días lunes se publicará en este espacio las actividades de la semana, días y horarios de cursada, videos de apoyo a la teoría y tutoriales, los ejercicios a realizar y los temas que vamos a estar viendo. También servirá de cartelera de avisos con las novedades importantes.
 - Es muy importante que te suscribas al canal de Discord de la materia, las instrucciones están en la sección **[Inicio](/)** de esta página.
-- En esta semana veremos las herramientas que se utilizarán en la cursada, comenzando por GIT como el manejador de las versiones del código que iremos produciendo. Github será la plataforma elegida por esta cátedra para almacenar el código fuente y los ejercicios a realizar.
+- En esta semana veremos las herramientas que se utilizarán en la cursada, comenzando por GIT como el manejador de las versiones del código que iremos produciendo. Github será la plataforma elegida por esta cátedra para almacenar el código fuente y los ejercicios a realizar. Es requisito también para esta cursada (si no tienen usuario ya generado) registrarse y obtener un usuario de github, el línk es el siguiente: <a href="https://github.com" target="_blank" > github </a>
 
 - Deberán instalarse GIT. El manejo que necesitan para esta materia es el básico, y está explicado en varias guías que están en la sección <a href="/material#ComandosBasicos" target="_blank">**Utilidad**▼ Material> ComandosGit</a>
 

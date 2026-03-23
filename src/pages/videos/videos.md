@@ -8,6 +8,9 @@
 - nombre: Instalación Wollok - Windows
   urlYoutube: https://www.youtube.com/watch?v=kPxbjL7WUHc
 
+- nombre: Como aceptar asignaciones (ejercicios) de github classroom
+  urlYoutube: https://www.youtube.com/watch?v=pKIhUX51nkw
+
 - nombre: Conociendo los Objetos en Wollok (por Lucas Spigariol).
   urlYoutube: https://www.youtube.com/watch?v=N3rmV8eAxkw
 
