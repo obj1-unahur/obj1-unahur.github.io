@@ -2,53 +2,70 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 1
 
-inicio: 2026-08-03
+inicio: 2026-03-21
 
 descripcion: ¡Hola! ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!
 
-atencion: Esta semana no habrá clases los días lunes 11/8 y viernes 15/8, pero les vamos a dejar algunas actividades para que vayan conociendo la materia.
+atencion: Esta semana no habrá clases los días martes 31/3 por PARO y viernes 3/4 por el FERIADO, pero les vamos a dejar algunas actividades para que vayan conociendo la materia.
 
 horarios:
-  - Comision: Comisión 1 - Lunes T.Noche
-    Dia: Lunes 11 de Agosto
-    Hora: 18.00hs
-    Mensaje: NO HAY CLASES POR PARO
-
-  - Comision: Comisión 2 - Lunes T.Noche
-    Dia: Lunes 11 de Agosto
-    Hora: 18.00hs
-    Mensaje: NO HAY CLASES POR PARO
-
-  - Comision: Comisión 3 - Jueves T.Noche
-    Dia: Jueves 14 de Agosto
-    Modalidad: CLASE PRESENCIAL
-    Hora: 18.00hs
-    Aula: Aula MA-113
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
-
-  - Comision: Comisión 4 - Viernes T.Mañana
-    Dia: Viernes 15 de Agosto
+  - Comision: Comisión 1 - Viernes T.Mañana
+    Dia: Viernes 3 de Abril
     Hora: 8.00hs
     Mensaje: NO HAY CLASES POR FERIADO
 
+  - Comision: Comisión 2 - Martes T.Noche
+    Dia: Martes 31 de Marzo
+    Hora: 18.00hs
+    Mensaje: NO HAY CLASES POR PARO
+
+  - Comision: Comisión 3 - Miércoles T.Noche
+    Dia: Miércoles 1 de Abril
+    Modalidad: CLASE PRESENCIAL
+    Hora: 18.00hs
+    Aula: Aula A Determinar
+    Edificio: (Edificio a Determinar)
+
+  - Comision: Comisión 4 - Viernes T.Noche
+    Dia: Viernes 3 de Abril
+    Hora: 18.00hs
+    Mensaje: NO HAY CLASES POR FERIADO
+
+  - Comision: Comisión 5 - Miércoles T.Noche
+    Dia: Miércoles 1 de Abril
+    Modalidad: CLASE PRESENCIAL
+    Hora: 18.00hs
+    Aula: Aula A Determinar
+    Edificio: (Edificio a Determinar)
+
+  - Comision: Comisión 6 - Viernes T.Noche
+    Dia: Viernes 3 de Abril
+    Hora: 18.00hs
+    Mensaje: NO HAY CLASES POR FERIADO
+
+  - Comision: Comisión 7 - Viernes T.Noche
+    Dia: Viernes 3 de Abril
+    Hora: 18.00hs
+    Mensaje: NO HAY CLASES POR FERIADO
+
   - Comision: Todas las Comisiones
-    Dia: Sábado 16 de Agosto
+    Dia: Sábado 4 de Abril
     Modalidad: VIRTUAL
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/83754849667
 
 videos:
-  - nombre: Grabación clase sábado 16/8/25
-    urlYoutube: https://www.youtube.com/watch?v=fSXblMoK7qY
   - nombre: Instalación Wollok en Windows
     urlYoutube: https://www.youtube.com/watch?v=kPxbjL7WUHc
   - nombre: Instalación Wollok en Linux
     urlYoutube: https://www.youtube.com/watch?v=DCG-syufqhU
 
+#   AGREGAR VIDEO EXPLICANDO COMO ACEPTAR ASIGNACIONES DE GITHUB CLASSROOM
+
 ejercicios:
   - name: Presentación Personal
-    classroom: https://classroom.github.com/a/mqKHUhOx
-    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-presentacionpersonal-PresentacionPersonal' # Acá va la URL del repo sin el "https://github.com/"
+    classroom: https://classroom.github.com/a/QcD0Y0ox
+    repoUrl: 'obj1-unahur-2026s1/obj1-unahur-2026s1-presentacion-personal-PresentacionPersonal' # Acá va la URL del repo sin el "https://github.com/"
     ejemploUrl: https://github.com/obj1-unahur-2023s1/presentacion-personal-BrankoMuruaga.git
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
@@ -57,9 +74,8 @@ ejercicios:
 
 - ¡Hola!
 - ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!
-- Todos los días lunes se publicará en este espacio las actividades de la semana, días y horarios de cursada, videos de apoyo a la teoría, videos de clases virtuales, los ejercicios a realizar y los temas que vamos a estar viendo. También servirá de cartelera de avisos con las novedades importantes.
+- Todos los días lunes se publicará en este espacio las actividades de la semana, días y horarios de cursada, videos de apoyo a la teoría, los ejercicios a realizar y los temas que vamos a estar viendo. También servirá de cartelera de avisos con las novedades importantes.
 - Es muy importante que te suscribas al canal de Discord de la materia, las instrucciones están en la sección **[Inicio](/)** de esta página.
-- Les dejamos el plano para que puedan ubicarse en las aulas de la Universidad: <a href="https://unahur.edu.ar/wp-content/uploads/2024/01/PLANO-2024-1.pdf" target="_blank">Ver Plano</a>
 - En esta semana veremos las herramientas que se utilizarán en la cursada, comenzando por GIT como el manejador de las versiones del código que iremos produciendo. Github será la plataforma elegida por esta cátedra para almacenar el código fuente y los ejercicios a realizar.
 
 - Deberán instalarse GIT. El manejo que necesitan para esta materia es el básico, y está explicado en varias guías que están en la sección <a href="/material#ComandosBasicos" target="_blank">**Utilidad**▼ Material> ComandosGit</a>
