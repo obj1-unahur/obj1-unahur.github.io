@@ -9,6 +9,11 @@ descripcion: ¡Hola! ¡Te damos la bienvenida a la primer semana de cursada de P
 atencion: Esta semana no habrá clases los días martes 31/3 por PARO y viernes 3/4 por el FERIADO, pero les vamos a dejar algunas actividades para que vayan conociendo la materia.
 
 horarios:
+  - Comision: Comisión 1 - Viernes T.Mañana
+    Dia: Viernes 3 de Abril
+    Hora: 8.00hs
+    Mensaje: NO HAY CLASES POR FERIADO
+
   - Comision: Comisión 2 - Martes T.Noche
     Dia: Martes 31 de Marzo
     Hora: 18.00hs
@@ -21,22 +26,17 @@ horarios:
     Aula: Aula A Determinar
     Edificio: (Edificio a Determinar)
 
+  - Comision: Comisión 4 - Viernes T.Noche
+    Dia: Viernes 3 de Abril
+    Hora: 18.00hs
+    Mensaje: NO HAY CLASES POR FERIADO
+
   - Comision: Comisión 5 - Miércoles T.Noche
     Dia: Miércoles 1 de Abril
     Modalidad: CLASE PRESENCIAL
     Hora: 18.00hs
     Aula: Aula A Determinar
     Edificio: (Edificio a Determinar)
-
-  - Comision: Comisión 1 - Viernes T.Mañana
-    Dia: Viernes 3 de Abril
-    Hora: 8.00hs
-    Mensaje: NO HAY CLASES POR FERIADO
-
-  - Comision: Comisión 4 - Viernes T.Noche
-    Dia: Viernes 3 de Abril
-    Hora: 18.00hs
-    Mensaje: NO HAY CLASES POR FERIADO
 
   - Comision: Comisión 6 - Viernes T.Noche
     Dia: Viernes 3 de Abril
