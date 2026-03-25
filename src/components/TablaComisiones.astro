@@ -52,18 +52,23 @@ const { horarios } = Astro.props
 		data: data,
 		search: true,
 		style: {
-			table: { background: '#1a1c22', color: '#e5e7eb', border: 'none' }, // Fondo exacto de la web
+			table: { background: '#1a1c22', color: '#e5e7eb', border: 'none' },
 			th: {
 				background: '#1a1c22',
-				color: '#6366f1',
+				color: '#A5F3FC',
 				border: '1px solid #374151',
 				padding: '15px',
-			}, // Azul UNahur
+			},
 			td: {
 				background: '#1a1c22',
 				border: '1px solid #374151',
 				padding: '12px',
 			},
+		},
+		language: {
+			search: { placeholder: '🔍 Buscar...' },
+			pagination: { previous: 'Anterior', next: 'Siguiente' },
+			noRecordsFound: 'No se encontraron comisiones 😕',
 		},
 	}).render(document.getElementById('wrapper-tabla'))
 </script>
@@ -73,14 +78,10 @@ const { horarios } = Astro.props
 		font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 			'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 		margin: 20px 0;
+		border: '#1a1c22';
 	}
 
 	@media (max-width: 450px) {
-		.gridjs-table {
-			max-width: 100%;
-		}
-
-		/* Achicamos un pelín la letra para que entre más info */
 		.gridjs-td,
 		.gridjs-th {
 			font-size: 12px !important;
@@ -88,39 +89,30 @@ const { horarios } = Astro.props
 		}
 	}
 
-	/* 2. FLECHITAS DE ORDEN (Resaltadas en blanco brillante) */
-	.gridjs-sort {
-		background-color: transparent !important;
-		border-color: #ffffff !important; /* Blanco para que resalten */
-		width: 10px !important;
-		height: 10px !important;
-		margin-left: 10px !important;
-	}
-	.gridjs-sort-neutral,
-	.gridjs-sort-asc,
-	.gridjs-sort-desc {
-		background-color: transparent !important;
-	}
-	/* Estilo para cuando ya están ordenadas */
-	.gridjs-sort-asc:after,
-	.gridjs-sort-desc:after {
-		border-color: #6366f1 !important; /* Azul cuando está activa */
+	.gridjs-sort-neutral {
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg>') !important;
 	}
 
-	/* 3. HOVER EN LINK DE ZOOM */
+	.gridjs-sort-desc {
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23A5F3FC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>') !important;
+	}
+
+	.gridjs-sort-asc {
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23A5F3FC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>') !important;
+	}
+
 	.link-zoom {
-		color: #a5b4fc; /* Un lila/azul claro */
+		color: #a5b4fc;
 		text-decoration: none;
 		font-weight: 600;
 		transition: all 0.2s ease-in-out;
 	}
 	.link-zoom:hover {
-		color: #6366f1; /* Azul UNahur en hover */
+		color: #6366f1;
 		text-decoration: underline;
-		transform: scale(1.02); /* Pequeño pop al pasar */
+		transform: scale(1.02);
 	}
 
-	/* 4. BUSCADOR INTEGRADO (Con los colores de la web) */
 	.gridjs-search-input {
 		background-color: #1a1c22 !important;
 		color: white !important;
@@ -129,10 +121,11 @@ const { horarios } = Astro.props
 		border-radius: 8px !important;
 		width: 100% !important;
 		font-size: 14px;
+		margin-bottom: 10px;
 	}
 	.gridjs-search-input:focus {
-		border-color: #6366f1 !important;
-		box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5) !important;
+		border-color: #a5f3fc !important;
+		box-shadow: 0 0 0 2px #a5f3fc !important;
 	}
 
 	/* 5. RESALTAR FERIADOS/PAROS (Opcional, pero queda útil) */
