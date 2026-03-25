@@ -24,7 +24,7 @@ horarios:
     Modalidad: CLASE PRESENCIAL
     Hora: 18.00hs
     Aula: Aula A Determinar
-    Edificio: (Edificio a Determinar)
+    Edificio: Edificio a Determinar
 
   - Comision: Comisión 4 - Viernes T.Noche
     Dia: Viernes 3 de Abril
@@ -36,7 +36,7 @@ horarios:
     Modalidad: CLASE PRESENCIAL
     Hora: 18.00hs
     Aula: Aula A Determinar
-    Edificio: (Edificio a Determinar)
+    Edificio: Edificio a Determinar
 
   - Comision: Comisión 6 - Viernes T.Noche
     Dia: Viernes 3 de Abril

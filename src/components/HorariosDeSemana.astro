@@ -1,11 +1,14 @@
 ---
 import CardHorario from './CardHorario.astro'
 import CardSecciones from './CardSecciones.astro'
+import TablaComisiones from './TablaComisiones.astro'
 
 const { horarios } = Astro.props
 ---
 
 <CardSecciones title="Horarios">
+	{
+		/* Cards anteriores, una por cada comisión ↓
 	<ul>
 		{
 			horarios.map((horario) => (
@@ -24,4 +27,7 @@ const { horarios } = Astro.props
 			))
 		}
 	</ul>
+	Tabla ordenable nueva ↓ */
+	}
+	<TablaComisiones horarios={horarios} />
 </CardSecciones>

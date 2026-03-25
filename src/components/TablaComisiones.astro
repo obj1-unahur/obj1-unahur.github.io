@@ -1,0 +1,145 @@
+---
+const { horarios } = Astro.props
+---
+
+<link
+	href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
+	rel="stylesheet"
+/>
+
+<div id="wrapper-tabla"></div>
+
+<script is:inline src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+
+<script is:inline define:vars={{ horarios }}>
+	const pesosDias = {
+		Lunes: 1,
+		Martes: 2,
+		Miércoles: 3,
+		Jueves: 4,
+		Viernes: 5,
+		Sábado: 6,
+		Domingo: 7,
+	}
+
+	const data = horarios.map((h) => [
+		h.Comision,
+		h.Dia,
+		h.Hora,
+		h.URL
+			? gridjs.html(
+					`💻 VIRTUAL - Conectarse <a href="${h.URL}" target="_blank" class="link-zoom">ACÁ</a>`
+			  )
+			: gridjs.html(`<p>${h.Modalidad} - ${h.Aula}`),
+	])
+
+	new gridjs.Grid({
+		columns: [
+			{ name: 'Comisión', sort: true },
+			{
+				name: 'Día',
+				sort: {
+					compare: (a, b) => {
+						const pesoA = pesosDias[a.split(' ')[0]] || 99
+						const pesoB = pesosDias[b.split(' ')[0]] || 99
+						return pesoA - pesoB
+					},
+				},
+			},
+			{ name: 'Hora', sort: true },
+			{ name: 'Modalidad' },
+		],
+		data: data,
+		search: true,
+		style: {
+			table: { background: '#1a1c22', color: '#e5e7eb', border: 'none' }, // Fondo exacto de la web
+			th: {
+				background: '#1a1c22',
+				color: '#6366f1',
+				border: '1px solid #374151',
+				padding: '15px',
+			}, // Azul UNahur
+			td: {
+				background: '#1a1c22',
+				border: '1px solid #374151',
+				padding: '12px',
+			},
+		},
+	}).render(document.getElementById('wrapper-tabla'))
+</script>
+
+<style is:global>
+	#wrapper-tabla {
+		font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+			'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+		margin: 20px 0;
+	}
+
+	@media (max-width: 450px) {
+		.gridjs-table {
+			max-width: 100%;
+		}
+
+		/* Achicamos un pelín la letra para que entre más info */
+		.gridjs-td,
+		.gridjs-th {
+			font-size: 12px !important;
+			padding: 8px 4px !important;
+		}
+	}
+
+	/* 2. FLECHITAS DE ORDEN (Resaltadas en blanco brillante) */
+	.gridjs-sort {
+		background-color: transparent !important;
+		border-color: #ffffff !important; /* Blanco para que resalten */
+		width: 10px !important;
+		height: 10px !important;
+		margin-left: 10px !important;
+	}
+	.gridjs-sort-neutral,
+	.gridjs-sort-asc,
+	.gridjs-sort-desc {
+		background-color: transparent !important;
+	}
+	/* Estilo para cuando ya están ordenadas */
+	.gridjs-sort-asc:after,
+	.gridjs-sort-desc:after {
+		border-color: #6366f1 !important; /* Azul cuando está activa */
+	}
+
+	/* 3. HOVER EN LINK DE ZOOM */
+	.link-zoom {
+		color: #a5b4fc; /* Un lila/azul claro */
+		text-decoration: none;
+		font-weight: 600;
+		transition: all 0.2s ease-in-out;
+	}
+	.link-zoom:hover {
+		color: #6366f1; /* Azul UNahur en hover */
+		text-decoration: underline;
+		transform: scale(1.02); /* Pequeño pop al pasar */
+	}
+
+	/* 4. BUSCADOR INTEGRADO (Con los colores de la web) */
+	.gridjs-search-input {
+		background-color: #1a1c22 !important;
+		color: white !important;
+		border: 1px solid #374151 !important;
+		padding: 12px !important;
+		border-radius: 8px !important;
+		width: 100% !important;
+		font-size: 14px;
+	}
+	.gridjs-search-input:focus {
+		border-color: #6366f1 !important;
+		box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5) !important;
+	}
+
+	/* 5. RESALTAR FERIADOS/PAROS (Opcional, pero queda útil) */
+	.gridjs-td:contains('NO HAY CLASES'),
+	.gridjs-td:contains('PARO'),
+	.gridjs-td:contains('FERIADO') {
+		color: #ef4444 !important; /* Rojo si no hay clases */
+		font-weight: bold;
+	}
+</style>
