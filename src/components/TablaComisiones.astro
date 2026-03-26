@@ -43,7 +43,10 @@ const { horarios } = Astro.props
 	const formatearComision = (comRaw) => {
 		let com = String(comRaw)
 		let comNormalizada = com.toLocaleLowerCase().replace('ó', 'o')
-		if (!comNormalizada.includes('comision')) {
+		if (
+			!comNormalizada.includes('comision') &&
+			!comNormalizada.includes('todas')
+		) {
 			com = 'Comisión ' + com
 		}
 		com = com.replace('io', 'ió')
