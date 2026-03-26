@@ -40,6 +40,17 @@ const { horarios } = Astro.props
 		return `${horas}:${minutos}`
 	}
 
+	const formatearComision = (comRaw) => {
+		let com = String(comRaw)
+		let comNormalizada = com.toLocaleLowerCase().replace('ó', 'o')
+		if (!comNormalizada.includes('comision')) {
+			com = 'Comisión ' + com
+		}
+		com = com.replace('io', 'ió')
+
+		return com
+	}
+
 	const data = horarios.map((h) => {
 		const mensaje = h.Mensaje ? h.Mensaje : ''
 		const palabrasAlerta = [
@@ -54,7 +65,7 @@ const { horarios } = Astro.props
 		)
 
 		return [
-			h.Comision,
+			formatearComision(h.Comision),
 			h.Dia,
 			formatearHora(h.Hora),
 			h.URL

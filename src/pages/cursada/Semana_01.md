@@ -8,15 +8,17 @@ descripcion: ¡Hola! ¡Te damos la bienvenida a la primer semana de cursada de P
 
 atencion: Esta semana no habrá clases los días martes 31/3 por PARO y viernes 3/4 por el FERIADO, pero les vamos a dejar algunas actividades para que vayan conociendo la materia.
 
-#Respetar el formato
+#Sobre el formato
+
+#'Comision' puede ser número, string, repetir o no la palabra, etc. El componente lo normaliza para que se aproveche el buscador
+#Sugerido: 'Comision: 1', 'Comision: comision 1', etc
 
 #En 'Modalidad', 'Aula' y 'Edificio' se sugiere no repetir palabra (el componente renderiza lo que va detrás de los :)
-#Incorrecto: 'Modalidad: Modalidad presencial'
-#Correcto: 'Modalidad: PRESENCIAL'
+#No sugerido: 'Modalidad: Modalidad presencial'
+#Sugerido: 'Modalidad: PRESENCIAL'
 
-#La hora puede estar casi en cualquier formato (número, string, con ., con :, etc), el componente la normaliza para que funcione el ordenamiento de la tabla
-#Correcto: 'Hora: 8'
-#Correcto: 'Hora: 8.00hs'
+#'Hora' puede estar casi en cualquier formato (número, string, con ., con :, etc), el componente la normaliza para que funcione el ordenamiento de la tabla
+#Sugerido: 'Hora: 8', 'Hora: 8.00hs', etc
 
 horarios:
   - Comision: 1
