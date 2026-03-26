@@ -7,7 +7,10 @@ const { horarios } = Astro.props
 	rel="stylesheet"
 />
 
-<div id="wrapper-tabla"></div>
+<div
+	id="wrapper-tabla"
+	class="[&_.gridjs-search-input]:!mb-[10px] [&_.gridjs-search-input]:!w-full [&_.gridjs-search-input]:!rounded-[8px] [&_.gridjs-search-input]:!p-[12px] [&_.gridjs-search-input]:!text-sm focus:[&_.gridjs-search-input]:!border-[var(--primary-300)] focus:[&_.gridjs-search-input]:!outline-none focus:[&_.gridjs-search-input]:!ring-2 focus:[&_.gridjs-search-input]:!ring-[var(--primary-300)] focus:[&_.gridjs-search-input]:!ring-offset-0 dark:[&_.gridjs-search-input]:!border-[#374151] dark:[&_.gridjs-search-input]:!bg-[#1a1c22] dark:[&_.gridjs-search-input]:!text-white dark:focus:[&_.gridjs-search-input]:!border-[#16aaa3] dark:focus:[&_.gridjs-search-input]:!ring-[#16aaa3] dark:[&_.gridjs-td]:!border-[#374151] dark:[&_.gridjs-td]:!bg-[#1a1c22] dark:[&_.gridjs-td]:!text-[#e5e7eb] [&_.gridjs-th]:!bg-[var(--primary-300)] [&_.gridjs-th]:!text-white dark:[&_.gridjs-th]:!border-b-0 dark:[&_.gridjs-th]:!bg-[#16aaa3] [&_.gridjs-wrapper]:!border-none">
+</div>
 
 <script is:inline src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
@@ -79,15 +82,20 @@ const { horarios } = Astro.props
 				h.URL
 					? gridjs.html(`
 							Modalidad: VIRTUAL 
-							<a
-							href=${h.URL}
-							class="boton mt-3 flex flex-col md:flex-row items-center justify-center rounded-lg bg-[var(--primary-300)] p-2 text-xs font-bold dark:bg-[#16aaa3] dark:hover:bg-[#178092] gap-1">
-								<span class="dark:zinc-800 text-white">UNIRSE</span>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
+							<a href=${h.URL} target=_blank
+								class="boton mt-3 flex flex-col md:flex-row items-center 
+									justify-center rounded-lg p-2 
+									text-xs font-bold gap-1
+									bg-[var(--primary-300)] hover:bg-[#A5F3FC] 
+									!text-white fill-white hover:!text-black hover:fill-black
+									dark:hover:text-white dark:!text-white dark:fill-white
+									dark:bg-[#16aaa3] dark:hover:bg-[#178092]
+									trasnsition-colors duration-200">
+								<span>UNIRSE</span>
+								<svg xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 24 24"
-									class="h-5 w-5 fill-white dark:fill-zinc-800">
-										<path fill="white" d="M6.75 6.5A2.25 2.25 0 0 0 4.5 8.75v6.5a2.25 2.25 0 0 0 2.25 2.25h6.5a2.25 2.25 0 0 0 2.25-2.25v-.725l3.386 1.88A.75.75 0 0 0 20 15.75V8.255a.75.75 0 0 0-1.114-.656L15.5 9.477V8.75a2.25 2.25 0 0 0-2.25-2.25zm8.75 4.692l3-1.664v4.947l-3-1.666zM14 8.75v6.5a.75.75 0 0 1-.75.75h-6.5a.75.75 0 0 1-.75-.75v-6.5A.75.75 0 0 1 6.75 8h6.5a.75.75 0 0 1 .75.75M6.416 20.922h.002l.003.002l.008.004l.024.011l.084.039c.07.031.172.075.303.126c.26.102.637.235 1.117.367c.961.265 2.34.527 4.042.529a15.15 15.15 0 0 0 4.045-.525c.48-.133.857-.268 1.118-.37a6.894 6.894 0 0 0 .387-.167c.337-.162.544-.68.371-1.025a.75.75 0 0 0-1.006-.333l-.01.004l-.054.025c-.05.023-.131.058-.239.1a9.663 9.663 0 0 1-.967.32A13.66 13.66 0 0 1 12 20.5a13.875 13.875 0 0 1-3.646-.475a9.794 9.794 0 0 1-.968-.318a5.753 5.753 0 0 1-.294-.124l-.01-.005a.75.75 0 0 0-.667 1.344m1.54-18.398c.962-.267 2.342-.53 4.045-.528c1.702.003 3.082.265 4.043.53c.48.134.857.267 1.117.37a7.19 7.19 0 0 1 .387.165l.025.012l.008.004l.002.001h.001s.597.35.337 1.007a.75.75 0 0 1-1.004.337h-.002l-.01-.005a5.648 5.648 0 0 0-.293-.125a9.777 9.777 0 0 0-.968-.32A13.823 13.823 0 0 0 12 3.497a13.604 13.604 0 0 0-3.642.473a9.638 9.638 0 0 0-.967.32a5.591 5.591 0 0 0-.293.126l-.01.005a.75.75 0 1 1-.675-1.34h.003l.002-.002l.008-.004l.025-.012l.084-.039c.07-.032.173-.076.303-.128c.26-.103.638-.238 1.119-.371m-.87 1.896" />
+									class="h-5 w-5">
+										<path d="M6.75 6.5A2.25 2.25 0 0 0 4.5 8.75v6.5a2.25 2.25 0 0 0 2.25 2.25h6.5a2.25 2.25 0 0 0 2.25-2.25v-.725l3.386 1.88A.75.75 0 0 0 20 15.75V8.255a.75.75 0 0 0-1.114-.656L15.5 9.477V8.75a2.25 2.25 0 0 0-2.25-2.25zm8.75 4.692l3-1.664v4.947l-3-1.666zM14 8.75v6.5a.75.75 0 0 1-.75.75h-6.5a.75.75 0 0 1-.75-.75v-6.5A.75.75 0 0 1 6.75 8h6.5a.75.75 0 0 1 .75.75M6.416 20.922h.002l.003.002l.008.004l.024.011l.084.039c.07.031.172.075.303.126c.26.102.637.235 1.117.367c.961.265 2.34.527 4.042.529a15.15 15.15 0 0 0 4.045-.525c.48-.133.857-.268 1.118-.37a6.894 6.894 0 0 0 .387-.167c.337-.162.544-.68.371-1.025a.75.75 0 0 0-1.006-.333l-.01.004l-.054.025c-.05.023-.131.058-.239.1a9.663 9.663 0 0 1-.967.32A13.66 13.66 0 0 1 12 20.5a13.875 13.875 0 0 1-3.646-.475a9.794 9.794 0 0 1-.968-.318a5.753 5.753 0 0 1-.294-.124l-.01-.005a.75.75 0 0 0-.667 1.344m1.54-18.398c.962-.267 2.342-.53 4.045-.528c1.702.003 3.082.265 4.043.53c.48.134.857.267 1.117.37a7.19 7.19 0 0 1 .387.165l.025.012l.008.004l.002.001h.001s.597.35.337 1.007a.75.75 0 0 1-1.004.337h-.002l-.01-.005a5.648 5.648 0 0 0-.293-.125a9.777 9.777 0 0 0-.968-.32A13.823 13.823 0 0 0 12 3.497a13.604 13.604 0 0 0-3.642.473a9.638 9.638 0 0 0-.967.32a5.591 5.591 0 0 0-.293.126l-.01.005a.75.75 0 1 1-.675-1.34h.003l.002-.002l.008-.004l.025-.012l.084-.039c.07-.032.173-.076.303-.128c.26-.103.638-.238 1.119-.371m-.87 1.896" />
 								</svg>
 							</a>
 						`)
@@ -122,18 +130,6 @@ const { horarios } = Astro.props
 			],
 			data: data,
 			search: true,
-			style: {
-				table: { background: '#1a1c22', color: '#e5e7eb', border: 'none' },
-				th: {
-					background: '#1a1c22',
-					color: '#A5F3FC',
-					border: '1px solid #374151',
-				},
-				td: {
-					background: '#1a1c22',
-					border: '1px solid #374151',
-				},
-			},
 			language: {
 				search: { placeholder: '🔍 Buscar...' },
 				pagination: { previous: 'Anterior', next: 'Siguiente' },
@@ -152,54 +148,64 @@ const { horarios } = Astro.props
 		margin: 20px 0;
 	}
 
+	.gridjs-td {
+		font-weight: 600 !important;
+	}
+
 	[data-column-id='comisión'],
 	[data-column-id='hora'] {
 		text-align: center;
 	}
 
-	.gridjs-td {
-		font-weight: bolder !important;
-	}
-
-	@media (max-width: 450px) {
-		.gridjs-td,
-		.gridjs-th {
-			font-size: 12px !important;
-			padding: 8px 4px !important;
-		}
-		.boton {
-			max-width: 100% !important;
-		}
-	}
-
 	.gridjs-sort-neutral {
-		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg>') !important;
-	}
-
-	.gridjs-sort-desc {
-		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23A5F3FC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>') !important;
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg>') !important;
+		background-position: center 70% !important;
 	}
 
 	.gridjs-sort-asc {
-		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23A5F3FC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>') !important;
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>') !important;
+		background-position: center 7px !important;
 	}
 
-	.gridjs-search-input {
-		background-color: #1a1c22 !important;
-		color: white !important;
-		border: 1px solid #374151 !important;
-		padding: 12px !important;
-		border-radius: 8px !important;
-		width: 100% !important;
-		font-size: 14px;
-		margin-bottom: 10px;
+	.gridjs-sort-desc {
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>') !important;
 	}
-	.gridjs-search-input:focus {
-		border-color: #a5f3fc !important;
-		box-shadow: 0 0 0 2px #a5f3fc !important;
+
+	button.gridjs-sort {
+		background-size: 15px !important;
+		opacity: 0.5;
 	}
 
 	.boton {
 		max-width: 70%;
+	}
+
+	.gridjs-th {
+		font-size: 17px;
+	}
+
+	@media (max-width: 1200px) {
+		.gridjs-th {
+			font-size: 14px !important;
+		}
+		.gridjs-td {
+			font-size: 12px !important;
+		}
+		.gridjs-td,
+		.gridjs-th {
+			padding: 8px 4px !important;
+		}
+	}
+
+	@media (max-width: 450px) {
+		.gridjs-th {
+			font-size: 12px !important;
+		}
+		.gridjs-td {
+			font-size: 10px !important;
+		}
+		.boton {
+			max-width: 100% !important;
+		}
 	}
 </style>
