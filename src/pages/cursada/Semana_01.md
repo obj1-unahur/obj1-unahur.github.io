@@ -9,9 +9,15 @@ descripcion: ¡Hola! ¡Te damos la bienvenida a la primer semana de cursada de P
 atencion: Esta semana no habrá clases los días martes 31/3 por PARO y viernes 3/4 por el FERIADO, pero les vamos a dejar algunas actividades para que vayan conociendo la materia.
 
 #Respetar el formato
-#En 'Modalidad', 'Aula' y 'Edificio' no repetir palabra (el componente renderiza lo que va detrás de los :)
+
+#En 'Modalidad', 'Aula' y 'Edificio' se sugiere no repetir palabra (el componente renderiza lo que va detrás de los :)
 #Incorrecto: 'Modalidad: Modalidad presencial'
 #Correcto: 'Modalidad: PRESENCIAL'
+
+#La hora puede estar casi en cualquier formato (número, string, con ., con :, etc), el componente la normaliza para que funcione el ordenamiento de la tabla
+#Correcto: 'Hora: 8'
+#Correcto: 'Hora: 8.00hs'
+
 horarios:
   - Comision: 1
     Dia: Viernes 3 de Abril
