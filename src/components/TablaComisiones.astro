@@ -12,129 +12,137 @@ const { horarios } = Astro.props
 <script is:inline src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
 <script is:inline define:vars={{ horarios }}>
-	const pesosDias = {
-		Lunes: 1,
-		Martes: 2,
-		Miércoles: 3,
-		Jueves: 4,
-		Viernes: 5,
-		Sábado: 6,
-		Domingo: 7,
-	}
+	const setupGrid = () => {
+		const contenedor = document.getElementById('wrapper-tabla')
 
-	const formatearHora = (horaRaw) => {
-		let horaString = String(horaRaw)
-		let limpia = horaString
-			.toLowerCase()
-			.replace('hs', '')
-			.replace(' ', '')
-			.replace('.', ':')
-			.trim()
-		if (!limpia.includes(':')) {
-			limpia += ':00'
+		if (!contenedor || contenedor.children.length > 0) return
+
+		const pesosDias = {
+			Lunes: 1,
+			Martes: 2,
+			Miércoles: 3,
+			Jueves: 4,
+			Viernes: 5,
+			Sábado: 6,
+			Domingo: 7,
 		}
-		let [horas, minutos] = limpia.split(':')
-		horas = horas.padStart(2, '0')
-		minutos = minutos.padEnd(2, '0')
 
-		return `${horas}:${minutos}`
-	}
+		const formatearHora = (horaRaw) => {
+			let horaString = String(horaRaw)
+			let limpia = horaString
+				.toLowerCase()
+				.replace('hs', '')
+				.replace(' ', '')
+				.replace('.', ':')
+				.trim()
+			if (!limpia.includes(':')) {
+				limpia += ':00'
+			}
+			let [horas, minutos] = limpia.split(':')
+			horas = horas.padStart(2, '0')
+			minutos = minutos.padEnd(2, '0')
 
-	const formatearComision = (comRaw) => {
-		let com = String(comRaw)
-		let comNormalizada = com.toLocaleLowerCase().replace('ó', 'o')
-		if (
-			!comNormalizada.includes('comision') &&
-			!comNormalizada.includes('todas')
-		) {
-			com = 'Comisión ' + com
+			return `${horas}:${minutos}`
 		}
-		com = com.replace('io', 'ió')
 
-		return com
-	}
+		const formatearComision = (comRaw) => {
+			let com = String(comRaw)
+			let comNormalizada = com.toLocaleLowerCase().replace('ó', 'o')
+			if (
+				!comNormalizada.includes('comision') &&
+				!comNormalizada.includes('todas')
+			) {
+				com = 'Comisión ' + com
+			}
+			com = com.replace('io', 'ió')
 
-	const data = horarios.map((h) => {
-		const mensaje = h.Mensaje ? h.Mensaje : ''
-		const palabrasAlerta = [
-			'paro',
-			'feriado',
-			'no hay',
-			'suspendida',
-			'sin clase',
-		]
-		const esAlerta = palabrasAlerta.some((p) =>
-			mensaje.toLowerCase().includes(p)
-		)
+			return com.charAt(0).toUpperCase() + com.slice(1).toLowerCase()
+		}
 
-		return [
-			formatearComision(h.Comision),
-			h.Dia,
-			formatearHora(h.Hora),
-			h.URL
-				? gridjs.html(`
-						Modalidad: VIRTUAL 
-						<a
-						href=${h.URL}
-						class="boton mt-3 flex flex-col md:flex-row items-center justify-center rounded-lg bg-[var(--primary-300)] p-2 text-xs font-bold dark:bg-[#16aaa3] dark:hover:bg-[#178092] gap-1">
-							<span class="dark:zinc-800 text-white">UNIRSE</span>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								class="h-5 w-5 fill-white dark:fill-zinc-800">
-									<path fill="white" d="M6.75 6.5A2.25 2.25 0 0 0 4.5 8.75v6.5a2.25 2.25 0 0 0 2.25 2.25h6.5a2.25 2.25 0 0 0 2.25-2.25v-.725l3.386 1.88A.75.75 0 0 0 20 15.75V8.255a.75.75 0 0 0-1.114-.656L15.5 9.477V8.75a2.25 2.25 0 0 0-2.25-2.25zm8.75 4.692l3-1.664v4.947l-3-1.666zM14 8.75v6.5a.75.75 0 0 1-.75.75h-6.5a.75.75 0 0 1-.75-.75v-6.5A.75.75 0 0 1 6.75 8h6.5a.75.75 0 0 1 .75.75M6.416 20.922h.002l.003.002l.008.004l.024.011l.084.039c.07.031.172.075.303.126c.26.102.637.235 1.117.367c.961.265 2.34.527 4.042.529a15.15 15.15 0 0 0 4.045-.525c.48-.133.857-.268 1.118-.37a6.894 6.894 0 0 0 .387-.167c.337-.162.544-.68.371-1.025a.75.75 0 0 0-1.006-.333l-.01.004l-.054.025c-.05.023-.131.058-.239.1a9.663 9.663 0 0 1-.967.32A13.66 13.66 0 0 1 12 20.5a13.875 13.875 0 0 1-3.646-.475a9.794 9.794 0 0 1-.968-.318a5.753 5.753 0 0 1-.294-.124l-.01-.005a.75.75 0 0 0-.667 1.344m1.54-18.398c.962-.267 2.342-.53 4.045-.528c1.702.003 3.082.265 4.043.53c.48.134.857.267 1.117.37a7.19 7.19 0 0 1 .387.165l.025.012l.008.004l.002.001h.001s.597.35.337 1.007a.75.75 0 0 1-1.004.337h-.002l-.01-.005a5.648 5.648 0 0 0-.293-.125a9.777 9.777 0 0 0-.968-.32A13.823 13.823 0 0 0 12 3.497a13.604 13.604 0 0 0-3.642.473a9.638 9.638 0 0 0-.967.32a5.591 5.591 0 0 0-.293.126l-.01.005a.75.75 0 1 1-.675-1.34h.003l.002-.002l.008-.004l.025-.012l.084-.039c.07-.032.173-.076.303-.128c.26-.103.638-.238 1.119-.371m-.87 1.896" />
-							</svg>
-						</a>
-					`)
-				: gridjs.html(`
-						<p>${h.Modalidad ? 'Modalidad: ' + h.Modalidad : ''}</p>
-						<p>${h.Edificio ? 'Sede: ' + h.Edificio : ''}</p>
-						<p>${h.Aula ? 'Aula: ' + h.Aula : ''}</p>
-						<p style="color: ${esAlerta ? '#ff4d4d' : 'inherit'}; font-weight: ${
-						esAlerta ? '800' : 'normal'
-				  }; text-transform: ${esAlerta ? 'uppercase' : 'none'};">
-            	${mensaje}
-          	</p>
-					`),
-		]
-	})
+		const data = horarios.map((h) => {
+			const mensaje = h.Mensaje ? h.Mensaje : ''
+			const palabrasAlerta = [
+				'paro',
+				'feriado',
+				'no hay',
+				'suspendida',
+				'sin clase',
+			]
+			const esAlerta = palabrasAlerta.some((p) =>
+				mensaje.toLowerCase().includes(p)
+			)
 
-	new gridjs.Grid({
-		columns: [
-			{ name: 'Comisión', sort: true },
-			{
-				name: 'Día',
-				sort: {
-					compare: (a, b) => {
-						const pesoA = pesosDias[a.split(' ')[0]] || 99
-						const pesoB = pesosDias[b.split(' ')[0]] || 99
-						return pesoA - pesoB
+			return [
+				formatearComision(h.Comision),
+				h.Dia,
+				formatearHora(h.Hora),
+				h.URL
+					? gridjs.html(`
+							Modalidad: VIRTUAL 
+							<a
+							href=${h.URL}
+							class="boton mt-3 flex flex-col md:flex-row items-center justify-center rounded-lg bg-[var(--primary-300)] p-2 text-xs font-bold dark:bg-[#16aaa3] dark:hover:bg-[#178092] gap-1">
+								<span class="dark:zinc-800 text-white">UNIRSE</span>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									class="h-5 w-5 fill-white dark:fill-zinc-800">
+										<path fill="white" d="M6.75 6.5A2.25 2.25 0 0 0 4.5 8.75v6.5a2.25 2.25 0 0 0 2.25 2.25h6.5a2.25 2.25 0 0 0 2.25-2.25v-.725l3.386 1.88A.75.75 0 0 0 20 15.75V8.255a.75.75 0 0 0-1.114-.656L15.5 9.477V8.75a2.25 2.25 0 0 0-2.25-2.25zm8.75 4.692l3-1.664v4.947l-3-1.666zM14 8.75v6.5a.75.75 0 0 1-.75.75h-6.5a.75.75 0 0 1-.75-.75v-6.5A.75.75 0 0 1 6.75 8h6.5a.75.75 0 0 1 .75.75M6.416 20.922h.002l.003.002l.008.004l.024.011l.084.039c.07.031.172.075.303.126c.26.102.637.235 1.117.367c.961.265 2.34.527 4.042.529a15.15 15.15 0 0 0 4.045-.525c.48-.133.857-.268 1.118-.37a6.894 6.894 0 0 0 .387-.167c.337-.162.544-.68.371-1.025a.75.75 0 0 0-1.006-.333l-.01.004l-.054.025c-.05.023-.131.058-.239.1a9.663 9.663 0 0 1-.967.32A13.66 13.66 0 0 1 12 20.5a13.875 13.875 0 0 1-3.646-.475a9.794 9.794 0 0 1-.968-.318a5.753 5.753 0 0 1-.294-.124l-.01-.005a.75.75 0 0 0-.667 1.344m1.54-18.398c.962-.267 2.342-.53 4.045-.528c1.702.003 3.082.265 4.043.53c.48.134.857.267 1.117.37a7.19 7.19 0 0 1 .387.165l.025.012l.008.004l.002.001h.001s.597.35.337 1.007a.75.75 0 0 1-1.004.337h-.002l-.01-.005a5.648 5.648 0 0 0-.293-.125a9.777 9.777 0 0 0-.968-.32A13.823 13.823 0 0 0 12 3.497a13.604 13.604 0 0 0-3.642.473a9.638 9.638 0 0 0-.967.32a5.591 5.591 0 0 0-.293.126l-.01.005a.75.75 0 1 1-.675-1.34h.003l.002-.002l.008-.004l.025-.012l.084-.039c.07-.032.173-.076.303-.128c.26-.103.638-.238 1.119-.371m-.87 1.896" />
+								</svg>
+							</a>
+						`)
+					: gridjs.html(`
+							<p>${h.Modalidad ? 'Modalidad: ' + h.Modalidad : ''}</p>
+							<p>${h.Edificio ? 'Sede: ' + h.Edificio : ''}</p>
+							<p>${h.Aula ? 'Aula: ' + h.Aula : ''}</p>
+							<p style="color: ${esAlerta ? '#ff4d4d' : 'inherit'}; font-weight: ${
+							esAlerta ? '800' : 'normal'
+					  }; text-transform: ${esAlerta ? 'uppercase' : 'none'};">
+								${mensaje}
+							</p>
+						`),
+			]
+		})
+
+		new gridjs.Grid({
+			columns: [
+				{ name: 'Comisión', sort: true },
+				{
+					name: 'Día',
+					sort: {
+						compare: (a, b) => {
+							const pesoA = pesosDias[a.split(' ')[0]] || 99
+							const pesoB = pesosDias[b.split(' ')[0]] || 99
+							return pesoA - pesoB
+						},
 					},
 				},
+				{ name: 'Hora', sort: true },
+				{ name: 'Detalle' },
+			],
+			data: data,
+			search: true,
+			style: {
+				table: { background: '#1a1c22', color: '#e5e7eb', border: 'none' },
+				th: {
+					background: '#1a1c22',
+					color: '#A5F3FC',
+					border: '1px solid #374151',
+				},
+				td: {
+					background: '#1a1c22',
+					border: '1px solid #374151',
+				},
 			},
-			{ name: 'Hora', sort: true },
-			{ name: 'Detalle' },
-		],
-		data: data,
-		search: true,
-		style: {
-			table: { background: '#1a1c22', color: '#e5e7eb', border: 'none' },
-			th: {
-				background: '#1a1c22',
-				color: '#A5F3FC',
-				border: '1px solid #374151',
+			language: {
+				search: { placeholder: '🔍 Buscar...' },
+				pagination: { previous: 'Anterior', next: 'Siguiente' },
+				noRecordsFound: 'No se encontraron comisiones 😕',
 			},
-			td: {
-				background: '#1a1c22',
-				border: '1px solid #374151',
-			},
-		},
-		language: {
-			search: { placeholder: '🔍 Buscar...' },
-			pagination: { previous: 'Anterior', next: 'Siguiente' },
-			noRecordsFound: 'No se encontraron comisiones 😕',
-		},
-	}).render(document.getElementById('wrapper-tabla'))
+		}).render(contenedor)
+	}
+
+	document.addEventListener('astro:page-load', setupGrid)
 </script>
 
 <style is:global>
