@@ -8,47 +8,51 @@ descripcion: ¡Hola! ¡Te damos la bienvenida a la primer semana de cursada de P
 
 atencion: Esta semana no habrá clases los días martes 31/3 por PARO y viernes 3/4 por el FERIADO, pero les vamos a dejar algunas actividades para que vayan conociendo la materia.
 
+#Respetar el formato
+#En 'Modalidad', 'Aula' y 'Edificio' no repetir palabra (el componente renderiza lo que va detrás de los :)
+#Incorrecto: 'Modalidad: Modalidad presencial'
+#Correcto: 'Modalidad: PRESENCIAL'
 horarios:
-  - Comision: Comisión 1 - Viernes T.Mañana
+  - Comision: 1
     Dia: Viernes 3 de Abril
     Hora: 8.00hs
     Mensaje: NO HAY CLASES POR FERIADO
 
-  - Comision: Comisión 2 - Martes T.Noche
+  - Comision: 2
     Dia: Martes 31 de Marzo
     Hora: 18.00hs
     Mensaje: NO HAY CLASES POR PARO
 
-  - Comision: Comisión 3 - Miércoles T.Noche
+  - Comision: 3
     Dia: Miércoles 1 de Abril
-    Modalidad: CLASE PRESENCIAL
+    Modalidad: PRESENCIAL
     Hora: 18.00hs
-    Aula: Aula A Determinar
-    Edificio: Edificio a Determinar
+    Aula: A Determinar
+    Edificio: A Determinar
 
-  - Comision: Comisión 4 - Viernes T.Noche
+  - Comision: 4
     Dia: Viernes 3 de Abril
     Hora: 18.00hs
     Mensaje: NO HAY CLASES POR FERIADO
 
-  - Comision: Comisión 5 - Miércoles T.Noche
+  - Comision: 5
     Dia: Miércoles 1 de Abril
-    Modalidad: CLASE PRESENCIAL
+    Modalidad: PRESENCIAL
     Hora: 18.00hs
-    Aula: Aula A Determinar
-    Edificio: Edificio a Determinar
+    Aula: A Determinar
+    Edificio: A Determinar
 
-  - Comision: Comisión 6 - Viernes T.Noche
+  - Comision: 6
     Dia: Viernes 3 de Abril
     Hora: 18.00hs
     Mensaje: NO HAY CLASES POR FERIADO
 
-  - Comision: Comisión 7 - Viernes T.Noche
+  - Comision: 7
     Dia: Viernes 3 de Abril
     Hora: 18.00hs
     Mensaje: NO HAY CLASES POR FERIADO
 
-  - Comision: Todas las Comisiones
+  - Comision: Todas
     Dia: Sábado 4 de Abril
     Modalidad: VIRTUAL
     Hora: 10.00hs
