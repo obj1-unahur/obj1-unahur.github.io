@@ -71,7 +71,7 @@ videos:
     urlYoutube: https://www.youtube.com/watch?v=kPxbjL7WUHc
   - nombre: Instalación Wollok en Linux
     urlYoutube: https://www.youtube.com/watch?v=DCG-syufqhU
-  - nombre: Como aceptar asignaciones (ejercicios) de github classroom
+  - nombre: Como aceptar asignaciones (ejercicios) de github classroom (LA PRIMERA VEZ DEBERÁN SELECCIONAR SU APELLIDO Y NOMBRE DE LA LISTA)
     urlYoutube: https://www.youtube.com/watch?v=pKIhUX51nkw
 
 ejercicios:
