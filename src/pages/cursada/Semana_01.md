@@ -35,8 +35,8 @@ horarios:
     Dia: Miércoles 1 de Abril
     Modalidad: PRESENCIAL
     Hora: 18.00hs
-    Aula: A Determinar
-    Edificio: A Determinar
+    Aula: LAB LP-206
+    Edificio: La Patria
 
   - Comision: 4
     Dia: Viernes 3 de Abril
@@ -47,8 +47,8 @@ horarios:
     Dia: Miércoles 1 de Abril
     Modalidad: PRESENCIAL
     Hora: 18.00hs
-    Aula: A Determinar
-    Edificio: A Determinar
+    Aula: LAB LP-207
+    Edificio: La Patria
 
   - Comision: 6
     Dia: Viernes 3 de Abril

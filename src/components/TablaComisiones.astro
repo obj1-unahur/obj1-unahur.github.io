@@ -18,7 +18,11 @@ const { horarios } = Astro.props
 	const setupGrid = () => {
 		const contenedor = document.getElementById('wrapper-tabla')
 
-		if (!contenedor || contenedor.children.length > 0) return
+		// Si no existe el div, no hace nada
+		if (!contenedor) return
+
+		// Borra lo que sea que haya adentro antes de que Grid.js intente renderizar.
+		contenedor.innerHTML = ''
 
 		const pesosDias = {
 			Lunes: 1,
