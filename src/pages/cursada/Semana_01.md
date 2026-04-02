@@ -64,7 +64,7 @@ horarios:
     Dia: Sábado 4 de Abril
     Modalidad: VIRTUAL
     Hora: 10.00hs
-    URL: https://us06web.zoom.us/j/83754849667
+    URL: https://us06web.zoom.us/j/89430035564
 
 videos:
   - nombre: Instalación Wollok en Windows
