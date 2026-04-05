@@ -2,67 +2,86 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 2
 
-inicio: 2026-08-18
+inicio: 2026-04-06
 
 descripcion: Esta semana daremos inicio al estudio de la programación orientada a objetos y aprenderemos cómo los objetos se comunican entre sí.
 
 horarios:
-  - Comision: Comisión 1 - Lunes T.Noche
-    Dia: Lunes 18 de Agosto
-    Modalidad: CLASE PRESENCIAL
-    Hora: 18.00hs
-    Aula: LAB LP-206
-    Edificio: Edificio La Patria - dirección La Patria 3800 (esquina Los Toldos)
+  - Comision: 1
+    Dia: Viernes 10 de Abril
+    Modalidad: PRESENCIAL
+    Hora: 8.00hs
+    Aula: LAB MA-113
+    Edificio: MALVINAS ARGENTINAS (PA)
 
-  - Comision: Comisión 2 - Lunes T.Noche
-    Dia: Lunes 18 de Agosto
-    Modalidad: CLASE PRESENCIAL
+  - Comision: 2
+    Dia: Martes 7 de Abril
+    Modalidad: PRESENCIAL
     Hora: 18.00hs
     Aula: LAB LP-207
-    Edificio: Edificio La Patria - dirección La Patria 3800 (esquina Los Toldos)
+    Edificio: La Patria
 
-  - Comision: Comisión 3 - Jueves T.Noche
-    Dia: Jueves 21 de Agosto
-    Modalidad: CLASE PRESENCIAL
+  - Comision: 3
+    Dia: Miércoles 8 de Abril
+    Modalidad: PRESENCIAL
     Hora: 18.00hs
-    Aula: Aula MA-109
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+    Aula: LAB LP-206
+    Edificio: La Patria
 
-  - Comision: Comisión 4 - Viernes T.Mañana
-    Dia: Viernes 22 de Agosto
-    Modalidad: CLASE PRESENCIAL
-    Hora: 8.00hs
-    Aula: Aula MA-109
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+  - Comision: 4
+    Dia: Viernes 10 de Abril
+    Hora: 18.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB TA-001
+    Edificio: TRABAJO ARGENTINO
 
-  - Comision: Todas las Comisiones
-    Dia: Sábado 23 de Agosto
+  - Comision: 5
+    Dia: Miércoles 8 de Abril
+    Modalidad: PRESENCIAL
+    Hora: 18.00hs
+    Aula: LAB LP-207
+    Edificio: La Patria
+
+  - Comision: 6
+    Dia: Viernes 10 de Abril
+    Hora: 18.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB TA-002
+    Edificio: TRABAJO ARGENTINO
+
+  - Comision: 7
+    Dia: Viernes 10 de Abril
+    Hora: 18.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-111
+    Edificio: MALVINAS ARGENTINAS (PA)
+
+  - Comision: Todas
+    Dia: Sábado 11 de Abril
     Modalidad: VIRTUAL
     Hora: 10.00hs
-    URL: https://us06web.zoom.us/j/87187879948
-
-videos:
-  - nombre: Grabación clase sábado 23/8/25
-    urlYoutube: https://www.youtube.com/watch?v=VqFvAuzNFzs
+    URL: https://us06web.zoom.us/j/89430035564
 
 ejercicios:
   - name: El Lobo Feroz (TP 1 Objetos (individual))
-    classroom: https://classroom.github.com/a/TotuxJpA
+    classroom: https://classroom.github.com/a/QvU8WvZL
     repoUrl: 'obj1-unahur/elLoboFeroz' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
-    fechaDeEntrega: Viernes 29/08
+    fechaDeEntrega: Domingo 19/04
     comentarios:
       - name: Ejercicio obligatorio para entregar haciendo push sobre el repositorio con la asignación correspondiente.
     obligatorio: true
+
   - name: Bolichito
-    classroom: https://classroom.github.com/a/ng1ohoV3
-    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-bolichito-bolichito' # Acá va la URL del repo sin el "https://github.com/"
+    classroom: https://classroom.github.com/a/oIAXJ1If
+    repoUrl: 'obj1-unahur-2026s1/obj1-unahur-2026s1-bolichito-bolichito' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Ejercicio para practicar en casa y en clase.
+
   - name: Juego Personajes Y Elementos
-    classroom: https://classroom.github.com/a/DaT4BY32
-    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-juegopersonajesyelementos-juegoPersonajesYElementos' # Acá va la URL del repo sin el "https://github.com/"
+    classroom: https://classroom.github.com/a/tNlAdMOT
+    repoUrl: 'obj1-unahur-2026s1/obj1-unahur-2026s1-personajes-personajes' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Ejercicio para practicar con objetos.

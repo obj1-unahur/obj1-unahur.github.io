@@ -93,3 +93,5 @@ ejercicios:
 - Deberán instalarse GIT. El manejo que necesitan para esta materia es el básico, y está explicado en varias guías que están en la sección <a href="/material#ComandosBasicos" target="_blank">**Utilidad**▼ Material> ComandosGit</a>
 
 - El lenguaje que usaremos se llama Wollok. Wollok es un lenguaje de programación para ser utilizado en el dictado de materias iniciales de programación orientada a objetos. Es un proyecto open source desarrollado por Fundación Uqbar, un grupo de docentes de distintas universidades nacionales de Argentina, para ser usado en sus clases. Incluye la propuesta Wollok Game, que propone ir adquiriendo los conceptos del paradigma orientado a objetos junto con el diseño de un juego didáctico, que en las clases siguientes les iremos contando.
+
+- Les dejamos el link a la presentación que se mostró en las clases presenciales de esta semana: <a href="https://docs.google.com/presentation/d/1tQCMQO4aCEZ3ey8ASoVl74BMGsUYAj2xt5OinElfUJ0/edit?usp=sharing" target="_blank">Presentación Semana 1</a>
