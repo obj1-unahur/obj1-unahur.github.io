@@ -10,7 +10,7 @@ const { data, title } = Astro.props
 		{
 			data &&
 				data.map((d) => (
-					<SideMenuItem href={d.url}>
+					<SideMenuItem href={d.href || d.url}>
 						{d.title || d.frontmatter.title}
 					</SideMenuItem>
 				))

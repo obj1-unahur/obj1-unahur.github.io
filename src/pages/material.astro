@@ -5,7 +5,6 @@ import SeccionListaCopyCode from '@/components/SeccionListaCopyCode.astro'
 import Separador from '@/components/Separador.astro'
 import TablaDeActividades from '@/components/TablaDeActividades.astro'
 import DefaultLayout from '@/layouts/DefaultLayout.astro'
-import { Icon } from 'astro-icon/components'
 import Wollok from '../content/Wollok.json'
 import Git from '../content/Git.json'
 import Ejercicios from '../content/Ejercicios.json'
@@ -13,6 +12,7 @@ import Ejercicios from '../content/Ejercicios.json'
 const elementosComunes = await Astro.glob(
 	'../content/sintaxis_basica_wollok.md'
 )
+
 const {
 	sintaxisBasica,
 	operadoresLogicosYMatematicos,
@@ -23,13 +23,10 @@ const {
 } = elementosComunes[0].frontmatter
 ---
 
-<DefaultLayout
-	title="Material - Objetos I"
-	description="Universidad Nacional de Hurlingham, material de Programación con Objetos I"
-	author="Objetos I">
+<DefaultLayout title="Material - Objetos I">
 	<div class="flex">
 		<aside
-			class="sticky left-0 top-0 h-screen w-max min-w-52 rounded-lg bg-gradient-to-t from-slate-200 to-[--background] dark:from-zinc-800 dark:to-[--background]">
+			class="sticky left-0 top-0 h-screen w-max min-w-52 overflow-y-auto rounded-lg bg-gradient-to-t from-slate-200 to-[--background] dark:from-zinc-800 dark:to-[--background]">
 			<AsideMenu
 				title="Wollok"
 				data={Wollok}
@@ -43,27 +40,11 @@ const {
 				data={Ejercicios}
 			/>
 		</aside>
+
 		<section class="m-auto md:mx-4">
 			<h3 class="mb-10 text-center text-3xl sm:text-5xl">Material</h3>
+
 			<CardSecciones title="Wollok">
-				<p>
-					Vas a tener que instalarte Wollok. En la sección <a href="/videos"
-						>Videos</a
-					> encontrarás las instrucciones tanto para Windows como Linux. También
-					recomendamos leer detalladamente las instrucciones de <a
-						href="https://uqbar-project.github.io/website-wollok-ts/getting_started/installation/">
-						instalación</a
-					> publicadas en la página de Wollok donde se incluyen otras alternativas
-					de instalación.
-				</p>
-				<p>
-					En principio recomendamos los apuntes <a
-						href="https://uqbar-project.github.io/website-wollok-ts/documentation/introduction/"
-						target="_blank"
-						>publicados en el sitio de Wollok</a
-					>. Además, tenemos estos recursos:
-				</p>
-				<br />
 				<SeccionListaCopyCode
 					id="SintaxisBasica"
 					title="Sintaxis basica"
@@ -71,143 +52,81 @@ const {
 				/>
 				<SeccionListaCopyCode
 					id="OpLogicos"
-					title="Operadores lógicos y matemáticos"
+					title="Operadores lógicos"
 					lista={operadoresLogicosYMatematicos}
 				/>
 				<SeccionListaCopyCode
 					id="OpSimples"
-					title="Operaciones simples sin efecto sobre colecciones/listas"
+					title="Operaciones simples"
 					lista={opSimplesCollList}
 				/>
 				<SeccionListaCopyCode
 					id="OpAvanzadas"
-					title="Operaciones avanzadas (de orden superior) sin efecto sobre colecciones/listas"
+					title="Operaciones avanzadas"
 					lista={opAvanCollList}
 				/>
 				<SeccionListaCopyCode
 					id="msgColecciones"
-					title="Mensajes de colecciones con efecto"
+					title="Mensajes de colecciones"
 					lista={mensajeDeColl}
 				/>
-				<article id="links">
-					<p
-						id="uno"
-						class="flex items-center">
-						Tambien podes descargar este mismo resumen de la sintaxis de Wollok
-						para tenerlo a mano.
-					</p>
-					<a
-						id="linkUno"
-						href="https://docs.google.com/document/d/11BEzE5o-0wRyvidwV-NV6JTQbf0s00ZLYNkjn_G8fio/edit?usp=sharing"
-						target="_blank"
-						class="rounded-md bg-slate-300 hover:bg-slate-400 dark:bg-zinc-900 dark:hover:bg-zinc-700"
-						>Ver recurso<Icon name="ion:arrow-up-right-box-outline" /></a
-					>
-					<p
-						id="dos"
-						class="flex items-center">
-						Acá hay recurso para tener a mano cuando empecemos a trabajar con
-						colecciones (Sobre todo las últimas páginas que sirven de machete
-						para recordar qué operaciones existen).
-					</p>
-					<a
-						id="linkDos"
-						href="https://objetos1wollokunq.gitlab.io/material/guia-colecciones-basicas.pdf"
-						target="_blank"
-						class="rounded-md bg-slate-300 hover:bg-slate-400 dark:bg-zinc-900 dark:hover:bg-zinc-700"
-						>Ver recurso<Icon name="ion:arrow-up-right-box-outline" /></a
-					>
-				</article>
 			</CardSecciones>
 
 			<CardSecciones title="Git">
-				<p>
-					En esta materia utilizamos <a
-						href="https://git-scm.com/"
-						target="_blank"
-						>Git</a
-					> como herramienta para el control de versiones del código que vas a ir
-					produciendo. El manejo que necesitás es básico, y está explicado en la
-					guía rápida que te ofrecemos más abajo. El resto de los recursos pueden
-					serte útiles si querés profundizar en el conocimiento de la herramienta.
-				</p>
-				<p>
-					Acá van a poder ver los comandos mas comunes que estaremos utilizando
-					en Git:
-				</p>
 				<SeccionListaCopyCode
 					id="ComandosBasicos"
 					title="Comandos basicos de Git"
 					lista={comandosBasicGit}
 				/>
-				<center
-					><b>Aclaración</b>: El "--global" SOLO se utiliza en PC PERSONALES, NO
-					en la Universidad.</center
-				>
+
 				<Separador />
-				<article id="links">
-					<p
-						id="uno"
-						class="flex items-center">
-						Guía rápida de cómo usar Git (Lo mínimo que tenés que saber para
-						poder trabajar).
-					</p>
+
+				<article id="git-links">
+					<p id="git-introduccion">Introducción a Git y Github.</p>
 					<a
-						id="linkUno"
+						href="https://docs.google.com/presentation/d/1laFLpZzUnR9PSwb2U0xDdHJDvQ97pQBrJCU-vsV4bxQ/edit?usp=sharing"
+						target="_blank"
+						class="btn-recurso">
+						Ver recurso →
+					</a>
+
+					<p id="git-guia">Guía rápida de cómo usar Git.</p>
+					<a
 						href="https://github.com/obj1-unahur-2018s2/docs/wiki/Guia-r%C3%A1pida-de-GIT"
 						target="_blank"
-						class="rounded-md bg-slate-300 hover:bg-slate-400 dark:bg-zinc-900 dark:hover:bg-zinc-700"
-						>Ver recurso<Icon name="ion:arrow-up-right-box-outline" /></a
-					>
-					<p
-						id="dos"
-						class="flex items-center">
-						Otro apunte sobre Git (Un poco más extenso que el anterior, explica
-						con más detalle algunos comandos).
-					</p>
+						class="btn-recurso">
+						Ver recurso →
+					</a>
+
+					<p id="git-apunte">Otro apunte de Git.</p>
 					<a
-						id="linkDos"
 						href="https://docs.google.com/document/d/1ozqfYCwt-37stynmgAd5wJlNOFKWYQeIZoeqXpAEs0I/edit"
 						target="_blank"
-						class="rounded-md bg-slate-300 hover:bg-slate-400 dark:bg-zinc-900 dark:hover:bg-zinc-700"
-						>Ver recurso<Icon name="ion:arrow-up-right-box-outline" /></a
-					>
-					<p
-						id="tres"
-						class="flex items-center">
-						Tutorial interactivo de Git (Mucho más completo que los anteriores.
-						Funciona sin conexión a internet, hay que instalarlo e incluye una
-						primera parte que explica cómo bajarse Git. Por defecto viene en
-						inglés pero se puede poner en español).
-					</p>
+						class="btn-recurso">
+						Ver recurso →
+					</a>
+
+					<p id="git-tutorial">Tutorial interactivo de Git.</p>
 					<a
-						id="linkTres"
 						href="https://github.com/jlord/git-it-electron"
 						target="_blank"
-						class="rounded-md bg-slate-300 hover:bg-slate-400 dark:bg-zinc-900 dark:hover:bg-zinc-700"
-						>Ver recurso<Icon name="ion:arrow-up-right-box-outline" /></a
-					>
-					<p
-						id="tres"
-						class="flex items-center">
-						Machete de comandos de Git (Resumen de los comandos más utilizados
-						de GIT.).
-					</p>
+						class="btn-recurso">
+						Ver recurso →
+					</a>
+
+					<p id="git-machete">Machete de comandos de Git.</p>
 					<a
-						id="linkTres"
 						href="/pdf/ComandosBasicosDeGit.pdf"
 						target="_blank"
-						class="rounded-md bg-slate-300 hover:bg-slate-400 dark:bg-zinc-900 dark:hover:bg-zinc-700"
-						>Ver recurso<Icon name="ion:arrow-up-right-box-outline" /></a
-					>
+						class="btn-recurso">
+						Ver recurso →
+					</a>
 				</article>
 			</CardSecciones>
 
 			<CardSecciones
 				id="guia"
 				title="Guías de ejercicios adicionales">
-				Ejercicios en formato “tradicional”, que (aún) no tienen un proyecto en
-				GitHub listo para clonar y empezar a trabajar.
 				<TablaDeActividades />
 			</CardSecciones>
 		</section>
@@ -215,57 +134,82 @@ const {
 </DefaultLayout>
 
 <style lang="scss">
-	p {
-		margin-bottom: 10px;
-	}
-	#links a {
-		transition: transform 0.2s ease-in-out;
-		margin: auto;
-		width: 100%;
-		height: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 1.25rem;
+	html {
+		scroll-behavior: smooth;
 	}
 
-	a:hover {
-		transform: scale(1.05);
-	}
-
-	#links {
+	#git-links {
 		display: grid;
 		gap: 1rem;
-		grid-template-rows: auto;
 		grid-template-columns: 1.5fr 0.3fr;
 		grid-template-areas:
-			'uno linkUno'
-			'dos linkDos';
-
-		@media (max-width: 1000px) {
-			grid-template-columns: 1fr;
-			grid-template-rows: auto;
-			grid-gap: 1rem;
-			grid-template-areas:
-				'uno'
-				'linkUno'
-				'dos'
-				'linkDos';
-		}
+			'intro link1'
+			'guia link2'
+			'apunte link3'
+			'tutorial link4'
+			'machete link5';
 	}
 
-	#uno {
-		grid-area: uno;
+	#git-introduccion {
+		grid-area: intro;
+	}
+	#git-guia {
+		grid-area: guia;
+	}
+	#git-apunte {
+		grid-area: apunte;
+	}
+	#git-tutorial {
+		grid-area: tutorial;
+	}
+	#git-machete {
+		grid-area: machete;
 	}
 
-	#linkUno {
-		grid-area: linkUno;
+	#git-links a:nth-of-type(1) {
+		grid-area: link1;
 	}
-	#dos {
-		grid-area: dos;
+	#git-links a:nth-of-type(2) {
+		grid-area: link2;
 	}
-	#linkDos {
-		grid-area: linkDos;
+	#git-links a:nth-of-type(3) {
+		grid-area: link3;
+	}
+	#git-links a:nth-of-type(4) {
+		grid-area: link4;
+	}
+	#git-links a:nth-of-type(5) {
+		grid-area: link5;
+	}
+
+	/* 🎨 BOTÓN CON BUEN CONTRASTE */
+	.btn-recurso {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0.75rem 1rem;
+		border-radius: 0.5rem;
+		background-color: #e2e8f0; /* gris claro */
+		color: #0f172a; /* texto oscuro fuerte */
+		font-weight: 600;
+		transition: all 0.2s ease;
+	}
+
+	.btn-recurso:hover {
+		background-color: #cbd5f5; /* más contraste */
+		color: #020617;
+		transform: scale(1.03);
+	}
+
+	/* 🌙 DARK MODE */
+	.dark .btn-recurso {
+		background-color: #27272a;
+		color: #f4f4f5;
+	}
+
+	.dark .btn-recurso:hover {
+		background-color: #3f3f46;
+		color: #ffffff;
 	}
 
 	@media (max-width: 775px) {

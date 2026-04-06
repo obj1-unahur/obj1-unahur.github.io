@@ -1,6 +1,8 @@
 [
-    {
-        "url":"#ComandosBasicos",
-        "title": "Comandos basicos de Git"
-    }
+  { "title": "Comandos básicos", "href": "#ComandosBasicos" },
+  { "title": "Introducción a GIT y Github", "href": "#git-introduccion" },
+  { "title": "Guía rápida de como usar GIT en esta materia", "href": "#git-guia" },
+  { "title": "Otro apunte de GIT", "href": "#git-apunte" },
+  { "title": "Tutorial interactivo de GIT", "href": "#git-tutorial" },
+  { "title": "Machete de comandos básicos de GIT", "href": "#git-machete" }
 ]
