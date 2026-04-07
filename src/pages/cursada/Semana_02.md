@@ -6,6 +6,8 @@ inicio: 2026-04-06
 
 descripcion: Esta semana daremos inicio al estudio de la programación orientada a objetos y aprenderemos cómo los objetos se comunican entre sí.
 
+atencion: Esta semana no habrá clases el día miércoles 8/4 por el PARO anunciado, afecta a las comisiones 3 y 5.
+
 horarios:
   - Comision: 1
     Dia: Viernes 10 de Abril
@@ -23,10 +25,8 @@ horarios:
 
   - Comision: 3
     Dia: Miércoles 8 de Abril
-    Modalidad: PRESENCIAL
     Hora: 18.00hs
-    Aula: LAB LP-206
-    Edificio: La Patria
+    Mensaje: NO HAY CLASES POR PARO
 
   - Comision: 4
     Dia: Viernes 10 de Abril
@@ -37,10 +37,8 @@ horarios:
 
   - Comision: 5
     Dia: Miércoles 8 de Abril
-    Modalidad: PRESENCIAL
     Hora: 18.00hs
-    Aula: LAB LP-207
-    Edificio: La Patria
+    Mensaje: NO HAY CLASES POR PARO
 
   - Comision: 6
     Dia: Viernes 10 de Abril
