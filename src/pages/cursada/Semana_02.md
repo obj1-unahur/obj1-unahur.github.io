@@ -95,3 +95,5 @@ ejercicios:
 - Recuerden que ya deberían tener instalado GIT como herramienta para el control de versiones del código y el software completo para usar Wollok, ya que esta semana empezaremos a realizar los primeros programas en el lenguaje.
 
 - También estamos publicando el 1er TP Obligatorio con fecha de entrega.
+
+- Les dejamos el link a la presentación que se mostró en las clases presenciales de esta semana: <a href="https://docs.google.com/presentation/d/1k8Ic6DBmFO8YciP0NAHDFqbAzzkBKJSlOVXg8wmd0p4/edit?usp=drive_link" target="_blank">Presentación Semana 2</a>
