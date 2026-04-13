@@ -51,7 +51,7 @@ horarios:
     Mensaje: NO HAY CLASES POR PARO
 
   - Comision: Todas
-    Dia: Sábado 4 de Abril
+    Dia: Sábado 18 de Abril
     Modalidad: VIRTUAL
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/89430035564
