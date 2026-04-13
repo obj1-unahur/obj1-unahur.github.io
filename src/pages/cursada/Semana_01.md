@@ -4,7 +4,7 @@ title: Semana 1
 
 inicio: 2026-03-21
 
-descripcion: ¡Hola! ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!
+descripcion: ¡Hola! ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!!!
 
 atencion: Esta semana no habrá clases los días martes 31/3 por PARO y viernes 3/4 por el FERIADO, pero les vamos a dejar algunas actividades para que vayan conociendo la materia.
 

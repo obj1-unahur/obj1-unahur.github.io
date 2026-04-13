@@ -6,7 +6,7 @@ inicio: 2026-04-13
 
 descripcion: En esta semana, vamos a aprender a modelar y desarrollar situaciones concretas simples dentro del paradigma de la programación con objetos, su estado interno, comportamiento, las relaciones entre distintos objetos y comprender el concepto de Polimorfismo.
 
-atencion: Esta semana no habrá clases el viernes 17/4 por PARO. Les vamos a dejar ejercicios para que intenten resolverlos aplicando lo que se vio hasta ahora y los temas de la semana se verán formalmente la próxima semana en la clase presencial. Estén atentos/as al Discord por si se levanta el paro o alguna comisión define realizar alguna actividad adicional.
+atencion: Esta semana no habrá clases el viernes 17/4/26 por PARO. Les vamos a dejar ejercicios para que intenten resolverlos aplicando lo que se vio hasta ahora y los temas de la semana se verán formalmente la próxima semana en la clase presencial. Estén atentos/as al Discord por si se levanta el paro o alguna comisión define realizar alguna actividad adicional.
 
 horarios:
   - Comision: 1

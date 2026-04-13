@@ -6,7 +6,7 @@ inicio: 2026-04-06
 
 descripcion: Esta semana daremos inicio al estudio de la programación orientada a objetos y aprenderemos cómo los objetos se comunican entre sí.
 
-atencion: Esta semana no habrá clases el día miércoles 8/4 por el PARO anunciado, afecta a las comisiones 3 y 5.
+atencion: Esta semana no habrá clases el día miércoles 8/4/26 por el PARO anunciado, afecta a las comisiones 3 y 5.
 
 horarios:
   - Comision: 1
