@@ -15,7 +15,7 @@ horarios:
     Mensaje: NO HAY CLASES POR PARO
 
   - Comision: 2
-    Dia: Martes 18 de Abril
+    Dia: Martes 14 de Abril
     Modalidad: PRESENCIAL
     Hora: 18.00hs
     Aula: LAB LP-207
