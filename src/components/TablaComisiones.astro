@@ -9,18 +9,20 @@ const { horarios } = Astro.props
 
 <div
 	id="wrapper-tabla"
+	data-horarios={JSON.stringify(horarios)}
 	class="[&_.gridjs-search-input]:!mb-[10px] [&_.gridjs-search-input]:!w-full [&_.gridjs-search-input]:!rounded-[8px] [&_.gridjs-search-input]:!p-[12px] [&_.gridjs-search-input]:!text-sm focus:[&_.gridjs-search-input]:!border-[var(--primary-300)] focus:[&_.gridjs-search-input]:!outline-none focus:[&_.gridjs-search-input]:!ring-2 focus:[&_.gridjs-search-input]:!ring-[var(--primary-300)] focus:[&_.gridjs-search-input]:!ring-offset-0 dark:[&_.gridjs-search-input]:!border-[#374151] dark:[&_.gridjs-search-input]:!bg-[#1a1c22] dark:[&_.gridjs-search-input]:!text-white dark:focus:[&_.gridjs-search-input]:!border-[#16aaa3] dark:focus:[&_.gridjs-search-input]:!ring-[#16aaa3] dark:[&_.gridjs-td]:!border-[#374151] dark:[&_.gridjs-td]:!bg-[#1a1c22] dark:[&_.gridjs-td]:!text-[#e5e7eb] [&_.gridjs-th]:!bg-[var(--primary-300)] [&_.gridjs-th]:!text-white dark:[&_.gridjs-th]:!border-b-0 dark:[&_.gridjs-th]:!bg-[#16aaa3] [&_.gridjs-wrapper]:!border-none">
 </div>
 
 <script is:inline src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
-<script is:inline define:vars={{ horarios }}>
+<script is:inline>
 	const setupGrid = () => {
 		const contenedor = document.getElementById('wrapper-tabla')
 
 		// Si no existe el div, no hace nada
 		if (!contenedor) return
 
+		const horarios = JSON.parse(contenedor.dataset.horarios || '[]')
 		// Borra lo que sea que haya adentro antes de que Grid.js intente renderizar.
 		contenedor.innerHTML = ''
 
