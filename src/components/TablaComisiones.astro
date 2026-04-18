@@ -87,7 +87,7 @@ const { horarios } = Astro.props
 				formatearHora(h.Hora),
 				h.URL
 					? gridjs.html(`
-							Modalidad: VIRTUAL 
+							Modalidad: ${h.Modalidad} 
 							<a href=${h.URL} target=_blank
 								class="boton mt-3 flex flex-col md:flex-row items-center 
 									justify-center rounded-lg p-2 
@@ -97,7 +97,7 @@ const { horarios } = Astro.props
 									dark:hover:text-white dark:!text-white dark:fill-white
 									dark:bg-[#16aaa3] dark:hover:bg-[#178092]
 									trasnsition-colors duration-200">
-								<span>UNIRSE</span>
+								<span>UNIRSE AL GRUPO</span>
 								<svg xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 24 24"
 									class="h-5 w-5">
