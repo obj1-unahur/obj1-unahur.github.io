@@ -79,7 +79,7 @@ ejercicios:
       - name: Otro ejercicio más (cortito y al pie) para practicar con polimorfismo.
 
   - name: Victoria D Porte
-    classroom: github.com/obj1-unahur/victoriaDPorte #URL de la asignación
+    classroom: https://classroom.github.com/a/UyJW4JmC #URL de la asignación
     repoUrl: 'obj1-unahur-2026s1/obj1-unahur-2026s1-victoriadporte-victoriaDPorte' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
