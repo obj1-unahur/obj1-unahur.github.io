@@ -67,7 +67,7 @@ ejercicios:
     obligatorio: true
     repoUrl: 'obj1-unahur/cotizacionDeLaPapa' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
-    fechaDeEntrega: Viernes 3/05
+    fechaDeEntrega: Domingo 3/05
     comentarios:
       - name: Se entrega haciendo push sobre el repo. Siempre deben clonarse el repo que se genera para c/u al momento de Aceptar la asignación.
 
