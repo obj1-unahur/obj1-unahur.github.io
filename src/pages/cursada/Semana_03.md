@@ -58,14 +58,14 @@ horarios:
 
 ejercicios:
   - name: Tom y Jerry (y Nibbles también!)
-    classroom: https://classroom.github.com/a/OwBjt8fS
+    classroom: https://github.com/obj1-unahur-2026s1/tomyjerry
     repoUrl: 'obj1-unahur-2026s1/obj1-unahur-2026s1-tomyjerry-TomJerryNibbles' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Ejercicio para practicar polimorfismo en clase.
 
   - name: El Alambique Viajero
-    classroom: https://classroom.github.com/a/tJWqZqqA
+    classroom: https://github.com/obj1-unahur-2026s1/alambiqueviajero1
     repoUrl: 'obj1-unahur-2026s1/obj1-unahur-2026s1-alambiqueviajero1-elAlambiqueViajero1' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:

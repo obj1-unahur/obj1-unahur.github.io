@@ -142,14 +142,35 @@ const {
 		{
 			urlGitHub && (
 				<a
-					href={urlGitHub}
+					href="#"
+					data-base={urlGitHub}
 					target="_blank"
-					class="has-icon button preview-button">
+					class="aceptar-invitacion has-icon button preview-button">
 					<Icon name="ion:logo-github" />
 					Aceptar la asignación
 				</a>
 			)
 		}
+
+		<script>
+			// Buscamos TODOS los botones que tengan esa clase
+			const botones = document.querySelectorAll('.aceptar-invitacion')
+
+			botones.forEach((btn) => {
+				btn.addEventListener('click', (e) => {
+					// Evitamos que el link vaya al "#"
+					e.preventDefault()
+
+					const base = btn.getAttribute('data-base')
+					const usuario = prompt('Por favor, ingresá tu usuario de GitHub:')
+
+					if (usuario && usuario.trim() !== '') {
+						const urlFinal = `${base}-${usuario.trim()}/invitations`
+						window.open(urlFinal, '_blank')
+					}
+				})
+			})
+		</script>
 
 		<a
 			href={`https://github.com/${repoUrl}/blob/${defaultBranch}/README.md`}

@@ -71,12 +71,12 @@ videos:
     urlYoutube: https://www.youtube.com/watch?v=kPxbjL7WUHc
   - nombre: Instalación Wollok en Linux
     urlYoutube: https://www.youtube.com/watch?v=DCG-syufqhU
-  - nombre: Como aceptar asignaciones (ejercicios) de github classroom (LA PRIMERA VEZ DEBERÁN SELECCIONAR SU APELLIDO Y NOMBRE DE LA LISTA)
-    urlYoutube: https://www.youtube.com/watch?v=pKIhUX51nkw
+  #- nombre: Como aceptar asignaciones (ejercicios) de github classroom (LA PRIMERA VEZ DEBERÁN #SELECCIONAR SU APELLIDO Y NOMBRE DE LA LISTA)
+  #  urlYoutube: https://www.youtube.com/watch?v=pKIhUX51nkw
 
 ejercicios:
   - name: Presentación Personal
-    classroom: https://classroom.github.com/a/QcD0Y0ox
+    classroom: https://github.com/obj1-unahur-2026s1/presentacion-personal
     repoUrl: 'obj1-unahur-2026s1/obj1-unahur-2026s1-presentacion-personal-PresentacionPersonal' # Acá va la URL del repo sin el "https://github.com/"
     ejemploUrl: https://github.com/obj1-unahur-2023s1/presentacion-personal-BrankoMuruaga.git
     defaultBranch: 'main' # Acá va la rama default del repo
