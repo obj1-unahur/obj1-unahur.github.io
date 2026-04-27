@@ -51,8 +51,14 @@ horarios:
     Mensaje: NO HAY CLASES POR FERIADO
 
   - Comision: Todas
+    Dia: Lunes 27 de Abril
+    Modalidad: 📣 ESPECIAL TUTORÍA 1 VIRTUAL ‼️
+    Hora: 18.00hs
+    URL: https://meet.google.com/nqg-rprn-asn
+
+  - Comision: Todas
     Dia: Viernes 1 de Mayo
-    Modalidad: 📣 ESPECIAL TUTORÍA VIRTUAL ‼️
+    Modalidad: 📣 ESPECIAL TUTORÍA 2 VIRTUAL ‼️
     Hora: 15.00hs
     URL: https://meet.google.com/nqg-rprn-asn
 
