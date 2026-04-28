@@ -8,6 +8,15 @@ const { ejercicios } = Astro.props
 <CardSecciones
 	title="Ejercicios"
 	id="ejercicios">
+	<!-- Input global de usuario GitHub -->
+	<div class="github-user-container">
+		<input
+			type="text"
+			placeholder="Ingresá tu usuario de GitHub"
+			class="github-user-input"
+		/>
+	</div>
+
 	<ul class="m-auto">
 		{
 			ejercicios ? (
@@ -63,5 +72,36 @@ const { ejercicios } = Astro.props
 			grid-template-columns: repeat(2, 1fr);
 			grid-gap: 1rem;
 		}
+	}
+
+	/* === NUEVO: estilos input GitHub === */
+
+	.github-user-container {
+		display: flex;
+		justify-content: center;
+		margin: 1rem 0 2rem 0;
+	}
+
+	.github-user-input {
+		width: 320px;
+		max-width: 90%;
+		padding: 10px 14px;
+		border-radius: 10px;
+		border: 2px solid var(--neutral-700);
+		background-color: var(--neutral-100);
+		color: var(--neutral-900);
+		text-align: center;
+		font-size: 1rem;
+	}
+
+	.github-user-input::placeholder {
+		color: var(--neutral-500);
+	}
+
+	/* modo oscuro */
+	:global(.darkmode) .github-user-input {
+		background-color: var(--dark-100);
+		color: var(--dark-900);
+		border-color: var(--dark-300);
 	}
 </style>

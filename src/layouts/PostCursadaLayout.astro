@@ -37,6 +37,7 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 	<div class="container">
 		<div class="my-12">
 			<h1 class="pb-3">{title}</h1>
+
 			{
 				atencion ? (
 					<CardSecciones
@@ -46,6 +47,7 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 					</CardSecciones>
 				) : null
 			}
+
 			{
 				importante ? (
 					<CardSecciones
@@ -55,10 +57,13 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 					</CardSecciones>
 				) : null
 			}
+
 			<div class="pb-2">
 				<slot />
 			</div>
+
 			{horarios ? <HorariosDeSemana horarios={horarios} /> : null}
+
 			{
 				videos && (
 					<VideosDeSemana
@@ -67,7 +72,68 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 					/>
 				)
 			}
+
 			<ActividadesDeSemana ejercicios={ejercicios} />
 		</div>
 	</div>
 </LayoutSemanas>
+
+<script>
+	if (!window.__githubHandlerAttached) {
+		window.__githubHandlerAttached = true
+
+		const getInput = () => document.querySelector('.github-user-input')
+
+		const syncInput = () => {
+			const input = getInput()
+			const saved = localStorage.getItem('githubUser')
+			if (input && saved && input.value !== saved) {
+				input.value = saved
+			}
+		}
+
+		// 1) Carga inicial (página completa)
+		document.addEventListener('DOMContentLoaded', syncInput)
+
+		// 2) Navegación cliente de Astro (View Transitions)
+		// (se dispara cuando cambiás de semana sin recargar)
+		document.addEventListener('astro:page-load', syncInput)
+
+		// 3) Por si el input se monta tarde
+		const observer = new MutationObserver(syncInput)
+		observer.observe(document.body, { childList: true, subtree: true })
+
+		// 4) Guardado en vivo
+		document.addEventListener('input', (e) => {
+			if (e.target.classList.contains('github-user-input')) {
+				localStorage.setItem('githubUser', e.target.value.trim())
+			}
+		})
+
+		// 5) Click en botones
+		document.addEventListener('click', (e) => {
+			const btn = e.target.closest('.aceptar-invitacion')
+			if (!btn) return
+
+			e.preventDefault()
+
+			const input = getInput()
+			let usuario = input?.value?.trim() || localStorage.getItem('githubUser')
+
+			if (!usuario) {
+				alert('Ingresá tu usuario de GitHub en la sección de ejercicios')
+				return
+			}
+
+			localStorage.setItem('githubUser', usuario)
+
+			const base = btn.getAttribute('data-base')
+			const urlFinal = `${base}-${usuario}/invitations`
+
+			window.open(urlFinal, '_blank')
+		})
+
+		// Ejecutar una vez por si ya está todo en DOM
+		syncInput()
+	}
+</script>
