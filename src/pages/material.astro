@@ -70,6 +70,29 @@ const {
 					title="Mensajes de colecciones"
 					lista={mensajeDeColl}
 				/>
+				<article id="wollok-links">
+					<p id="wollok-resumen">
+						También podés descargar este mismo resumen de la sintaxis de Wollok
+						para tenerlo a mano.
+					</p>
+					<a
+						href="https://docs.google.com/document/d/11BEzE5o-0wRyvidwV-NV6JTQbf0s00ZLYNkjn_G8fio/edit?usp=sharing"
+						target="_blank"
+						class="btn-recurso">
+						Ver recurso →
+					</a>
+
+					<p id="wollok-colecciones">
+						Acá hay recurso para tener a mano cuando empecemos a trabajar con
+						colecciones (especialmente como machete de operaciones).
+					</p>
+					<a
+						href="/pdf/guia-colecciones-basicas.pdf"
+						target="_blank"
+						class="btn-recurso">
+						Ver recurso →
+					</a>
+				</article>
 			</CardSecciones>
 
 			<CardSecciones title="Git">
@@ -215,6 +238,41 @@ const {
 	@media (max-width: 775px) {
 		aside {
 			display: none;
+		}
+	}
+	#wollok-links {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: 1.5fr 0.3fr;
+		grid-template-areas:
+			'resumen link1'
+			'colecciones link2';
+	}
+
+	#wollok-resumen {
+		grid-area: resumen;
+	}
+
+	#wollok-colecciones {
+		grid-area: colecciones;
+	}
+
+	#wollok-links a:nth-of-type(1) {
+		grid-area: link1;
+	}
+
+	#wollok-links a:nth-of-type(2) {
+		grid-area: link2;
+	}
+
+	@media (max-width: 775px) {
+		#wollok-links {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				'resumen'
+				'link1'
+				'colecciones'
+				'link2';
 		}
 	}
 </style>
