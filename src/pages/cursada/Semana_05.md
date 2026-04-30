@@ -90,6 +90,8 @@ ejercicios:
 
 - Les dejamos un apunte que contiene la introducción al uso de closures y colecciones además de otro material básico de la materia: [**Apunte Closures y Colecciones**](https://docs.google.com/document/d/1HiYxLswd4O0MBqnT3jGo2K9e_4FE73RXF_lf8NWVOSE/edit?usp=sharing)
 
+- También les facilitamos el link a la presentación de la clase presencial, que resume los temas de esta semana: <a href="https://docs.google.com/presentation/d/1GFHxRPlobgAwnoPX3NBa7F9OrVJnMAbZR2SIczAjspo/edit?usp=drive_link" target="_blank">Presentación Semana 5</a>
+
 ---
 
 - #### Sobre las asignaciones (TPs)
