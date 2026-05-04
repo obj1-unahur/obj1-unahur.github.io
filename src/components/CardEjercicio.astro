@@ -266,13 +266,22 @@ const {
 
 	.text-obligatorio {
 		position: absolute;
-		right: 10px;
+		left: 10px;
+
 		white-space: nowrap;
 		font-size: 1rem;
 		color: var(--dark-100);
 		font-weight: bold;
-		transform: translateX(-100%);
+
 		opacity: 0;
+		transform: translateX(-20px);
+		transition: all 0.4s ease;
+	}
+
+	.obligatorio-container:hover .text-obligatorio,
+	.obligatorio-container:focus-within .text-obligatorio {
+		opacity: 1;
+		transform: translateX(0);
 	}
 
 	.icon-svg {
