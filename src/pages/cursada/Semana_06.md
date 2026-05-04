@@ -102,9 +102,9 @@ ejercicios:
 
 #### Reglas e instrucciones para armado de grupos
 
-1. Los grupos deberán ser de entre 4 y 6 integrantes y la idea es que le pongan un buen nombre porque a fin de cursada el TPGame se expone en la carrera y grupos externos.
-2. No se generarán asignaciones para estudiantes ni para grupos de 1 o 2 estudiantes, ni más de 7 como máximo (ideal 6)
+1. Los grupos deberán ser de 6 integrantes (máximo 7) y la idea es que le pongan un buen nombre porque a fin de cursada el TPGame se expone en la carrera y grupos externos.
+2. No se generarán asignaciones individuales para estudiantes ni para grupos que tengan menos estudiantes que la cantidad mínima.
 3. Todxs los estudiantes que conforman el grupo tienen que tener usuario de github activo y pertenecer a la misma comisión.
-4. Los grupos se arman en esta **Semana 6**, y las asignaciones por grupo del TP de esta semana se van a generar el próximo domingo 10/5.
-5. Durante la semana 6 pueden comenzar a trabajar en la solución del 1er TP Grupal que se llama "F1 2024" en algún repositorio propio, externo, local, etc, leyendo la consigna publicada abajo, pero al llegar la fecha límite deberá estar realizado el push en el repo grupal que será anunciado el próximo lunes para que cuente como entregado.
+4. Los grupos se arman en esta **Semana 6**, y las asignaciones por grupo del TP de esta semana se van a generar el próximo domingo 10/5. Aquellxs estudiantes que no formen grupo antes del domingo se les asignará aleatoriamente uno existente o un grupo designado por los docentes.
+5. Durante la semana 6 pueden comenzar a discutir en grupo la solución del 1er TP Grupal que se llama "F1 2024", leyendo la consigna publicada abajo, pero al llegar la fecha límite de entrega deberá estar realizado el push en el repo grupal que será anunciado el próximo lunes para que cuente como entregado. Todxs en el grupo deberán registrar algún commit para que cuente su participación.
 6. Dejamos el link a la planilla para que la completen, solapa "Usuarios Activos" con **fecha límite sábado 9/5/26**.: [**Planilla Grupos y usuarios**](https://docs.google.com/spreadsheets/d/1c7nFp03LJOs7LAd7UzGX6LdAST7EwIaAmr2aQFFNhJQ/edit?gid=691885193#gid=691885193)
