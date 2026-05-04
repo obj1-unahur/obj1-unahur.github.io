@@ -72,7 +72,7 @@ ejercicios:
 
   - name: Bolichito
     classroom: https://github.com/obj1-unahur-2026s1/bolichito
-    repoUrl: 'obj1-unahur-2026s1/obj1-unahur-2026s1-bolichito-bolichitoo' # Acá va la URL del repo sin el "https://github.com/"
+    repoUrl: 'obj1-unahur-2026s1/obj1-unahur-2026s1-bolichito-bolichito' # Acá va la URL del repo sin el "https://github.com/"
     defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Ejercicio para practicar en casa y en clase.
