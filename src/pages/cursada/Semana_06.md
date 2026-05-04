@@ -64,11 +64,11 @@ horarios:
     Hora: 18.00hs
     URL: https://meet.google.com/nqg-rprn-asn
 
-  - Comision: Todas
-    Dia: Viernes 8 de Mayo
-    Modalidad: 📣 ESPECIAL TUTORÍA 2 VIRTUAL ‼️
-    Hora: 15.00hs
-    URL: https://meet.google.com/nqg-rprn-asn
+  #- Comision: Todas
+  #  Dia: Jueves 7 de Mayo
+  #  Modalidad: 📣 ESPECIAL TUTORÍA 2 VIRTUAL ‼️
+  #  Hora: 15.00hs
+  #  URL: https://meet.google.com/nqg-rprn-asn
 
   - Comision: Todas
     Dia: Sábado 9 de Mayo
