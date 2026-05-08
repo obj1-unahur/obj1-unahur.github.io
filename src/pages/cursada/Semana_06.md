@@ -85,16 +85,29 @@ ejercicios:
       - name: TP Grupal. Arriba están las indicaciones de como formar grupo y como acceder a la asignación.
     obligatorio: true
 
-  - name: Matrix El Elegido                                                       # Título del ejercicio (aparece en la card)
-    classroom: https://github.com/obj1-unahur-2026s1/coleccionesMatrixElElegido   # URL del template (org/nombre-template)
-    repoUrl: 'obj1-unahur-2026s1/coleccionesMatrixElElegido'                      # URL del repo de consigna (para el botón "Ver consigna")
-    defaultBranch: 'main'                                                         # Rama default del repo de consigna
-    destOrg: 'obj1-unahur-2026s1'                                                 # Org donde se crean los repos de los alumnos
-    prefix: 'coleccionesMatrixElElegido'                                          # Prefijo del repo → queda: prefix-usuarioAlumno
-    isPrivate: false                                                              # true = repo privado, false = público
-    type: 'individual'                                                            # 'individual' o 'group'
+  - name: Matrix El Elegido # Título del ejercicio (aparece en la card)
+    classroom: https://github.com/obj1-unahur-2026s1/coleccionesMatrixElElegido # URL del template (org/nombre-template)
+    repoUrl: 'obj1-unahur-2026s1/coleccionesMatrixElElegido' # URL del repo de consigna (para el botón "Ver consigna")
+    defaultBranch: 'main' # Rama default del repo de consigna
+    destOrg: 'obj1-unahur-2026s1' # Org donde se crean los repos de los alumnos
+    prefix: 'coleccionesMatrixElElegido' # Prefijo del repo → queda: prefix-usuarioAlumno
+    isPrivate: false # true = repo privado, false = público
+    type: 'individual' # 'individual' o 'group'
     comentarios:
-      - name: Ejercicio para practicar con colecciones y bloques.                 # Descripción que aparece en la card
+      - name: Ejercicio para practicar con colecciones y bloques. # Descripción que aparece en la card
+
+  - name: Ejercicio de prueba de worker
+    classroom: https://github.com/pruebaPermisosOrga/pruebaRepoForger
+    repoUrl: 'pruebaPermisosOrga/pruebaRepoForger' # Acá va la URL del repo sin el "https://github.com/"
+    defaultBranch: 'main' # Acá va la rama default del repo
+    destOrg: 'pruebaPermisosOrga'
+    prefix: 'prueba-worker-grupal'
+    isPrivate: false # true = repo privado, false = público
+    type: 'group'
+    fechaDeEntrega: Domingo 24/05
+    comentarios:
+      - name: TP Grupal de prueba
+    obligatorio: true
 ---
 
 - Esta semana profundizaremos en las colecciones, objetos que permiten agrupar y manejar referencias a muchos otros. Son una herramienta clave en la programación orientada a objetos y, al dominarlas, podrán organizar mejor sus programas y avanzar hacia soluciones más completas y útiles.

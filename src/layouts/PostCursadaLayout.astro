@@ -112,56 +112,145 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 
 		// 5) Click en botones
 		document.addEventListener('click', async (e) => {
-			const btn = e.target.closest('.aceptar-invitacion')
-			if (!btn) return
-			e.preventDefault()
+			const btn = e.target.closest('.aceptar-invitacion');
+			if (!btn) return;
+			e.preventDefault();
 
-			const input = getInput()
-			let usuario = input?.value?.trim() || localStorage.getItem('githubUser')
+			const input = getInput();
+			let usuario = input?.value?.trim() || localStorage.getItem('githubUser');
 			if (!usuario) {
-				alert('Ingresá tu usuario de GitHub en la sección de ejercicios')
-				return
+				alert('Ingresá tu usuario de GitHub en la sección de ejercicios');
+				return;
 			}
-			localStorage.setItem('githubUser', usuario)
+			localStorage.setItem('githubUser', usuario);
 
-			btn.disabled = true
-			btn.textContent = 'Creando repositorio...'
+			btn.disabled = true;
+			btn.textContent = 'Procesando...';
+
+			const type = btn.getAttribute('data-type') ?? 'individual';
+
+			// ===================== INDIVIDUAL =====================
+			if (type === 'individual') {
+				try {
+					const res = await fetch('https://worker-objetos.objetos-unahur.workers.dev', {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/json' },
+						body: JSON.stringify({
+							type: 'individual',
+							template: btn.getAttribute('data-template'),
+							templateOrg: btn.getAttribute('data-template-org'),
+							destOrg: btn.getAttribute('data-dest-org'),
+							prefix: btn.getAttribute('data-prefix'),
+							isPrivate: btn.getAttribute('data-private') === 'true',
+							username: usuario,
+						}),
+					});
+
+					const data = await res.json();
+
+					if (data.status === 'ok') {
+						btn.textContent = '✓ ¡Listo! Abriendo repo...';
+						setTimeout(() => {
+							window.open(`${data.repoUrl}/invitations`, '_blank');
+							btn.disabled = false;
+							btn.textContent = 'Aceptar la asignación';
+						}, 1500);
+					} else {
+						btn.textContent = '✗ Error, intentá de nuevo';
+						btn.disabled = false;
+						console.error(data);
+					}
+				} catch (err) {
+					btn.textContent = '✗ Error de conexión';
+					btn.disabled = false;
+					console.error(err);
+				}
+				return;
+			}
+
+			// ===================== GRUPAL =====================
+			const destOrg = btn.getAttribute('data-dest-org');
 
 			try {
-				const res = await fetch('https://worker-objetos.objetos-unahur.workers.dev', {
+				// 1. Obtener lista de equipos de la organización
+				btn.textContent = 'Buscando equipos...';
+				const listRes = await fetch('https://worker-objetos.objetos-unahur.workers.dev', {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify({
-						template: btn.getAttribute('data-template'),
-						templateOrg: btn.getAttribute('data-template-org'),
-						destOrg: btn.getAttribute('data-dest-org'),
-						prefix: btn.getAttribute('data-prefix'),
-						isPrivate: btn.getAttribute('data-private') === 'true',
-						type: btn.getAttribute('data-type') ?? 'individual',
-						username: usuario,
-					})
-				})
+						type: 'group',
+						action: 'list-teams',
+						destOrg,
+					}),
+				});
+				const { teams } = await listRes.json();
 
-				const data = await res.json()
+				// 2. Mostrar opciones al alumno
+				let teamName;
+				let mode;
 
-				if (data.status === 'ok') {
-					btn.textContent = '✓ ¡Listo! Abriendo repo...'
-					setTimeout(() => {
-						window.open(`${data.repoUrl}/invitations`, '_blank')
-						btn.disabled = false
-						btn.textContent = 'Aceptar la asignación'
-					}, 1500)
+				if (teams.length > 0) {
+					const teamList = teams.map((t, i) => `${i + 1}. ${t.teamName}`).join('\n');
+					const choice = prompt(
+						`Equipos disponibles para esta tarea:\n${teamList}\n\nElegí el número para unirte, o escribí un nombre nuevo para crear uno:`
+					);
+					if (!choice) throw new Error('Cancelado');
+
+					const num = parseInt(choice, 10);
+					if (num > 0 && num <= teams.length) {
+						teamName = teams[num - 1].teamName;
+						mode = 'join';
+					} else {
+						teamName = choice.trim();
+						if (!teamName) throw new Error('Nombre inválido');
+						mode = 'create';
+					}
 				} else {
-					btn.textContent = '✗ Error, intentá de nuevo'
-					btn.disabled = false
-					console.error(data)
+					teamName = prompt('No hay equipos creados todavía.\nEscribí el nombre de tu nuevo equipo:');
+					if (!teamName || !teamName.trim()) throw new Error('Cancelado');
+					teamName = teamName.trim();
+					mode = 'create';
+				}
+
+				// 3. Aceptar la asignación grupal (join o create)
+				btn.textContent = mode === 'create' ? 'Creando equipo...' : 'Uniéndote al equipo...';
+				const acceptRes = await fetch('https://worker-objetos.objetos-unahur.workers.dev', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({
+						type: 'group',
+						action: 'accept',
+						username: usuario,
+						prefix: btn.getAttribute('data-prefix'),
+						destOrg,
+						templateOrg: btn.getAttribute('data-template-org'),
+						templateRepo: btn.getAttribute('data-template'),
+						isPrivate: btn.getAttribute('data-private') === 'true',
+						mode,
+						teamName,
+					}),
+				});
+
+				const acceptData = await acceptRes.json();
+
+				if (acceptData.success) {
+					btn.textContent = '✓ ¡Listo! Abriendo repo...';
+					setTimeout(() => {
+						window.open(acceptData.repoUrl, '_blank'); // directo al repo
+						btn.disabled = false;
+						btn.textContent = 'Aceptar la asignación';
+					}, 1500);
+				} else {
+					btn.textContent = '✗ Error, intentá de nuevo';
+					btn.disabled = false;
+					console.error(acceptData);
 				}
 			} catch (err) {
-				btn.textContent = '✗ Error de conexión'
-				btn.disabled = false
-				console.error(err)
+				btn.textContent = '✗ Error de conexión';
+				btn.disabled = false;
+				console.error(err);
 			}
-		})
+		});
 
 		// Ejecutar una vez por si ya está todo en DOM
 		syncInput()
