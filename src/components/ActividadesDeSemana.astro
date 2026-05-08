@@ -31,6 +31,10 @@ const { ejercicios } = Astro.props
 						fechaDeEntrega,
 						obligatorio,
 						consultas,
+						destOrg,    // ← nueva para worker
+						prefix,     // ← nueva para worker
+						isPrivate,  // ← nueva para worker
+						type,       // ← nueva para worker
 					}) => (
 						<li class="flex w-full justify-center">
 							<CardEjercicio
@@ -43,6 +47,10 @@ const { ejercicios } = Astro.props
 								fechaDeEntrega={fechaDeEntrega}
 								obligatorio={obligatorio}
 								consultas={consultas}
+								destOrg={destOrg}
+								prefix={prefix}
+								isPrivate={isPrivate}
+								type={type}
 							/>
 						</li>
 					)

@@ -2,15 +2,19 @@
 import { Icon } from 'astro-icon/components'
 const props = Astro.props
 const {
-	title,
-	comentarios,
-	ejemploUrl,
-	urlGitHub,
-	repoUrl,
-	defaultBranch,
-	fechaDeEntrega,
-	obligatorio,
-	consultas,
+  title,
+  comentarios,
+  ejemploUrl,
+  urlGitHub,
+  repoUrl,
+  defaultBranch,
+  fechaDeEntrega,
+  obligatorio,
+  consultas,
+  destOrg,      // ← nueva para worker
+  prefix,       // ← nueva para worker
+  isPrivate,    // ← nueva para worker
+  type,         // ← nueva para worker
 } = Astro.props
 ---
 
@@ -145,7 +149,12 @@ const {
 			urlGitHub && (
 				<button
 					type="button"
-					data-base={urlGitHub}
+					data-template={urlGitHub.split("/").pop()}
+					data-template-org={urlGitHub.split("/")[3]}
+					data-dest-org={destOrg}
+					data-prefix={prefix}
+					data-private={isPrivate ? "true" : "false"}
+					data-type={type ?? "individual"}
 					class="aceptar-invitacion has-icon button preview-button">
 					<Icon name="ion:logo-github" />
 					Aceptar la asignación

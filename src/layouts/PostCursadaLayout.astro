@@ -111,26 +111,56 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 		})
 
 		// 5) Click en botones
-		document.addEventListener('click', (e) => {
+		document.addEventListener('click', async (e) => {
 			const btn = e.target.closest('.aceptar-invitacion')
 			if (!btn) return
-
 			e.preventDefault()
 
 			const input = getInput()
 			let usuario = input?.value?.trim() || localStorage.getItem('githubUser')
-
 			if (!usuario) {
 				alert('Ingresá tu usuario de GitHub en la sección de ejercicios')
 				return
 			}
-
 			localStorage.setItem('githubUser', usuario)
 
-			const base = btn.getAttribute('data-base')
-			const urlFinal = `${base}-${usuario}/invitations`
+			btn.disabled = true
+			btn.textContent = 'Creando repositorio...'
 
-			window.open(urlFinal, '_blank')
+			try {
+				const res = await fetch('https://worker-objetos.objetos-unahur.workers.dev', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({
+						template: btn.getAttribute('data-template'),
+						templateOrg: btn.getAttribute('data-template-org'),
+						destOrg: btn.getAttribute('data-dest-org'),
+						prefix: btn.getAttribute('data-prefix'),
+						isPrivate: btn.getAttribute('data-private') === 'true',
+						type: btn.getAttribute('data-type') ?? 'individual',
+						username: usuario,
+					})
+				})
+
+				const data = await res.json()
+
+				if (data.status === 'ok') {
+					btn.textContent = '✓ ¡Listo! Abriendo repo...'
+					setTimeout(() => {
+						window.open(`${data.repoUrl}/invitations`, '_blank')
+						btn.disabled = false
+						btn.textContent = 'Aceptar la asignación'
+					}, 1500)
+				} else {
+					btn.textContent = '✗ Error, intentá de nuevo'
+					btn.disabled = false
+					console.error(data)
+				}
+			} catch (err) {
+				btn.textContent = '✗ Error de conexión'
+				btn.disabled = false
+				console.error(err)
+			}
 		})
 
 		// Ejecutar una vez por si ya está todo en DOM
