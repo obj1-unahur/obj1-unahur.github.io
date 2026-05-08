@@ -79,180 +79,238 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 </LayoutSemanas>
 
 <script>
-	if (!window.__githubHandlerAttached) {
-		window.__githubHandlerAttached = true
+  if (!window.__githubHandlerAttached) {
+    window.__githubHandlerAttached = true;
 
-		const getInput = () => document.querySelector('.github-user-input')
+    // ---------- textos del botón ----------
+    const PROCESSING_TEXT = 'Procesando...';
+    const SUCCESS_TEXT = '✓ ¡Listo! Abriendo...';
+    const ERROR_TEXT = '✗ Error, intentá de nuevo';
+    const REACCEPT_TEXT = 'Aceptado. Ir al repo →';  // solo para usar en updateAcceptedButtons
 
-		const syncInput = () => {
-			const input = getInput()
-			const saved = localStorage.getItem('githubUser')
-			if (input && saved && input.value !== saved) {
-				input.value = saved
-			}
-		}
+    // ---------- utilidades ----------
+    const getInput = () => document.querySelector('.github-user-input');
 
-		// 1) Carga inicial (página completa)
-		document.addEventListener('DOMContentLoaded', syncInput)
+    const syncInput = () => {
+      const input = getInput();
+      const saved = localStorage.getItem('githubUser');
+      if (input && saved && input.value !== saved) {
+        input.value = saved;
+      }
+    };
 
-		// 2) Navegación cliente de Astro (View Transitions)
-		// (se dispara cuando cambiás de semana sin recargar)
-		document.addEventListener('astro:page-load', syncInput)
+    // ---------- manejo de ejercicios aceptados ----------
+    const ACCEPTED_KEY = 'acceptedAssignments';
 
-		// 3) Por si el input se monta tarde
-		const observer = new MutationObserver(syncInput)
-		observer.observe(document.body, { childList: true, subtree: true })
+    const getAcceptedAssignments = () => {
+      try {
+        return JSON.parse(localStorage.getItem(ACCEPTED_KEY)) || [];
+      } catch {
+        return [];
+      }
+    };
 
-		// 4) Guardado en vivo
-		document.addEventListener('input', (e) => {
-			if (e.target.classList.contains('github-user-input')) {
-				localStorage.setItem('githubUser', e.target.value.trim())
-			}
-		})
+    const markAssignmentAccepted = (prefix, type) => {
+      const accepted = getAcceptedAssignments();
+      if (!accepted.some(a => a.prefix === prefix && a.type === type)) {
+        accepted.push({ prefix, type });
+        localStorage.setItem(ACCEPTED_KEY, JSON.stringify(accepted));
+      }
+    };
 
-		// 5) Click en botones
-		document.addEventListener('click', async (e) => {
-			const btn = e.target.closest('.aceptar-invitacion');
-			if (!btn) return;
-			e.preventDefault();
+    const isAssignmentAccepted = (prefix, type) => {
+      return getAcceptedAssignments().some(a => a.prefix === prefix && a.type === type);
+    };
 
-			const input = getInput();
-			let usuario = input?.value?.trim() || localStorage.getItem('githubUser');
-			if (!usuario) {
-				alert('Ingresá tu usuario de GitHub en la sección de ejercicios');
-				return;
-			}
-			localStorage.setItem('githubUser', usuario);
+    // SVG inline del check
+    const CHECK_ICON_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`;
 
-			btn.disabled = true;
-			btn.textContent = 'Procesando...';
+    const updateAcceptedButtons = () => {
+      document.querySelectorAll('.aceptar-invitacion').forEach(btn => {
+        const prefix = btn.getAttribute('data-prefix');
+        const type = btn.getAttribute('data-type') ?? 'individual';
+        if (isAssignmentAccepted(prefix, type)) {
+          btn.innerHTML = `${CHECK_ICON_SVG} ${REACCEPT_TEXT}`;
+        }
+      });
+    };
 
-			const type = btn.getAttribute('data-type') ?? 'individual';
+    document.addEventListener('DOMContentLoaded', updateAcceptedButtons);
+    document.addEventListener('astro:page-load', updateAcceptedButtons);
+    updateAcceptedButtons();
 
-			// ===================== INDIVIDUAL =====================
-			if (type === 'individual') {
-				try {
-					const res = await fetch('https://worker-objetos.objetos-unahur.workers.dev', {
-						method: 'POST',
-						headers: { 'Content-Type': 'application/json' },
-						body: JSON.stringify({
-							type: 'individual',
-							template: btn.getAttribute('data-template'),
-							templateOrg: btn.getAttribute('data-template-org'),
-							destOrg: btn.getAttribute('data-dest-org'),
-							prefix: btn.getAttribute('data-prefix'),
-							isPrivate: btn.getAttribute('data-private') === 'true',
-							username: usuario,
-						}),
-					});
+    // ---------- sincronización del input ----------
+    document.addEventListener('DOMContentLoaded', syncInput);
+    document.addEventListener('astro:page-load', syncInput);
+    syncInput();
 
-					const data = await res.json();
+    document.addEventListener('input', (e) => {
+      if (e.target.classList.contains('github-user-input')) {
+        localStorage.setItem('githubUser', e.target.value.trim());
+      }
+    });
 
-					if (data.status === 'ok') {
-						btn.textContent = '✓ ¡Listo! Abriendo repo...';
-						setTimeout(() => {
-							window.open(`${data.repoUrl}/invitations`, '_blank');
-							btn.disabled = false;
-							btn.textContent = 'Aceptar la asignación';
-						}, 1500);
-					} else {
-						btn.textContent = '✗ Error, intentá de nuevo';
-						btn.disabled = false;
-						console.error(data);
-					}
-				} catch (err) {
-					btn.textContent = '✗ Error de conexión';
-					btn.disabled = false;
-					console.error(err);
-				}
-				return;
-			}
+    // ---------- click en botón aceptar asignación ----------
+    document.addEventListener('click', async (e) => {
+      const btn = e.target.closest('.aceptar-invitacion');
+      if (!btn) return;
+      e.preventDefault();
 
-			// ===================== GRUPAL =====================
-			const destOrg = btn.getAttribute('data-dest-org');
+      const input = getInput();
+      let usuario = input?.value?.trim() || localStorage.getItem('githubUser');
+      if (!usuario) {
+        alert('Ingresá tu usuario de GitHub en la sección de ejercicios');
+        return;
+      }
+      localStorage.setItem('githubUser', usuario);
 
-			try {
-				// 1. Obtener lista de equipos de la organización
-				btn.textContent = 'Buscando equipos...';
-				const listRes = await fetch('https://worker-objetos.objetos-unahur.workers.dev', {
-					method: 'POST',
-					headers: { 'Content-Type': 'application/json' },
-					body: JSON.stringify({
-						type: 'group',
-						action: 'list-teams',
-						destOrg,
-					}),
-				});
-				const { teams } = await listRes.json();
+      // Guardamos el texto original del botón para restaurarlo después
+      const originalText = btn.textContent;
 
-				// 2. Mostrar opciones al alumno
-				let teamName;
-				let mode;
+      btn.disabled = true;
+      btn.textContent = PROCESSING_TEXT;
 
-				if (teams.length > 0) {
-					const teamList = teams.map((t, i) => `${i + 1}. ${t.teamName}`).join('\n');
-					const choice = prompt(
-						`Equipos disponibles para esta tarea:\n${teamList}\n\nElegí el número para unirte, o escribí un nombre nuevo para crear uno:`
-					);
-					if (!choice) throw new Error('Cancelado');
+      const type = btn.getAttribute('data-type') ?? 'individual';
+      const prefix = btn.getAttribute('data-prefix');
 
-					const num = parseInt(choice, 10);
-					if (num > 0 && num <= teams.length) {
-						teamName = teams[num - 1].teamName;
-						mode = 'join';
-					} else {
-						teamName = choice.trim();
-						if (!teamName) throw new Error('Nombre inválido');
-						mode = 'create';
-					}
-				} else {
-					teamName = prompt('No hay equipos creados todavía.\nEscribí el nombre de tu nuevo equipo:');
-					if (!teamName || !teamName.trim()) throw new Error('Cancelado');
-					teamName = teamName.trim();
-					mode = 'create';
-				}
+      // ===================== INDIVIDUAL =====================
+      if (type === 'individual') {
+        try {
+          const res = await fetch('https://worker-objetos.objetos-unahur.workers.dev', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              type: 'individual',
+              template: btn.getAttribute('data-template'),
+              templateOrg: btn.getAttribute('data-template-org'),
+              destOrg: btn.getAttribute('data-dest-org'),
+              prefix,
+              isPrivate: btn.getAttribute('data-private') === 'true',
+              username: usuario,
+            }),
+          });
+          const data = await res.json();
+          if (data.status === 'ok') {
+            markAssignmentAccepted(prefix, type);
+            btn.textContent = SUCCESS_TEXT;
+            setTimeout(() => {
+              window.open(`${data.repoUrl}/invitations`, '_blank');
+              btn.disabled = false;
+              btn.innerHTML = originalText;  // restaura el texto original (puede ser "Aceptar" o "Reaceptar")
+              // No llamamos a updateAcceptedButtons porque el texto ya quedó bien
+            }, 1500);
+          } else {
+            btn.textContent = ERROR_TEXT;
+            btn.disabled = false;
+            console.error(data);
+            setTimeout(() => {
+              btn.innerHTML = originalText;  // restaura incluso si hubo error
+            }, 2000);
+          }
+        } catch (err) {
+          btn.textContent = ERROR_TEXT;
+          btn.disabled = false;
+          console.error(err);
+          setTimeout(() => {
+            btn.innerHTML = originalText;
+          }, 2000);
+        }
+        return;
+      }
 
-				// 3. Aceptar la asignación grupal (join o create)
-				btn.textContent = mode === 'create' ? 'Creando equipo...' : 'Uniéndote al equipo...';
-				const acceptRes = await fetch('https://worker-objetos.objetos-unahur.workers.dev', {
-					method: 'POST',
-					headers: { 'Content-Type': 'application/json' },
-					body: JSON.stringify({
-						type: 'group',
-						action: 'accept',
-						username: usuario,
-						prefix: btn.getAttribute('data-prefix'),
-						destOrg,
-						templateOrg: btn.getAttribute('data-template-org'),
-						templateRepo: btn.getAttribute('data-template'),
-						isPrivate: btn.getAttribute('data-private') === 'true',
-						mode,
-						teamName,
-					}),
-				});
+      // ===================== GRUPAL =====================
+      const destOrg = btn.getAttribute('data-dest-org');
+      const cacheKey = `teamCache_${destOrg}`;
 
-				const acceptData = await acceptRes.json();
+      try {
+        let teamName, mode;
 
-				if (acceptData.success) {
-					btn.textContent = '✓ ¡Listo! Abriendo repo...';
-					setTimeout(() => {
-						window.open(acceptData.repoUrl, '_blank'); // directo al repo
-						btn.disabled = false;
-						btn.textContent = 'Aceptar la asignación';
-					}, 1500);
-				} else {
-					btn.textContent = '✗ Error, intentá de nuevo';
-					btn.disabled = false;
-					console.error(acceptData);
-				}
-			} catch (err) {
-				btn.textContent = '✗ Error de conexión';
-				btn.disabled = false;
-				console.error(err);
-			}
-		});
+        if (e.shiftKey) {
+          localStorage.removeItem(cacheKey);
+        }
 
-		// Ejecutar una vez por si ya está todo en DOM
-		syncInput()
-	}
+        const cachedTeam = localStorage.getItem(cacheKey);
+
+        if (cachedTeam) {
+          const parsed = JSON.parse(cachedTeam);
+          teamName = parsed.teamName;
+          mode = parsed.mode;
+        } else {
+          btn.textContent = PROCESSING_TEXT;
+          const listRes = await fetch('https://worker-objetos.objetos-unahur.workers.dev', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ type: 'group', action: 'list-teams', destOrg }),
+          });
+          const { teams } = await listRes.json();
+
+          if (teams.length > 0) {
+            const teamList = teams.map((t, i) => `${i + 1}. ${t.teamName}`).join('\n');
+            const choice = prompt(
+              `Equipos disponibles para esta tarea:\n${teamList}\n\nElegí el número para unirte, o escribí un nombre nuevo para crear uno:`
+            );
+            if (!choice) throw new Error('Cancelado');
+
+            const num = parseInt(choice, 10);
+            if (num > 0 && num <= teams.length) {
+              teamName = teams[num - 1].teamName;
+              mode = 'join';
+            } else {
+              teamName = choice.trim();
+              if (!teamName) throw new Error('Nombre inválido');
+              mode = 'create';
+            }
+          } else {
+            teamName = prompt('No hay equipos creados todavía.\nEscribí el nombre de tu nuevo equipo:');
+            if (!teamName || !teamName.trim()) throw new Error('Cancelado');
+            teamName = teamName.trim();
+            mode = 'create';
+          }
+
+          localStorage.setItem(cacheKey, JSON.stringify({ teamName, mode }));
+        }
+
+        btn.textContent = PROCESSING_TEXT;
+        const acceptRes = await fetch('https://worker-objetos.objetos-unahur.workers.dev', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            type: 'group',
+            action: 'accept',
+            username: usuario,
+            prefix,
+            destOrg,
+            templateOrg: btn.getAttribute('data-template-org'),
+            templateRepo: btn.getAttribute('data-template'),
+            isPrivate: btn.getAttribute('data-private') === 'true',
+            mode,
+            teamName,
+          }),
+        });
+        const acceptData = await acceptRes.json();
+
+        if (acceptData.success) {
+          markAssignmentAccepted(prefix, type);
+          btn.textContent = SUCCESS_TEXT;
+          setTimeout(() => {
+            window.open(acceptData.repoUrl, '_blank');
+            btn.disabled = false;
+            btn.innerHTML = originalText;  // restaura "Reaceptar" o lo que tuviera
+          }, 1500);
+        } else {
+          if (acceptData.error?.includes('no existe')) {
+            localStorage.removeItem(cacheKey);
+          }
+          throw new Error(acceptData.error || 'Error al procesar');
+        }
+      } catch (err) {
+        btn.textContent = ERROR_TEXT;
+        btn.disabled = false;
+        console.error(err);
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+        }, 2000);
+      }
+    });
+  }
 </script>
