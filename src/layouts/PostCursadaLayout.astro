@@ -116,6 +116,8 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 
     const CHECK_ICON_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`;
 
+    const TEAM_ICON_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`;
+
     const updateAcceptedButtons = () => {
       document.querySelectorAll('.aceptar-invitacion').forEach(btn => {
         const prefix = btn.getAttribute('data-prefix');
@@ -141,9 +143,8 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
       }
     });
 
-    // ---------- Modal elegante con contraste mejorado ----------
+    // ---------- Modal ----------
     const createTeamModal = () => {
-      // Siempre eliminar el modal anterior para evitar listeners duplicados
       const existing = document.getElementById('team-modal');
       if (existing) existing.remove();
 
@@ -151,69 +152,195 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
       if (!style.id) {
         style.id = 'team-modal-styles';
         style.textContent = `
+          #team-modal {
+            --tm-accent:        var(--action-color, #40bf6a);
+            --tm-accent-hover:  var(--action-color-state, #17823b);
+            --tm-bg:            var(--background, #fff);
+            --tm-bg-input:      var(--neutral-background, #fafafa);
+            --tm-border:        var(--neutral-400, #e6e6e6);
+            --tm-text:          var(--font-color, #1a1a1a);
+            --tm-text-muted:    var(--neutral-700, #595959);
+            --tm-radius:        var(--radius-large, 6px);
+            --tm-font:          var(--font-family-default, "Open Sans", sans-serif);
+          }
+
           .team-modal-backdrop {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.4); backdrop-filter: blur(4px);
-            display: flex; align-items: center; justify-content: center;
-            z-index: 9999; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(3px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.25s ease, visibility 0.25s ease;
           }
-          .team-modal-backdrop.open { opacity: 1; visibility: visible; }
+          .team-modal-backdrop.open {
+            opacity: 1;
+            visibility: visible;
+          }
+
           .team-modal {
-            background: var(--neutral-100, #ffffff); color: var(--neutral-900, #1a1a1a);
-            border-radius: 1rem; padding: 1.5rem; max-width: 380px; width: 90%;
-            box-shadow: 0 12px 28px rgba(0,0,0,0.25), 0 4px 10px rgba(0,0,0,0.1);
-            display: flex; flex-direction: column; gap: 1rem;
-            transform: scale(0.95); transition: transform 0.2s ease;
+            font-family: var(--tm-font);
+            background: var(--tm-bg);
+            color: var(--tm-text);
+            border: 3px solid var(--tm-accent);
+            border-radius: var(--tm-radius);
+            padding: 1.5rem;
+            max-width: 380px;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+            transform: translateY(6px);
+            transition: transform 0.2s ease;
           }
-          .team-modal-backdrop.open .team-modal { transform: scale(1); }
-          .darkmode .team-modal { background: var(--dark-100, #1e1e1e); color: var(--neutral-100, #f0f0f0); }
-          .team-modal-header { display: flex; justify-content: space-between; align-items: center; }
-          .team-modal-header h3 { font-size: 1.15rem; font-weight: 600; margin: 0; }
+          .team-modal-backdrop.open .team-modal {
+            transform: translateY(0);
+          }
+
+          .team-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--tm-border);
+          }
+          .team-modal-header h3 {
+            font-family: var(--tm-font);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 0;
+            color: var(--tm-text);
+          }
+
           .team-close-btn {
-            background: none; border: none; font-size: 1.6rem; cursor: pointer; color: var(--neutral-500, #6b7280);
-            line-height: 1; padding: 0.25rem; border-radius: 0.25rem; transition: color 0.2s;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            line-height: 1;
+            cursor: pointer;
+            color: var(--tm-text-muted);
+            padding: 0.15rem 0.4rem;
+            border-radius: var(--tm-radius);
+            transition: color 0.15s ease, background-color 0.15s ease;
           }
-          .team-close-btn:hover { color: var(--neutral-900, #1a1a1a); }
-          .darkmode .team-close-btn:hover { color: var(--neutral-100, #f0f0f0); }
+          .team-close-btn:hover {
+            color: var(--tm-text);
+            background-color: var(--tm-border);
+          }
+
           .team-action-btn {
-            width: 100%; padding: 0.7rem; border: none; border-radius: 0.6rem; font-size: 1rem;
-            font-weight: 600; cursor: pointer; transition: all 0.2s; background: var(--action-color, #10b981);
-            color: white; box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            font-family: var(--tm-font);
+            font-size: 1rem;
+            font-weight: 700;
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 3px solid var(--tm-accent);
+            border-radius: var(--tm-radius);
+            background-color: var(--tm-accent);
+            color: var(--neutral-900, #1a1a1a);
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.15s ease, border-color 0.15s ease;
+            line-height: 1;
           }
-          .team-action-btn:hover:not(:disabled) { filter: brightness(1.05); transform: translateY(-1px); box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
-          .team-action-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
-          .darkmode .team-action-btn { box-shadow: 0 2px 6px rgba(0,0,0,0.3); filter: brightness(0.9); }
-          .darkmode .team-action-btn:hover:not(:disabled) { filter: brightness(1); }
-          .combobox { position: relative; flex: 1; display: flex; flex-direction: column; min-height: 0; }
+          .team-action-btn:hover:not(:disabled) {
+            background-color: var(--tm-accent-hover);
+            border-color: var(--tm-accent-hover);
+          }
+          .team-action-btn:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+          }
+
+          .combobox {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+          }
+
           .combobox-input {
-            width: 100%; padding: 0.7rem 0.9rem; border: 2px solid var(--neutral-300, #e5e7eb);
-            border-radius: 0.6rem; font-size: 0.95rem; background: var(--neutral-100, #fff);
-            color: var(--neutral-900, #1a1a1a); outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+            font-family: var(--tm-font);
+            font-size: 0.95rem;
+            width: 100%;
+            padding: 0.65rem 0.85rem;
+            background: var(--tm-bg-input);
+            color: var(--tm-text);
+            border: 2px solid var(--tm-border);
+            border-radius: var(--tm-radius);
+            outline: none;
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
           }
-          .combobox-input:focus { border-color: var(--action-color, #10b981); box-shadow: 0 0 0 3px rgba(16,185,129,0.2); }
-          .darkmode .combobox-input { background: #2a2a2a; color: #f0f0f0; border-color: #555; }
-          .darkmode .combobox-input:focus { border-color: var(--action-color); box-shadow: 0 0 0 3px rgba(16,185,129,0.3); }
+          .combobox-input:focus {
+            border-color: var(--tm-accent);
+            box-shadow: 0 0 0 2px color-mix(in srgb, var(--tm-accent) 25%, transparent);
+          }
+          .combobox-input::placeholder {
+            color: var(--tm-text-muted);
+          }
+
           .combobox-list {
-            display: none; position: absolute; top: calc(100% + 4px); left: 0; right: 0;
-            max-height: 180px; overflow-y: auto; background: var(--neutral-100, #fff);
-            border: 1px solid var(--neutral-300, #e5e7eb); border-radius: 0.6rem;
-            z-index: 10; list-style: none; padding: 0.25rem; margin: 0;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            display: none;
+            position: absolute;
+            top: calc(100% + 3px);
+            left: 0; right: 0;
+            max-height: 170px;
+            overflow-y: auto;
+            background: var(--tm-bg);
+            border: 2px solid var(--tm-accent);
+            border-radius: var(--tm-radius);
+            z-index: 10;
+            list-style: none;
+            padding: 0.25rem;
+            margin: 0;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
           }
           .combobox-list.open { display: block; }
-          .darkmode .combobox-list { background: #2a2a2a; border-color: #555; }
+
           .combobox-option {
-            padding: 0.5rem 0.75rem; cursor: pointer; font-size: 0.9rem; border-radius: 0.4rem;
-            color: var(--neutral-900, #1a1a1a); display: flex; align-items: center; gap: 0.5rem;
-            transition: background 0.15s, color 0.15s;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.55rem 0.75rem;
+            font-size: 0.9rem;
+            font-family: var(--tm-font);
+            color: var(--tm-text);
+            cursor: pointer;
+            border-radius: calc(var(--tm-radius) - 2px);
+            transition: background-color 0.12s ease, color 0.12s ease;
           }
-          .combobox-option::before { content: "👥"; font-size: 0.9rem; opacity: 0.7; }
-          .combobox-option:hover, .combobox-option.active { background: var(--action-color, #10b981); color: var(--neutral-900, #1a1a1a); }
-          .combobox-option:hover::before, .combobox-option.active::before { opacity: 1; }
-          .darkmode .combobox-option { color: #f0f0f0; }
-          .darkmode .combobox-option:hover, .darkmode .combobox-option.active { background: var(--action-color); color: #1a1a1a; }
+          .combobox-option .team-icon {
+            flex-shrink: 0;
+            opacity: 0.5;
+            transition: opacity 0.12s ease;
+          }
+          .combobox-option .team-icon svg {
+            display: block;
+          }
+          .combobox-option:hover,
+          .combobox-option.active {
+            background-color: var(--tm-accent);
+            color: var(--neutral-900, #1a1a1a);
+          }
+          .combobox-option:hover .team-icon,
+          .combobox-option.active .team-icon {
+            opacity: 1;
+          }
+
+          .team-modal-hint {
+            font-family: var(--tm-font);
+            font-size: 0.75rem;
+            color: var(--tm-text-muted);
+            text-align: center;
+            margin-top: -0.25rem;
+          }
+
           @media (max-width: 400px) {
-            .team-modal { padding: 1.2rem; gap: 0.8rem; }
+            .team-modal { padding: 1.1rem; gap: 0.75rem; }
           }
         `;
         document.head.appendChild(style);
@@ -223,16 +350,24 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
       backdrop.className = 'team-modal-backdrop';
       backdrop.id = 'team-modal';
       backdrop.innerHTML = `
-        <div class="team-modal">
+        <div class="team-modal" role="dialog" aria-modal="true" aria-labelledby="team-modal-title">
           <div class="team-modal-header">
-            <h3>Elegí o creá tu equipo</h3>
+            <h3 id="team-modal-title">Elegi o crea tu equipo</h3>
             <button class="team-close-btn" aria-label="Cerrar">&times;</button>
           </div>
-          <button class="team-action-btn" id="team-action-btn" disabled>Escribí un nombre</button>
+          <button class="team-action-btn" id="team-action-btn" disabled>Escribi un nombre</button>
           <div class="combobox">
-            <input type="text" placeholder="Buscar equipo..." class="combobox-input" id="combobox-input" autocomplete="off">
-            <ul class="combobox-list" id="combobox-list"></ul>
+            <input
+              type="text"
+              placeholder="Busca o escribi el nombre del equipo..."
+              class="combobox-input"
+              id="combobox-input"
+              autocomplete="off"
+              aria-label="Nombre del equipo"
+            >
+            <ul class="combobox-list" id="combobox-list" role="listbox"></ul>
           </div>
+          <p class="team-modal-hint">Usa las flechas para navegar, Enter para confirmar</p>
         </div>
       `;
       document.body.appendChild(backdrop);
@@ -241,7 +376,6 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 
     const openTeamModal = (teams) => {
       return new Promise((resolve, reject) => {
-        // Crear modal fresco cada vez (elimina el anterior)
         const modal = createTeamModal();
         const backdrop = modal;
         const input = modal.querySelector('#combobox-input');
@@ -252,21 +386,30 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
         let activeIndex = -1;
         let currentSuggestions = [];
         let resolved = false;
+        let isNavigating = false; // Flag para saber si el usuario navega con flechas
 
-        const updateUI = () => {
+        const updateUI = (scrollToActive = false) => {
           const search = input.value.trim().toLowerCase();
           currentSuggestions = search
             ? teams.filter(t => t.teamName.toLowerCase().includes(search))
             : [];
 
+          // Si el activeIndex actual ya no es valido para las nuevas sugerencias, resetear
+          if (activeIndex >= currentSuggestions.length) {
+            activeIndex = -1;
+            isNavigating = false;
+          }
+
           list.innerHTML = '';
           currentSuggestions.forEach((team, idx) => {
             const li = document.createElement('li');
             li.className = 'combobox-option';
-            li.textContent = team.teamName;
+            li.setAttribute('role', 'option');
+            li.innerHTML = `<span class="team-icon">${TEAM_ICON_SVG}</span><span>${team.teamName}</span>`;
             li.addEventListener('click', () => {
               input.value = team.teamName;
               activeIndex = idx;
+              isNavigating = false;
               updateUI();
               input.focus();
             });
@@ -290,16 +433,26 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
             actionBtn.textContent = `Crear "${input.value.trim()}"`;
             actionBtn.disabled = false;
           } else {
-            actionBtn.textContent = 'Escribí un nombre';
+            actionBtn.textContent = 'Escribi un nombre';
             actionBtn.disabled = true;
           }
 
-          if (exactMatch) {
-            activeIndex = currentSuggestions.findIndex(t => t.teamName.toLowerCase() === search);
-            if (activeIndex >= 0) {
+          // Solo auto-seleccionar el exactMatch si NO esta navegando con flechas
+          if (exactMatch && !isNavigating) {
+            const matchIndex = currentSuggestions.findIndex(t => t.teamName.toLowerCase() === search);
+            if (matchIndex >= 0) {
+              activeIndex = matchIndex;
               list.querySelectorAll('.combobox-option').forEach((el, i) => {
                 el.classList.toggle('active', i === activeIndex);
               });
+            }
+          }
+
+          // Scroll hacia el elemento activo
+          if (scrollToActive && activeIndex >= 0) {
+            const activeEl = list.querySelectorAll('.combobox-option')[activeIndex];
+            if (activeEl) {
+              activeEl.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
             }
           }
         };
@@ -332,6 +485,7 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 
         input.addEventListener('input', () => {
           activeIndex = -1;
+          isNavigating = false;
           updateUI();
         });
 
@@ -340,23 +494,22 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
         });
 
         input.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape') {
-            closeModal();
-            return;
-          }
+          if (e.key === 'Escape') { closeModal(); return; }
 
           const items = list.querySelectorAll('.combobox-option');
           if (e.key === 'ArrowDown') {
             e.preventDefault();
             if (items.length > 0) {
+              isNavigating = true;
               activeIndex = Math.min(activeIndex + 1, items.length - 1);
-              updateUI();
+              updateUI(true);
             }
           } else if (e.key === 'ArrowUp') {
             e.preventDefault();
             if (items.length > 0) {
+              isNavigating = true;
               activeIndex = Math.max(activeIndex - 1, 0);
-              updateUI();
+              updateUI(true);
             }
           } else if (e.key === 'Enter') {
             e.preventDefault();
@@ -395,7 +548,7 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
       const input = getInput();
       let usuario = input?.value?.trim() || localStorage.getItem('githubUser');
       if (!usuario) {
-        alert('Ingresá tu usuario de GitHub en la sección de ejercicios');
+        alert('Ingresa tu usuario de GitHub en la seccion de ejercicios');
         return;
       }
       localStorage.setItem('githubUser', usuario);
@@ -452,7 +605,7 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
       // GRUPAL
       const destOrg = btn.getAttribute('data-dest-org');
       if (!destOrg || destOrg === 'undefined') {
-        alert('Error: falta la organización de destino en el botón.');
+        alert('Error: falta la organizacion de destino en el boton.');
         restoreButton(btn);
         return;
       }
@@ -473,7 +626,7 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
           mode = parsed.mode;
         } else {
           btn.textContent = 'Buscando equipos...';
-          
+
           let teams = [];
           try {
             const listRes = await fetch('https://worker-objetos.objetos-unahur.workers.dev', {
@@ -482,10 +635,7 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
               body: JSON.stringify({ type: 'group', action: 'list-teams', destOrg }),
             });
             const listData = await listRes.json();
-            
-            if (listData.error) {
-              throw new Error(listData.error);
-            }
+            if (listData.error) throw new Error(listData.error);
             teams = listData.teams || [];
           } catch (fetchErr) {
             console.error('Error al buscar equipos:', fetchErr);
