@@ -82,11 +82,11 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
   if (!window.__githubHandlerAttached) {
     window.__githubHandlerAttached = true;
 
-    // ---------- textos del botón ----------
+    // ---------- textos ----------
     const PROCESSING_TEXT = 'Procesando...';
     const SUCCESS_TEXT = '✓ ¡Listo! Abriendo...';
     const ERROR_TEXT = '✗ Error, intentá de nuevo';
-    const REACCEPT_TEXT = 'Aceptado. Ir al repo →';  // solo para usar en updateAcceptedButtons
+    const ACCEPTED_TEXT = 'Aceptado. Ir al repo →';
 
     // ---------- utilidades ----------
     const getInput = () => document.querySelector('.github-user-input');
@@ -101,15 +101,9 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 
     // ---------- manejo de ejercicios aceptados ----------
     const ACCEPTED_KEY = 'acceptedAssignments';
-
     const getAcceptedAssignments = () => {
-      try {
-        return JSON.parse(localStorage.getItem(ACCEPTED_KEY)) || [];
-      } catch {
-        return [];
-      }
+      try { return JSON.parse(localStorage.getItem(ACCEPTED_KEY)) || []; } catch { return []; }
     };
-
     const markAssignmentAccepted = (prefix, type) => {
       const accepted = getAcceptedAssignments();
       if (!accepted.some(a => a.prefix === prefix && a.type === type)) {
@@ -117,12 +111,9 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
         localStorage.setItem(ACCEPTED_KEY, JSON.stringify(accepted));
       }
     };
+    const isAssignmentAccepted = (prefix, type) =>
+      getAcceptedAssignments().some(a => a.prefix === prefix && a.type === type);
 
-    const isAssignmentAccepted = (prefix, type) => {
-      return getAcceptedAssignments().some(a => a.prefix === prefix && a.type === type);
-    };
-
-    // SVG inline del check
     const CHECK_ICON_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`;
 
     const updateAcceptedButtons = () => {
@@ -130,7 +121,7 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
         const prefix = btn.getAttribute('data-prefix');
         const type = btn.getAttribute('data-type') ?? 'individual';
         if (isAssignmentAccepted(prefix, type)) {
-          btn.innerHTML = `${CHECK_ICON_SVG} ${REACCEPT_TEXT}`;
+          btn.innerHTML = `${CHECK_ICON_SVG} ${ACCEPTED_TEXT}`;
         }
       });
     };
@@ -150,6 +141,251 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
       }
     });
 
+    // ---------- Modal elegante con contraste mejorado ----------
+    const createTeamModal = () => {
+      // Siempre eliminar el modal anterior para evitar listeners duplicados
+      const existing = document.getElementById('team-modal');
+      if (existing) existing.remove();
+
+      const style = document.getElementById('team-modal-styles') || document.createElement('style');
+      if (!style.id) {
+        style.id = 'team-modal-styles';
+        style.textContent = `
+          .team-modal-backdrop {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4); backdrop-filter: blur(4px);
+            display: flex; align-items: center; justify-content: center;
+            z-index: 9999; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s;
+          }
+          .team-modal-backdrop.open { opacity: 1; visibility: visible; }
+          .team-modal {
+            background: var(--neutral-100, #ffffff); color: var(--neutral-900, #1a1a1a);
+            border-radius: 1rem; padding: 1.5rem; max-width: 380px; width: 90%;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.25), 0 4px 10px rgba(0,0,0,0.1);
+            display: flex; flex-direction: column; gap: 1rem;
+            transform: scale(0.95); transition: transform 0.2s ease;
+          }
+          .team-modal-backdrop.open .team-modal { transform: scale(1); }
+          .darkmode .team-modal { background: var(--dark-100, #1e1e1e); color: var(--neutral-100, #f0f0f0); }
+          .team-modal-header { display: flex; justify-content: space-between; align-items: center; }
+          .team-modal-header h3 { font-size: 1.15rem; font-weight: 600; margin: 0; }
+          .team-close-btn {
+            background: none; border: none; font-size: 1.6rem; cursor: pointer; color: var(--neutral-500, #6b7280);
+            line-height: 1; padding: 0.25rem; border-radius: 0.25rem; transition: color 0.2s;
+          }
+          .team-close-btn:hover { color: var(--neutral-900, #1a1a1a); }
+          .darkmode .team-close-btn:hover { color: var(--neutral-100, #f0f0f0); }
+          .team-action-btn {
+            width: 100%; padding: 0.7rem; border: none; border-radius: 0.6rem; font-size: 1rem;
+            font-weight: 600; cursor: pointer; transition: all 0.2s; background: var(--action-color, #10b981);
+            color: white; box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+          }
+          .team-action-btn:hover:not(:disabled) { filter: brightness(1.05); transform: translateY(-1px); box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+          .team-action-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+          .darkmode .team-action-btn { box-shadow: 0 2px 6px rgba(0,0,0,0.3); filter: brightness(0.9); }
+          .darkmode .team-action-btn:hover:not(:disabled) { filter: brightness(1); }
+          .combobox { position: relative; flex: 1; display: flex; flex-direction: column; min-height: 0; }
+          .combobox-input {
+            width: 100%; padding: 0.7rem 0.9rem; border: 2px solid var(--neutral-300, #e5e7eb);
+            border-radius: 0.6rem; font-size: 0.95rem; background: var(--neutral-100, #fff);
+            color: var(--neutral-900, #1a1a1a); outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+          }
+          .combobox-input:focus { border-color: var(--action-color, #10b981); box-shadow: 0 0 0 3px rgba(16,185,129,0.2); }
+          .darkmode .combobox-input { background: #2a2a2a; color: #f0f0f0; border-color: #555; }
+          .darkmode .combobox-input:focus { border-color: var(--action-color); box-shadow: 0 0 0 3px rgba(16,185,129,0.3); }
+          .combobox-list {
+            display: none; position: absolute; top: calc(100% + 4px); left: 0; right: 0;
+            max-height: 180px; overflow-y: auto; background: var(--neutral-100, #fff);
+            border: 1px solid var(--neutral-300, #e5e7eb); border-radius: 0.6rem;
+            z-index: 10; list-style: none; padding: 0.25rem; margin: 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+          }
+          .combobox-list.open { display: block; }
+          .darkmode .combobox-list { background: #2a2a2a; border-color: #555; }
+          .combobox-option {
+            padding: 0.5rem 0.75rem; cursor: pointer; font-size: 0.9rem; border-radius: 0.4rem;
+            color: var(--neutral-900, #1a1a1a); display: flex; align-items: center; gap: 0.5rem;
+            transition: background 0.15s, color 0.15s;
+          }
+          .combobox-option::before { content: "👥"; font-size: 0.9rem; opacity: 0.7; }
+          .combobox-option:hover, .combobox-option.active { background: var(--action-color, #10b981); color: var(--neutral-900, #1a1a1a); }
+          .combobox-option:hover::before, .combobox-option.active::before { opacity: 1; }
+          .darkmode .combobox-option { color: #f0f0f0; }
+          .darkmode .combobox-option:hover, .darkmode .combobox-option.active { background: var(--action-color); color: #1a1a1a; }
+          @media (max-width: 400px) {
+            .team-modal { padding: 1.2rem; gap: 0.8rem; }
+          }
+        `;
+        document.head.appendChild(style);
+      }
+
+      const backdrop = document.createElement('div');
+      backdrop.className = 'team-modal-backdrop';
+      backdrop.id = 'team-modal';
+      backdrop.innerHTML = `
+        <div class="team-modal">
+          <div class="team-modal-header">
+            <h3>Elegí o creá tu equipo</h3>
+            <button class="team-close-btn" aria-label="Cerrar">&times;</button>
+          </div>
+          <button class="team-action-btn" id="team-action-btn" disabled>Escribí un nombre</button>
+          <div class="combobox">
+            <input type="text" placeholder="Buscar equipo..." class="combobox-input" id="combobox-input" autocomplete="off">
+            <ul class="combobox-list" id="combobox-list"></ul>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(backdrop);
+      return backdrop;
+    };
+
+    const openTeamModal = (teams) => {
+      return new Promise((resolve, reject) => {
+        // Crear modal fresco cada vez (elimina el anterior)
+        const modal = createTeamModal();
+        const backdrop = modal;
+        const input = modal.querySelector('#combobox-input');
+        const list = modal.querySelector('#combobox-list');
+        const actionBtn = modal.querySelector('#team-action-btn');
+        const closeBtn = modal.querySelector('.team-close-btn');
+
+        let activeIndex = -1;
+        let currentSuggestions = [];
+        let resolved = false;
+
+        const updateUI = () => {
+          const search = input.value.trim().toLowerCase();
+          currentSuggestions = search
+            ? teams.filter(t => t.teamName.toLowerCase().includes(search))
+            : [];
+
+          list.innerHTML = '';
+          currentSuggestions.forEach((team, idx) => {
+            const li = document.createElement('li');
+            li.className = 'combobox-option';
+            li.textContent = team.teamName;
+            li.addEventListener('click', () => {
+              input.value = team.teamName;
+              activeIndex = idx;
+              updateUI();
+              input.focus();
+            });
+            if (idx === activeIndex) li.classList.add('active');
+            list.appendChild(li);
+          });
+
+          if (currentSuggestions.length > 0 && search) {
+            list.classList.add('open');
+          } else {
+            list.classList.remove('open');
+          }
+
+          const exactMatch = teams.some(t => t.teamName.toLowerCase() === search);
+          const validSearch = search !== '';
+
+          if (exactMatch) {
+            actionBtn.textContent = 'Unirse al equipo';
+            actionBtn.disabled = false;
+          } else if (validSearch) {
+            actionBtn.textContent = `Crear "${input.value.trim()}"`;
+            actionBtn.disabled = false;
+          } else {
+            actionBtn.textContent = 'Escribí un nombre';
+            actionBtn.disabled = true;
+          }
+
+          if (exactMatch) {
+            activeIndex = currentSuggestions.findIndex(t => t.teamName.toLowerCase() === search);
+            if (activeIndex >= 0) {
+              list.querySelectorAll('.combobox-option').forEach((el, i) => {
+                el.classList.toggle('active', i === activeIndex);
+              });
+            }
+          }
+        };
+
+        const cleanup = () => {
+          if (resolved) return;
+          resolved = true;
+          backdrop.classList.remove('open');
+          document.removeEventListener('keydown', escHandler);
+          document.removeEventListener('click', outsideClickHandler);
+        };
+
+        const closeModal = () => {
+          cleanup();
+          reject(new Error('Cancelado por el usuario'));
+        };
+
+        const handleAction = () => {
+          if (resolved) return;
+          const selected = input.value.trim();
+          if (!selected) return;
+          const exists = teams.some(t => t.teamName.toLowerCase() === selected.toLowerCase());
+          cleanup();
+          if (exists) {
+            resolve({ teamName: selected, mode: 'join' });
+          } else {
+            resolve({ teamName: selected, mode: 'create' });
+          }
+        };
+
+        input.addEventListener('input', () => {
+          activeIndex = -1;
+          updateUI();
+        });
+
+        input.addEventListener('focus', () => {
+          if (input.value.trim()) updateUI();
+        });
+
+        input.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            closeModal();
+            return;
+          }
+
+          const items = list.querySelectorAll('.combobox-option');
+          if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            if (items.length > 0) {
+              activeIndex = Math.min(activeIndex + 1, items.length - 1);
+              updateUI();
+            }
+          } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            if (items.length > 0) {
+              activeIndex = Math.max(activeIndex - 1, 0);
+              updateUI();
+            }
+          } else if (e.key === 'Enter') {
+            e.preventDefault();
+            if (activeIndex >= 0 && activeIndex < items.length) {
+              items[activeIndex].click();
+            } else if (!actionBtn.disabled) {
+              handleAction();
+            }
+          }
+        });
+
+        const outsideClickHandler = (e) => {
+          if (!backdrop.contains(e.target)) {
+            list.classList.remove('open');
+          }
+        };
+        document.addEventListener('click', outsideClickHandler);
+
+        actionBtn.addEventListener('click', handleAction);
+        closeBtn.addEventListener('click', closeModal);
+
+        const escHandler = (e) => { if (e.key === 'Escape') closeModal(); };
+        document.addEventListener('keydown', escHandler);
+
+        backdrop.classList.add('open');
+        setTimeout(() => input.focus(), 100);
+      });
+    };
+
     // ---------- click en botón aceptar asignación ----------
     document.addEventListener('click', async (e) => {
       const btn = e.target.closest('.aceptar-invitacion');
@@ -164,16 +400,19 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
       }
       localStorage.setItem('githubUser', usuario);
 
-      // Guardamos el texto original del botón para restaurarlo después
-      const originalText = btn.textContent;
-
+      const originalHTML = btn.innerHTML;
       btn.disabled = true;
       btn.textContent = PROCESSING_TEXT;
 
       const type = btn.getAttribute('data-type') ?? 'individual';
       const prefix = btn.getAttribute('data-prefix');
 
-      // ===================== INDIVIDUAL =====================
+      const restoreButton = (targetBtn) => {
+        targetBtn.disabled = false;
+        targetBtn.innerHTML = originalHTML;
+      };
+
+      // INDIVIDUAL
       if (type === 'individual') {
         try {
           const res = await fetch('https://worker-objetos.objetos-unahur.workers.dev', {
@@ -195,31 +434,28 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
             btn.textContent = SUCCESS_TEXT;
             setTimeout(() => {
               window.open(`${data.repoUrl}/invitations`, '_blank');
+              updateAcceptedButtons();
               btn.disabled = false;
-              btn.innerHTML = originalText;  // restaura el texto original (puede ser "Aceptar" o "Reaceptar")
-              // No llamamos a updateAcceptedButtons porque el texto ya quedó bien
             }, 1500);
           } else {
-            btn.textContent = ERROR_TEXT;
-            btn.disabled = false;
-            console.error(data);
-            setTimeout(() => {
-              btn.innerHTML = originalText;  // restaura incluso si hubo error
-            }, 2000);
+            throw new Error(data.error || 'Error al procesar');
           }
         } catch (err) {
           btn.textContent = ERROR_TEXT;
           btn.disabled = false;
           console.error(err);
-          setTimeout(() => {
-            btn.innerHTML = originalText;
-          }, 2000);
+          setTimeout(() => { btn.innerHTML = originalHTML; }, 2000);
         }
         return;
       }
 
-      // ===================== GRUPAL =====================
+      // GRUPAL
       const destOrg = btn.getAttribute('data-dest-org');
+      if (!destOrg || destOrg === 'undefined') {
+        alert('Error: falta la organización de destino en el botón.');
+        restoreButton(btn);
+        return;
+      }
       const cacheKey = `teamCache_${destOrg}`;
 
       try {
@@ -236,41 +472,45 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
           teamName = parsed.teamName;
           mode = parsed.mode;
         } else {
-          btn.textContent = PROCESSING_TEXT;
-          const listRes = await fetch('https://worker-objetos.objetos-unahur.workers.dev', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ type: 'group', action: 'list-teams', destOrg }),
-          });
-          const { teams } = await listRes.json();
-
-          if (teams.length > 0) {
-            const teamList = teams.map((t, i) => `${i + 1}. ${t.teamName}`).join('\n');
-            const choice = prompt(
-              `Equipos disponibles para esta tarea:\n${teamList}\n\nElegí el número para unirte, o escribí un nombre nuevo para crear uno:`
-            );
-            if (!choice) throw new Error('Cancelado');
-
-            const num = parseInt(choice, 10);
-            if (num > 0 && num <= teams.length) {
-              teamName = teams[num - 1].teamName;
-              mode = 'join';
-            } else {
-              teamName = choice.trim();
-              if (!teamName) throw new Error('Nombre inválido');
-              mode = 'create';
+          btn.textContent = 'Buscando equipos...';
+          
+          let teams = [];
+          try {
+            const listRes = await fetch('https://worker-objetos.objetos-unahur.workers.dev', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ type: 'group', action: 'list-teams', destOrg }),
+            });
+            const listData = await listRes.json();
+            
+            if (listData.error) {
+              throw new Error(listData.error);
             }
-          } else {
-            teamName = prompt('No hay equipos creados todavía.\nEscribí el nombre de tu nuevo equipo:');
-            if (!teamName || !teamName.trim()) throw new Error('Cancelado');
-            teamName = teamName.trim();
-            mode = 'create';
+            teams = listData.teams || [];
+          } catch (fetchErr) {
+            console.error('Error al buscar equipos:', fetchErr);
+            btn.textContent = ERROR_TEXT;
+            setTimeout(() => { restoreButton(btn); }, 2000);
+            return;
           }
 
+          let decision;
+          try {
+            decision = await openTeamModal(teams);
+          } catch (cancelErr) {
+            restoreButton(btn);
+            return;
+          }
+
+          teamName = decision.teamName;
+          mode = decision.mode;
           localStorage.setItem(cacheKey, JSON.stringify({ teamName, mode }));
         }
 
-        btn.textContent = PROCESSING_TEXT;
+        const activeBtn = document.querySelector(`.aceptar-invitacion[data-prefix="${prefix}"]`) || btn;
+        activeBtn.disabled = true;
+        activeBtn.textContent = PROCESSING_TEXT;
+
         const acceptRes = await fetch('https://worker-objetos.objetos-unahur.workers.dev', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -291,11 +531,11 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 
         if (acceptData.success) {
           markAssignmentAccepted(prefix, type);
-          btn.textContent = SUCCESS_TEXT;
+          activeBtn.textContent = SUCCESS_TEXT;
           setTimeout(() => {
             window.open(acceptData.repoUrl, '_blank');
-            btn.disabled = false;
-            btn.innerHTML = originalText;  // restaura "Reaceptar" o lo que tuviera
+            updateAcceptedButtons();
+            activeBtn.disabled = false;
           }, 1500);
         } else {
           if (acceptData.error?.includes('no existe')) {
@@ -304,12 +544,11 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
           throw new Error(acceptData.error || 'Error al procesar');
         }
       } catch (err) {
-        btn.textContent = ERROR_TEXT;
-        btn.disabled = false;
+        const currentBtn = document.querySelector(`.aceptar-invitacion[data-prefix="${prefix}"]`) || btn;
+        currentBtn.textContent = ERROR_TEXT;
+        currentBtn.disabled = false;
         console.error(err);
-        setTimeout(() => {
-          btn.innerHTML = originalText;
-        }, 2000);
+        setTimeout(() => { currentBtn.innerHTML = originalHTML; }, 2000);
       }
     });
   }
