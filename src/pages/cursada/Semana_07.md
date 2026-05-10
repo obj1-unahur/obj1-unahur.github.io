@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 7
 
-inicio: 2026-09-20
+inicio: 2026-05-11
 
 descripcion: Esta semana aprenderemos a resolver problemas más complejos con colecciones.
 
@@ -68,7 +68,6 @@ horarios:
     Hora: 10.00hs
     URL: https://t.me/+GMlcEZyJtCo2OTUx
 
-
 # --- Nuevo formato para describir los ejercicios acá (2026s1) ---
 # Campos obligatorios: name, urlTemplate (reemplaza "classroom").
 # Campos opcionales que se infieren automáticamente desde urlTemplate:
@@ -96,9 +95,6 @@ horarios:
 #
 # Se infiere: repoUrl, prefix, type, isPrivate (true si es obligatorio), defaultBranch.
 
-ejercicios:
-  - name: Nombre del ejercicio
-    urlTemplate: https://github.com/org/repo
 ejercicios:
   - name: El Alambique Viajero
     urlTemplate: https://github.com/obj1-unahur/alambiqueViajeroParte2
