@@ -6,64 +6,62 @@ inicio: 2026-05-11
 
 descripcion: Esta semana aprenderemos a resolver problemas más complejos con colecciones.
 
+atencion: El día martes 12/5 no habrá clases para que tod@s podamos asistir a la marcha por el cumplimiento de la ley de financiamiento universitario.
+
 horarios:
   - Comision: 1
-    Dia: Viernes 8 de Mayo
+    Dia: Viernes 15 de Mayo
     Modalidad: PRESENCIAL
     Hora: 8.00hs
     Aula: LAB MA-113
     Edificio: MALVINAS ARGENTINAS (PA)
 
   - Comision: 2
-    Dia: Martes 5 de Mayo
-    Modalidad: PRESENCIAL
+    Dia: Martes 12 de Mayo
     Hora: 18.00hs
-    Aula: LAB LP-207
-    Edificio: La Patria
+    Mensaje: Sin clase por la marcha
 
   - Comision: 3
-    Dia: Miércoles 6 de Mayo
-    Modalidad: PRESENCIAL
+    Dia: Miércoles 13 de Mayo
+    Modalidad: ⚠️ VIRTUAL ⚠️ (Excepción)
     Hora: 18.00hs
-    Aula: LAB LP-206
-    Edificio: La Patria
+    URL: https://t.me/+GMlcEZyJtCo2OTUx
 
   - Comision: 4
-    Dia: Viernes 8 de Mayo
+    Dia: Viernes 15 de Mayo
     Hora: 18.00hs
     Modalidad: PRESENCIAL
     Aula: LAB TA-001
     Edificio: TRABAJO ARGENTINO
 
   - Comision: 5
-    Dia: Miércoles 6 de Mayo
-    Modalidad: PRESENCIAL
+    Dia: Miércoles 13 de Mayo
+    Modalidad: ⚠️ VIRTUAL ⚠️ (Excepción)
     Hora: 18.00hs
-    Aula: LAB LP-207
-    Edificio: La Patria
+    URL: https://t.me/+GMlcEZyJtCo2OTUx
 
   - Comision: 6
-    Dia: Viernes 8 de Mayo
+    Dia: Viernes 15 de Mayo
     Hora: 18.00hs
     Modalidad: PRESENCIAL
     Aula: LAB TA-002
     Edificio: TRABAJO ARGENTINO
 
   - Comision: 7
-    Dia: Viernes 8 de Mayo
+    Dia: Viernes 15 de Mayo
     Hora: 18.00hs
     Modalidad: PRESENCIAL
     Aula: LAB MA-111
     Edificio: MALVINAS ARGENTINAS (PA)
 
   - Comision: Todas
-    Dia: Lunes 4 de Mayo
-    Modalidad: 📣 ESPECIAL TUTORÍA 1 VIRTUAL ‼️
+    Dia: Lunes 11 de Mayo
+    Modalidad: 📣 VIRTUAL (tutoría) 📣
     Hora: 18.00hs
-    URL: https://meet.google.com/nqg-rprn-asn
+    URL: https://meet.google.com/nqg-rprn-asn #link es el mismo?
 
   - Comision: Todas
-    Dia: Sábado 9 de Mayo
+    Dia: Sábado 16 de Mayo
     Modalidad: VIRTUAL
     Hora: 10.00hs
     URL: https://t.me/+GMlcEZyJtCo2OTUx
