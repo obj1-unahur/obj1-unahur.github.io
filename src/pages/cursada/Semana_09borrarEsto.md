@@ -53,27 +53,26 @@ videos:
   - nombre: Grabación clase sábado 11/10/25
     urlYoutube: https://www.youtube.com/watch?v=_glG4IjXpJ4
 
+#testear correcto funcionamiento de asignaciones
 ejercicios:
   - name: Infraestructura Ferroviaria (TP Grupal Clases)
-    classroom: https://classroom.github.com/a/m37EgLVM
-    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-infraferroviaria-clases-infraFerroviaria' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/clases-infraFerroviaria
+    destOrg: obj1-unahur-2026s1
+    type: group
+    obligatorio: true
     fechaDeEntrega: Mirar sección 'Importante'
     comentarios:
       - name: TP Grupal de entrega obligatoria que incluye todos los temas vistos incluyendo clases.
-    obligatorio: true
 
   - name: Servicios Profesionales
-    classroom: https://classroom.github.com/a/2_0cCdri
-    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-serviciosprofesionales-clasesServiciosProfesionales' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/clasesServiciosProfesionales
+    destOrg: obj1-unahur-2026s1
     comentarios:
       - name: Un ejercicio bastante completo para practicar Clases en casa.
 
   - name: Flotas de Rodados (Con Game)
-    classroom: https://classroom.github.com/a/lC1mrSV7
-    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-flotasderodados-flotasDeRodadosConGameTS' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/flotasDeRodadosConGameTS
+    destOrg: obj1-unahur-2026s1
     comentarios:
       - name: Ejercicio incremental, polimorfismo, colecciones, clases y game. Para practicar en clase.
 ---

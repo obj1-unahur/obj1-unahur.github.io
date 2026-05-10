@@ -57,41 +57,39 @@ videos:
   - nombre: Grabación clase sábado 25/10/25
     urlYoutube: https://www.youtube.com/watch?v=H9lRnz4fz-o
 
+#verificar asignaciones
 ejercicios:
   - name: Semillas (TP Grupal Herencia)
-    classroom: https://classroom.github.com/a/xM3eCOIQ
-    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-herencia-semillas-herencia-Semillas' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/herencia-Semillas
+    destOrg: obj1-unahur-2026s1
+    type: group
+    obligatorio: true
     fechaDeEntrega: Ver sección 'Importante'
     comentarios:
       - name: TP Grupal de entrega obligatoria que incluye todos los temas vistos incluyendo herencia.
-    obligatorio: true
 
   - name: Golosinas - Colecciones (la primer parte)
-    classroom: https://classroom.github.com/a/yPoqYTwa
-    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-coleccionesgolosinas-coleccionesGolosinas' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/coleccionesGolosinas
+    destOrg: obj1-unahur-2026s1
     comentarios:
       - name: Primer parte del ejercicio de golosinas, con el enunciado y de cero para practicar.
 
   - name: Golosinas - Clases y Herencia
-    classroom: https://classroom.github.com/a/C9ud3eAY
-    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-herenciagolosinas-herenciaGolosinas' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/herenciaGolosinas
+    destOrg: obj1-unahur-2026s1
     comentarios:
       - name: El ejercicio de los videos de herencia, para que lo puedan practicar. Están implementadas las clases de cada golosina, está para arrancar con el enunciado.
 
   - name: Plagas - Herencia
-    classroom: https://classroom.github.com/a/qaaas3MI
-    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-herenciaplagas-herenciaPlagas' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/herenciaPlagas
+    destOrg: obj1-unahur-2026s1
     comentarios:
       - name: TP individual para practicar en clase y en casa.
 
   - name: Pacman - Rivales
-    classroom: https://classroom.github.com/a/xa6lr746 #URL de la asignación
-    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-pacmanbasicgame-pacmanBasicGame' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: '02-rivales' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/pacmanBasicGame
+    destOrg: obj1-unahur-2026s1
+    defaultBranch: '02-rivales'
     comentarios:
       - name: Segunda parte del ejercicio para trabajar Game el sábado.
 ---

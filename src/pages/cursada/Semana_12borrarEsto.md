@@ -45,18 +45,17 @@ videos:
   - nombre: Grabación de la clase del sábado 01/11/2025.
     urlYoutube: https://drive.google.com/file/d/1a7Y9CC3l3nAnDyviJ72nlCuiH7z0JXut/view?usp=sharing
 
+#verificar
 ejercicios:
   - name: Naves Espaciales
-    classroom: https://classroom.github.com/a/FN2PBzAi
-    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-herencia-naves-herencia-NavesEspaciales' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/herencia-NavesEspaciales
+    destOrg: obj1-unahur-2026s1
     comentarios:
       - name: Para practicar Herencia de Clases en clase y Clase Abstracta.
 
   - name: Pack de Viajes
-    classroom: https://classroom.github.com/a/Drmc7oCz
-    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-tipo-2do-parcial-packs-de-viajes-parcial-agenciaDeViajes' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/parcial-agenciaDeViajes
+    destOrg: obj1-unahur-2026s1
     comentarios:
       - name: Ejercicio tipo parcial para practicar Herencia de Clases y Clase Abstracta, la solución la vamos a desarrollar junto con el repaso para el segundo parcial en la clase del sábado.
 ---

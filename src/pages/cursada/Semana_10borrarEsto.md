@@ -44,22 +44,22 @@ horarios:
     Aula: Aula a confirmar
     Edificio: A confirmar
 
+#testear correcto funcionamiento de asignaciones
 ejercicios:
   - name: Coliseo
-    classroom: https://classroom.github.com/a/OTxlArQp
-    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-coliseo-clasesColiseo' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/clasesColiseo
+    destOrg: obj1-unahur-2026s1
     comentarios:
       - name: TP individual para practicar en clase y en casa.
 
   - name: TPGameIntegrador Final (Grupal)
-    classroom: https://classroom.github.com/a/k9fZ4-iD
-    repoUrl: 'obj1-unahur/TPGameIntegrador' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/TPGameIntegrador
+    destOrg: obj1-unahur-2026s1
+    type: group
+    obligatorio: true
     fechaDeEntrega: Consultar con docente de cada comisión
     comentarios:
       - name: TP Grupal Integrador de entrega obligatoria.
-    obligatorio: true
 ---
 
 - Esta semana continuamos viendo "clases" <a href="https://www.wollok.org/documentation/clases/" target="_blank">---> Wollok docs Clases <---</a> y seguiremos con tema test avanzados <a href="https://www.wollok.org/documentation/tests/" target="_blank">---> Wollok docs Tests <---</a>. Recomendamos la lectura previa de la documentación disponible en la página oficial de Wollok.

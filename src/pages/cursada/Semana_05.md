@@ -70,16 +70,14 @@ horarios:
 
 ejercicios:
   - name: Mensajeros de Película
-    # classroom: https://classroom.github.com/a/QyUxnjcN
-    classroom: https://github.com/obj1-unahur-2026s1/mensajerosDePelicula
-    repoUrl: 'obj1-unahur-2026s1/mensajerosDePelicula' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/mensajeros
+    destOrg: obj1-unahur-2026s1
     comentarios:
-      - name: Ejercicio que introduce el mamejo de bloques y colecciones.
+      - name: Ejercicio que introduce el manejo de bloques y colecciones.
+
   - name: Bebidas Parte 2
-    classroom: https://github.com/obj1-unahur-2026s1/coleccionesBebidas
-    repoUrl: 'obj1-unahur-2026s1/coleccionesBebidas' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/coleccionesBebidas
+    destOrg: obj1-unahur-2026s1
     comentarios:
       - name: Segunda parte del ejercicio Bebidas, que agrega el manejo de bloques y colecciones.
 ---

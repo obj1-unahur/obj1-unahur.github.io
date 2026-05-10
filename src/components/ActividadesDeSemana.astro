@@ -8,7 +8,7 @@ const { ejercicios } = Astro.props
 <CardSecciones
 	title="Ejercicios"
 	id="ejercicios">
-	<!-- Input global de usuario GitHub -->
+	<!-- Input global para el usuario de GitHub -->
 	<div class="github-user-container">
 		<input
 			type="text"
@@ -23,34 +23,30 @@ const { ejercicios } = Astro.props
 				ejercicios.map(
 					({
 						name,
+						urlTemplate,
+						destOrg,
+						prefix,
+						isPrivate,
+						type,
 						comentarios,
 						ejemploUrl,
-						classroom,
-						repoUrl,
-						defaultBranch,
-						fechaDeEntrega,
 						obligatorio,
 						consultas,
-						destOrg, // ← nueva para worker
-						prefix, // ← nueva para worker
-						isPrivate, // ← nueva para worker
-						type, // ← nueva para worker
+						fechaDeEntrega,
 					}) => (
 						<li class="flex w-full justify-center">
 							<CardEjercicio
 								title={name}
-								comentarios={comentarios}
-								urlGitHub={classroom}
-								repoUrl={repoUrl}
-								ejemploUrl={ejemploUrl}
-								defaultBranch={defaultBranch}
-								fechaDeEntrega={fechaDeEntrega}
-								obligatorio={obligatorio}
-								consultas={consultas}
+								urlTemplate={urlTemplate}
 								destOrg={destOrg}
 								prefix={prefix}
 								isPrivate={isPrivate}
 								type={type}
+								comentarios={comentarios}
+								ejemploUrl={ejemploUrl}
+								obligatorio={obligatorio}
+								consultas={consultas}
+								fechaDeEntrega={fechaDeEntrega}
 							/>
 						</li>
 					)
@@ -73,16 +69,12 @@ const { ejercicios } = Astro.props
 
 		@media (min-width: 550px) {
 			grid-template-columns: repeat(1, 1fr);
-			grid-gap: 1rem;
 		}
 
 		@media (min-width: 950px) {
 			grid-template-columns: repeat(2, 1fr);
-			grid-gap: 1rem;
 		}
 	}
-
-	/* === NUEVO: estilos input GitHub === */
 
 	.github-user-container {
 		display: flex;
@@ -106,7 +98,6 @@ const { ejercicios } = Astro.props
 		color: var(--neutral-500);
 	}
 
-	/* modo oscuro */
 	:global(.darkmode) .github-user-input {
 		background-color: var(--dark-100);
 		color: var(--dark-900);

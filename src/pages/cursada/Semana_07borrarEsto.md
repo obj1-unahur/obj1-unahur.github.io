@@ -7,56 +7,108 @@ inicio: 2026-09-20
 descripcion: Esta semana aprenderemos a resolver problemas más complejos con colecciones.
 
 horarios:
-  - Comision: Comisión 1 - Lunes T.Noche
-    Dia: Lunes 22 de Septiembre
-    Modalidad: CLASE PRESENCIAL
-    Hora: 18.00hs
-    Aula: LAB LP-206
-    Edificio: Edificio La Patria, 2do piso - La Patria 3800 (esq. Los Toldos)
+  - Comision: 1
+    Dia: Viernes 8 de Mayo
+    Modalidad: PRESENCIAL
+    Hora: 8.00hs
+    Aula: LAB MA-113
+    Edificio: MALVINAS ARGENTINAS (PA)
 
-  - Comision: Comisión 2 - Lunes T.Noche
-    Dia: Lunes 22 de Septiembre
-    Modalidad: CLASE PRESENCIAL
+  - Comision: 2
+    Dia: Martes 5 de Mayo
+    Modalidad: PRESENCIAL
     Hora: 18.00hs
     Aula: LAB LP-207
-    Edificio: Edificio La Patria, 2do piso - La Patria 3800 (esq. Los Toldos)
+    Edificio: La Patria
 
-  - Comision: Comisión 3 - Jueves T.Noche
-    Dia: Jueves 25 de Septiembre
-    Modalidad: CLASE PRESENCIAL
+  - Comision: 3
+    Dia: Miércoles 6 de Mayo
+    Modalidad: PRESENCIAL
     Hora: 18.00hs
-    Aula: Aula MA-109
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+    Aula: LAB LP-206
+    Edificio: La Patria
 
-  - Comision: Comisión 4 - Viernes T.Mañana
-    Dia: Viernes 26 de Septiembre
-    Modalidad: CLASE PRESENCIAL
-    Hora: 8.00hs
-    Aula: Aula MA-109
-    Edificio: (Edificio Malvinas Argentinas, 1er piso)
+  - Comision: 4
+    Dia: Viernes 8 de Mayo
+    Hora: 18.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB TA-001
+    Edificio: TRABAJO ARGENTINO
 
-  - Comision: Todas las Comisiones
-    Dia: Sábado 27 de Septiembre
+  - Comision: 5
+    Dia: Miércoles 6 de Mayo
+    Modalidad: PRESENCIAL
+    Hora: 18.00hs
+    Aula: LAB LP-207
+    Edificio: La Patria
+
+  - Comision: 6
+    Dia: Viernes 8 de Mayo
+    Hora: 18.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB TA-002
+    Edificio: TRABAJO ARGENTINO
+
+  - Comision: 7
+    Dia: Viernes 8 de Mayo
+    Hora: 18.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-111
+    Edificio: MALVINAS ARGENTINAS (PA)
+
+  - Comision: Todas
+    Dia: Lunes 4 de Mayo
+    Modalidad: 📣 ESPECIAL TUTORÍA 1 VIRTUAL ‼️
+    Hora: 18.00hs
+    URL: https://meet.google.com/nqg-rprn-asn
+
+  - Comision: Todas
+    Dia: Sábado 9 de Mayo
     Modalidad: VIRTUAL
     Hora: 10.00hs
-    URL: https://us06web.zoom.us/j/87187879948
+    URL: https://t.me/+GMlcEZyJtCo2OTUx
 
-videos:
-  - nombre: Grabación clase sábado 27/9/25
-    urlYoutube: https://www.youtube.com/watch?v=Fo34C_alKIE
+
+# --- Nuevo formato para describir los ejercicios acá (2026s1) ---
+# Campos obligatorios: name, urlTemplate (reemplaza "classroom").
+# Campos opcionales que se infieren automáticamente desde urlTemplate:
+#   repoUrl, defaultBranch (= "main"), prefix (último segmento de urlTemplate),
+#   destOrg (org de urlTemplate), type (= "individual"), isPrivate (= false).
+# Si el ejercicio es obligatorio → isPrivate pasa a true (salvo que se indique lo contrario).
+# Para TPs grupales, usar type: group. La consigna se muestra desde /blob/defaultBranch/README.md.
+
+#Comparativa
+
+# ─── ANTES ───────────────────────────────   │  ─── AHORA ──────────────────────────────
+# ejercicios:                                 │  ejercicios:
+#   - name: "Mi TP Obligatorio"               │    - name: "Mi TP Obligatorio"
+#     classroom: https://github.com/org/repo  │      urlTemplate: https://github.com/org/repo
+#     repoUrl: 'org/repo'                     │      destOrg: mi-org-2026s1   # opcional
+#     defaultBranch: 'main'                   │      obligatorio: true
+#     destOrg: mi-org-2026s1                  │      fechaDeEntrega: 1/1/2026
+#     prefix: mi-ejercicio                    │      comentarios:
+#     isPrivate: true                         │        - name: "Entregar haciendo push"
+#     type: individual                        │
+#     fechaDeEntrega: 1/1/2026                │
+#     obligatorio: true                       │
+#     comentarios:                            │
+#       - name: "Entregar haciendo push"      │
+#
+# Se infiere: repoUrl, prefix, type, isPrivate (true si es obligatorio), defaultBranch.
 
 ejercicios:
+  - name: Nombre del ejercicio
+    urlTemplate: https://github.com/org/repo
+ejercicios:
   - name: El Alambique Viajero
-    classroom: https://classroom.github.com/a/xnk1VreA
-    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-alambiqueviajeroparte2-alambiqueViajeroParte2' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/alambiqueViajeroParte2
+    destOrg: obj1-unahur-2026s1
     comentarios:
       - name: Enunciado de la parte 2 del ejercicio que agrega colecciones. Ya trae la solución de parte 1.
 
   - name: Camión de Transporte
-    classroom: https://classroom.github.com/a/HvncVW9A
-    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-camiondetransporte-camionDeTransporte' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/camionDeTransporte
+    destOrg: obj1-unahur-2026s1
     comentarios:
       - name: Para practicar en casa y en clase con colecciones y polimorfismo.
 ---

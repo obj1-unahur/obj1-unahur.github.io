@@ -1,25 +1,40 @@
 ---
 import { Icon } from 'astro-icon/components'
-const props = Astro.props
-const {
+
+// ── Props con valores por defecto e inferidos ────────────────────
+let {
 	title,
 	comentarios,
 	ejemploUrl,
-	urlGitHub,
-	repoUrl,
-	defaultBranch,
-	fechaDeEntrega,
+	urlTemplate, // obligatorio: https://github.com/org/repo
+	destOrg = urlTemplate?.split('/')[3] ?? '',
+	prefix = urlTemplate?.split('/').pop()?.split('?')[0] ?? '',
+	isPrivate = false,
+	type = 'individual',
 	obligatorio,
 	consultas,
-	destOrg, // nueva para worker
-	prefix, // nueva para worker
-	isPrivate, // nueva para worker
-	type, // nueva para worker
 } = Astro.props
+
+// ── Si es obligatorio y no se especificó isPrivate, forzar a true ──
+if (obligatorio && Astro.props.isPrivate === undefined) {
+	isPrivate = true
+}
+
+// ── Derivados para worker y consigna ────────────────────────────
+const partes = urlTemplate
+	? urlTemplate.replace('https://github.com/', '').split('/')
+	: []
+const templateOrg = partes[0] ?? ''
+const template = (partes[1] ?? '').split('?')[0] ?? ''
+const repoUrl = urlTemplate
+	? urlTemplate.replace('https://github.com/', '')
+	: ''
+const defaultBranch = Astro.props.defaultBranch ?? 'main'
 ---
 
 <div class="feature m-3">
 	<div class="flex h-full w-full flex-col">
+		<!-- Etiqueta de obligatorio (si corresponde) -->
 		{
 			obligatorio && (
 				<div class="obligatorio-container">
@@ -31,17 +46,17 @@ const {
 				</div>
 			)
 		}
+		<!-- Etiqueta de consultas (si corresponde) -->
 		{
 			consultas && (
 				<div class="obligatorio-container">
 					<span class="text-obligatorio">Ejercicio de clase de consultas</span>
 					<svg
-						class="icon-svg "
+						class="icon-svg"
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"
 						height="24"
-						viewBox="0 0 24 24"
-						{...props}>
+						viewBox="0 0 24 24">
 						<mask
 							id="lineMdGithubLoop0"
 							width="24"
@@ -121,18 +136,28 @@ const {
 
 		<h3 class="p-2 text-xl">{title}</h3>
 
-		<ul>
-			{comentarios.map(({ name }) => <li>{name}</li>)}
-		</ul>
-
+		<!-- Comentarios -->
 		{
-			fechaDeEntrega && (
+			comentarios && comentarios.length > 0 && (
+				<ul>
+					{comentarios.map(({ name }) => (
+						<li>{name}</li>
+					))}
+				</ul>
+			)
+		}
+
+		<!-- Fecha de entrega -->
+		{
+			Astro.props.fechaDeEntrega && (
 				<p class="p-2 text-lg font-bold">
-					Fecha de entrega: <span class="font-thin">{fechaDeEntrega}</span>
+					Fecha de entrega:{' '}
+					<span class="font-thin">{Astro.props.fechaDeEntrega}</span>
 				</p>
 			)
 		}
 
+		<!-- Ejemplo -->
 		{
 			ejemploUrl && (
 				<a
@@ -145,16 +170,17 @@ const {
 			)
 		}
 
+		<!-- Botón de aceptar asignación (el worker se maneja desde PostCursadaLayout.astro) -->
 		{
-			urlGitHub && (
+			urlTemplate && (
 				<button
 					type="button"
-					data-template={urlGitHub.split('/').pop()}
-					data-template-org={urlGitHub.split('/')[3]}
+					data-template={template}
+					data-template-org={templateOrg}
 					data-dest-org={destOrg}
 					data-prefix={prefix}
 					data-private={isPrivate ? 'true' : 'false'}
-					data-type={type ?? 'individual'}
+					data-type={type}
 					class="aceptar-invitacion has-icon button preview-button">
 					<Icon name="ion:logo-github" />
 					Aceptar la asignación
@@ -162,6 +188,7 @@ const {
 			)
 		}
 
+		<!-- Consigna -->
 		<a
 			href={`https://github.com/${repoUrl}/blob/${defaultBranch}/README.md`}
 			target="_blank"
@@ -276,12 +303,10 @@ const {
 	.text-obligatorio {
 		position: absolute;
 		left: 10px;
-
 		white-space: nowrap;
 		font-size: 1rem;
 		color: var(--dark-100);
 		font-weight: bold;
-
 		opacity: 0;
 		transform: translateX(-20px);
 		transition: all 0.4s ease;

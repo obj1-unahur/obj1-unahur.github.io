@@ -44,25 +44,23 @@ horarios:
     Aula: Auditorio T.A
     Edificio: (Edificio Trabajo Argentino, Origone 151)
 
+#verificar
 ejercicios:
   - name: Práctica Mutual MMMM
-    classroom: https://classroom.github.com/a/8D5etN-1
-    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-mutual-mmmm-mutual-MMMM' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/mutual-MMMM
+    destOrg: obj1-unahur-2026s1
     comentarios:
       - name: Para practicar en clase y en casa.
 
   - name: Centro de Kinesiología
-    classroom: https://classroom.github.com/a/f7LL6pMF
-    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-centrokinesiologia-centroKinesiologia' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/centroKinesiologia
+    destOrg: obj1-unahur-2026s1
     comentarios:
       - name: Otro buen ejercicio para practicar con todo lo visto hasta ahora.
 
   - name: Practica tipo 2do Parcial
-    classroom: https://classroom.github.com/a/D3GOJVzY
-    repoUrl: 'obj1-unahur-2025s2/obj1-unahur-2025s2-practicaparcial2-practicaParcial2' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/practicaParcial2
+    destOrg: obj1-unahur-2026s1
     comentarios:
       - name: Ejercicio tipo parcial 2.
 ---

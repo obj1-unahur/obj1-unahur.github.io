@@ -62,25 +62,22 @@ horarios:
 
 ejercicios:
   - name: El Lobo Feroz (TP 1 Objetos (individual))
-    classroom: https://github.com/obj1-unahur-2026s1/elloboferoz
-    repoUrl: 'obj1-unahur-2026s1/obj1-unahur-2026s1-elloboferoz-elLoboFeroz' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/elLoboFeroz
+    destOrg: obj1-unahur-2026s1
+    obligatorio: true
     fechaDeEntrega: Domingo 19/04
     comentarios:
       - name: Ejercicio obligatorio para entregar haciendo push sobre el repositorio con la asignación correspondiente.
-    obligatorio: true
 
   - name: Bolichito
-    classroom: https://github.com/obj1-unahur-2026s1/bolichito
-    repoUrl: 'obj1-unahur-2026s1/obj1-unahur-2026s1-bolichito-bolichito' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/bolichito
+    destOrg: obj1-unahur-2026s1
     comentarios:
       - name: Ejercicio para practicar en casa y en clase.
 
   - name: Juego Personajes Y Elementos
-    classroom: https://github.com/obj1-unahur-2026s1/personajes
-    repoUrl: 'obj1-unahur-2026s1/obj1-unahur-2026s1-personajes-personajes' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/personajes
+    destOrg: obj1-unahur-2026s1
     comentarios:
       - name: Ejercicio para practicar con objetos.
 ---

@@ -74,12 +74,42 @@ videos:
   #- nombre: Como aceptar asignaciones (ejercicios) de github classroom (LA PRIMERA VEZ DEBERÁN #SELECCIONAR SU APELLIDO Y NOMBRE DE LA LISTA)
   #  urlYoutube: https://www.youtube.com/watch?v=pKIhUX51nkw
 
+# --- Nuevo formato para describir los ejercicios acá (2026s1) ---
+# Campos obligatorios: name, urlTemplate (reemplaza "classroom").
+# Campos opcionales que se infieren automáticamente desde urlTemplate:
+#   repoUrl, defaultBranch (= "main"), prefix (último segmento de urlTemplate),
+#   destOrg (org de urlTemplate), type (= "individual"), isPrivate (= false).
+# Si el ejercicio es obligatorio → isPrivate pasa a true (salvo que se indique lo contrario).
+# Para TPs grupales, usar type: group. La consigna se muestra desde /blob/defaultBranch/README.md.
+
+#Comparativa
+
+# ─── ANTES ───────────────────────────────   │  ─── AHORA ──────────────────────────────
+# ejercicios:                                 │  ejercicios:
+#   - name: "Mi TP Obligatorio"               │    - name: "Mi TP Obligatorio"
+#     classroom: https://github.com/org/repo  │      urlTemplate: https://github.com/org/repo
+#     repoUrl: 'org/repo'                     │      destOrg: mi-org-2026s1   # opcional
+#     defaultBranch: 'main'                   │      obligatorio: true
+#     destOrg: mi-org-2026s1                  │      fechaDeEntrega: 1/1/2026
+#     prefix: mi-ejercicio                    │      comentarios:
+#     isPrivate: true                         │        - name: "Entregar haciendo push"
+#     type: individual                        │
+#     fechaDeEntrega: 1/1/2026                │
+#     obligatorio: true                       │
+#     comentarios:                            │
+#       - name: "Entregar haciendo push"      │
+#
+# Se infiere: repoUrl, prefix, type, isPrivate (true si es obligatorio), defaultBranch.
+
 ejercicios:
   - name: Presentación Personal
-    classroom: https://github.com/obj1-unahur-2026s1/presentacion-personal
-    repoUrl: 'obj1-unahur-2026s1/obj1-unahur-2026s1-presentacion-personal-PresentacionPersonal' # Acá va la URL del repo sin el "https://github.com/"
+    urlTemplate: https://github.com/obj1-unahur/PresentacionPersonal
+    defaultBranch: 'main'
+    destOrg: obj1-unahur-2026s1
+    prefix: presentacion-personal
+    isPrivate: false
+    type: individual
     ejemploUrl: https://github.com/obj1-unahur-2023s1/presentacion-personal-BrankoMuruaga.git
-    defaultBranch: 'main' # Acá va la rama default del repo
     comentarios:
       - name: Ejercicio para practicar con github. Les dejamos un ejermplo, aunque esperamos que nos sorprendan con algo bien personal y creativo!
 ---

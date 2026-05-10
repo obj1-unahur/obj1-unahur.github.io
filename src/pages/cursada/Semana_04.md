@@ -63,25 +63,22 @@ horarios:
 
 ejercicios:
   - name: TP2(Polimorfismo) - Cotización de la Papa - Ejercicio para entregar haciendo push sobre el repositorio con la asignación correspondiente.
-    classroom: https://github.com/obj1-unahur-2026s1/cotizaciondelapapa #URL de la asignación
+    urlTemplate: https://github.com/obj1-unahur/cotizacionDeLaPapa
+    destOrg: obj1-unahur-2026s1
     obligatorio: true
-    repoUrl: 'obj1-unahur/cotizacionDeLaPapa' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
     fechaDeEntrega: Domingo 3/05
     comentarios:
       - name: Se entrega haciendo push sobre el repo. Siempre deben clonarse el repo que se genera para c/u al momento de Aceptar la asignación.
 
   - name: Bebidas
-    classroom: https://github.com/obj1-unahur-2026s1/bebidas #URL de la asignación
-    repoUrl: 'obj1-unahur-2026s1/obj1-unahur-2026s1-bebidas-bebidas' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/bebidas
+    destOrg: obj1-unahur-2026s1
     comentarios:
       - name: Otro ejercicio más (cortito y al pie) para practicar con polimorfismo.
 
   - name: Victoria D Porte
-    classroom: https://github.com/obj1-unahur-2026s1/victoriadporte #URL de la asignación
-    repoUrl: 'obj1-unahur-2026s1/obj1-unahur-2026s1-victoriadporte-victoriaDPorte' # Acá va la URL del repo sin el "https://github.com/"
-    defaultBranch: 'main' # Acá va la rama default del repo
+    urlTemplate: https://github.com/obj1-unahur/victoriaDPorte
+    destOrg: obj1-unahur-2026s1
     comentarios:
       - name: Ejercicio para trabajar en clase polimorfismo, con algunas vueltitas de rosca.
 ---
