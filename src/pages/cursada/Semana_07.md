@@ -102,6 +102,15 @@ videos:
 # Se infiere: repoUrl, prefix, type, isPrivate (true si es obligatorio), defaultBranch.
 
 ejercicios:
+  - name: F1 2024 - GRUPAL
+    urlTemplate: https://github.com/obj1-unahur/F1_2024
+    destOrg: obj1-unahur-2026s1
+    obligatorio: true
+    type: 'group'
+    fechaDeEntrega: Domingo 17/05
+    comentarios:
+      - name: TP Grupal número 1
+
   - name: El Alambique Viajero
     urlTemplate: https://github.com/obj1-unahur/alambiqueViajeroParte2
     destOrg: obj1-unahur-2026s1

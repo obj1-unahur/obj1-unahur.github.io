@@ -76,6 +76,12 @@ horarios:
     Hora: 10.00hs
     URL: https://t.me/+GMlcEZyJtCo2OTUx
 
+videos:
+  - nombre: Aceptar asignación grupal y CREAR equipo
+    urlYoutube: https://www.youtube.com/watch?v=BRK0gQZ0NZM
+  - nombre: Aceptar asignación grupal y UNIRSE a equipo ya creado
+    urlYoutube: https://www.youtube.com/watch?v=AYfNUJESbZg
+
 ejercicios:
   - name: F1 2024 - GRUPAL
     urlTemplate: https://github.com/obj1-unahur/F1_2024
