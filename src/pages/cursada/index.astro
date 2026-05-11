@@ -17,11 +17,11 @@ const semanas = await Astro.glob('./*.md') //Para buscar todos los archivos .md 
 					semanas
 						.reverse()
 						.filter((semana) => {
-							// Solo mostramos las clases de las semanas cuya fecha de inicio sea inferior a la fecha actual
-							// por un tema de compatibilidad, también mostramos las clases que no especifican fecha de inicio
+							if (!semana.frontmatter.inicio) return true
 							const inicio = new Date(semana.frontmatter.inicio)
-							const hoy = new Date()
-							return hoy >= inicio || !semana.frontmatter.inicio
+							// Astro parsea las fechas en UTC, compensamos UTC-3 de Argentina
+							inicio.setHours(inicio.getHours() + 3)
+							return new Date() >= inicio
 						})
 						.map((semana) => (
 							<li>
