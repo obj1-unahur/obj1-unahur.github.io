@@ -6,7 +6,9 @@ inicio: 2026-05-11
 
 descripcion: Esta semana aprenderemos a resolver problemas más complejos con colecciones.
 
-atencion: El día martes 12/5 no habrá clases para que tod@s podamos asistir a la marcha por el cumplimiento de la ley de financiamiento universitario.
+atencion: El día martes 12/5 no habrá clases para que tod@s podamos asistir a la marcha por el cumplimiento de la ley de financiamiento universitario. Más info acá abajo ↓
+
+importante: Las clases de comisión 3 y comisión 5 de este miércoles 13 se unificarán en una sola, que será en MODALIDAD VIRTUAL. Esto es una excepción ya que no habrán aulas disponibles. El horario es el mismo de siempre, 18 hs, y la plataforma la misma de los sábados, telegram.
 
 horarios:
   - Comision: 1
@@ -19,7 +21,7 @@ horarios:
   - Comision: 2
     Dia: Martes 12 de Mayo
     Hora: 18.00hs
-    Mensaje: Sin clase por la marcha
+    Mensaje: Sin clase por la marcha (pueden unirse el miércoles)
 
   - Comision: 3
     Dia: Miércoles 13 de Mayo
@@ -58,13 +60,19 @@ horarios:
     Dia: Lunes 11 de Mayo
     Modalidad: 📣 VIRTUAL (tutoría) 📣
     Hora: 18.00hs
-    URL: https://meet.google.com/nqg-rprn-asn #link es el mismo?
+    URL: https://meet.google.com/nqg-rprn-asn
 
   - Comision: Todas
     Dia: Sábado 16 de Mayo
     Modalidad: VIRTUAL
     Hora: 10.00hs
     URL: https://t.me/+GMlcEZyJtCo2OTUx
+
+videos:
+  - nombre: Aceptar asignación grupal y CREAR equipo
+    urlYoutube: https://www.youtube.com/watch?v=BRK0gQZ0NZM
+  - nombre: Aceptar asignación grupal y UNIRSE a equipo ya creado
+    urlYoutube: https://www.youtube.com/watch?v=AYfNUJESbZg
 
 # --- Nuevo formato para describir los ejercicios acá (2026s1) ---
 # Campos obligatorios: name, urlTemplate (reemplaza "classroom").
@@ -111,3 +119,5 @@ ejercicios:
 
 - Volvemos a recomendar la utilización del apunte que mencionamos la semana pasada sobre closures y colecciones que está disponible en la sección Material de esta página en este link:
   <a href="https://objetos1wollokunq.gitlab.io/material/guia-colecciones-basicas.pdf" target="_blank">Closures y Colecciones</a>
+
+- En otro orden de cosas, como sabrán, este martes está convocada una marcha federal para exigir el cumplimiento de la Ley de Financiamiento universitario. Pueden informarse más al respecto y sumarse en este <a href="https://discord.com/channels/656909199510601744/1487558648472272956/1502642395857162300" target="_blank">enlace</a>.

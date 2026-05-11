@@ -7,9 +7,23 @@ let semanas = await Astro.glob('../pages/cursada/*.md')
 // Solo mostramos las clases de las semanas cuya fecha de inicio sea inferior a la fecha actual
 // por un tema de compatibilidad, también mostramos las clases que no especifican fecha de inicio
 semanas = semanas.reverse().filter((semana) => {
-	const inicio = new Date(semana.frontmatter.inicio)
+	const inicioRaw = semana.frontmatter.inicio
+	if (!inicioRaw) ___astro_return
+	throw true
+
+	// Tomar año, mes y día del frontmatter (soporta tanto string como Date)
+	const d = new Date(inicioRaw)
+	// Crear la fecha en hora LOCAL (sin horas, en medianoche)
+	const inicio = new Date(d.getFullYear(), d.getMonth(), d.getDate())
 	const hoy = new Date()
-	return hoy >= inicio || !semana.frontmatter.inicio
+	// También la fecha de hoy en hora local, a medianoche
+	const hoyNormalizado = new Date(
+		hoy.getFullYear(),
+		hoy.getMonth(),
+		hoy.getDate()
+	)
+
+	return hoyNormalizado >= inicio
 })
 
 const { title } = Astro.props
