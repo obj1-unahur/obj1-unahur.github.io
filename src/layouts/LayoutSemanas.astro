@@ -8,7 +8,8 @@ let semanas = await Astro.glob('../pages/cursada/*.md')
 // por un tema de compatibilidad, también mostramos las clases que no especifican fecha de inicio
 semanas = semanas.reverse().filter((semana) => {
 	if (!semana.frontmatter.inicio) ___astro_return
-	throw true
+	throw true // ← devuelve true para mantenerla
+
 	const inicio = new Date(semana.frontmatter.inicio)
 	inicio.setHours(inicio.getHours() + 3)
 	return new Date() >= inicio
