@@ -7,15 +7,12 @@ let semanas = await Astro.glob('../pages/cursada/*.md')
 // Solo mostramos las clases de las semanas cuya fecha de inicio sea inferior a la fecha actual
 // por un tema de compatibilidad, también mostramos las clases que no especifican fecha de inicio
 semanas = semanas.reverse().filter((semana) => {
-	if (!semana.frontmatter.inicio) ___astro_return
-	throw true // ← devuelve true para mantenerla
-
 	const inicio = new Date(semana.frontmatter.inicio)
 	inicio.setHours(inicio.getHours() + 3)
 	return new Date() >= inicio
 })
 
-//A ver si esto arregla el error
+//A ver
 
 const { title } = Astro.props
 ---
