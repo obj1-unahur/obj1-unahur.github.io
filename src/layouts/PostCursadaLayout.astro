@@ -723,7 +723,7 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 					markAssignmentAccepted(prefix, type)
 					activeBtn.textContent = SUCCESS_TEXT
 					setTimeout(() => {
-						window.open(acceptData.repoUrl, '_blank')
+						window.open(`${acceptData.repoUrl}/invitations`, '_blank')
 						updateAcceptedButtons()
 						activeBtn.disabled = false
 					}, 1500)
