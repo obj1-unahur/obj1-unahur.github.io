@@ -394,7 +394,7 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 				let activeIndex = -1
 				let currentSuggestions = []
 				let resolved = false
-				let isNavigating = false // Flag para saber si el usuario navega con flechas
+				let isNavigating = false
 
 				const updateUI = (scrollToActive = false) => {
 					const search = input.value.trim().toLowerCase()
@@ -402,7 +402,6 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 						? teams.filter((t) => t.teamName.toLowerCase().includes(search))
 						: []
 
-					// Si el activeIndex actual ya no es valido para las nuevas sugerencias, resetear
 					if (activeIndex >= currentSuggestions.length) {
 						activeIndex = -1
 						isNavigating = false
@@ -447,7 +446,6 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 						actionBtn.disabled = true
 					}
 
-					// Solo auto-seleccionar el exactMatch si NO esta navegando con flechas
 					if (exactMatch && !isNavigating) {
 						const matchIndex = currentSuggestions.findIndex(
 							(t) => t.teamName.toLowerCase() === search
@@ -460,7 +458,6 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 						}
 					}
 
-					// Scroll hacia el elemento activo
 					if (scrollToActive && activeIndex >= 0) {
 						const activeEl =
 							list.querySelectorAll('.combobox-option')[activeIndex]
@@ -723,7 +720,10 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 					markAssignmentAccepted(prefix, type)
 					activeBtn.textContent = SUCCESS_TEXT
 					setTimeout(() => {
-						window.open(`${acceptData.repoUrl}/invitations`, '_blank')
+						const url = acceptData.needsInvitation
+							? `${acceptData.repoUrl}/invitations`
+							: acceptData.repoUrl
+						window.open(url, '_blank')
 						updateAcceptedButtons()
 						activeBtn.disabled = false
 					}, 1500)
