@@ -2,6 +2,8 @@
 const { frontmatter, url } = Astro.props
 
 const { title, descripcion } = frontmatter // 'frontmatter' devuelve un JSON con todos los campos del .md
+const ejerciciosVisibles =
+	frontmatter.ejercicios?.filter((ej) => ej.visible !== false) || []
 ---
 
 <a href={url}>
@@ -27,7 +29,7 @@ const { title, descripcion } = frontmatter // 'frontmatter' devuelve un JSON con
 				) : null
 			}
 			{
-				frontmatter.ejercicios ? (
+				ejerciciosVisibles?.length > 0 ? (
 					<a
 						href={url + '/#ejercicios'}
 						class="boton mr-3 rounded-md bg-[var(--primary-300)] px-4  py-1 text-center align-middle dark:bg-[var(--secondary-500)] dark:text-white ">
