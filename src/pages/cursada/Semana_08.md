@@ -58,8 +58,8 @@ horarios:
 
   - Comision: Todas
     Dia: Lunes 18 de Mayo
-    Modalidad: 📣 VIRTUAL (tutoría) 📣
-    Hora: 18.00hs
+    Modalidad: 📣 VIRTUAL (¡tutoría extendida de 4 horas!) 📣
+    Hora: 16.00hs
     URL: https://meet.google.com/nqg-rprn-asn
 
   - Comision: Todas
