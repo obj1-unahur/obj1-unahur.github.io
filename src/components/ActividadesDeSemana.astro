@@ -3,62 +3,65 @@ import CardEjercicio from './CardEjercicio.astro'
 import CardSecciones from './CardSecciones.astro'
 
 const { ejercicios } = Astro.props
+const ejerciciosVisibles =
+	ejercicios?.filter((ej) => ej.visible !== false) || []
 ---
 
-<CardSecciones
-	title="Ejercicios"
-	id="ejercicios">
-	<!-- Input global para el usuario de GitHub -->
-	<div class="github-user-container">
-		<input
-			type="text"
-			placeholder="Ingresá tu usuario de GitHub"
-			class="github-user-input"
-		/>
-	</div>
+{
+	ejerciciosVisibles?.length > 0 && (
+		<CardSecciones
+			title="Ejercicios"
+			id="ejercicios">
+			<div class="github-user-container">
+				<input
+					type="text"
+					placeholder="Ingresá tu usuario de GitHub"
+					class="github-user-input"
+				/>
+			</div>
 
-	<ul class="m-auto">
-		{
-			ejercicios ? (
-				ejercicios.map(
-					({
-						name,
-						urlTemplate,
-						destOrg,
-						prefix,
-						isPrivate,
-						type,
-						comentarios,
-						ejemploUrl,
-						obligatorio,
-						consultas,
-						fechaDeEntrega,
-					}) => (
-						<li class="flex w-full justify-center">
-							<CardEjercicio
-								title={name}
-								urlTemplate={urlTemplate}
-								destOrg={destOrg}
-								prefix={prefix}
-								isPrivate={isPrivate}
-								type={type}
-								comentarios={comentarios}
-								ejemploUrl={ejemploUrl}
-								obligatorio={obligatorio}
-								consultas={consultas}
-								fechaDeEntrega={fechaDeEntrega}
-							/>
-						</li>
+			<ul class="m-auto">
+				{ejerciciosVisibles ? (
+					ejerciciosVisibles.map(
+						({
+							name,
+							urlTemplate,
+							destOrg,
+							prefix,
+							isPrivate,
+							type,
+							comentarios,
+							ejemploUrl,
+							obligatorio,
+							consultas,
+							fechaDeEntrega,
+						}) => (
+							<li class="flex w-full justify-center">
+								<CardEjercicio
+									title={name}
+									urlTemplate={urlTemplate}
+									destOrg={destOrg}
+									prefix={prefix}
+									isPrivate={isPrivate}
+									type={type}
+									comentarios={comentarios}
+									ejemploUrl={ejemploUrl}
+									obligatorio={obligatorio}
+									consultas={consultas}
+									fechaDeEntrega={fechaDeEntrega}
+								/>
+							</li>
+						)
 					)
-				)
-			) : (
-				<p class="m-auto flex w-full">
-					<strong>Esta semana no hay ejercicios</strong>
-				</p>
-			)
-		}
-	</ul>
-</CardSecciones>
+				) : (
+					<p class="m-auto flex w-full">
+						<strong>Esta semana no hay ejercicios</strong>
+					</p>
+				)}
+			</ul>
+		</CardSecciones>
+	)
+}
 
 <style lang="scss">
 	ul {
