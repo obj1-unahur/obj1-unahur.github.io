@@ -79,6 +79,26 @@ ejercicios:
     isPrivate: true
     #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
     visible: false
+
+  #----------------------------------------------
+  # CONFIG PARA PARCIAL PARCIAL DE VIERNES TN
+  # PARA HABILITAR 22/05 A LAS 18.00 HS
+  - name: PRIMER PARCIAL - Vie TN
+    #Poner template correcta del parcial
+    urlTemplate: https://github.com/obj1-unahur/parcial1-vie-tn
+    destOrg: obj1-unahur-2026s1
+    prefix: parcial1-vie-tn_2026c1
+    comentarios:
+      - name: Primer parcial para las comisiones 4, 6 y 7 del viernes turno noche
+    #Los parciales se van a generar privados en la orga del cuatri
+    isPrivate: true
+    obligatorio: true
+    type: 'individual'
+    fechaDeEntrega: Viernes 22/05
+
+    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
+    visible: false
+#----------------------------------------------
 ---
 
 - Semana de PARCIAL PRESENCIAL para todas las comisiones. Los temas que entran son hasta colecciones completo.
