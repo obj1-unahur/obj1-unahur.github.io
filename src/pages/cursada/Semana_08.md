@@ -71,7 +71,7 @@ horarios:
 ejercicios:
   - name: PRIMER PARCIAL - COMISIÓN 2
     #Poner template correcta del parcial
-    urlTemplate: https://github.com/obj1-unahur/pixel-arcade
+    urlTemplate: https://github.com/obj1-unahur/parcial1Com2_2026C1
     destOrg: obj1-unahur-2026s1
     comentarios:
       - name: Primer parcial para comisión 2
