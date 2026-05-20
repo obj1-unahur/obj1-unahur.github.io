@@ -86,7 +86,7 @@ ejercicios:
     destOrg: obj1-unahur-2026s1
     comentarios:
       - name: Primer parcial para comisión 2
-    #Los parciales se van a generar privados en la orga del cuatri
+    #Los parciales se van a generar privados en la orga del cuatri 2026
     isPrivate: true
     #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
     visible: true
