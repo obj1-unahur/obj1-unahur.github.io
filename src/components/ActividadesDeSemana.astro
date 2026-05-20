@@ -35,6 +35,8 @@ const ejerciciosVisibles =
 							obligatorio,
 							consultas,
 							fechaDeEntrega,
+							requireTOTP,
+							totpSecret,
 						}) => (
 							<li class="flex w-full justify-center">
 								<CardEjercicio
@@ -49,6 +51,8 @@ const ejerciciosVisibles =
 									obligatorio={obligatorio}
 									consultas={consultas}
 									fechaDeEntrega={fechaDeEntrega}
+									requireTOTP={requireTOTP}
+									totpSecret={totpSecret}
 								/>
 							</li>
 						)

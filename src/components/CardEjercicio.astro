@@ -13,6 +13,8 @@ let {
 	type = 'individual',
 	obligatorio,
 	consultas,
+	requireTOTP = false,
+	totpSecret = '',
 } = Astro.props
 
 // ── Si es obligatorio y no se especificó isPrivate, forzar a true ──
@@ -181,6 +183,8 @@ const defaultBranch = Astro.props.defaultBranch ?? 'main'
 					data-prefix={prefix}
 					data-private={isPrivate ? 'true' : 'false'}
 					data-type={type}
+					data-require-totp={requireTOTP ? 'true' : 'false'}
+					data-totp-secret={totpSecret}
 					class="aceptar-invitacion has-icon button preview-button">
 					<Icon name="ion:logo-github" />
 					Aceptar la asignación

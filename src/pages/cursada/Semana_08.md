@@ -80,6 +80,20 @@ ejercicios:
     #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
     visible: false
 
+  - name: PRIMER PARCIAL - COMISIÓN 3 y 5
+    #Poner template correcta del parcial
+    urlTemplate: https://github.com/obj1-unahur/parcial-1_Com-3-5_2026-C1
+    destOrg: obj1-unahur-2026s1
+    comentarios:
+      - name: Primer parcial para comisión 2
+    #Los parciales se van a generar privados en la orga del cuatri
+    isPrivate: true
+    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
+    visible: false
+    #Atributo nuevo para requerir código de 6 digitos TOTP
+    requireTOTP: true
+    # totpSecret: "MI_SECRETO_BASE32"  # opcional, si no usás el default
+
   #----------------------------------------------
 #   # CONFIG PARA PARCIAL PARCIAL DE VIERNES TN
 #   # PARA HABILITAR 22/05 A LAS 18.00 HS
