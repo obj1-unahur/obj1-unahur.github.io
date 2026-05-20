@@ -78,7 +78,7 @@ ejercicios:
     #Los parciales se van a generar privados en la orga del cuatri
     isPrivate: true
     #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: true
+    visible: false
 
   #----------------------------------------------
 #   # CONFIG PARA PARCIAL PARCIAL DE VIERNES TN
