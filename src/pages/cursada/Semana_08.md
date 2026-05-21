@@ -63,6 +63,12 @@ horarios:
     URL: https://meet.google.com/nqg-rprn-asn
 
   - Comision: Todas
+    Dia: Jueves 21 de Mayo
+    Modalidad: 📣 VIRTUAL (tutoría resolución de un parcial) 📣
+    Hora: 16.00hs
+    URL: https://meet.google.com/nqg-rprn-asn
+
+  - Comision: Todas
     Dia: Sábado 23 de Mayo
     Modalidad: VIRTUAL
     Hora: 10.00hs
