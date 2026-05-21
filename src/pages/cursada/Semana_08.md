@@ -89,7 +89,7 @@ ejercicios:
     #Los parciales se van a generar privados en la orga del cuatri 2026
     isPrivate: true
     #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: true
+    visible: false
     #Atributo nuevo para requerir código de 6 digitos TOTP
     requireTOTP: true
     # totpSecret: "MI_SECRETO_BASE32"  # opcional, si no usás el default
