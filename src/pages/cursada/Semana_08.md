@@ -100,6 +100,15 @@ ejercicios:
     requireTOTP: true
     # totpSecret: "MI_SECRETO_BASE32"  # opcional, si no usás el default
 
+  - name: Grupal de prueba
+    urlTemplate: https://github.com/pruebaPermisosOrga/pruebaRepoForger
+    destOrg: pruebaPermisosOrga
+    obligatorio: true
+    type: 'group'
+    fechaDeEntrega: Domingo 17/05
+    requireTOTP: true
+    comentarios:
+      - name: TP Grupal número 1
   #----------------------------------------------
 #   # CONFIG PARA PARCIAL PARCIAL DE VIERNES TN
 #   # PARA HABILITAR 22/05 A LAS 18.00 HS

@@ -83,6 +83,7 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 	const WORKER_URL = 'https://worker-objetos.objetos-unahur.workers.dev'
 	//WORKER TEST
 	//const WORKER_URL ='https://test-worker-objetos.objetos-unahur.workers.dev/'
+
 	if (!window.__githubHandlerAttached) {
 		window.__githubHandlerAttached = true
 
@@ -154,7 +155,6 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 		})
 
 		// ---------- TOTP: pedir código si el botón lo requiere ----------
-
 		const askTotpCode = (btn) => {
 			const requireTotp = btn.getAttribute('data-require-totp') === 'true'
 			if (!requireTotp) return null
@@ -167,14 +167,411 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 			return code.trim()
 		}
 
-		// ---------- Modal para equipos ----------
+		// ---------- Modal ----------
 		const createTeamModal = () => {
-			// ... (el código del modal se mantiene igual, no lo modifico)
-			// Por brevedad no lo copio entero, pero lo dejas igual
+			const existing = document.getElementById('team-modal')
+			if (existing) existing.remove()
+
+			const style =
+				document.getElementById('team-modal-styles') ||
+				document.createElement('style')
+			if (!style.id) {
+				style.id = 'team-modal-styles'
+				style.textContent = `
+          #team-modal {
+            --tm-accent:        var(--action-color, #40bf6a);
+            --tm-accent-hover:  var(--action-color-state, #17823b);
+            --tm-bg:            var(--background, #fff);
+            --tm-bg-input:      var(--neutral-background, #fafafa);
+            --tm-border:        var(--neutral-400, #e6e6e6);
+            --tm-text:          var(--font-color, #1a1a1a);
+            --tm-text-muted:    var(--neutral-700, #595959);
+            --tm-radius:        var(--radius-large, 6px);
+            --tm-font:          var(--font-family-default, "Open Sans", sans-serif);
+          }
+
+          .team-modal-backdrop {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(3px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.25s ease, visibility 0.25s ease;
+          }
+          .team-modal-backdrop.open {
+            opacity: 1;
+            visibility: visible;
+          }
+
+          .team-modal {
+            font-family: var(--tm-font);
+            background: var(--tm-bg);
+            color: var(--tm-text);
+            border: 3px solid var(--tm-accent);
+            border-radius: var(--tm-radius);
+            padding: 1.5rem;
+            max-width: 380px;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+            transform: translateY(6px);
+            transition: transform 0.2s ease;
+          }
+          .team-modal-backdrop.open .team-modal {
+            transform: translateY(0);
+          }
+
+          .team-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--tm-border);
+          }
+          .team-modal-header h3 {
+            font-family: var(--tm-font);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 0;
+            color: var(--tm-text);
+          }
+
+          .team-close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            line-height: 1;
+            cursor: pointer;
+            color: var(--tm-text-muted);
+            padding: 0.15rem 0.4rem;
+            border-radius: var(--tm-radius);
+            transition: color 0.15s ease, background-color 0.15s ease;
+          }
+          .team-close-btn:hover {
+            color: var(--tm-text);
+            background-color: var(--tm-border);
+          }
+
+          .team-action-btn {
+            font-family: var(--tm-font);
+            font-size: 1rem;
+            font-weight: 700;
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 3px solid var(--tm-accent);
+            border-radius: var(--tm-radius);
+            background-color: var(--tm-accent);
+            color: var(--neutral-900, #1a1a1a);
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.15s ease, border-color 0.15s ease;
+            line-height: 1;
+          }
+          .team-action-btn:hover:not(:disabled) {
+            background-color: var(--tm-accent-hover);
+            border-color: var(--tm-accent-hover);
+          }
+          .team-action-btn:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+          }
+
+          .combobox {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+          }
+
+          .combobox-input {
+            font-family: var(--tm-font);
+            font-size: 0.95rem;
+            width: 100%;
+            padding: 0.65rem 0.85rem;
+            background: var(--tm-bg-input);
+            color: var(--tm-text);
+            border: 2px solid var(--tm-border);
+            border-radius: var(--tm-radius);
+            outline: none;
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+          }
+          .combobox-input:focus {
+            border-color: var(--tm-accent);
+            box-shadow: 0 0 0 2px color-mix(in srgb, var(--tm-accent) 25%, transparent);
+          }
+          .combobox-input::placeholder {
+            color: var(--tm-text-muted);
+          }
+
+          .combobox-list {
+            display: none;
+            position: absolute;
+            top: calc(100% + 3px);
+            left: 0; right: 0;
+            max-height: 170px;
+            overflow-y: auto;
+            background: var(--tm-bg);
+            border: 2px solid var(--tm-accent);
+            border-radius: var(--tm-radius);
+            z-index: 10;
+            list-style: none;
+            padding: 0.25rem;
+            margin: 0;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+          }
+          .combobox-list.open { display: block; }
+
+          .combobox-option {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.55rem 0.75rem;
+            font-size: 0.9rem;
+            font-family: var(--tm-font);
+            color: var(--tm-text);
+            cursor: pointer;
+            border-radius: calc(var(--tm-radius) - 2px);
+            transition: background-color 0.12s ease, color 0.12s ease;
+          }
+          .combobox-option .team-icon {
+            flex-shrink: 0;
+            opacity: 0.5;
+            transition: opacity 0.12s ease;
+          }
+          .combobox-option .team-icon svg {
+            display: block;
+          }
+          .combobox-option:hover,
+          .combobox-option.active {
+            background-color: var(--tm-accent);
+            color: var(--neutral-900, #1a1a1a);
+          }
+          .combobox-option:hover .team-icon,
+          .combobox-option.active .team-icon {
+            opacity: 1;
+          }
+
+          .team-modal-hint {
+            font-family: var(--tm-font);
+            font-size: 0.75rem;
+            color: var(--tm-text-muted);
+            text-align: center;
+            margin-top: -0.25rem;
+          }
+
+          @media (max-width: 400px) {
+            .team-modal { padding: 1.1rem; gap: 0.75rem; }
+          }
+        `
+				document.head.appendChild(style)
+			}
+
+			const backdrop = document.createElement('div')
+			backdrop.className = 'team-modal-backdrop'
+			backdrop.id = 'team-modal'
+			backdrop.innerHTML = `
+        <div class="team-modal" role="dialog" aria-modal="true" aria-labelledby="team-modal-title">
+          <div class="team-modal-header">
+            <h3 id="team-modal-title">Elegi o crea tu equipo</h3>
+            <button class="team-close-btn" aria-label="Cerrar">&times;</button>
+          </div>
+          <button class="team-action-btn" id="team-action-btn" disabled>Escribi un nombre</button>
+          <div class="combobox">
+            <input
+              type="text"
+              placeholder="Busca o escribi el nombre del equipo..."
+              class="combobox-input"
+              id="combobox-input"
+              autocomplete="off"
+              aria-label="Nombre del equipo"
+            >
+            <ul class="combobox-list" id="combobox-list" role="listbox"></ul>
+          </div>
+          <p class="team-modal-hint">Usa las flechas para navegar, Enter para confirmar</p>
+        </div>
+      `
+			document.body.appendChild(backdrop)
+			return backdrop
 		}
 
 		const openTeamModal = (teams) => {
-			// ... (sin cambios)
+			return new Promise((resolve, reject) => {
+				const modal = createTeamModal()
+				const backdrop = modal
+				const input = modal.querySelector('#combobox-input')
+				const list = modal.querySelector('#combobox-list')
+				const actionBtn = modal.querySelector('#team-action-btn')
+				const closeBtn = modal.querySelector('.team-close-btn')
+
+				let activeIndex = -1
+				let currentSuggestions = []
+				let resolved = false
+				let isNavigating = false
+
+				const updateUI = (scrollToActive = false) => {
+					const search = input.value.trim().toLowerCase()
+					currentSuggestions = search
+						? teams.filter((t) => t.teamName.toLowerCase().includes(search))
+						: []
+
+					if (activeIndex >= currentSuggestions.length) {
+						activeIndex = -1
+						isNavigating = false
+					}
+
+					list.innerHTML = ''
+					currentSuggestions.forEach((team, idx) => {
+						const li = document.createElement('li')
+						li.className = 'combobox-option'
+						li.setAttribute('role', 'option')
+						li.innerHTML = `<span class="team-icon">${TEAM_ICON_SVG}</span><span>${team.teamName}</span>`
+						li.addEventListener('click', () => {
+							input.value = team.teamName
+							activeIndex = idx
+							isNavigating = false
+							updateUI()
+							input.focus()
+						})
+						if (idx === activeIndex) li.classList.add('active')
+						list.appendChild(li)
+					})
+
+					if (currentSuggestions.length > 0 && search) {
+						list.classList.add('open')
+					} else {
+						list.classList.remove('open')
+					}
+
+					const exactMatch = teams.some(
+						(t) => t.teamName.toLowerCase() === search
+					)
+					const validSearch = search !== ''
+
+					if (exactMatch) {
+						actionBtn.textContent = 'Unirse al equipo'
+						actionBtn.disabled = false
+					} else if (validSearch) {
+						actionBtn.textContent = `Crear "${input.value.trim()}"`
+						actionBtn.disabled = false
+					} else {
+						actionBtn.textContent = 'Escribi un nombre'
+						actionBtn.disabled = true
+					}
+
+					if (exactMatch && !isNavigating) {
+						const matchIndex = currentSuggestions.findIndex(
+							(t) => t.teamName.toLowerCase() === search
+						)
+						if (matchIndex >= 0) {
+							activeIndex = matchIndex
+							list.querySelectorAll('.combobox-option').forEach((el, i) => {
+								el.classList.toggle('active', i === activeIndex)
+							})
+						}
+					}
+
+					if (scrollToActive && activeIndex >= 0) {
+						const activeEl =
+							list.querySelectorAll('.combobox-option')[activeIndex]
+						if (activeEl) {
+							activeEl.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
+						}
+					}
+				}
+
+				const cleanup = () => {
+					if (resolved) return
+					resolved = true
+					backdrop.classList.remove('open')
+					document.removeEventListener('keydown', escHandler)
+					document.removeEventListener('click', outsideClickHandler)
+				}
+
+				const closeModal = () => {
+					cleanup()
+					reject(new Error('Cancelado por el usuario'))
+				}
+
+				const handleAction = () => {
+					if (resolved) return
+					const selected = input.value.trim()
+					if (!selected) return
+					const exists = teams.some(
+						(t) => t.teamName.toLowerCase() === selected.toLowerCase()
+					)
+					cleanup()
+					if (exists) {
+						resolve({ teamName: selected, mode: 'join' })
+					} else {
+						resolve({ teamName: selected, mode: 'create' })
+					}
+				}
+
+				input.addEventListener('input', () => {
+					activeIndex = -1
+					isNavigating = false
+					updateUI()
+				})
+
+				input.addEventListener('focus', () => {
+					if (input.value.trim()) updateUI()
+				})
+
+				input.addEventListener('keydown', (e) => {
+					if (e.key === 'Escape') {
+						closeModal()
+						return
+					}
+
+					const items = list.querySelectorAll('.combobox-option')
+					if (e.key === 'ArrowDown') {
+						e.preventDefault()
+						if (items.length > 0) {
+							isNavigating = true
+							activeIndex = Math.min(activeIndex + 1, items.length - 1)
+							updateUI(true)
+						}
+					} else if (e.key === 'ArrowUp') {
+						e.preventDefault()
+						if (items.length > 0) {
+							isNavigating = true
+							activeIndex = Math.max(activeIndex - 1, 0)
+							updateUI(true)
+						}
+					} else if (e.key === 'Enter') {
+						e.preventDefault()
+						if (activeIndex >= 0 && activeIndex < items.length) {
+							items[activeIndex].click()
+						} else if (!actionBtn.disabled) {
+							handleAction()
+						}
+					}
+				})
+
+				const outsideClickHandler = (e) => {
+					if (!backdrop.contains(e.target)) {
+						list.classList.remove('open')
+					}
+				}
+				document.addEventListener('click', outsideClickHandler)
+
+				actionBtn.addEventListener('click', handleAction)
+				closeBtn.addEventListener('click', closeModal)
+
+				const escHandler = (e) => {
+					if (e.key === 'Escape') closeModal()
+				}
+				document.addEventListener('keydown', escHandler)
+
+				backdrop.classList.add('open')
+				setTimeout(() => input.focus(), 100)
+			})
 		}
 
 		// ---------- click en botón aceptar asignación ----------
@@ -213,11 +610,12 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 				targetBtn.innerHTML = originalHTML
 			}
 
-			// Helper para construir el body base con TOTP
+			// Helper para construir el body base con TOTP. Ahora incluyo el requireTotp siempre.
 			const buildBaseBody = () => {
 				const body = {
 					type,
 					username: usuario,
+					requireTotp: btn.getAttribute('data-require-totp') === 'true',
 				}
 				if (totpCode !== null && totpCode !== false) {
 					body.totpCode = totpCode
@@ -245,7 +643,7 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 						body: JSON.stringify(body),
 					})
 					const data = await res.json()
-					if (data.status === 'ok') {
+					if (data.status === 'ok' || data.success) {
 						markAssignmentAccepted(prefix, type)
 						btn.textContent = SUCCESS_TEXT
 						setTimeout(() => {
@@ -254,7 +652,10 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 							btn.disabled = false
 						}, 1500)
 					} else {
-						if (data.error === 'Código TOTP inválido') {
+						if (
+							data.error?.toLowerCase().includes('totp') ||
+							data.error?.toLowerCase().includes('temporal')
+						) {
 							alert(
 								'❌ El código ingresado es incorrecto. Verificá el código en la pantalla del profesor.'
 							)
@@ -299,17 +700,31 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 
 					let teams = []
 					try {
+						// AHORA incluimos el buildBaseBody() para que valide el código TOTP antes de listar equipos
 						const listRes = await fetch(WORKER_URL, {
 							method: 'POST',
 							headers: { 'Content-Type': 'application/json' },
 							body: JSON.stringify({
+								...buildBaseBody(),
 								type: 'group',
 								action: 'list-teams',
 								destOrg,
 							}),
 						})
 						const listData = await listRes.json()
-						if (listData.error) throw new Error(listData.error)
+
+						if (!listRes.ok || listData.error) {
+							if (
+								listData.error?.toLowerCase().includes('totp') ||
+								listData.error?.toLowerCase().includes('temporal')
+							) {
+								alert(
+									'❌ El código ingresado es incorrecto. Verificá el código en la pantalla del profesor.'
+								)
+							}
+							throw new Error(listData.error || 'Error al listar equipos')
+						}
+
 						teams = listData.teams || []
 					} catch (fetchErr) {
 						console.error('Error al buscar equipos:', fetchErr)
@@ -317,7 +732,7 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 						setTimeout(() => {
 							restoreButton(btn)
 						}, 2000)
-						return
+						return // IMPORTANTE: Corta el flujo acá para no abrir el modal
 					}
 
 					let decision
@@ -372,7 +787,10 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 						activeBtn.disabled = false
 					}, 1500)
 				} else {
-					if (acceptData.error === 'Código TOTP inválido') {
+					if (
+						acceptData.error?.toLowerCase().includes('totp') ||
+						acceptData.error?.toLowerCase().includes('temporal')
+					) {
 						alert(
 							'❌ El código ingresado es incorrecto. Verificá el código en la pantalla del profesor.'
 						)
