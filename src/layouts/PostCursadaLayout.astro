@@ -7,6 +7,7 @@ import VideosDeSemana from '@components/VideosDeSemana.astro'
 import ActividadesDeSemana from '@components/ActividadesDeSemana.astro'
 import HorariosDeSemana from '@components/HorariosDeSemana.astro'
 import CardSecciones from '@/components/CardSecciones.astro'
+import TotpModal from '@components/TotpModal.astro'
 
 const { frontmatter } = Astro.props
 
@@ -76,6 +77,7 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 			<ActividadesDeSemana ejercicios={ejercicios} />
 		</div>
 	</div>
+	<TotpModal />
 </LayoutSemanas>
 
 <script>
@@ -126,7 +128,6 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 			)
 
 		const CHECK_ICON_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`
-
 		const TEAM_ICON_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`
 
 		const updateAcceptedButtons = () => {
@@ -143,7 +144,6 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 		document.addEventListener('astro:page-load', updateAcceptedButtons)
 		updateAcceptedButtons()
 
-		// ---------- sincronización del input ----------
 		document.addEventListener('DOMContentLoaded', syncInput)
 		document.addEventListener('astro:page-load', syncInput)
 		syncInput()
@@ -154,20 +154,77 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 			}
 		})
 
-		// ---------- TOTP: pedir código si el botón lo requiere ----------
+		// =========================================================================
+		// 1. TOTP MODAL (USA TU COMPONENTE ASTRO)
+		// =========================================================================
 		const askTotpCode = (btn) => {
 			const requireTotp = btn.getAttribute('data-require-totp') === 'true'
-			if (!requireTotp) return null
+			if (!requireTotp) return Promise.resolve(null)
 
-			const code = prompt(
-				'🔐 Ingresá el código de 6 dígitos que muestra el profesor:'
-			)
-			if (!code) return null // usuario canceló
+			return new Promise((resolve) => {
+				// Apuntamos al componente <TotpModal /> renderizado en el DOM
+				const modal = document.getElementById('totp-modal')
+				if (!modal) {
+					console.error(
+						'Componente TotpModal no encontrado. ¿Lo importaste en el Layout?'
+					)
+					return resolve(null)
+				}
 
-			return code.trim()
+				const input = document.getElementById('totp-input')
+				const submitBtn = document.getElementById('totp-submit')
+				const cancelBtn = document.getElementById('totp-cancel')
+
+				input.value = ''
+				let resolved = false
+
+				const intentarSubmit = () => {
+					const val = input.value.trim()
+					if (val.length !== 6) {
+						alert('El código debe tener exactamente 6 dígitos.')
+						input.focus()
+						return
+					}
+					handleResolve(val)
+				}
+
+				const handleCancel = () => handleResolve(null)
+
+				const handleKeydown = (e) => {
+					if (e.key === 'Enter') intentarSubmit()
+					if (e.key === 'Escape') handleCancel()
+				}
+
+				const cleanup = () => {
+					if (resolved) return
+					resolved = true
+					// Vuelve a ocultar TU componente
+					modal.classList.add('hidden')
+
+					submitBtn.removeEventListener('click', intentarSubmit)
+					cancelBtn.removeEventListener('click', handleCancel)
+					input.removeEventListener('keydown', handleKeydown)
+				}
+
+				const handleResolve = (val) => {
+					cleanup()
+					resolve(val)
+				}
+
+				submitBtn.addEventListener('click', intentarSubmit)
+				cancelBtn.addEventListener('click', handleCancel)
+				input.addEventListener('keydown', handleKeydown)
+
+				// Muestra TU componente y hace foco en el input
+				modal.classList.remove('hidden')
+				setTimeout(() => input.focus(), 50)
+			})
 		}
 
-		// ---------- Modal ----------
+		// =========================================================================
+		// 2. MODAL DE EQUIPOS (INYECTADO DINÁMICAMENTE)
+		// =========================================================================
+		// OJO: Este es el código gigante que te confundió. Es para los grupos.
 		const createTeamModal = () => {
 			const existing = document.getElementById('team-modal')
 			if (existing) existing.remove()
@@ -277,6 +334,7 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
           .team-action-btn:hover:not(:disabled) {
             background-color: var(--tm-accent-hover);
             border-color: var(--tm-accent-hover);
+            color: var(--neutral-900, #1a1a1a);
           }
           .team-action-btn:disabled {
             opacity: 0.45;
@@ -574,7 +632,9 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 			})
 		}
 
-		// ---------- click en botón aceptar asignación ----------
+		// =========================================================================
+		// 3. LOGICA PRINCIPAL DE LOS BOTONES
+		// =========================================================================
 		document.addEventListener('click', async (e) => {
 			const btn = e.target.closest('.aceptar-invitacion')
 			if (!btn) return
@@ -588,14 +648,13 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 			}
 			localStorage.setItem('githubUser', usuario)
 
-			// Pedir código TOTP si es necesario
-			const totpCode = askTotpCode(btn)
+			// ACÁ SE LLAMA A TU COMPONENTE
+			const totpCode = await askTotpCode(btn)
 			if (
 				totpCode === null &&
 				btn.getAttribute('data-require-totp') === 'true'
 			) {
-				// Usuario canceló, no hacemos nada
-				return
+				return // Cancelado por el usuario
 			}
 
 			const originalHTML = btn.innerHTML
@@ -610,7 +669,6 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 				targetBtn.innerHTML = originalHTML
 			}
 
-			// Helper para construir el body base con TOTP. Ahora incluyo el requireTotp siempre.
 			const buildBaseBody = () => {
 				const body = {
 					type,
@@ -625,7 +683,6 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 				return body
 			}
 
-			// INDIVIDUAL
 			if (type === 'individual') {
 				try {
 					const body = {
@@ -673,7 +730,6 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 				return
 			}
 
-			// GRUPAL
 			const destOrg = btn.getAttribute('data-dest-org')
 			if (!destOrg || destOrg === 'undefined') {
 				alert('Error: falta la organizacion de destino en el boton.')
@@ -700,7 +756,6 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 
 					let teams = []
 					try {
-						// AHORA incluimos el buildBaseBody() para que valide el código TOTP antes de listar equipos
 						const listRes = await fetch(WORKER_URL, {
 							method: 'POST',
 							headers: { 'Content-Type': 'application/json' },
@@ -732,7 +787,7 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 						setTimeout(() => {
 							restoreButton(btn)
 						}, 2000)
-						return // IMPORTANTE: Corta el flujo acá para no abrir el modal
+						return
 					}
 
 					let decision
