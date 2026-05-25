@@ -8,6 +8,7 @@ import ActividadesDeSemana from '@components/ActividadesDeSemana.astro'
 import HorariosDeSemana from '@components/HorariosDeSemana.astro'
 import CardSecciones from '@/components/CardSecciones.astro'
 import TotpModal from '@components/TotpModal.astro'
+import TeamModal from '@/components/TeamModal.astro'
 
 const { frontmatter } = Astro.props
 
@@ -78,6 +79,7 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 		</div>
 	</div>
 	<TotpModal />
+	<TeamModal />
 </LayoutSemanas>
 
 <script>
@@ -95,150 +97,164 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 		const ACCEPTED_TEXT = 'Aceptado. Ir al repo →'
 
 		const getInput = () => document.querySelector('.github-user-input')
-
 		const syncInput = () => {
 			const input = getInput()
 			const saved = localStorage.getItem('githubUser')
-			if (input && saved && input.value !== saved) {
-				input.value = saved
-			}
+			if (input && saved && input.value !== saved) input.value = saved
 		}
 
+		// ---------- assignments ----------
 		const ACCEPTED_KEY = 'acceptedAssignments'
-		const getAcceptedAssignments = () => {
-			try {
-				return JSON.parse(localStorage.getItem(ACCEPTED_KEY)) || []
-			} catch {
-				return []
-			}
+		const assignments = {
+			get: () => {
+				try {
+					return JSON.parse(localStorage.getItem(ACCEPTED_KEY)) || []
+				} catch {
+					return []
+				}
+			},
+			mark: (prefix, type) => {
+				const list = assignments.get()
+				if (!list.some((a) => a.prefix === prefix && a.type === type)) {
+					list.push({ prefix, type })
+					localStorage.setItem(ACCEPTED_KEY, JSON.stringify(list))
+				}
+			},
+			has: (prefix, type) =>
+				assignments.get().some((a) => a.prefix === prefix && a.type === type),
 		}
-		const markAssignmentAccepted = (prefix, type) => {
-			const accepted = getAcceptedAssignments()
-			if (!accepted.some((a) => a.prefix === prefix && a.type === type)) {
-				accepted.push({ prefix, type })
-				localStorage.setItem(ACCEPTED_KEY, JSON.stringify(accepted))
-			}
-		}
-		const isAssignmentAccepted = (prefix, type) =>
-			getAcceptedAssignments().some(
-				(a) => a.prefix === prefix && a.type === type
-			)
 
-		const CHECK_ICON_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`
-		const TEAM_ICON_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`
+		// ---------- SVGs ----------
+		const svg = (path, size = 24) =>
+			`<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${path}</svg>`
+		const CHECK_ICON = svg(
+			`<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>`,
+			24
+		)
+		const TEAM_ICON = svg(
+			`<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>`,
+			16
+		)
 
+		// ---------- botones aceptados ----------
 		const updateAcceptedButtons = () => {
 			document.querySelectorAll('.aceptar-invitacion').forEach((btn) => {
 				const prefix = btn.getAttribute('data-prefix')
 				const type = btn.getAttribute('data-type') ?? 'individual'
-				if (isAssignmentAccepted(prefix, type)) {
-					btn.innerHTML = `${CHECK_ICON_SVG} ${ACCEPTED_TEXT}`
+				if (assignments.has(prefix, type)) {
+					btn.innerHTML = `<span style="vertical-align:middle;margin-right:4px">${CHECK_ICON}</span> ${ACCEPTED_TEXT}`
 				}
 			})
 		}
 
-		document.addEventListener('DOMContentLoaded', updateAcceptedButtons)
-		document.addEventListener('astro:page-load', updateAcceptedButtons)
-		updateAcceptedButtons()
+		// ---------- eventos globales ----------
+		const onLoad = (fn) => {
+			document.addEventListener('DOMContentLoaded', fn)
+			document.addEventListener('astro:page-load', fn)
+			fn()
+		}
 
-		document.addEventListener('DOMContentLoaded', syncInput)
-		document.addEventListener('astro:page-load', syncInput)
-		syncInput()
+		onLoad(updateAcceptedButtons)
+		onLoad(syncInput)
 
 		document.addEventListener('input', (e) => {
-			if (e.target.classList.contains('github-user-input')) {
+			if (e.target.classList.contains('github-user-input'))
 				localStorage.setItem('githubUser', e.target.value.trim())
-			}
 		})
 
+		// --- FUNCIÓN GLOBAL PARA CERRAR EL MODAL TOTP ---
+		const hideTotpModal = () => {
+			document.getElementById('totp-modal')?.classList.add('hidden')
+			document
+				.getElementById('totp-modal-content')
+				?.classList.remove('shake-anim')
+		}
+
 		// =========================================================================
-		// 1. LÓGICA DEL TOTP MODAL (CON ANIMACIONES DE ERROR)
+		// 1. TOTP MODAL
 		// =========================================================================
-		const askTotpCode = (btn, initialError = null) => {
-			const requireTotp = btn.getAttribute('data-require-totp') === 'true'
-			if (!requireTotp) return Promise.resolve(null)
+		const askTotpCode = (btn, errorMsg = null) => {
+			if (btn.getAttribute('data-require-totp') !== 'true')
+				return Promise.resolve(null)
 
 			return new Promise((resolve) => {
 				const modal = document.getElementById('totp-modal')
-				if (!modal) return resolve(null)
-
 				const content = document.getElementById('totp-modal-content')
 				const input = document.getElementById('totp-input')
 				const errorBox = document.getElementById('totp-error-box')
-				const errorText = document.getElementById('totp-error-text')
+				const errorTxt = document.getElementById('totp-error-text')
 				const submitBtn = document.getElementById('totp-submit')
 				const cancelBtn = document.getElementById('totp-cancel')
 				const closeBtn = document.getElementById('totp-close')
 
+				// Limpiamos y re-habilitamos el modal (por si viene de un reintento)
 				input.value = ''
-				let resolved = false
+				input.disabled = false
+				submitBtn.disabled = false
+				cancelBtn.disabled = false
+				submitBtn.textContent = 'Verificar'
+				errorBox.classList.add('hidden')
+				input.classList.remove('is-invalid')
+				content.classList.remove('shake-anim')
 
-				// Función que dispara los estilos rojos y sacude el modal
 				const showError = (msg) => {
-					errorText.textContent = msg
+					errorTxt.textContent = msg
 					errorBox.classList.remove('hidden')
 					input.classList.add('is-invalid')
 
-					// Magia para reiniciar la animación CSS cada vez que falla
 					content.classList.remove('shake-anim')
-					void content.offsetWidth // Forzamos reflow del navegador
+					void content.offsetWidth
 					content.classList.add('shake-anim')
 				}
 
-				// Si ya venía con error (ej: rebotado por el server), lo mostramos
-				if (initialError) {
-					showError(initialError)
-				} else {
-					errorBox.classList.add('hidden')
-					input.classList.remove('is-invalid')
-					content.classList.remove('shake-anim')
-				}
+				if (errorMsg) showError(errorMsg)
 
-				// Limpia el error apenas el alumno empieza a escribir de nuevo
-				const handleInput = () => {
-					errorBox.classList.add('hidden')
-					input.classList.remove('is-invalid')
+				let resolved = false
+
+				const cleanup = () => {
+					if (resolved) return
+					resolved = true
+					// YA NO CERRAMOS EL MODAL ACÁ. Solo limpiamos los eventos.
+					submitBtn.removeEventListener('click', intentarSubmit)
+					cancelBtn.removeEventListener('click', handleCancel)
+					closeBtn?.removeEventListener('click', handleCancel)
+					input.removeEventListener('keydown', handleKeydown)
 				}
 
 				const intentarSubmit = () => {
 					const val = input.value.trim()
-					if (val.length !== 6) {
-						showError('El código debe tener 6 dígitos exactos.')
+
+					if (!/^\d{6}$/.test(val)) {
+						showError('El código es incorrecto.')
 						input.focus()
 						return
 					}
-					handleResolve(val)
+
+					// Estado visual de carga (el modal se queda abierto)
+					input.disabled = true
+					submitBtn.disabled = true
+					cancelBtn.disabled = true
+					submitBtn.textContent = 'Verificando...'
+
+					cleanup()
+					resolve(val) // Resolvemos la promesa pero el modal sigue visible
 				}
 
-				const handleCancel = () => handleResolve(null)
+				const handleCancel = () => {
+					hideTotpModal() // Si el usuario cancela, sí lo cerramos explícitamente
+					cleanup()
+					resolve(null)
+				}
 
 				const handleKeydown = (e) => {
 					if (e.key === 'Enter') intentarSubmit()
 					if (e.key === 'Escape') handleCancel()
 				}
 
-				const cleanup = () => {
-					if (resolved) return
-					resolved = true
-					modal.classList.add('hidden')
-
-					submitBtn.removeEventListener('click', intentarSubmit)
-					cancelBtn.removeEventListener('click', handleCancel)
-					if (closeBtn) closeBtn.removeEventListener('click', handleCancel)
-					input.removeEventListener('keydown', handleKeydown)
-					input.removeEventListener('input', handleInput)
-				}
-
-				const handleResolve = (val) => {
-					cleanup()
-					resolve(val)
-				}
-
 				submitBtn.addEventListener('click', intentarSubmit)
 				cancelBtn.addEventListener('click', handleCancel)
-				if (closeBtn) closeBtn.addEventListener('click', handleCancel)
+				closeBtn?.addEventListener('click', handleCancel)
 				input.addEventListener('keydown', handleKeydown)
-				input.addEventListener('input', handleInput)
 
 				modal.classList.remove('hidden')
 				setTimeout(() => input.focus(), 50)
@@ -246,491 +262,450 @@ const { title, videos, horarios, ejercicios, atencion, importante } =
 		}
 
 		// =========================================================================
-		// 2. MODAL DE EQUIPOS DINÁMICO (SIN CAMBIOS)
+		// 2. TEAM MODAL
 		// =========================================================================
-		const createTeamModal = () => {
-			const existing = document.getElementById('team-modal')
-			if (existing) existing.remove()
-
-			const style =
-				document.getElementById('team-modal-styles') ||
-				document.createElement('style')
-			if (!style.id) {
-				style.id = 'team-modal-styles'
-				style.textContent = `
-          #team-modal {
-            --tm-accent:        var(--action-color, #40bf6a);
-            --tm-accent-hover:  var(--action-color-state, #17823b);
-            --tm-bg:            var(--background, #fff);
-            --tm-bg-input:      var(--neutral-background, #fafafa);
-            --tm-border:        var(--neutral-400, #e6e6e6);
-            --tm-text:          var(--font-color, #1a1a1a);
-            --tm-text-muted:    var(--neutral-700, #595959);
-            --tm-radius:        var(--radius-large, 6px);
-            --tm-font:          var(--font-family-default, "Open Sans", sans-serif);
-          }
-          .team-modal-backdrop {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.45); backdrop-filter: blur(3px);
-            display: flex; align-items: center; justify-content: center;
-            z-index: 9999; opacity: 0; visibility: hidden;
-            transition: opacity 0.25s ease, visibility 0.25s ease;
-          }
-          .team-modal-backdrop.open { opacity: 1; visibility: visible; }
-          .team-modal {
-            font-family: var(--tm-font); background: var(--tm-bg); color: var(--tm-text);
-            border: 3px solid var(--tm-accent); border-radius: var(--tm-radius);
-            padding: 1.5rem; max-width: 380px; width: 90%; display: flex; flex-direction: column;
-            gap: 1rem; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
-            transform: translateY(6px); transition: transform 0.2s ease;
-          }
-          .team-modal-backdrop.open .team-modal { transform: translateY(0); }
-          .team-modal-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 0.75rem; border-bottom: 2px solid var(--tm-border); }
-          .team-modal-header h3 { font-family: var(--tm-font); font-size: 1.1rem; font-weight: 700; margin: 0; color: var(--tm-text); }
-          .team-close-btn { background: none; border: none; font-size: 1.5rem; line-height: 1; cursor: pointer; color: var(--tm-text-muted); padding: 0.15rem 0.4rem; border-radius: var(--tm-radius); transition: color 0.15s ease, background-color 0.15s ease; }
-          .team-close-btn:hover { color: var(--tm-text); background-color: var(--tm-border); }
-          .team-action-btn { font-family: var(--tm-font); font-size: 1rem; font-weight: 700; width: 100%; padding: 0.75rem 1rem; border: 3px solid var(--tm-accent); border-radius: var(--tm-radius); background-color: var(--tm-accent); color: var(--neutral-900, #1a1a1a); cursor: pointer; text-align: center; transition: background-color 0.15s ease, border-color 0.15s ease; line-height: 1; }
-          .team-action-btn:hover:not(:disabled) { background-color: var(--tm-accent-hover); border-color: var(--tm-accent-hover); }
-          .team-action-btn:disabled { opacity: 0.45; cursor: not-allowed; }
-          .combobox { position: relative; display: flex; flex-direction: column; }
-          .combobox-input { font-family: var(--tm-font); font-size: 0.95rem; width: 100%; padding: 0.65rem 0.85rem; background: var(--tm-bg-input); color: var(--tm-text); border: 2px solid var(--tm-border); border-radius: var(--tm-radius); outline: none; transition: border-color 0.15s ease, box-shadow 0.15s ease; }
-          .combobox-input:focus { border-color: var(--tm-accent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--tm-accent) 25%, transparent); }
-          .combobox-input::placeholder { color: var(--tm-text-muted); }
-          .combobox-list { display: none; position: absolute; top: calc(100% + 3px); left: 0; right: 0; max-height: 170px; overflow-y: auto; background: var(--tm-bg); border: 2px solid var(--tm-accent); border-radius: var(--tm-radius); z-index: 10; list-style: none; padding: 0.25rem; margin: 0; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); }
-          .combobox-list.open { display: block; }
-          .combobox-option { display: flex; align-items: center; gap: 0.6rem; padding: 0.55rem 0.75rem; font-size: 0.9rem; font-family: var(--tm-font); color: var(--tm-text); cursor: pointer; border-radius: calc(var(--tm-radius) - 2px); transition: background-color 0.12s ease, color 0.12s ease; }
-          .combobox-option .team-icon { flex-shrink: 0; opacity: 0.5; transition: opacity 0.12s ease; }
-          .combobox-option .team-icon svg { display: block; }
-          .combobox-option:hover, .combobox-option.active { background-color: var(--tm-accent); color: var(--neutral-900, #1a1a1a); }
-          .combobox-option:hover .team-icon, .combobox-option.active .team-icon { opacity: 1; }
-          .team-modal-hint { font-family: var(--tm-font); font-size: 0.75rem; color: var(--tm-text-muted); text-align: center; margin-top: -0.25rem; }
-          @media (max-width: 400px) { .team-modal { padding: 1.1rem; gap: 0.75rem; } }
-        `
-				document.head.appendChild(style)
-			}
-
-			const backdrop = document.createElement('div')
-			backdrop.className = 'team-modal-backdrop'
-			backdrop.id = 'team-modal'
-			backdrop.innerHTML = `
-        <div class="team-modal" role="dialog" aria-modal="true" aria-labelledby="team-modal-title">
-          <div class="team-modal-header">
-            <h3 id="team-modal-title">Elegi o crea tu equipo</h3>
-            <button class="team-close-btn" aria-label="Cerrar">&times;</button>
-          </div>
-          <button class="team-action-btn" id="team-action-btn" disabled>Escribi un nombre</button>
-          <div class="combobox">
-            <input type="text" placeholder="Busca o escribi el nombre del equipo..." class="combobox-input" id="combobox-input" autocomplete="off">
-            <ul class="combobox-list" id="combobox-list" role="listbox"></ul>
-          </div>
-          <p class="team-modal-hint">Usa las flechas para navegar, Enter para confirmar</p>
-        </div>
-      `
-			document.body.appendChild(backdrop)
-			return backdrop
-		}
-
 		const openTeamModal = (teams) => {
-			return new Promise((resolve, reject) => {
-				const modal = createTeamModal()
-				const input = modal.querySelector('#combobox-input')
-				const list = modal.querySelector('#combobox-list')
-				const actionBtn = modal.querySelector('#team-action-btn')
-				const closeBtn = modal.querySelector('.team-close-btn')
+			return new Promise((resolve) => {
+				const modal = document.getElementById('team-modal')
+				const input = document.getElementById('combobox-input')
+				const list = document.getElementById('combobox-list')
+				const actionBtn = document.getElementById('team-action-btn')
+				const closeBtn = document.getElementById('team-close-btn')
+
+				input.value = ''
+				list.innerHTML = ''
+				actionBtn.disabled = true
+				list.classList.remove('open')
 
 				let activeIndex = -1
-				let currentSuggestions = []
 				let resolved = false
-				let isNavigating = false
-
-				const updateUI = (scrollToActive = false) => {
-					const search = input.value.trim().toLowerCase()
-					currentSuggestions = search
-						? teams.filter((t) => t.teamName.toLowerCase().includes(search))
-						: []
-
-					if (activeIndex >= currentSuggestions.length) {
-						activeIndex = -1
-						isNavigating = false
-					}
-
-					list.innerHTML = ''
-					currentSuggestions.forEach((team, idx) => {
-						const li = document.createElement('li')
-						li.className = 'combobox-option'
-						li.setAttribute('role', 'option')
-						li.innerHTML = `<span class="team-icon">${TEAM_ICON_SVG}</span><span>${team.teamName}</span>`
-						li.addEventListener('click', () => {
-							input.value = team.teamName
-							activeIndex = idx
-							isNavigating = false
-							updateUI()
-							input.focus()
-						})
-						if (idx === activeIndex) li.classList.add('active')
-						list.appendChild(li)
-					})
-
-					if (currentSuggestions.length > 0 && search)
-						list.classList.add('open')
-					else list.classList.remove('open')
-
-					const exactMatch = teams.some(
-						(t) => t.teamName.toLowerCase() === search
-					)
-					const validSearch = search !== ''
-
-					if (exactMatch) {
-						actionBtn.textContent = 'Unirse al equipo'
-						actionBtn.disabled = false
-					} else if (validSearch) {
-						actionBtn.textContent = `Crear "${input.value.trim()}"`
-						actionBtn.disabled = false
-					} else {
-						actionBtn.textContent = 'Escribi un nombre'
-						actionBtn.disabled = true
-					}
-
-					if (exactMatch && !isNavigating) {
-						const matchIndex = currentSuggestions.findIndex(
-							(t) => t.teamName.toLowerCase() === search
-						)
-						if (matchIndex >= 0) {
-							activeIndex = matchIndex
-							list
-								.querySelectorAll('.combobox-option')
-								.forEach((el, i) =>
-									el.classList.toggle('active', i === activeIndex)
-								)
-						}
-					}
-					if (scrollToActive && activeIndex >= 0) {
-						const activeEl =
-							list.querySelectorAll('.combobox-option')[activeIndex]
-						if (activeEl)
-							activeEl.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
-					}
-				}
 
 				const cleanup = () => {
 					if (resolved) return
 					resolved = true
+
 					modal.classList.remove('open')
-					document.removeEventListener('keydown', escHandler)
-					document.removeEventListener('click', outsideClickHandler)
+
+					input.oninput = null
+					actionBtn.onclick = null
+					closeBtn.onclick = null
+
+					input.removeEventListener('keydown', handleKeydown)
 				}
 
-				const closeModal = () => {
-					cleanup()
-					reject(new Error('Cancelado por el usuario'))
-				}
-				const handleAction = () => {
-					if (resolved) return
-					const selected = input.value.trim()
-					if (!selected) return
-					const exists = teams.some(
-						(t) => t.teamName.toLowerCase() === selected.toLowerCase()
+				const updateUI = (forceClose = false) => {
+					const search = input.value.trim().toLowerCase()
+
+					const suggestions = search
+						? teams.filter((t) => t.teamName.toLowerCase().includes(search))
+						: []
+
+					if (activeIndex >= suggestions.length) activeIndex = -1
+
+					list.innerHTML = ''
+
+					suggestions.forEach((team, idx) => {
+						const li = document.createElement('li')
+
+						li.className = 'combobox-option'
+
+						if (idx === activeIndex) li.classList.add('active')
+
+						li.innerHTML = `
+              <span class="team-icon">${TEAM_ICON}</span>
+              <span>${team.teamName}</span>
+            `
+
+						li.addEventListener('mousedown', (e) => {
+							e.preventDefault()
+
+							input.value = team.teamName
+							activeIndex = -1
+
+							updateUI(true)
+							input.focus()
+						})
+
+						list.appendChild(li)
+					})
+
+					list.classList.toggle(
+						'open',
+						suggestions.length > 0 && !!search && !forceClose
 					)
-					cleanup()
-					resolve({ teamName: selected, mode: exists ? 'join' : 'create' })
+
+					if (activeIndex >= 0) {
+						list
+							.querySelectorAll('.combobox-option')
+							[activeIndex]?.scrollIntoView({
+								block: 'nearest',
+								behavior: 'smooth',
+							})
+					}
+
+					const val = input.value.trim()
+
+					const exists = teams.some(
+						(t) => t.teamName.toLowerCase() === val.toLowerCase()
+					)
+
+					actionBtn.textContent = val
+						? exists
+							? 'Unirse al equipo'
+							: `Crear "${val}"`
+						: 'Escribí un nombre'
+
+					actionBtn.disabled = !val
 				}
 
-				input.addEventListener('input', () => {
-					activeIndex = -1
-					isNavigating = false
-					updateUI()
-				})
-				input.addEventListener('focus', () => {
-					if (input.value.trim()) updateUI()
-				})
-				input.addEventListener('keydown', (e) => {
-					if (e.key === 'Escape') return closeModal()
+				const handleKeydown = (e) => {
 					const items = list.querySelectorAll('.combobox-option')
+
 					if (e.key === 'ArrowDown') {
 						e.preventDefault()
-						if (items.length > 0) {
-							isNavigating = true
+
+						if (items.length) {
 							activeIndex = Math.min(activeIndex + 1, items.length - 1)
-							updateUI(true)
+							updateUI()
 						}
 					} else if (e.key === 'ArrowUp') {
 						e.preventDefault()
-						if (items.length > 0) {
-							isNavigating = true
+
+						if (items.length) {
 							activeIndex = Math.max(activeIndex - 1, 0)
-							updateUI(true)
+							updateUI()
 						}
 					} else if (e.key === 'Enter') {
 						e.preventDefault()
-						if (activeIndex >= 0 && activeIndex < items.length)
-							items[activeIndex].click()
-						else if (!actionBtn.disabled) handleAction()
-					}
-				})
 
-				const outsideClickHandler = (e) => {
-					if (!modal.contains(e.target)) list.classList.remove('open')
+						if (activeIndex >= 0 && activeIndex < items.length) {
+							const teamName = list
+								.querySelectorAll('.combobox-option')
+								[activeIndex]?.querySelector('span:last-child')?.textContent
+
+							if (teamName) {
+								input.value = teamName
+								activeIndex = -1
+
+								updateUI(true)
+								input.focus()
+							}
+						} else if (!actionBtn.disabled) {
+							actionBtn.onclick()
+						}
+					} else if (e.key === 'Escape') {
+						cleanup()
+						resolve(null)
+					}
 				}
-				document.addEventListener('click', outsideClickHandler)
-				actionBtn.addEventListener('click', handleAction)
-				closeBtn.addEventListener('click', closeModal)
-				const escHandler = (e) => {
-					if (e.key === 'Escape') closeModal()
+
+				actionBtn.onclick = () => {
+					const val = input.value.trim()
+
+					if (!val) return
+
+					const exists = teams.some(
+						(t) => t.teamName.toLowerCase() === val.toLowerCase()
+					)
+
+					cleanup()
+
+					resolve({
+						teamName: val,
+						mode: exists ? 'join' : 'create',
+					})
 				}
-				document.addEventListener('keydown', escHandler)
+
+				closeBtn.onclick = () => {
+					cleanup()
+					resolve(null)
+				}
+
+				input.oninput = () => {
+					activeIndex = -1
+					updateUI()
+				}
+
+				input.addEventListener('keydown', handleKeydown)
 
 				modal.classList.add('open')
+
 				setTimeout(() => input.focus(), 100)
 			})
 		}
 
 		// =========================================================================
-		// 3. LÓGICA PRINCIPAL (CON AUTO-REAPERTURA EN ERROR DE TOTP)
+		// 3. FETCH CON REINTENTO TOTP
+		// =========================================================================
+		const isTotpError = (data) => {
+			if (!data?.error) return false
+
+			const err = String(data.error).toLowerCase()
+
+			return (
+				err.includes('totp') ||
+				err.includes('inválido') ||
+				err.includes('invalido') ||
+				err.includes('incorrecto') ||
+				err.includes('expired') ||
+				err.includes('expirado')
+			)
+		}
+
+		const fetchConReintento = async (btn, body) => {
+			let codigoActual = body.totpCode
+
+			while (true) {
+				const res = await fetch(WORKER_URL, {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({
+						...body,
+						totpCode: codigoActual,
+					}),
+				})
+
+				let data = null
+
+				try {
+					data = await res.json()
+				} catch {
+					data = null
+				}
+
+				// SUCCESS
+				if (res.ok && !data?.error) {
+					return data
+				}
+
+				// ERROR TOTP → El modal ya está abierto, solo actualizamos su UI pidiendo otro código
+				if (isTotpError(data)) {
+					const nuevoCodigo = await askTotpCode(
+						btn,
+						'Código incorrecto o expirado, intentá de nuevo.'
+					)
+
+					if (nuevoCodigo === null) {
+						throw new Error('CANCELLED')
+					}
+
+					codigoActual = nuevoCodigo
+					continue
+				}
+
+				// Cualquier otro error
+				throw new Error(data?.error || 'Error al procesar')
+			}
+		}
+
+		// =========================================================================
+		// 4. LÓGICA PRINCIPAL
 		// =========================================================================
 		document.addEventListener('click', async (e) => {
 			const btn = e.target.closest('.aceptar-invitacion')
+
 			if (!btn) return
+
 			e.preventDefault()
 
 			const input = getInput()
+
 			let usuario = input?.value?.trim() || localStorage.getItem('githubUser')
+
 			if (!usuario) {
-				alert('Ingresa tu usuario de GitHub en la sección de ejercicios')
+				alert('Ingresá tu usuario de GitHub')
 				return
 			}
+
 			localStorage.setItem('githubUser', usuario)
 
-			// Leemos si hubo un error de TOTP en el último intento devuelto por el worker
-			const prevError = btn.getAttribute('data-totp-error')
-			const totpCode = await askTotpCode(btn, prevError)
-
-			// Limpiamos el atributo inmediatamente para la próxima ejecución
-			btn.removeAttribute('data-totp-error')
+			const totpCode = await askTotpCode(btn)
 
 			if (
 				totpCode === null &&
 				btn.getAttribute('data-require-totp') === 'true'
 			) {
-				return // Cancelado por el usuario
+				return
 			}
 
 			const originalHTML = btn.innerHTML
+
 			btn.disabled = true
 			btn.textContent = PROCESSING_TEXT
 
 			const type = btn.getAttribute('data-type') ?? 'individual'
 			const prefix = btn.getAttribute('data-prefix')
+			const destOrg = btn.getAttribute('data-dest-org')
 
-			const restoreButton = (targetBtn) => {
-				targetBtn.disabled = false
-				targetBtn.innerHTML = originalHTML
+			const restoreButton = () => {
+				btn.disabled = false
+				btn.innerHTML = originalHTML
 			}
 
-			const buildBaseBody = () => {
-				const body = {
-					type,
-					username: usuario,
-					requireTotp: btn.getAttribute('data-require-totp') === 'true',
-				}
-				if (totpCode !== null && totpCode !== false) body.totpCode = totpCode
-				const totpSecret = btn.getAttribute('data-totp-secret')
-				if (totpSecret) body.totpSecret = totpSecret
-				return body
+			const handleError = (msg) => {
+				btn.textContent = ERROR_TEXT
+
+				setTimeout(restoreButton, 2000)
+
+				console.error(msg)
 			}
 
-			// ================= INDIVIDUAL =================
-			if (type === 'individual') {
-				try {
+			try {
+				// =========================================================
+				// INDIVIDUAL
+				// =========================================================
+				if (type === 'individual') {
 					const body = {
-						...buildBaseBody(),
+						type,
+						username: usuario,
+						totpCode,
+
 						template: btn.getAttribute('data-template'),
 						templateOrg: btn.getAttribute('data-template-org'),
-						destOrg: btn.getAttribute('data-dest-org'),
+
+						destOrg,
 						prefix,
+
 						isPrivate: btn.getAttribute('data-private') === 'true',
 					}
 
-					const res = await fetch(WORKER_URL, {
-						method: 'POST',
-						headers: { 'Content-Type': 'application/json' },
-						body: JSON.stringify(body),
-					})
-					const data = await res.json()
+					const data = await fetchConReintento(btn, body)
 
-					if (data.status === 'ok' || data.success) {
-						markAssignmentAccepted(prefix, type)
-						btn.textContent = SUCCESS_TEXT
-						setTimeout(() => {
-							window.open(`${data.repoUrl}/invitations`, '_blank')
-							updateAcceptedButtons()
-							btn.disabled = false
-						}, 1500)
-					} else {
-						// SI FALLA EL TOTP DESDE EL SERVER, LO GUARDA Y VUELVE A ABRIR EL MODAL
-						if (
-							data.error?.toLowerCase().includes('totp') ||
-							data.error?.toLowerCase().includes('temporal')
-						) {
-							btn.setAttribute(
-								'data-totp-error',
-								'El código ha expirado o es incorrecto.'
-							)
-							restoreButton(btn)
-							btn.click() // Automáticamente hace click para reabrir el modal con error
-							return
-						}
-						throw new Error(data.error || 'Error al procesar')
-					}
-				} catch (err) {
-					btn.textContent = ERROR_TEXT
-					btn.disabled = false
-					console.error(err)
+					hideTotpModal() // Si salió bien, ocultamos el modal
+
+					assignments.mark(prefix, type)
+
+					btn.textContent = SUCCESS_TEXT
+
 					setTimeout(() => {
-						btn.innerHTML = originalHTML
-					}, 2000)
+						window.open(`${data.repoUrl}/invitations`, '_blank')
+
+						updateAcceptedButtons()
+
+						btn.disabled = false
+					}, 1500)
 				}
-				return
-			}
 
-			// ================= GRUPAL =================
-			const destOrg = btn.getAttribute('data-dest-org')
-			if (!destOrg || destOrg === 'undefined') {
-				alert('Error: falta la organizacion de destino en el boton.')
-				restoreButton(btn)
-				return
-			}
-			const cacheKey = `teamCache_${destOrg}`
+				// =========================================================
+				// GRUPAL
+				// =========================================================
+				else {
+					const cacheKey = `teamCache_${destOrg}`
 
-			try {
-				let teamName, mode
-				if (e.shiftKey) localStorage.removeItem(cacheKey)
-				const cachedTeam = localStorage.getItem(cacheKey)
+					const baseBody = {
+						type,
+						username: usuario,
+						totpCode,
+					}
 
-				if (cachedTeam) {
-					const parsed = JSON.parse(cachedTeam)
-					teamName = parsed.teamName
-					mode = parsed.mode
-				} else {
-					btn.textContent = 'Buscando equipos...'
-					let teams = []
-					try {
+					// VALIDAMOS TOTP PRIMERO
+					await fetchConReintento(btn, {
+						...baseBody,
+						type: 'individual',
+						template: '__totp_check__',
+						templateOrg: '__totp_check__',
+						destOrg: '__totp_check__',
+						prefix: '__totp_check__',
+					}).catch((err) => {
+						if (err.message === 'CANCELLED') throw err
+					})
+
+					hideTotpModal() // Cerramos el modal de TOTP para darle paso al de Equipos
+
+					let teamName
+					let mode
+
+					if (e.shiftKey) {
+						localStorage.removeItem(cacheKey)
+					}
+
+					const cached = localStorage.getItem(cacheKey)
+
+					if (cached) {
+						;({ teamName, mode } = JSON.parse(cached))
+					} else {
 						const listRes = await fetch(WORKER_URL, {
 							method: 'POST',
-							headers: { 'Content-Type': 'application/json' },
+
+							headers: {
+								'Content-Type': 'application/json',
+							},
+
 							body: JSON.stringify({
-								...buildBaseBody(),
+								...baseBody,
 								type: 'group',
 								action: 'list-teams',
 								destOrg,
 							}),
 						})
+
 						const listData = await listRes.json()
 
 						if (!listRes.ok || listData.error) {
-							// SI FALLA EL TOTP AL LISTAR EQUIPOS, REABRE MODAL
-							if (
-								listData.error?.toLowerCase().includes('totp') ||
-								listData.error?.toLowerCase().includes('temporal')
-							) {
-								btn.setAttribute(
-									'data-totp-error',
-									'El código ha expirado o es incorrecto.'
-								)
-								restoreButton(btn)
-								btn.click()
-								return
-							}
-							throw new Error(listData.error || 'Error al listar equipos')
+							throw new Error(listData.error || 'Error listando equipos')
 						}
-						teams = listData.teams || []
-					} catch (fetchErr) {
-						console.error('Error al buscar equipos:', fetchErr)
-						btn.textContent = ERROR_TEXT
-						setTimeout(() => {
-							restoreButton(btn)
-						}, 2000)
-						return
+
+						const decision = await openTeamModal(listData.teams || [])
+
+						if (!decision) {
+							restoreButton()
+							return
+						}
+
+						;({ teamName, mode } = decision)
+
+						localStorage.setItem(cacheKey, JSON.stringify({ teamName, mode }))
 					}
 
-					let decision
-					try {
-						decision = await openTeamModal(teams)
-					} catch (cancelErr) {
-						restoreButton(btn)
-						return
+					const body = {
+						...baseBody,
+
+						type: 'group',
+						action: 'accept',
+
+						prefix,
+						destOrg,
+
+						templateOrg: btn.getAttribute('data-template-org'),
+						templateRepo: btn.getAttribute('data-template'),
+
+						isPrivate: btn.getAttribute('data-private') === 'true',
+
+						mode,
+						teamName,
 					}
-					teamName = decision.teamName
-					mode = decision.mode
-					localStorage.setItem(cacheKey, JSON.stringify({ teamName, mode }))
-				}
 
-				const activeBtn =
-					document.querySelector(
-						`.aceptar-invitacion[data-prefix="${prefix}"]`
-					) || btn
-				activeBtn.disabled = true
-				activeBtn.textContent = PROCESSING_TEXT
+					const acceptData = await fetchConReintento(btn, body)
 
-				const body = {
-					...buildBaseBody(),
-					type: 'group',
-					action: 'accept',
-					prefix,
-					destOrg,
-					templateOrg: btn.getAttribute('data-template-org'),
-					templateRepo: btn.getAttribute('data-template'),
-					isPrivate: btn.getAttribute('data-private') === 'true',
-					mode,
-					teamName,
-				}
+					hideTotpModal() // Por seguridad, si ocurrió un reintento tardío
 
-				const acceptRes = await fetch(WORKER_URL, {
-					method: 'POST',
-					headers: { 'Content-Type': 'application/json' },
-					body: JSON.stringify(body),
-				})
-				const acceptData = await acceptRes.json()
+					assignments.mark(prefix, type)
 
-				if (acceptData.success) {
-					markAssignmentAccepted(prefix, type)
-					activeBtn.textContent = SUCCESS_TEXT
+					btn.textContent = SUCCESS_TEXT
+
 					setTimeout(() => {
-						const url = acceptData.needsInvitation
-							? `${acceptData.repoUrl}/invitations`
-							: acceptData.repoUrl
-						window.open(url, '_blank')
-						updateAcceptedButtons()
-						activeBtn.disabled = false
-					}, 1500)
-				} else {
-					// SI FALLA EL TOTP AL CREAR EQUIPO, REABRE MODAL
-					if (
-						acceptData.error?.toLowerCase().includes('totp') ||
-						acceptData.error?.toLowerCase().includes('temporal')
-					) {
-						activeBtn.setAttribute(
-							'data-totp-error',
-							'El código ha expirado o es incorrecto.'
+						window.open(
+							acceptData.needsInvitation
+								? `${acceptData.repoUrl}/invitations`
+								: acceptData.repoUrl,
+							'_blank'
 						)
-						restoreButton(activeBtn)
-						activeBtn.click()
-						return
-					} else if (acceptData.error?.includes('no existe')) {
-						localStorage.removeItem(cacheKey)
-					}
-					throw new Error(acceptData.error || 'Error al procesar')
+
+						updateAcceptedButtons()
+
+						btn.disabled = false
+					}, 1500)
 				}
 			} catch (err) {
-				const currentBtn =
-					document.querySelector(
-						`.aceptar-invitacion[data-prefix="${prefix}"]`
-					) || btn
-				currentBtn.textContent = ERROR_TEXT
-				currentBtn.disabled = false
-				console.error(err)
-				setTimeout(() => {
-					currentBtn.innerHTML = originalHTML
-				}, 2000)
+				hideTotpModal() // Nos aseguramos de limpiar el modal si explota por otra cosa
+
+				if (err.message !== 'CANCELLED') {
+					handleError(err)
+				} else {
+					restoreButton()
+				}
 			}
 		})
 	}
