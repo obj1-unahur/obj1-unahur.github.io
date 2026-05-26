@@ -66,6 +66,12 @@ horarios:
     Hora: 10.00hs
     URL: https://t.me/+GMlcEZyJtCo2OTUx
 
+  - Comision: Todas
+    Dia: Jueves 28 de Mayo
+    Modalidad: 📣 VIRTUAL (tutoría) 📣
+    Hora: 16.00hs
+    URL: https://meet.google.com/nqg-rprn-asn
+
 ejercicios:
   - name: Servicios profesionales
     urlTemplate: https://github.com/obj1-unahur/clasesServiciosProfesionales
