@@ -6,17 +6,13 @@ inicio: 2026-05-26
 
 descripcion: En esta semana veremos el concepto de Clase como patrón o modelo para crear objetos, que describe completa y detalladamente la estructura de información y comportamiento que tendrá todo objeto de la clase.
 
-# atencion: COMISIÓN 1, 4, 6 y 7. Debido al paro convocado para el viernes 29 de mayo, no tendrán clases.
-
-# importante: Para las comisiones 1 y 2 el TP obligatorio se entregará el 17/10. Para las comisiones 3 y 4 se entregará el 24/10.
+atencion: Las comisiones 1, 4, 6 y 7 no tendrán clases debido al paro convocado para el viernes 29 de mayo, en reclamo por el incumplimiento de la Ley de financiamiento universitario.
 
 horarios:
   - Comision: 1
     Dia: Viernes 29 de Mayo
-    Modalidad: PRESENCIAL
     Hora: 8.00hs
-    Aula: LAB MA-113
-    Edificio: MALVINAS ARGENTINAS (PA)
+    Mensaje: Sin clase por paro
 
   - Comision: 2
     Dia: Martes 26 de Mayo
@@ -35,9 +31,7 @@ horarios:
   - Comision: 4
     Dia: Viernes 29 de Mayo
     Hora: 18.00hs
-    Modalidad: PRESENCIAL
-    Aula: LAB TA-001
-    Edificio: TRABAJO ARGENTINO
+    Mensaje: Sin clase por paro
 
   - Comision: 5
     Dia: Miércoles 27 de Mayo
@@ -49,16 +43,12 @@ horarios:
   - Comision: 6
     Dia: Viernes 29 de Mayo
     Hora: 18.00hs
-    Modalidad: PRESENCIAL
-    Aula: LAB TA-002
-    Edificio: TRABAJO ARGENTINO
+    Mensaje: Sin clase por paro
 
   - Comision: 7
     Dia: Viernes 29 de Mayo
     Hora: 18.00hs
-    Modalidad: PRESENCIAL
-    Aula: LAB MA-111
-    Edificio: MALVINAS ARGENTINAS (PA)
+    Mensaje: Sin clase por paro
 
   - Comision: Todas
     Dia: Sábado 30 de Mayo
