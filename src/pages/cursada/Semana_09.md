@@ -79,3 +79,5 @@ ejercicios:
 - En esta semana veremos el concepto de clase como patrón o modelo para crear objetos, que describe completa y detalladamente la estructura de información y comportamiento que tendrá todo objeto de la misma.
 
 - También aprenderemos el concepto de instanciación como creación de objetos a partir de una clase. Constructores de clase y "quién" es ahora self.
+
+- Les dejamos el link a la presentación de la clase presencial, que resume los temas de esta semana: <a href="https://docs.google.com/presentation/d/1t-Kiarm80ivL78YXHUtO8-aL7Pc5V8EzwhHRxxutmSY/edit?usp=sharing" target="_blank">Presentación Semana 9</a>
