@@ -22,8 +22,8 @@ horarios:
     Dia: Martes 2 de junio
     Modalidad: PRESENCIAL
     Hora: 18.00hs
-    Aula: LAB LP-207
-    Edificio: La Patria
+    Aula: LAB TA-002
+    Edificio: TRABAJO ARGENTINO
 
   - Comision: 3
     Dia: Miércoles 3 de junio
