@@ -74,6 +74,12 @@ ejercicios:
     destOrg: obj1-unahur-2026s1
     comentarios:
       - name: Ejercicio con clases y herencia para practicar en casa.
+
+  - name: Plagas
+    urlTemplate: https://github.com/obj1-unahur/herenciaPlagas
+    destOrg: obj1-unahur-2026s1
+    comentarios:
+      - name: Ejercicio a realizar el sábado en la clase virtual. Incluye el tema nuevo herencia. Ideal para ir leyendo e intentar hacerlo para antes de dicha clase.
 ---
 
 - Esta semana vamos a profundizar en el uso de Clases y empezaremos a trabajar con el concepto de Herencia, que nos va a permitir la definición de nuevas clases basadas en clases existentes, estableciendo jerarquías de Superclase y Subclase. Vamos a poder agregar nuevas variables y métodos, y también redefinir otros ya existentes.
