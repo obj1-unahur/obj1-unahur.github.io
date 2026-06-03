@@ -10,8 +10,6 @@ atencion: Este miércoles 3/6 nuevamente hay paro para reclamar por el incumplim
 
 importante: Les dejamos más abajo el link a la consigna, requisitos e indicaciones para el desarrollo del TP Game Grupal.
 
-#importante: Publicamos el repo base y las instrucciones para comenzar con el TP Game Integrador.
-
 horarios:
   - Comision: 1
     Dia: Viernes 5 de junio
@@ -89,10 +87,10 @@ ejercicios:
 - También veremos el concepto de lookup method como mecanismo por el cual se determina, para el envío de un mensaje, qué método se debe ejecutar.
 
 - Les dejamos a mano el enlace a la <a href="https://www.wollok.org/documentation/classes/" target="_blank">documentación de Wollok sobre Clases</a> para que lean con atención.
--
+
+- También les facilitamos el enlace a la presentación que resume los temas de esta semana: <a href="https://docs.google.com/presentation/d/1mvE-ML4E756U_meOayhIlWhq0i2mG2OYKMrHDEQjbG0/edit?usp=sharing" target="_blank">Presentación Semana 10</a>
 
 ---
 
--
 - #### Trabajo práctico grupal integrador Wollok Game
 - ##### <a href="https://docs.google.com/document/d/1eUFp9Ckqhu1itXPSh4to3vsvFETI7uC7hsyoV7YpKvA/edit?usp=sharing" target="_blank">Pautas generales del TP Wollok Game grupal</a>
