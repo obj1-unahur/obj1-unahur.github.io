@@ -60,7 +60,7 @@ horarios:
     Dia: Sábado 6 de junio
     Modalidad: VIRTUAL
     Hora: 10.00hs
-    URL: https://t.me/+GMlcEZyJtCo2OTUx
+    URL: https://meet.google.com/sia-cweg-zen
 
 ejercicios:
   - name: Naves espaciales
