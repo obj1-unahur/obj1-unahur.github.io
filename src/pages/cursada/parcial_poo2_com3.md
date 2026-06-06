@@ -17,7 +17,7 @@ ejercicios:
     #Los parciales se van a generar privados en la orga del cuatri
     isPrivate: true
     #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: true
+    visible: false
 
   # - name: PRIMER PARCIAL - COMISIÓN 3 y 5
   #   #Poner template correcta del parcial
