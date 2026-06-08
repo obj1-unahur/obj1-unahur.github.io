@@ -20,8 +20,8 @@ horarios:
     Dia: Martes 9 de junio
     Modalidad: PRESENCIAL
     Hora: 18.00hs
-    Aula: LAB LP-207
-    Edificio: La Patria
+    Aula: LAB MA-111
+    Edificio: MALVINAS ARGENTINAS (PA)
 
   - Comision: 3
     Dia: Miércoles 10 de junio
