@@ -33,9 +33,9 @@ horarios:
   - Comision: 4
     Dia: Viernes 12 de junio
     Hora: 18.00hs
-    Modalidad: A confirmar
-    Aula: A confirmar
-    Edificio: A confirmar
+    Modalidad: PRESENCIAL
+    Aula: TA-001
+    Edificio: TRABAJO ARGENTINO
 
   - Comision: 5
     Dia: Miércoles 10 de junio
