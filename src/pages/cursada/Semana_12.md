@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 12
 
-inicio: 2026-06-14
+inicio: 2026-06-15
 
 descripcion: Semana de 2do. PARCIAL PRESENCIAL para todas las comisiones. Entra todo lo visto en la materia.
 
@@ -69,102 +69,43 @@ horarios:
 
 ejercicios:
   - name: SEGUNDO PARCIAL - COMISIÓN 2
-    #Poner template correcta del parcial
-    urlTemplate: https://github.com/obj1-unahur/parcial1Com2_2026C1
+    urlTemplate: https://github.com/obj1-unahur/parcial2Com2_2026C1
     destOrg: obj1-unahur-2026s1
     comentarios:
       - name: Segundo parcial para comisión 2
-    #Los parciales se van a generar privados en la orga del cuatri
     isPrivate: true
     #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
     visible: false
 
-  - name: PRIMER PARCIAL - COMISIÓN 3 y 5
-    #Poner template correcta del parcial
-    urlTemplate: https://github.com/obj1-unahur/parcial-1_Com-3-5_2026-C1
+  - name: SEGUNDO PARCIAL - COMISIÓN 3
+    urlTemplate: https://github.com/obj1-unahur/parcial2Com3_2026C1
     destOrg: obj1-unahur-2026s1
     comentarios:
-      - name: Primer parcial para comisión 2
-    #Los parciales se van a generar privados en la orga del cuatri 2026
+      - name: Segundo parcial para comisión 3
+    isPrivate: true
+    requireTOTP: true
+    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
+    visible: false
+
+  - name: SEGUNDO PARCIAL - COMISIÓN 5
+    urlTemplate: https://github.com/obj1-unahur/parcial2Com5_2026C1
+    destOrg: obj1-unahur-2026s1
+    comentarios:
+      - name: Segundo parcial para comisión 5
     isPrivate: true
     #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
     visible: false
-    #Atributo nuevo para requerir código de 6 digitos TOTP
-    requireTOTP: true
-    # totpSecret: "MI_SECRETO_BASE32"  # opcional, si no usás el default
 
-  # #----------------------------------------------
-  # Para pruebas
-# - name: Prueba grupal
-# # urlTemplate: https://github.com/pruebaPermisosOrga/pruebaRepoForger
-# # destOrg: pruebaPermisosOrga
-# # requireTOTP: true
-# # obligatorio: true
-# # type: 'group'
-# # fechaDeEntrega: Domingo 17/05
-# # comentarios:
-# # # - name: TP Grupal número 1
-
-# - name: Prueba individual
-# # urlTemplate: https://github.com/pruebaPermisosOrga/pruebaRepoForger
-# # destOrg: pruebaPermisosOrga
-# # requireTOTP: true
-# # obligatorio: true
-# # fechaDeEntrega: Domingo 17/05
-# # comentarios:
-# #   - name: TP Grupal número 1
-
-# #----------------------------------------------
-# # CONFIG PARA PARCIAL PARCIAL DE VIERNES TN
-# # PARA HABILITAR 22/05 A LAS 18.00 HS
-# - name: PRIMER PARCIAL - COMISIÓN 4
-#   #Poner template correcta del parcial
-#   urlTemplate: https://github.com/obj1-unahur/parcial1-vie-tn
-#   destOrg: obj1-unahur-2026s1
-#   prefix: parcial1Com4_2026C1
-#   comentarios:
-#     - name: Primer parcial para las comisiones 4, 6 y 7 del viernes turno noche
-#   #Los parciales se van a generar privados en la orga del cuatri
-#   isPrivate: true
-#   obligatorio: true
-#   type: 'individual'
-#   fechaDeEntrega: Viernes 22/05
-
-#   #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-#   visible: true
-
-# - name: PRIMER PARCIAL - COMISIÓN 6
-#   #Poner template correcta del parcial
-#   urlTemplate: https://github.com/obj1-unahur/parcial1-vie-tn
-#   destOrg: obj1-unahur-2026s1
-#   prefix: parcial1Com6_2026C1
-#   comentarios:
-#     - name: Primer parcial para las comisiones 4, 6 y 7 del viernes turno noche
-#   #Los parciales se van a generar privados en la orga del cuatri
-#   isPrivate: true
-#   obligatorio: true
-#   type: 'individual'
-#   fechaDeEntrega: Viernes 22/05
-
-#   #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-#   visible: true
-
-# - name: PRIMER PARCIAL - COMISIÓN 7
-#   #Poner template correcta del parcial
-#   urlTemplate: https://github.com/obj1-unahur/parcial1-vie-tn
-#   destOrg: obj1-unahur-2026s1
-#   prefix: parcial1Com7_2026C1
-#   comentarios:
-#     - name: Primer parcial para las comisiones 4, 6 y 7 del viernes turno noche
-#   #Los parciales se van a generar privados en la orga del cuatri
-#   isPrivate: true
-#   obligatorio: true
-#   type: 'individual'
-#   fechaDeEntrega: Viernes 22/05
-
-#   #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-#   visible: true
-# #----------------------------------------------
+  - name: SEGUNDO PARCIAL - COMISIÓN 7
+    urlTemplate: #TEMPLATE COM 7
+    destOrg: obj1-unahur-2026s1
+    comentarios:
+      - name: Segundo parcial para comisión 7
+    isPrivate: true
+    #Si querés usar código TOTP descomentá acá abajo ↓
+    #requireTOTP: true
+    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
+    visible: false
 ---
 
 - Semana de 2do. PARCIAL PRESENCIAL para todas las comisiones. Entra todo lo visto en la materia.
