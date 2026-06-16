@@ -75,7 +75,7 @@ ejercicios:
       - name: Segundo parcial para comisión 2
     isPrivate: true
     #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: true
+    visible: false
 
   - name: SEGUNDO PARCIAL - COMISIÓN 3
     urlTemplate: https://github.com/obj1-unahur/parcial2Com3_2026C1
