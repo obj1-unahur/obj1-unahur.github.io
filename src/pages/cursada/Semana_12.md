@@ -25,8 +25,8 @@ horarios:
     Dia: Miércoles 17 de Junio
     Modalidad: PRESENCIAL
     Hora: 18.00hs
-    Aula: A Designar
-    Edificio: A Designar
+    Aula: MA-107 / MA-111 / MA-112
+    Edificio: MALVINAS ARGENTINAS
 
   - Comision: 4
     Dia: Viernes 19 de Junio
@@ -39,8 +39,8 @@ horarios:
     Dia: Miércoles 17 de Junio
     Modalidad: PRESENCIAL
     Hora: 18.00hs
-    Aula: A Designar
-    Edificio: A Designar
+    Aula: MA-107 / MA-111 / MA-112
+    Edificio: MALVINAS ARGENTINAS
 
   - Comision: 6
     Dia: Viernes 19 de Junio
