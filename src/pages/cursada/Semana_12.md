@@ -85,7 +85,7 @@ ejercicios:
     isPrivate: true
     requireTOTP: true
     #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: false
+    visible: true
 
   - name: SEGUNDO PARCIAL - COMISIÓN 5
     urlTemplate: https://github.com/obj1-unahur/parcial2Com5_2026C1
@@ -94,7 +94,7 @@ ejercicios:
       - name: Segundo parcial para comisión 5
     isPrivate: true
     #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: false
+    visible: true
 
   - name: SEGUNDO PARCIAL - COMISIÓN 7
     urlTemplate: #TEMPLATE COM 7
