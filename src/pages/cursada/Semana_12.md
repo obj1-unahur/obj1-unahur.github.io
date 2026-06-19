@@ -96,16 +96,57 @@ ejercicios:
     #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
     visible: false
 
-  - name: SEGUNDO PARCIAL - COMISIÓN 7
-    urlTemplate: #TEMPLATE COM 7
+  # #----------------------------------------------
+  # CONFIG PARA PARCIAL PARCIAL DE VIERNES TN
+  # PARA HABILITAR 19/06 A LAS 18.00 HS
+  - name: SEGUNDO PARCIAL - COMISIÓN 4
+    #Poner template correcta del parcial
+    urlTemplate: https://github.com/obj1-unahur/parcial2-vie-tn
     destOrg: obj1-unahur-2026s1
+    prefix: parcial2Com4_2026C1
     comentarios:
-      - name: Segundo parcial para comisión 7
+      - name: Segundo parcial para las comisión 4 del viernes turno noche
+    #Los parciales se van a generar privados en la orga del cuatri
     isPrivate: true
-    #Si querés usar código TOTP descomentá acá abajo ↓
-    #requireTOTP: true
+    obligatorio: true
+    type: 'individual'
+    fechaDeEntrega: Viernes 19/06
+
     #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
     visible: false
+
+  - name: SEGUNDO PARCIAL - COMISIÓN 6
+    #Poner template correcta del parcial
+    urlTemplate: https://github.com/obj1-unahur/parcial2-vie-tn
+    destOrg: obj1-unahur-2026s1
+    prefix: parcial2Com6_2026C1
+    comentarios:
+      - name: Segundo parcial para las comisión 6 del viernes turno noche
+    #Los parciales se van a generar privados en la orga del cuatri
+    isPrivate: true
+    obligatorio: true
+    type: 'individual'
+    fechaDeEntrega: Viernes 19/06
+
+    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
+    visible: false
+
+  - name: SEGUNDO PARCIAL - COMISIÓN 7
+    #Poner template correcta del parcial
+    urlTemplate: https://github.com/obj1-unahur/parcial2-vie-tn
+    destOrg: obj1-unahur-2026s1
+    prefix: parcial2Com7_2026C1
+    comentarios:
+      - name: Segundo parcial para las comisión 7 del viernes turno noche
+    #Los parciales se van a generar privados en la orga del cuatri
+    isPrivate: true
+    obligatorio: true
+    type: 'individual'
+    fechaDeEntrega: Viernes 19/06
+
+    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
+    visible: false
+  # #----------------------------------------------
 ---
 
 - Semana de 2do. PARCIAL PRESENCIAL para todas las comisiones. Entra todo lo visto en la materia.
