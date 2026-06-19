@@ -113,7 +113,7 @@ ejercicios:
     fechaDeEntrega: Viernes 19/06
 
     #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: false
+    visible: true
 
   - name: SEGUNDO PARCIAL - COMISIÓN 6
     #Poner template correcta del parcial
@@ -129,7 +129,7 @@ ejercicios:
     fechaDeEntrega: Viernes 19/06
 
     #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: false
+    visible: true
 
   - name: SEGUNDO PARCIAL - COMISIÓN 7
     #Poner template correcta del parcial
@@ -145,7 +145,7 @@ ejercicios:
     fechaDeEntrega: Viernes 19/06
 
     #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: false
+    visible: true
   # #----------------------------------------------
 ---
 
