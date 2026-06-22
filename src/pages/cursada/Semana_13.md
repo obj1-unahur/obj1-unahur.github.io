@@ -26,9 +26,9 @@ horarios:
   - Comision: 3
     Dia: Miércoles 24 de junio
     Hora: 18.00hs
-    Modalidad: PRESENCIAL
-    Aula: LAB LP-206
-    Edificio: La Patria
+    Modalidad: VIRTUAL
+    Hora: 10.00hs
+    URL: https://meet.google.com/sia-cweg-zen
 
   - Comision: 4
     Dia: Viernes 26 de junio
@@ -40,9 +40,9 @@ horarios:
   - Comision: 5
     Dia: Miércoles 24 de junio
     Hora: 18.00hs
-    Modalidad: PRESENCIAL
-    Aula: LAB LP-207
-    Edificio: La Patria
+    Modalidad: VIRTUAL
+    Hora: 10.00hs
+    URL: https://meet.google.com/sia-cweg-zen
 
   - Comision: 6
     Dia: Viernes 26 de junio
