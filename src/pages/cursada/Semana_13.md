@@ -27,7 +27,6 @@ horarios:
     Dia: Miércoles 24 de junio
     Hora: 18.00hs
     Modalidad: VIRTUAL
-    Hora: 10.00hs
     URL: https://meet.google.com/sia-cweg-zen
 
   - Comision: 4
@@ -41,7 +40,6 @@ horarios:
     Dia: Miércoles 24 de junio
     Hora: 18.00hs
     Modalidad: VIRTUAL
-    Hora: 10.00hs
     URL: https://meet.google.com/sia-cweg-zen
 
   - Comision: 6
