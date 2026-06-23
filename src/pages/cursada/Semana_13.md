@@ -8,6 +8,8 @@ descripcion: Semana post-parcial y pre-recuperatorio. Resolución de segundo par
 
 importante: Este sábado 27 la modalidad es excepcional. Deben concurrir presencialmente al evento sobre Wollok Game que se llevará a cabo en el Auditorio del edificio Trabajo argentino a partir de las 9 am.
 
+atencion: Esta semana a modo excepcional, las comisiones 2, 3 y 5 tienen clase VIRTUAL. El sábado, como se indicó oportunamente, será PRESENCIAL para todas las comisiones.
+
 horarios:
   - Comision: 1
     Dia: Viernes 26 de junio
