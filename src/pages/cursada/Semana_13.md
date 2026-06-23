@@ -18,10 +18,9 @@ horarios:
 
   - Comision: 2
     Dia: Martes 23 de junio
-    Modalidad: PRESENCIAL
     Hora: 18.00hs
-    Aula: LAB LP-207
-    Edificio: La Patria
+    Modalidad: VIRTUAL
+    URL: https://meet.google.com/sia-cweg-zen
 
   - Comision: 3
     Dia: Miércoles 24 de junio
