@@ -71,7 +71,7 @@ horarios:
 
 ejercicios:
   - name: RECUPERATORIO - COMISIÓN 2
-    urlTemplate: https://github.com/obj1-unahur/ #completar con plantilla correcta
+    urlTemplate: https://github.com/obj1-unahur/recu1y2_com2_2026c1 #completar con plantilla correcta
     destOrg: obj1-unahur-2026s1
     comentarios:
       - name: Examen recuperatorio para comisión 2
