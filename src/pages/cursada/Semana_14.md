@@ -79,7 +79,7 @@ ejercicios:
     visible: false
 
   - name: RECUPERATORIO - COMISIÓN 3
-    urlTemplate: https://github.com/obj1-unahur/ #completar con plantilla correcta
+    urlTemplate: https://github.com/obj1-unahur/recuperatorioCom3_2026C1 #completar con plantilla correcta
     destOrg: obj1-unahur-2026s1
     comentarios:
       - name: Examen recuperatorio para comisión 3
