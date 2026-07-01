@@ -25,8 +25,8 @@ horarios:
     Dia: Miércoles 1 de julio
     Modalidad: PRESENCIAL
     Hora: 18.00hs
-    Aula: A determinar #LAB LP-206
-    Edificio: A determinar #La Patria
+    Aula: LAB TA-002
+    Edificio: TRABAJO ARGENTINO
 
   - Comision: 4
     Dia: Viernes 3 de julio
@@ -39,8 +39,8 @@ horarios:
     Dia: Miércoles 1 de julio
     Modalidad: PRESENCIAL
     Hora: 18.00hs
-    Aula: A determinar #LAB LP-207
-    Edificio: A determinar #La Patria
+    Aula: LAB TA-001
+    Edificio: TRABAJO ARGENTINO
 
   - Comision: 6
     Dia: Viernes 3 de julio
