@@ -84,7 +84,7 @@ ejercicios:
     comentarios:
       - name: Examen recuperatorio para comisión 3
     isPrivate: true
-    visible: true
+    visible: false
 
   - name: RECUPERATORIO - COMISIÓN 5
     urlTemplate: https://github.com/obj1-unahur/recuperatorioCom5_2026C1
@@ -92,7 +92,7 @@ ejercicios:
     comentarios:
       - name: Examen recuperatorio para comisión 5
     isPrivate: true
-    visible: true
+    visible: false
 ---
 
 - Esta semana se tomará examen recuperatorio tanto del primer parcial como del segundo, para cada comisión en su día y horario correspondiente. La modalidad es PRESENCIAL, pero la forma de evaluación puede variar según decida el/la docente de cada comisión (consultar cualquier duda).
