@@ -93,6 +93,58 @@ ejercicios:
       - name: Examen recuperatorio para comisión 5
     isPrivate: true
     visible: false
+
+  # #----------------------------------------------
+  # CONFIG PARA PARCIAL PARCIAL DE VIERNES TN
+  # PARA HABILITAR 03/07 A LAS 18.00 HS
+  - name: SEGUNDO PARCIAL - COMISIÓN 4
+    #Poner template correcta del parcial
+    urlTemplate: https://github.com/obj1-unahur/cine
+    destOrg: obj1-unahur-2026s1
+    prefix: recu1y2Com4_2026C1
+    comentarios:
+      - name: Segundo parcial para las comisión 4 del viernes turno noche
+    #Los parciales se van a generar privados en la orga del cuatri
+    isPrivate: true
+    obligatorio: true
+    type: 'individual'
+    fechaDeEntrega: Viernes 03/07
+
+    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
+    visible: false
+
+  - name: SEGUNDO PARCIAL - COMISIÓN 6
+    #Poner template correcta del parcial
+    urlTemplate: https://github.com/obj1-unahur/cine
+    destOrg: obj1-unahur-2026s1
+    prefix: recu1y2Com6_2026C1
+    comentarios:
+      - name: Segundo parcial para las comisión 6 del viernes turno noche
+    #Los parciales se van a generar privados en la orga del cuatri
+    isPrivate: true
+    obligatorio: true
+    type: 'individual'
+    fechaDeEntrega: Viernes 03/07
+
+    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
+    visible: false
+
+  - name: SEGUNDO PARCIAL - COMISIÓN 7
+    #Poner template correcta del parcial
+    urlTemplate: https://github.com/obj1-unahur/cine
+    destOrg: obj1-unahur-2026s1
+    prefix: recu1y2Com7_2026C1
+    comentarios:
+      - name: Segundo parcial para las comisión 7 del viernes turno noche
+    #Los parciales se van a generar privados en la orga del cuatri
+    isPrivate: true
+    obligatorio: true
+    type: 'individual'
+    fechaDeEntrega: Viernes 03/07
+
+    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
+    visible: false
+  # #----------------------------------------------
 ---
 
 - Esta semana se tomará examen recuperatorio tanto del primer parcial como del segundo, para cada comisión en su día y horario correspondiente. La modalidad es PRESENCIAL, pero la forma de evaluación puede variar según decida el/la docente de cada comisión (consultar cualquier duda).
