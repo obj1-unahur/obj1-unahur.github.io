@@ -55,6 +55,13 @@ horarios:
     Modalidad: VIRTUAL (horario y enlace a determinar según comisión)
     Hora: 10
     URL: A determinar
+
+  #Tutorías
+  - Comision: Todas
+    Dia: Lunes 6 de julio
+    Modalidad: 📣 VIRTUAL (tutoría) 📣
+    Hora: 18.00hs
+    URL: https://meet.google.com/sia-cweg-zen
 ---
 
 - Esta semana es la entrega del TP Game grupal, cada grupo mostrará su producción para el resto del curso y explicarán a su docente cómo jugarlo para que pueda probarlo "en vivo" en su computadora. Comisiones 2, 3 y 5 harán dicha entrega en la clase presencial durante la semana, mientras que las demás lo harán de manera virtual en la clase del sábado por el feriado del viernes. Habrá una videollamada distinta para cada comisión, y puede que se requiera empezar más temprano de lo habitual para llegar a ver todos los trabajos. Estén atent@s a lo que informe su docente.
