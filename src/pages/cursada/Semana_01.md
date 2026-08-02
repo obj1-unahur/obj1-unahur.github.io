@@ -1,0 +1,127 @@
+---
+layout: src/layouts/PostCursadaLayout.astro
+title: Semana 1
+
+inicio: 2026-03-21
+
+descripcion: ¡Hola! ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!!!
+
+atencion: Esta semana no habrá clases los días martes 31/3 por PARO y viernes 3/4 por el FERIADO, pero les vamos a dejar algunas actividades para que vayan conociendo la materia.
+
+#Sobre el formato
+
+#'Comision' puede ser número, string, repetir o no la palabra, etc. El componente lo normaliza para que se aproveche el buscador
+#Sugerido: 'Comision: 1', 'Comision: comision 1', etc
+
+#En 'Modalidad', 'Aula' y 'Edificio' se sugiere no repetir palabra (el componente renderiza lo que va detrás de los :)
+#No sugerido: 'Modalidad: Modalidad presencial'
+#Sugerido: 'Modalidad: PRESENCIAL'
+
+#'Hora' puede estar casi en cualquier formato (número, string, con ., con :, etc), el componente la normaliza para que funcione el ordenamiento de la tabla
+#Sugerido: 'Hora: 8', 'Hora: 8.00hs', etc
+
+horarios:
+  - Comision: 1
+    Dia: Viernes 3 de Abril
+    Hora: 8.00hs
+    Mensaje: NO HAY CLASES POR FERIADO
+
+  - Comision: 2
+    Dia: Martes 31 de Marzo
+    Hora: 18.00hs
+    Mensaje: NO HAY CLASES POR PARO
+
+  - Comision: 3
+    Dia: Miércoles 1 de Abril
+    Modalidad: PRESENCIAL
+    Hora: 18.00hs
+    Aula: LAB LP-206
+    Edificio: La Patria
+
+  - Comision: 4
+    Dia: Viernes 3 de Abril
+    Hora: 18.00hs
+    Mensaje: NO HAY CLASES POR FERIADO
+
+  - Comision: 5
+    Dia: Miércoles 1 de Abril
+    Modalidad: PRESENCIAL
+    Hora: 18.00hs
+    Aula: LAB LP-207
+    Edificio: La Patria
+
+  - Comision: 6
+    Dia: Viernes 3 de Abril
+    Hora: 18.00hs
+    Mensaje: NO HAY CLASES POR FERIADO
+
+  - Comision: 7
+    Dia: Viernes 3 de Abril
+    Hora: 18.00hs
+    Mensaje: NO HAY CLASES POR FERIADO
+
+  - Comision: Todas
+    Dia: Sábado 4 de Abril
+    Modalidad: VIRTUAL
+    Hora: 10.00hs
+    URL: https://us06web.zoom.us/j/89430035564
+
+videos:
+  - nombre: Instalación Wollok en Windows
+    urlYoutube: https://www.youtube.com/watch?v=kPxbjL7WUHc
+  - nombre: Instalación Wollok en Linux
+    urlYoutube: https://www.youtube.com/watch?v=DCG-syufqhU
+  #- nombre: Como aceptar asignaciones (ejercicios) de github classroom (LA PRIMERA VEZ DEBERÁN #SELECCIONAR SU APELLIDO Y NOMBRE DE LA LISTA)
+  #  urlYoutube: https://www.youtube.com/watch?v=pKIhUX51nkw
+
+# --- Nuevo formato para describir los ejercicios acá (2026s1) ---
+# Campos obligatorios: name, urlTemplate (reemplaza "classroom").
+# Campos opcionales que se infieren automáticamente desde urlTemplate:
+#   repoUrl, defaultBranch (= "main"), prefix (último segmento de urlTemplate),
+#   destOrg (org de urlTemplate), type (= "individual"), isPrivate (= false).
+# Si el ejercicio es obligatorio → isPrivate pasa a true (salvo que se indique lo contrario).
+# Para TPs grupales, usar type: group. La consigna se muestra desde /blob/defaultBranch/README.md.
+
+#Comparativa
+
+# ─── ANTES ───────────────────────────────   │  ─── AHORA ──────────────────────────────
+# ejercicios:                                 │  ejercicios:
+#   - name: "Mi TP Obligatorio"               │    - name: "Mi TP Obligatorio"
+#     classroom: https://github.com/org/repo  │      urlTemplate: https://github.com/org/repo
+#     repoUrl: 'org/repo'                     │      destOrg: mi-org-2026s1   # opcional
+#     defaultBranch: 'main'                   │      obligatorio: true
+#     destOrg: mi-org-2026s1                  │      fechaDeEntrega: 1/1/2026
+#     prefix: mi-ejercicio                    │      comentarios:
+#     isPrivate: true                         │        - name: "Entregar haciendo push"
+#     type: individual                        │
+#     fechaDeEntrega: 1/1/2026                │
+#     obligatorio: true                       │
+#     comentarios:                            │
+#       - name: "Entregar haciendo push"      │
+#
+# Se infiere: repoUrl, prefix, type, isPrivate (true si es obligatorio), defaultBranch.
+
+ejercicios:
+  - name: Presentación Personal
+    urlTemplate: https://github.com/obj1-unahur/PresentacionPersonal
+    defaultBranch: 'main'
+    destOrg: obj1-unahur-2026s1
+    prefix: presentacion-personal
+    isPrivate: false
+    type: individual
+    ejemploUrl: https://github.com/obj1-unahur-2023s1/presentacion-personal-BrankoMuruaga.git
+    comentarios:
+      - name: Ejercicio para practicar con github. Les dejamos un ejermplo, aunque esperamos que nos sorprendan con algo bien personal y creativo!
+---
+
+- ¡Hola!
+- ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!
+- Todos los días lunes se publicará en este espacio las actividades de la semana, días y horarios de cursada, videos de apoyo a la teoría y tutoriales, los ejercicios a realizar y los temas que vamos a estar viendo. También servirá de cartelera de avisos con las novedades importantes.
+- Es muy importante que te suscribas al canal de Discord de la materia, las instrucciones están en la sección **[Inicio](/)** de esta página.
+- En esta semana veremos las herramientas que se utilizarán en la cursada, comenzando por GIT como el manejador de las versiones del código que iremos produciendo. Github será la plataforma elegida por esta cátedra para almacenar el código fuente y los ejercicios a realizar. Es requisito también para esta cursada (si no tienen usuario ya generado) registrarse y obtener un usuario de github, el línk es el siguiente: <a href="https://github.com" target="_blank" > github </a>
+
+- Deberán instalarse GIT. El manejo que necesitan para esta materia es el básico, y está explicado en varias guías que están en la sección <a href="/material#ComandosBasicos" target="_blank">**Utilidad**▼ Material> ComandosGit</a>
+
+- El lenguaje que usaremos se llama Wollok. Wollok es un lenguaje de programación para ser utilizado en el dictado de materias iniciales de programación orientada a objetos. Es un proyecto open source desarrollado por Fundación Uqbar, un grupo de docentes de distintas universidades nacionales de Argentina, para ser usado en sus clases. Incluye la propuesta Wollok Game, que propone ir adquiriendo los conceptos del paradigma orientado a objetos junto con el diseño de un juego didáctico, que en las clases siguientes les iremos contando.
+
+- Les dejamos el link a la presentación que se mostró en las clases presenciales de esta semana: <a href="https://docs.google.com/presentation/d/1tQCMQO4aCEZ3ey8ASoVl74BMGsUYAj2xt5OinElfUJ0/edit?usp=sharing" target="_blank">Presentación Semana 1</a>
