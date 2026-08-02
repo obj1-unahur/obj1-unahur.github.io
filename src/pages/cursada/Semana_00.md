@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 0
 
-inicio: 2026-08-02
+inicio: 2028-08-02
 
 descripcion: Prueba ejercicios con autograde.
 
