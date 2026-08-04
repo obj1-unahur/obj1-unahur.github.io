@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Integrador 2026c1
 
-inicio: 2026-08-05
+inicio: 2026-08-04
 
 descripcion: Integradores para comisiones 2, 3 y 5
 
@@ -56,3 +56,5 @@ ejercicios:
     visible: false
     requireTOTP: false
 ---
+
+### A las 18hs se habilitan los links a los exámenes.
