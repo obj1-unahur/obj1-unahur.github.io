@@ -35,7 +35,7 @@ ejercicios:
     comentarios:
       - name: Examen integrador para comisión 2
     isPrivate: true
-    visible: false
+    visible: true
     requireTOTP: false
 
   - name: INTEGRADOR - Comisión 3
@@ -44,7 +44,7 @@ ejercicios:
     comentarios:
       - name: Examen integrador para comisión 3
     isPrivate: true
-    visible: false
+    visible: true
     requireTOTP: false
 
   - name: INTEGRADOR - Comisión 5
@@ -53,7 +53,7 @@ ejercicios:
     comentarios:
       - name: Examen integrador para comisión 5
     isPrivate: true
-    visible: false
+    visible: true
     requireTOTP: false
 ---
 
