@@ -5,8 +5,7 @@ title: Integrador 2026c1
 inicio:
 active: false
 
-# descripcion: Integradores para comisiones 2, 3 y 5
-descripcion: Integradores para comisiones 4, 6 y 7
+descripcion: Integradores para comisiones 2, 3 y 5
 
 horarios:
   - Comision: 2
