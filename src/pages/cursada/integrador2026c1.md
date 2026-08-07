@@ -4,57 +4,117 @@ title: Integrador 2026c1
 
 inicio: 2026-08-04
 
-descripcion: Integradores para comisiones 2, 3 y 5
+# descripcion: Integradores para comisiones 2, 3 y 5
+descripcion: Integradores para comisiones 4, 6 y 7
 
 horarios:
-  - Comision: 2
-    Dia: Martes 4 de Agosto
+  - Comision: 4, 6 y 7
+    Dia: Viernes 7 de Agosto
     Modalidad: PRESENCIAL
     Hora: 18.00hs
-    Aula: LAB TA-001
-    Edificio: TRABAJO ARGENTINO
+    Aula: LAB MA-109
+    Edificio: MALVINAS ARGENTINAS
 
-  - Comision: 3
-    Dia: Martes 4 de Agosto
-    Modalidad: PRESENCIAL
-    Hora: 18.00hs
-    Aula: LAB TA-001
-    Edificio: TRABAJO ARGENTINO
+  # - Comision: 2
+  #   Dia: Martes 4 de Agosto
+  #   Modalidad: PRESENCIAL
+  #   Hora: 18.00hs
+  #   Aula: LAB TA-001
+  #   Edificio: TRABAJO ARGENTINO
 
-  - Comision: 5
-    Dia: Martes 4 de Agosto
-    Modalidad: PRESENCIAL
-    Hora: 18.00hs
-    Aula: LAB TA-001
-    Edificio: TRABAJO ARGENTINO
+  # - Comision: 3
+  #   Dia: Martes 4 de Agosto
+  #   Modalidad: PRESENCIAL
+  #   Hora: 18.00hs
+  #   Aula: LAB TA-001
+  #   Edificio: TRABAJO ARGENTINO
 
-ejercicios:
-  - name: INTEGRADOR - Comisión 2
-    urlTemplate: https://github.com/obj1-unahur-2026s1/integrador2026c1-Com2
+  # - Comision: 5
+  #   Dia: Martes 4 de Agosto
+  #   Modalidad: PRESENCIAL
+  #   Hora: 18.00hs
+  #   Aula: LAB TA-001
+  #   Edificio: TRABAJO ARGENTINO
+
+  # ejercicios:
+  #   - name: INTEGRADOR - Comisión 2
+  #     urlTemplate: https://github.com/obj1-unahur-2026s1/integrador2026c1-Com2
+  #     destOrg: obj1-unahur-2026s1
+  #     comentarios:
+  #       - name: Examen integrador para comisión 2
+  #     isPrivate: true
+  #     visible: true
+  #     requireTOTP: false
+
+  #   - name: INTEGRADOR - Comisión 3
+  #     urlTemplate: https://github.com/obj1-unahur-2026s1/integrador2026c1-Com3
+  #     destOrg: obj1-unahur-2026s1
+  #     comentarios:
+  #       - name: Examen integrador para comisión 3
+  #     isPrivate: true
+  #     visible: true
+  #     requireTOTP: false
+
+  #   - name: INTEGRADOR - Comisión 5
+  #     urlTemplate: https://github.com/obj1-unahur-2026s1/integrador2026c1-Com5
+  #     destOrg: obj1-unahur-2026s1
+  #     comentarios:
+  #       - name: Examen integrador para comisión 5
+  #     isPrivate: true
+  #     visible: true
+  #     requireTOTP: false
+
+  # #----------------------------------------------
+  # CONFIG PARA INTEGRADOR DE VIERNES TN
+  # PARA HABILITAR 07/08 A LAS 18.00 HS
+  - name: INTEGRADOR - COMISIÓN 4
+    #Poner template correcta del parcial
+    urlTemplate: https://github.com/obj1-unahur/reino
     destOrg: obj1-unahur-2026s1
+    prefix: integrador-Com4_2026C1
     comentarios:
-      - name: Examen integrador para comisión 2
+      - name: Integrador para las comisión 4 del viernes turno noche
+    #Los parciales se van a generar privados en la orga del cuatri
     isPrivate: true
-    visible: true
-    requireTOTP: false
+    obligatorio: true
+    type: 'individual'
+    fechaDeEntrega: Viernes 07/08
 
-  - name: INTEGRADOR - Comisión 3
-    urlTemplate: https://github.com/obj1-unahur-2026s1/integrador2026c1-Com3
-    destOrg: obj1-unahur-2026s1
-    comentarios:
-      - name: Examen integrador para comisión 3
-    isPrivate: true
-    visible: true
-    requireTOTP: false
+    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
+    visible: false
 
-  - name: INTEGRADOR - Comisión 5
-    urlTemplate: https://github.com/obj1-unahur-2026s1/integrador2026c1-Com5
+  - name: INTEGRADOR - COMISIÓN 6
+    #Poner template correcta del parcial
+    urlTemplate: https://github.com/obj1-unahur/reino
     destOrg: obj1-unahur-2026s1
+    prefix: integrador-Com6_2026C1
     comentarios:
-      - name: Examen integrador para comisión 5
+      - name: Integrador para las comisión 6 del viernes turno noche
+    #Los parciales se van a generar privados en la orga del cuatri
     isPrivate: true
-    visible: true
-    requireTOTP: false
+    obligatorio: true
+    type: 'individual'
+    fechaDeEntrega: Viernes 07/08
+
+    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
+    visible: false
+
+  - name: INTEGRADOR - COMISIÓN 7
+    #Poner template correcta del parcial
+    urlTemplate: https://github.com/obj1-unahur/reino
+    destOrg: obj1-unahur-2026s1
+    prefix: integrador-Com7_2026C1
+    comentarios:
+      - name: Integrador para las comisión 7 del viernes turno noche
+    #Los parciales se van a generar privados en la orga del cuatri
+    isPrivate: true
+    obligatorio: true
+    type: 'individual'
+    fechaDeEntrega: Viernes 07/08
+
+    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
+    visible: false
+  # #----------------------------------------------
 ---
 
 ### A las 18hs se habilitan los links a los exámenes.
