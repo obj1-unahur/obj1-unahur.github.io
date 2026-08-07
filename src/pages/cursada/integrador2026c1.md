@@ -46,7 +46,7 @@ ejercicios:
     fechaDeEntrega: Viernes 07/08
 
     #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: false
+    visible: true
 
   - name: INTEGRADOR - COMISIÓN 6
     #Poner template correcta del parcial
@@ -62,7 +62,7 @@ ejercicios:
     fechaDeEntrega: Viernes 07/08
 
     #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: false
+    visible: true
 
   - name: INTEGRADOR - COMISIÓN 7
     #Poner template correcta del parcial
@@ -78,7 +78,7 @@ ejercicios:
     fechaDeEntrega: Viernes 07/08
 
     #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: false
+    visible: true
   # #----------------------------------------------
 ---
 
