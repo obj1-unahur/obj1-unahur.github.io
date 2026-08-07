@@ -8,54 +8,26 @@ inicio: 2026-08-04
 descripcion: Integradores para comisiones 4, 6 y 7
 
 horarios:
-  - Comision: 4, 6 y 7
+  - Comision: 4
     Dia: Viernes 7 de Agosto
     Modalidad: PRESENCIAL
     Hora: 18.00hs
     Aula: LAB MA-109
     Edificio: MALVINAS ARGENTINAS
 
-  # - Comision: 2
-  #   Dia: Martes 4 de Agosto
-  #   Modalidad: PRESENCIAL
-  #   Hora: 18.00hs
-  #   Aula: LAB TA-001
-  #   Edificio: TRABAJO ARGENTINO
+  - Comision: 6
+    Dia: Viernes 7 de Agosto
+    Modalidad: PRESENCIAL
+    Hora: 18.00hs
+    Aula: LAB MA-109
+    Edificio: MALVINAS ARGENTINAS
 
-  # - Comision: 3
-  #   Dia: Martes 4 de Agosto
-  #   Modalidad: PRESENCIAL
-  #   Hora: 18.00hs
-  #   Aula: LAB TA-001
-  #   Edificio: TRABAJO ARGENTINO
-
-  # - Comision: 5
-  #   Dia: Martes 4 de Agosto
-  #   Modalidad: PRESENCIAL
-  #   Hora: 18.00hs
-  #   Aula: LAB TA-001
-  #   Edificio: TRABAJO ARGENTINO
-
-  # - Comision: 2
-  #   Dia: Martes 4 de Agosto
-  #   Modalidad: PRESENCIAL
-  #   Hora: 18.00hs
-  #   Aula: LAB TA-001
-  #   Edificio: TRABAJO ARGENTINO
-
-  # - Comision: 3
-  #   Dia: Martes 4 de Agosto
-  #   Modalidad: PRESENCIAL
-  #   Hora: 18.00hs
-  #   Aula: LAB TA-001
-  #   Edificio: TRABAJO ARGENTINO
-
-  # - Comision: 5
-  #   Dia: Martes 4 de Agosto
-  #   Modalidad: PRESENCIAL
-  #   Hora: 18.00hs
-  #   Aula: LAB TA-001
-  #   Edificio: TRABAJO ARGENTINO
+  - Comision: 7
+    Dia: Viernes 7 de Agosto
+    Modalidad: PRESENCIAL
+    Hora: 18.00hs
+    Aula: LAB MA-109
+    Edificio: MALVINAS ARGENTINAS
 
   # ejercicios:
   #   - name: INTEGRADOR - Comisión 2
