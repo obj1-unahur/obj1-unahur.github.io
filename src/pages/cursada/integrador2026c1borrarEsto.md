@@ -2,7 +2,8 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Integrador 2026c1
 
-inicio: 2026-08-04
+inicio:
+active: false
 
 # descripcion: Integradores para comisiones 2, 3 y 5
 descripcion: Integradores para comisiones 4, 6 y 7
