@@ -23,8 +23,8 @@
 #- nombre: Cargar un ejercicio desde GitHub bajándolo como Zip, y llevarlo al ambiente Wollok
 #  urlYoutube: https://www.youtube.com/watch?v=PDEGqUcXlV4
 
-- nombre: Cómo ver las correcciones en GitHub
-  urlYoutube: https://www.youtube.com/watch?v=q5uOdrwR3Lw
+# - nombre: Cómo ver las correcciones en GitHub
+#   urlYoutube: https://www.youtube.com/watch?v=q5uOdrwR3Lw
 
 - nombre: Wollok Game
   urlYoutube: https://www.youtube.com/watch?v=8jEzQm_re30

@@ -6,7 +6,7 @@ inicio: 2026-08-10
 
 descripcion: ¡Hola! ¡Te damos la bienvenida a la primera semana de cursada de Programación con Objetos 1!
 
-atencion: Esta semana no habrá clases los días martes 31/3 por PARO y viernes 3/4 por el FERIADO, pero les vamos a dejar algunas actividades para que vayan conociendo la materia.
+atencion: Esta semana no habrá clases el día miércoles 12/8 por el paro para reclamar por el incumplimiento de la Ley de financiamento universitario. Afecta a comisión 1 y 6. Igualmente vayan leyendo toda la información disponible de la materia y hagan la actividad de GitHub que les dejamos acá abajo.
 
 #Sobre el formato
 
@@ -35,47 +35,40 @@ horarios:
     Aula: LAB MA-113
     Edificio: Malvinas argentinas
 
+  - Comision: 4
+    Dia: Martes 11 de agosto
+    Hora: 18.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-107
+    Edificio: Malvinas argentinas
+
   - Comision: 5
     Dia: Martes 11 de agosto
-    Hora: 14.00hs
+    Hora: 18.00hs
     Modalidad: PRESENCIAL
     Aula: LAB MA-109
     Edificio: Malvinas argentinas
 
-  - Comision: 3
-    Dia: Miércoles 1 de Abril
-    Modalidad: PRESENCIAL
-    Hora: 18.00hs
-    Aula: LAB LP-206
-    Edificio: La Patria
-
-  - Comision: 4
-    Dia: Viernes 3 de Abril
-    Hora: 18.00hs
-    Mensaje: NO HAY CLASES POR FERIADO
-
-  - Comision: 5
-    Dia: Miércoles 1 de Abril
-    Modalidad: PRESENCIAL
-    Hora: 18.00hs
-    Aula: LAB LP-207
-    Edificio: La Patria
+  - Comision: 1
+    Dia: Miércoles 12 de agosto
+    Hora: 8.00hs
+    Mensaje: NO HAY CLASES POR PARO
 
   - Comision: 6
-    Dia: Viernes 3 de Abril
+    Dia: Miércoles 12 de agosto
     Hora: 18.00hs
-    Mensaje: NO HAY CLASES POR FERIADO
+    Mensaje: NO HAY CLASES POR PARO
 
   - Comision: Todas
-    Dia: Sábado 4 de Abril
-    Modalidad: VIRTUAL
+    Dia: Sábado 15 de agosto
+    Modalidad: CLASE VIRTUAL
     Hora: 10.00hs
-    URL: https://us06web.zoom.us/j/89430035564
+    URL: https://meet.google.com/sia-cweg-zen
 
   - Comision: Todas
-    Dia: Jueves 11 de junio
+    Dia: Sábado 15 de agosto
     Modalidad: 📣 VIRTUAL (tutoría) 📣
-    Hora: 16.00hs
+    Hora: 15.00hs
     URL: https://meet.google.com/sia-cweg-zen
 
 videos:
@@ -116,14 +109,10 @@ videos:
 ejercicios:
   - name: Presentación Personal
     urlTemplate: https://github.com/obj1-unahur/PresentacionPersonal
-    defaultBranch: 'main'
-    destOrg: obj1-unahur-2026s1
-    prefix: presentacion-personal
-    isPrivate: false
-    type: individual
+    destOrg: obj1-unahur-2026s2
     ejemploUrl: https://github.com/obj1-unahur-2023s1/presentacion-personal-BrankoMuruaga.git
     comentarios:
-      - name: Ejercicio para practicar con github. Les dejamos un ejermplo, aunque esperamos que nos sorprendan con algo bien personal y creativo!
+      - name: Ejercicio para practicar con github. Les dejamos un ejemplo, aunque esperamos que nos sorprendan con algo original y personal.
 ---
 
 - ¡Hola!
