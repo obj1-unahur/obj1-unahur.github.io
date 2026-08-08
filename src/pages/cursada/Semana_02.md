@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 2
 
-inicio: 2026-04-06
+inicio: 2026-08-17
 
 descripcion: Esta semana daremos inicio al estudio de la programación orientada a objetos y aprenderemos cómo los objetos se comunican entre sí.
 

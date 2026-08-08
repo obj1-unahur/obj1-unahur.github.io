@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 12
 
-inicio: 2026-06-15
+inicio: 2026-10-26
 
 descripcion: Semana de 2do. PARCIAL PRESENCIAL para todas las comisiones. Entra todo lo visto en la materia.
 

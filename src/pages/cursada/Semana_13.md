@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 13
 
-inicio: 2026-06-22
+inicio: 2026-11-02
 
 descripcion: Semana post-parcial y pre-recuperatorio. Resolución de segundo parcial.
 

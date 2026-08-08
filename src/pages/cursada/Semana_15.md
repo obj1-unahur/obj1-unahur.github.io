@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 15
 
-inicio: 2026-07-06
+inicio: 2026-11-16
 
 descripcion: Esta semana es la entrega del TP Game grupal.
 

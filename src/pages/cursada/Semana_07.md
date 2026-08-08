@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 7
 
-inicio: 2026-05-11
+inicio: 2026-09-21
 
 descripcion: Esta semana aprenderemos a resolver problemas más complejos con colecciones.
 

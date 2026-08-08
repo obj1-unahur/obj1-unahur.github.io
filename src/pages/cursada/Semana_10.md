@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 10
 
-inicio: 2026-06-01
+inicio: 2026-10-12
 
 descripcion: Esta semana vamos a profundizar en el uso de Clases y empezaremos a trabajar con el concepto de Herencia, que nos va a permitir la definición de nuevas clases basadas en clases existentes, estableciendo jerarquías de Superclase y Subclase. Vamos a poder agregar nuevas variables y métodos, y también redefinir otros ya existentes.
 

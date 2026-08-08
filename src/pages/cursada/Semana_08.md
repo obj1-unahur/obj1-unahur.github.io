@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 8
 
-inicio: 2026-05-18
+inicio: 2026-09-28
 
 descripcion: Semana de PARCIAL PRESENCIAL para todas las comisiones. Entra todo lo visto.
 

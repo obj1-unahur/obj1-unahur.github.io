@@ -2,9 +2,9 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 1
 
-inicio: 2026-03-21
+inicio: 2026-08-10
 
-descripcion: ¡Hola! ¡Te damos la bienvenida a la primer semana de cursada de Programación con Objetos 1!!!
+descripcion: ¡Hola! ¡Te damos la bienvenida a la primera semana de cursada de Programación con Objetos 1!
 
 atencion: Esta semana no habrá clases los días martes 31/3 por PARO y viernes 3/4 por el FERIADO, pero les vamos a dejar algunas actividades para que vayan conociendo la materia.
 
@@ -21,15 +21,26 @@ atencion: Esta semana no habrá clases los días martes 31/3 por PARO y viernes 
 #Sugerido: 'Hora: 8', 'Hora: 8.00hs', etc
 
 horarios:
-  - Comision: 1
-    Dia: Viernes 3 de Abril
-    Hora: 8.00hs
-    Mensaje: NO HAY CLASES POR FERIADO
+  - Comision: 3
+    Dia: Lunes 10 de agosto
+    Hora: 18.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB LP-207
+    Edificio: La Patria
 
   - Comision: 2
-    Dia: Martes 31 de Marzo
-    Hora: 18.00hs
-    Mensaje: NO HAY CLASES POR PARO
+    Dia: Martes 11 de agosto
+    Hora: 14.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-113
+    Edificio: Malvinas argentinas
+
+  - Comision: 5
+    Dia: Martes 11 de agosto
+    Hora: 14.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-109
+    Edificio: Malvinas argentinas
 
   - Comision: 3
     Dia: Miércoles 1 de Abril
@@ -55,16 +66,17 @@ horarios:
     Hora: 18.00hs
     Mensaje: NO HAY CLASES POR FERIADO
 
-  - Comision: 7
-    Dia: Viernes 3 de Abril
-    Hora: 18.00hs
-    Mensaje: NO HAY CLASES POR FERIADO
-
   - Comision: Todas
     Dia: Sábado 4 de Abril
     Modalidad: VIRTUAL
     Hora: 10.00hs
     URL: https://us06web.zoom.us/j/89430035564
+
+  - Comision: Todas
+    Dia: Jueves 11 de junio
+    Modalidad: 📣 VIRTUAL (tutoría) 📣
+    Hora: 16.00hs
+    URL: https://meet.google.com/sia-cweg-zen
 
 videos:
   - nombre: Instalación Wollok en Windows

@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 11
 
-inicio: 2026-06-08
+inicio: 2026-10-19
 
 descripcion: Esta semana vamos a seguir profundizando en el uso de Clases y Herencia y practicando para el segundo parcial que es la semana que viene.
 

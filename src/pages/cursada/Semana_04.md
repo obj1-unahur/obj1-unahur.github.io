@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 4
 
-inicio: 2026-04-19
+inicio: 2026-08-31
 descripcion: Esta semana continuaremos trabajando con el tema de polimorfismo, con el objetivo de comprenderlo en profundidad y aplicarlo de manera adecuada en las distintas situaciones que se nos presenten a lo largo de la cursada.
 
 horarios:

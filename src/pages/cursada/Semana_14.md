@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 14
 
-inicio: 2026-06-29
+inicio: 2026-11-09
 
 descripcion: Semana de recuperatorios de ambos parciales para todas las comisiones.
 

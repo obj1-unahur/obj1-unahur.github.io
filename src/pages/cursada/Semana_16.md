@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 16
 
-inicio: 2026-07-13
+inicio: 2026-11-23
 
 descripcion: Esta semana es la defensa oral y presentación de correcciones y mejoras del TP Game.
 
