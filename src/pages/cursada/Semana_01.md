@@ -39,14 +39,14 @@ horarios:
     Dia: Martes 11 de agosto
     Hora: 18.00hs
     Modalidad: PRESENCIAL
-    Aula: LAB MA-107
-    Edificio: Malvinas argentinas
+    Aula: Aula JS-022
+    Edificio: Justicia Social
 
   - Comision: 5
     Dia: Martes 11 de agosto
     Hora: 18.00hs
     Modalidad: PRESENCIAL
-    Aula: LAB MA-109
+    Aula: LAB MA-108
     Edificio: Malvinas argentinas
 
   - Comision: 1
