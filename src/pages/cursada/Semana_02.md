@@ -25,29 +25,29 @@ horarios:
     Dia: Martes 18 de agosto
     Hora: 18.00hs
     Modalidad: PRESENCIAL
-    Aula: #??
-    Edificio: Justicia Social
+    Aula: LAB MA-111
+    Edificio: Malvinas argentinas
 
   - Comision: 5
     Dia: Martes 18 de agosto
     Hora: 18.00hs
     Modalidad: PRESENCIAL
-    Aula: #??
+    Aula: LAB MA-108
     Edificio: Malvinas argentinas
 
   - Comision: 1
     Dia: Miércoles 19 de agosto
     Hora: 8.00hs
     Modalidad: PRESENCIAL
-    Aula: #??
+    Aula: LAB MA-113
     Edificio: Malvinas argentinas
 
   - Comision: 6
     Dia: Miércoles 19 de agosto
     Hora: 18.00hs
     Modalidad: PRESENCIAL
-    Aula: #??
-    Edificio: Malvinas argentinas
+    Aula: TA-002
+    Edificio: Trabajo argentino
 
   - Comision: Todas
     Dia: Sábado 22 de agosto
