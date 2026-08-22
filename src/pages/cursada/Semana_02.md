@@ -55,12 +55,6 @@ horarios:
     Hora: 10.00hs
     URL: https://meet.google.com/sia-cweg-zen
 
-  - Comision: Todas
-    Dia: Sábado 22 de agosto
-    Modalidad: 📣 VIRTUAL (tutoría) 📣
-    Hora: 15.00hs
-    URL: https://meet.google.com/sia-cweg-zen
-
 ejercicios:
   - name: El Lobo Feroz - TP 1 Objetos (individual)
     urlTemplate: https://github.com/obj1-unahur-2026s2/objetoMensaje_loboFeroz
