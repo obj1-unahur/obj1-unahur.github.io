@@ -89,4 +89,4 @@ ejercicios:
       - name: Ejercicio para practicar con polimorfismo.
 ---
 
-- Esta semana continuaremos trabajando sobre el concepto de polimorfismo, concepto clave del paradigma orientado a objetos. Es fundamental comprenderlo en profundidad y aplicarlo de manera adecuada en cualquier situación que se les pueda perse
+- Esta semana continuaremos trabajando sobre el concepto de polimorfismo, concepto clave del paradigma orientado a objetos. Es fundamental comprenderlo en profundidad y aplicarlo de manera adecuada en las distintas situaciones que se nos presenten a lo largo de la cursada.
