@@ -5,6 +5,8 @@ title: Semana 4
 inicio: 2026-08-31
 descripcion: Esta semana continuaremos trabajando sobre el concepto de polimorfismo, con el objetivo de comprenderlo en profundidad y aplicarlo de manera adecuada en las distintas situaciones que se nos presenten a lo largo de la cursada.
 
+atencion: Esta semana no habrá clases el día miércoles 2/9 por el paro para reclamar por el incumplimiento de la Ley de financiamento universitario. Afecta a comisiones 1 y 6. Igualmente vayan resolviendo los ejercicios de esta semanana y no falten a la clase del sábado.
+
 horarios:
   - Comision: 3
     Dia: Lunes 31 de agosto
@@ -37,16 +39,12 @@ horarios:
   - Comision: 1
     Dia: Miércoles 2 de septiembre
     Hora: 8.00hs
-    Modalidad: PRESENCIAL
-    Aula: LAB MA-113
-    Edificio: Malvinas argentinas
+    Mensaje: NO HAY CLASES POR PARO
 
   - Comision: 6
     Dia: Miércoles 2 de septiembre
     Hora: 18.00hs
-    Modalidad: PRESENCIAL
-    Aula: TA-002
-    Edificio: Trabajo argentino
+    Mensaje: NO HAY CLASES POR PARO
 
   - Comision: Todas
     Dia: Jueves 3 de septiembre
