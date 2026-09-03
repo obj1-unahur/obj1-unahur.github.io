@@ -59,11 +59,11 @@ horarios:
     Hora: 10.00hs
     URL: https://meet.google.com/sia-cweg-zen
 
-  - Comision: Todas
-    Dia: Sábado 5 de septiembre
-    Modalidad: TUTORÍA VIRTUAL (2 hs) 🫂🙌
-    Hora: 15.00hs
-    URL: https://meet.google.com/sia-cweg-zen
+  #- Comision: Todas
+  #  Dia: Sábado 5 de septiembre
+  #  Modalidad: TUTORÍA VIRTUAL (2 hs) 🫂🙌
+  #  Hora: 15.00hs
+  #  URL: https://meet.google.com/sia-cweg-zen
 
 ejercicios:
   - name: Competencia de "Farmear aura" - TP 2 POLIMORFISMO - Individual obligatorio
