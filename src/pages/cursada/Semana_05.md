@@ -84,7 +84,7 @@ ejercicios:
 
 - En esta semana vamos empezar a trabajar con colecciones y closures (a.k.a bloques, lambdas, funciones arrow/flecha, etc.). Vamos a ver y entender cómo se combinan para facilitar programar cosas más interesantes e interactivas y les va a ser muy útil luego para tu TP Game también.
 
-- Las colecciones podrían definirse como una estructura de datos que se compone de una serie de elementos. Vamos a ver dos tipos de colecciones mutables en Wollok: listas ordenadas (permiten repetidos) y conjuntos (sin orden ni repetidos).
+- Las colecciones podrían definirse como una estructura de datos que se compone de una serie de referencias a objetos (decimos que estos objetos son sus elementos). Vamos a ver dos tipos de colecciones mutables en Wollok: listas ordenadas (permiten repetidos) y conjuntos (sin orden ni repetidos).
 
 - Estas colecciones trabajan junto con los closures, que son "cachos" de código que pueden declararse, ejecutarse, y tener uno o más parámetros. De esta forma se trata esta porción de código como un objeto más, dándonos el beneficio de diferir su ejecución, ya que el lugar donde se escribe el código puede no ser el mismo donde se requiera la misma (incluso, el código podría no ejecutarse nunca).
 
