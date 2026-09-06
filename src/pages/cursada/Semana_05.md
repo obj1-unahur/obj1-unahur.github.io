@@ -4,97 +4,90 @@ title: Semana 5
 
 inicio: 2026-09-07
 
-descripcion: En esta semana vamos a conocer a los Closures, que son bloques de código que pueden convertirse en un objeto y que pueden diferir su ejecución. Eso nos va a ayudar a programar cosas más interesantes e interactivas y nos va a ser muy útil luego en Wollok Game! También incorporamos el uso de colecciones.
-
-importante: Cambiamos la forma de generar las asignaciones de los TPs. Por favor Leer detenidamente lo que se explica más abajo. Gracias!
+descripcion: En esta semana vamos empezar a trabajar con colecciones y closures (a.k.a bloques, lambdas, funciones arrow/flecha, etc.). Vamos a ver y entender cómo se combinan para facilitar programar cosas más interesantes e interactivas y les va a ser muy útil luego para tu TP Game también.
 
 horarios:
-  - Comision: 1
-    Dia: Viernes 1 de Mayo
-    Hora: 8.00hs
-    Mensaje: NO HAY CLASES POR FERIADO
+  - Comision: 3
+    Dia: Lunes 7 de septiembre
+    Hora: 18.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB LP-207
+    Edificio: La Patria
 
   - Comision: 2
-    Dia: Martes 28 de Abril
-    Modalidad: PRESENCIAL
-    Hora: 18.00hs
-    Aula: LAB LP-207
-    Edificio: La Patria
-
-  - Comision: 3
-    Dia: Miércoles 29 de Abril
-    Modalidad: PRESENCIAL
-    Hora: 18.00hs
-    Aula: LAB LP-206
-    Edificio: La Patria
+    Dia: Martes 8 de septiembre
+    Hora: 14.00hs
+    Modalidad: A definir #PRESENCIAL
+    Aula: A definir #LAB MA-113
+    Edificio: A definir #Malvinas argentinas
 
   - Comision: 4
-    Dia: Viernes 1 de Mayo
+    Dia: Martes 8 de septiembre
     Hora: 18.00hs
-    Mensaje: NO HAY CLASES POR FERIADO
+    Modalidad: A definir #PRESENCIAL
+    Aula: A definir #LAB MA-111
+    Edificio: A definir #Malvinas argentinas
 
   - Comision: 5
-    Dia: Miércoles 29 de Abril
-    Modalidad: PRESENCIAL
+    Dia: Martes 8 de septiembre
     Hora: 18.00hs
-    Aula: LAB LP-207
-    Edificio: La Patria
+    Modalidad: A definir #PRESENCIAL
+    Aula: A definir #LAB MA-108
+    Edificio: A definir #Malvinas argentinas
+
+  - Comision: 1
+    Dia: Miércoles 9 de septiembre
+    Hora: 8.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-113
+    Edificio: Malvinas argentinas
 
   - Comision: 6
-    Dia: Viernes 1 de Mayo
+    Dia: Miércoles 9 de septiembre
     Hora: 18.00hs
-    Mensaje: NO HAY CLASES POR FERIADO
-
-  - Comision: 7
-    Dia: Viernes 1 de Mayo
-    Hora: 18.00hs
-    Mensaje: NO HAY CLASES POR FERIADO
+    Modalidad: PRESENCIAL
+    Aula: TA-002
+    Edificio: Trabajo argentino
 
   - Comision: Todas
-    Dia: Lunes 27 de Abril
-    Modalidad: 📣 ESPECIAL TUTORÍA 1 VIRTUAL ‼️
-    Hora: 18.00hs
-    URL: https://meet.google.com/nqg-rprn-asn
+    Dia: Jueves 10 de septiembre
+    Hora: 16.00hs
+    Modalidad: TUTORÍA PRESENCIAL (2 hs) 🫂🙌
+    Aula: LAB MA-110
+    Edificio: Malvinas argentinas
 
   - Comision: Todas
-    Dia: Viernes 1 de Mayo
-    Modalidad: 📣 ESPECIAL TUTORÍA 2 VIRTUAL ‼️
-    Hora: 15.00hs
-    URL: https://meet.google.com/nqg-rprn-asn
-
-  - Comision: Todas
-    Dia: Sábado 2 de Mayo
-    Modalidad: VIRTUAL
+    Dia: Sábado 12 de septiembre
+    Modalidad: CLASE VIRTUAL
     Hora: 10.00hs
-    URL: https://t.me/+GMlcEZyJtCo2OTUx
+    URL: https://meet.google.com/sia-cweg-zen
+
+  - Comision: Todas
+    Dia: Sábado 12 de septiembre
+    Modalidad: TUTORÍA VIRTUAL (2 hs) 🫂🙌
+    Hora: 15.00hs
+    URL: https://meet.google.com/sia-cweg-zen
 
 ejercicios:
-  - name: Mensajeros de Película
-    urlTemplate: https://github.com/obj1-unahur/mensajeros
-    destOrg: obj1-unahur-2026s1
+  - name: Mensajeros de película
+    urlTemplate: #https://github.com/obj1-unahur/mensajeros
+    destOrg: obj1-unahur-2026s2
     comentarios:
       - name: Ejercicio que introduce el manejo de bloques y colecciones.
 
-  - name: Bebidas Parte 2
-    urlTemplate: https://github.com/obj1-unahur/coleccionesBebidas
-    destOrg: obj1-unahur-2026s1
+  - name: Bebidas (parte 2)
+    urlTemplate: #https://github.com/obj1-unahur/coleccionesBebidas
+    destOrg: obj1-unahur-2026s2
     comentarios:
       - name: Segunda parte del ejercicio Bebidas, que agrega el manejo de bloques y colecciones.
 ---
 
-- En esta semana vamos a conocer a los Closures, que son bloques de código que pueden convertirse en un objeto y que pueden diferir su ejecución. Eso nos va a ayudar a programar cosas más interesantes e interactivas y nos va a ser muy útil luego en Wollok Game! También incorporamos el uso de colecciones.
+- En esta semana vamos empezar a trabajar con colecciones y closures (a.k.a bloques, lambdas, funciones arrow/flecha, etc.). Vamos a ver y entender cómo se combinan para facilitar programar cosas más interesantes e interactivas y les va a ser muy útil luego para tu TP Game también.
 
-- A los closures también se los llama expresiones Lambda. Estos "cachos" de código pueden tener, además, 1 o más parámetros que nos permiten convertir una porción de código en un objeto, dándonos el beneficio de diferir su ejecución, ya que el lugar donde se escribe el código puede no ser el mismo donde se pide la ejecución. Incluso, el código podría no ejecutarse nunca.
+- Las colecciones podrían definirse como una estructura de datos que se compone de una serie de elementos. Vamos a ver dos tipos de colecciones mutables en Wollok: listas ordenadas (permiten repetidos) y conjuntos (sin orden ni repetidos).
 
-- Les dejamos un apunte que contiene la introducción al uso de closures y colecciones además de otro material básico de la materia: [**Apunte Closures y Colecciones**](https://docs.google.com/document/d/1HiYxLswd4O0MBqnT3jGo2K9e_4FE73RXF_lf8NWVOSE/edit?usp=sharing)
+- Estas colecciones trabajan junto con los closures, que son "cachos" de código que pueden declararse, ejecutarse, y tener uno o más parámetros. De esta forma se trata esta porción de código como un objeto más, dándonos el beneficio de diferir su ejecución, ya que el lugar donde se escribe el código puede no ser el mismo donde se requiera la misma (incluso, el código podría no ejecutarse nunca).
 
-- También les facilitamos el link a la presentación de la clase presencial, que resume los temas de esta semana: <a href="https://docs.google.com/presentation/d/1GFHxRPlobgAwnoPX3NBa7F9OrVJnMAbZR2SIczAjspo/edit?usp=drive_link" target="_blank">Presentación Semana 5</a>
+- Les dejamos un apunte que contiene la introducción al uso de closures y colecciones además de otro material básico de la materia: [**Apunte closures y colecciones**](https://docs.google.com/document/d/1HiYxLswd4O0MBqnT3jGo2K9e_4FE73RXF_lf8NWVOSE/edit?usp=sharing)
 
----
-
-- #### Sobre las asignaciones (TPs)
-- ##### Debido a los problemas que nos viene trayendo la plataforma classroom de github para aceptar y gestionar asignaciones (error 500, Access Issue, etc), a partir de esta semana usaremos otra herramienta que genera previamente los repos de cada estudiante y envía los mails de invitación antes de aceptar.
-
-- ##### Aquellxs estudiantes que registraron correctamente su usuario de github en la planilla compartida la semana pasada, deberían haber recibido 2 mails de parte de Objetos UNAHUR que serán las invitaciones a aceptar las 2 asignaciones de esta semana (verificar carpeta spam).
-- ##### Podrán acceder a sus repos tanto desde el link del mail como desde el link de **"Aceptar asignación"** que está en esta página, y la primera vez deberán aceptar la invitación (vence a los 7 días). Se agregó en la sección Ejercicios para que indiquen su usuario de github, es necesario para dirigirlos al repo correcto. Asegúrense de colocarlo correctamente (mayúsculas, minúsculas, guiones, etc) porque en otro caso no les dará acceso y arrojará error 404.
-- ##### Para los ejercicios de las semanas anteriores que usamos classroom, tengan en cuenta que tal vez deban probar colocando su usuario con sufijo "-1", "-2", "-3", debido a los problemas que generó classroom al generar los repos.
+- También les facilitamos el link a la presentación de la clase presencial, que resume los temas de esta semana: <a href="https://docs.google.com/presentation/d/1GFHxRPlobgAwnoPX3NBa7F9OrVJnMAbZR2SIczAjspo/edit?usp=drive_link" target="_blank">Presentación semana 5</a>
