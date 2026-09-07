@@ -17,23 +17,17 @@ horarios:
   - Comision: 2
     Dia: Martes 8 de septiembre
     Hora: 14.00hs
-    Modalidad: A definir #PRESENCIAL
-    Aula: A definir #LAB MA-113
-    Edificio: A definir #Malvinas argentinas
+    Mensaje: NO HAY CLASES POR PARO
 
   - Comision: 4
     Dia: Martes 8 de septiembre
     Hora: 18.00hs
-    Modalidad: A definir #PRESENCIAL
-    Aula: A definir #LAB MA-111
-    Edificio: A definir #Malvinas argentinas
+    Mensaje: NO HAY CLASES POR PARO
 
   - Comision: 5
     Dia: Martes 8 de septiembre
     Hora: 18.00hs
-    Modalidad: A definir #PRESENCIAL
-    Aula: A definir #LAB MA-108
-    Edificio: A definir #Malvinas argentinas
+    Mensaje: NO HAY CLASES POR PARO
 
   - Comision: 1
     Dia: Miércoles 9 de septiembre
