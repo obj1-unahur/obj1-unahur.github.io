@@ -6,6 +6,8 @@ inicio: 2026-09-07
 
 descripcion: En esta semana vamos empezar a trabajar con colecciones y closures (a.k.a bloques, lambdas, funciones arrow/flecha, etc.). Vamos a ver y entender cómo se combinan para facilitar programar cosas más interesantes e interactivas y les va a ser muy útil luego para tu TP Game también.
 
+atencion: Esta semana no habrá clases el día martes 8/9 por el paro para reclamar por el incumplimiento de la Ley de financiamento universitario. Afecta a comisiones 2, 4 y 5. Igualmente vayan revisando la PPT de esta semana, resolviendo los ejercicios y no falten a la clase del sábado.
+
 horarios:
   - Comision: 3
     Dia: Lunes 7 de septiembre
