@@ -70,16 +70,16 @@ horarios:
 
 ejercicios:
   - name: Mensajeros de película
-    urlTemplate: #https://github.com/obj1-unahur/mensajeros
+    urlTemplate: https://github.com/obj1-unahur-2026s2/colecciones-mensajerosDePelicula
     destOrg: obj1-unahur-2026s2
     comentarios:
       - name: Ejercicio que introduce el manejo de bloques y colecciones.
 
   - name: Bebidas (parte 2)
-    urlTemplate: #https://github.com/obj1-unahur/coleccionesBebidas
+    urlTemplate: https://github.com/obj1-unahur-2026s2/colecciones-bebidasParte2
     destOrg: obj1-unahur-2026s2
     comentarios:
-      - name: Segunda parte del ejercicio Bebidas, que agrega el manejo de bloques y colecciones.
+      - name: Segunda parte del ejercicio Bebidas. Incluye sugerencia de solución de parte 1 y agrega el manejo de bloques y colecciones.
 ---
 
 - En esta semana vamos empezar a trabajar con colecciones y closures (a.k.a bloques, lambdas, funciones arrow/flecha, etc.). Vamos a ver y entender cómo se combinan para facilitar programar cosas más interesantes e interactivas y les va a ser muy útil luego para tu TP Game también.
