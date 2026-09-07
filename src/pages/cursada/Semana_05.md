@@ -40,7 +40,7 @@ horarios:
 
   - Comision: 6
     Dia: Miércoles 9 de septiembre
-    Hora: 18.00hs
+    Hora: 20.00hs
     Modalidad: PRESENCIAL
     Aula: TA-002
     Edificio: Trabajo argentino
