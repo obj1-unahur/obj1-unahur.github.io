@@ -69,25 +69,31 @@ horarios:
     URL: https://meet.google.com/sia-cweg-zen
 
 ejercicios:
-  - name: #Competencia de "Farmear aura" - TP 3 COLECCIONES - Individual obligatorio
-    urlTemplate: #https://github.com/obj1-unahur-2026s2/polimorfismo-competenciaFarmearAura
+  - name: Avengers y el chasquido de Thanos - TP 3 COLECCIONES - Individual obligatorio
+    urlTemplate: https://github.com/obj1-unahur-2026s2/colecciones-avengers
     destOrg: obj1-unahur-2026s2
     obligatorio: true
     fechaDeEntrega: Viernes 25/09/26
     comentarios:
-      - name: #Segundo trabajo práctico individual de entrega obligatoria. Hay tiempo de hacer push a GitHub con su solución hasta la fecha límite indicada (inclusive).
+      - name: Tercer trabajo práctico individual de entrega obligatoria. Hay tiempo de hacer push a GitHub con su solución hasta la fecha límite indicada (inclusive).
 
-  - name: #Victoria D Porte
-    urlTemplate: #https://github.com/obj1-unahur-2026s2/polimorfismo-victoriaDPorte
+  - name: Camión de transporte
+    urlTemplate: https://github.com/obj1-unahur-2026s2/colecciones-camionDeTransporte
     destOrg: obj1-unahur-2026s2
     comentarios:
       - name: Ejercicio para trabajar colecciones y bloques en clase.
 
-  - name: #Bebidas
-    urlTemplate: #https://github.com/obj1-unahur-2026s2/polimorfismo-bebidas
+  - name: F1 2024 - Modelado de temporada
+    urlTemplate: https://github.com/obj1-unahur-2026s2/colecciones-F1_2024
     destOrg: obj1-unahur-2026s2
     comentarios:
-      - name: Ejercicio para practicar con colecciones y bloques.
+      - name: Ejercicio para practicar colecciones y bloques de manera autónoma.
+
+  - name: Matrix - El Elegido
+    urlTemplate: https://github.com/obj1-unahur-2026s2/colecciones-matrixElElegido
+    destOrg: obj1-unahur-2026s2
+    comentarios:
+      - name: Otro ejercicio para practicar colecciones y bloques en casa y el sábado en la virtual.
 ---
 
 - Esta semana profundizaremos en las colecciones, objetos que permiten agrupar y manejar referencias a muchos otros. Son una herramienta clave en la programación orientada a objetos y, al dominarlas, podrán organizar mejor sus programas y avanzar hacia soluciones más completas y útiles.
