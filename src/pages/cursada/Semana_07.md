@@ -4,129 +4,88 @@ title: Semana 7
 
 inicio: 2026-09-21
 
-descripcion: Esta semana aprenderemos a resolver problemas más complejos con colecciones.
+descripcion: En esta semana veremos el concepto de clase, fundamental en la POO. Definiremos una clase como "molde" o "plantilla" para crear objetos, ya que describe la estructura de información y agrupa el comportamiento que tendrá toda instancia de la misma.
 
-atencion: El día martes 12/5 no habrá clases para que tod@s podamos asistir a la marcha por el cumplimiento de la ley de financiamiento universitario. Más info acá abajo ↓
-
-importante: Las clases de comisión 3 y comisión 5 de este miércoles 13 se unificarán en una sola, que será en MODALIDAD VIRTUAL. Esto es una excepción ya que no habrán aulas disponibles. El horario es el mismo de siempre, 18 hs, y la plataforma la misma de los sábados, telegram.
+atencion: El día martes 22/9 no habrá clases por el paro convocado como parte de la lucha para reclamar por el debido cumplimiento de la Ley de financiamiento universitario, sancionada e incumplida hace ya 335 días.
 
 horarios:
-  - Comision: 1
-    Dia: Viernes 15 de Mayo
+  - Comision: 3
+    Dia: Lunes 21 de septiembre
+    Hora: 18.00hs
     Modalidad: PRESENCIAL
-    Hora: 8.00hs
-    Aula: LAB MA-113
-    Edificio: MALVINAS ARGENTINAS (PA)
+    Aula: LAB LP-207
+    Edificio: La Patria
 
   - Comision: 2
-    Dia: Martes 12 de Mayo
-    Hora: 18.00hs
-    Mensaje: Sin clase por la marcha (pueden unirse el miércoles)
-
-  - Comision: 3
-    Dia: Miércoles 13 de Mayo
-    Modalidad: ⚠️ VIRTUAL ⚠️ (Excepción)
-    Hora: 18.00hs
-    URL: https://t.me/+GMlcEZyJtCo2OTUx
+    Dia: Martes 22 de septiembre
+    Hora: 14.00hs
+    Mensaje: NO HAY CLASES POR PARO
 
   - Comision: 4
-    Dia: Viernes 15 de Mayo
+    Dia: Martes 22 de septiembre
     Hora: 18.00hs
-    Modalidad: PRESENCIAL
-    Aula: LAB TA-001
-    Edificio: TRABAJO ARGENTINO
+    Mensaje: NO HAY CLASES POR PARO
 
   - Comision: 5
-    Dia: Miércoles 13 de Mayo
-    Modalidad: ⚠️ VIRTUAL ⚠️ (Excepción)
+    Dia: Martes 22 de septiembre
     Hora: 18.00hs
-    URL: https://t.me/+GMlcEZyJtCo2OTUx
+    Mensaje: NO HAY CLASES POR PARO
+
+  - Comision: 1
+    Dia: Miércoles 23 de septiembre
+    Hora: 8.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-113
+    Edificio: Malvinas argentinas
 
   - Comision: 6
-    Dia: Viernes 15 de Mayo
+    Dia: Miércoles 23 de septiembre
     Hora: 18.00hs
     Modalidad: PRESENCIAL
-    Aula: LAB TA-002
-    Edificio: TRABAJO ARGENTINO
-
-  - Comision: 7
-    Dia: Viernes 15 de Mayo
-    Hora: 18.00hs
-    Modalidad: PRESENCIAL
-    Aula: LAB MA-111
-    Edificio: MALVINAS ARGENTINAS (PA)
+    Aula: TA-002
+    Edificio: Trabajo argentino
 
   - Comision: Todas
-    Dia: Lunes 11 de Mayo
-    Modalidad: 📣 VIRTUAL (tutoría) 📣
-    Hora: 18.00hs
-    URL: https://meet.google.com/nqg-rprn-asn
+    Dia: Jueves 24 de septiembre
+    Hora: 16.00hs
+    Modalidad: TUTORÍA PRESENCIAL (2 hs) 🫂🙌
+    Aula: LAB MA-110
+    Edificio: Malvinas argentinas
 
   - Comision: Todas
-    Dia: Sábado 16 de Mayo
-    Modalidad: VIRTUAL
+    Dia: Sábado 26 de septiembre
+    Modalidad: CLASE VIRTUAL
     Hora: 10.00hs
-    URL: https://t.me/+GMlcEZyJtCo2OTUx
+    URL: https://meet.google.com/sia-cweg-zen
 
-videos:
-  - nombre: Aceptar asignación grupal y CREAR equipo
-    urlYoutube: https://www.youtube.com/watch?v=BRK0gQZ0NZM
-  - nombre: Aceptar asignación grupal y UNIRSE a equipo ya creado
-    urlYoutube: https://www.youtube.com/watch?v=AYfNUJESbZg
-
-# --- Nuevo formato para describir los ejercicios acá (2026s1) ---
-# Campos obligatorios: name, urlTemplate (reemplaza "classroom").
-# Campos opcionales que se infieren automáticamente desde urlTemplate:
-#   repoUrl, defaultBranch (= "main"), prefix (último segmento de urlTemplate),
-#   destOrg (org de urlTemplate), type (= "individual"), isPrivate (= false).
-# Si el ejercicio es obligatorio → isPrivate pasa a true (salvo que se indique lo contrario).
-# Para TPs grupales, usar type: group. La consigna se muestra desde /blob/defaultBranch/README.md.
-
-#Comparativa
-
-# ─── ANTES ───────────────────────────────   │  ─── AHORA ──────────────────────────────
-# ejercicios:                                 │  ejercicios:
-#   - name: "Mi TP Obligatorio"               │    - name: "Mi TP Obligatorio"
-#     classroom: https://github.com/org/repo  │      urlTemplate: https://github.com/org/repo
-#     repoUrl: 'org/repo'                     │      destOrg: mi-org-2026s1   # opcional
-#     defaultBranch: 'main'                   │      obligatorio: true
-#     destOrg: mi-org-2026s1                  │      fechaDeEntrega: 1/1/2026
-#     prefix: mi-ejercicio                    │      comentarios:
-#     isPrivate: true                         │        - name: "Entregar haciendo push"
-#     type: individual                        │
-#     fechaDeEntrega: 1/1/2026                │
-#     obligatorio: true                       │
-#     comentarios:                            │
-#       - name: "Entregar haciendo push"      │
-#
-# Se infiere: repoUrl, prefix, type, isPrivate (true si es obligatorio), defaultBranch.
+  - Comision: Todas
+    Dia: Sábado 26 de septiembre
+    Modalidad: TUTORÍA VIRTUAL (2 hs) 🫂🙌
+    Hora: 15.00hs
+    URL: https://meet.google.com/sia-cweg-zen
 
 ejercicios:
-  - name: F1 2024 - GRUPAL
-    urlTemplate: https://github.com/obj1-unahur/F1_2024
-    destOrg: obj1-unahur-2026s1
-    obligatorio: true
-    type: 'group'
-    fechaDeEntrega: Domingo 17/05
+  - name: Flota de rodados con Game
+    urlTemplate: https://github.com/obj1-unahur-2026s2/clases-flotaDeRodadosConGame
+    destOrg: obj1-unahur-2026s2
     comentarios:
-      - name: TP Grupal número 1
+      - name: Ejercicio para empezar a practicar clases en clase (valga la redundancia). La parte de game se profundiza luego, probablemente en la clase virtual del sábado.
 
-  - name: El Alambique Viajero
-    urlTemplate: https://github.com/obj1-unahur/alambiqueViajeroParte2
-    destOrg: obj1-unahur-2026s1
+  - name: Servicios profesionales
+    urlTemplate: https://github.com/obj1-unahur-2026s2/clases-serviciosProfesionales
+    destOrg: obj1-unahur-2026s2
     comentarios:
-      - name: Enunciado de la parte 2 del ejercicio que agrega colecciones. Ya trae la solución de parte 1.
+      - name: Un ejercicio más extenso y completo para practicar clases de manera autónoma.
 
-  - name: Camión de Transporte
-    urlTemplate: https://github.com/obj1-unahur/camionDeTransporte
-    destOrg: obj1-unahur-2026s1
+  - name: Los robots en todos lados
+    urlTemplate: https://github.com/obj1-unahur-2026s2/clases-Bots
+    destOrg: obj1-unahur-2026s2
     comentarios:
-      - name: Para practicar en casa y en clase con colecciones y polimorfismo.
+      - name: Más práctica sobre el tema nuevo, clases. Para hacer en casa.
 ---
 
-- Esta semana aprenderemos a resolver problemas más complejos con colecciones.
+- En esta semana veremos el concepto de **clase**, fundamental en la POO. Definiremos una clase como "molde" o "plantilla" para crear objetos, ya que describe la estructura de información y agrupa el comportamiento que tendrá toda instancia de la misma.
 
-- Volvemos a recomendar la utilización del apunte que mencionamos la semana pasada sobre closures y colecciones que está disponible en la sección Material de esta página en este link:
-  <a href="https://objetos1wollokunq.gitlab.io/material/guia-colecciones-basicas.pdf" target="_blank">Closures y Colecciones</a>
+- También aprenderemos el concepto de **instanciación** (la creación de objetos a partir de una clase), constructores de clase y "quién" es ahora self.
 
-- En otro orden de cosas, como sabrán, este martes está convocada una marcha federal para exigir el cumplimiento de la Ley de Financiamiento universitario. Pueden informarse más al respecto y sumarse en este <a href="https://discord.com/channels/656909199510601744/1487558648472272956/1502642395857162300" target="_blank">enlace</a>.
+- Les dejamos el link a la presentación que resume los temas de esta semana: <a href="https://docs.google.com/presentation/d/1t-Kiarm80ivL78YXHUtO8-aL7Pc5V8EzwhHRxxutmSY/edit?usp=sharing" target="_blank">Presentación Semana 7</a>
