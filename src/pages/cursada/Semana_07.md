@@ -35,7 +35,7 @@ horarios:
     Dia: Miércoles 23 de septiembre
     Hora: 8.00hs
     Modalidad: PRESENCIAL
-    Aula: LAB MA-113
+    Aula: LAB MA-109
     Edificio: Malvinas argentinas
 
   - Comision: 6
