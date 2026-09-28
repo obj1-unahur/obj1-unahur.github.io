@@ -82,31 +82,32 @@ ejercicios:
     comentarios:
       - name: Cada grupo debe aceptar esta tarea, que simplemente creará el repositorio remoto en el que trabajarán. Solo incluye las pautas y un README que deberán completar con los datos del grupo y su juego. Todo lo demás debe ser creación de ustedes.
 
-  - name: ?? - TP 4 CLASES Y HERENCIA - Individual obligatorio
-    urlTemplate: #https://github.com/obj1-unahur-2026s2/colecciones-avengers
-    destOrg: obj1-unahur-2026s2
-    obligatorio: true
-    fechaDeEntrega: Viernes 9/10/26
-    comentarios:
-      - name: Cuarto trabajo práctico individual de entrega obligatoria. Hay tiempo de hacer push a GitHub con su solución hasta la fecha límite indicada (inclusive).
+#
+#  - name: ?? - TP 4 CLASES Y HERENCIA - Individual obligatorio
+#    urlTemplate: #https://github.com/obj1-unahur-2026s2/colecciones-avengers
+#    destOrg: obj1-unahur-2026s2
+#    obligatorio: true
+#    fechaDeEntrega: Viernes 9/10/26
+#    comentarios:
+#      - name: Cuarto trabajo práctico individual de entrega obligatoria. Hay tiempo de hacer push # a GitHub con su solución hasta la fecha límite indicada (inclusive).
 
   - name: Naves espaciales
-    urlTemplate: #https://github.com/obj1-unahur/herencia-NavesEspaciales
+    urlTemplate: https://github.com/obj1-unahur-2026s2/herencia-NavesEspaciales
     destOrg: obj1-unahur-2026s2
     comentarios:
       - name: Ejercicio con clases y herencia para practicar en clase.
 
-  - name: Plagas?
-    urlTemplate: #https://github.com/obj1-unahur/herenciaPlagas
+  - name: Plagas
+    urlTemplate: https://github.com/obj1-unahur-2026s2/herencia-Plagas
     destOrg: obj1-unahur-2026s2
     comentarios:
       - name: Ejercicio con clases y herencia para practicar en casa.
 
-  - name: Golosinas?
-    urlTemplate: #https://github.com/obj1-unahur/...
+  - name: Golosinas
+    urlTemplate: https://github.com/obj1-unahur-2026s2/incremental-Golosinas
     destOrg: obj1-unahur-2026s2
     comentarios:
-      - name: Otro ejercicio con clases y herencia para practicar en casa. Se espera resolverlo y/o hacer puesta en común el sábado en la clase virtual.
+      - name: Ejercicio incremental para realizar en etapas y practicar objeto/mensaje, polimorfismo, colecciones e implementar luego clases y herencia para practicar en casa. Resolverlo para hacer puesta en común el sábado en la clase virtual.
 ---
 
 - <iframe src="https://sudhurok.github.io/reloj-ley-universitaria/reloj-contador.html" width="100%" frameborder="0" scrolling="no" style="border-radius: 15px; border: none; height: 30rem"></iframe>
