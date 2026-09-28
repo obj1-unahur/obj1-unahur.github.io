@@ -2,182 +2,133 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 8
 
-inicio: 2026-09-28
+inicio: 2026-10-28
 
-descripcion: Semana de PARCIAL PRESENCIAL para todas las comisiones. Entra todo lo visto.
+descripcion: Esta semana vamos a profundizar en el uso de Clases y empezaremos a trabajar con el concepto de Herencia, que nos va a permitir la definición de nuevas clases basadas en clases existentes, estableciendo jerarquías de Superclase y Subclase. Vamos a poder agregar nuevas variables y métodos, y también redefinir otros ya existentes.
+
+atencion: El día miércoles 30/9 no habrá clases por el paro convocado como parte de la lucha para reclamar por el debido cumplimiento de la Ley de financiamiento universitario, sancionada e incumplida hace ya 342 días (11 meses).
 
 horarios:
-  - Comision: 1
-    Dia: Viernes 22 de Mayo
+  - Comision: 3
+    Dia: Lunes 28 de septiembre
+    Hora: 18.00hs
     Modalidad: PRESENCIAL
-    Hora: 8.00hs
-    Aula: MA-113 / MA-107 / MA-108
-    Edificio: MALVINAS ARGENTINAS
+    Aula: LAB LP-207
+    Edificio: La Patria
 
   - Comision: 2
-    Dia: Martes 19 de Mayo
+    Dia: Martes 29 de septiembre
+    Hora: 14.00hs
     Modalidad: PRESENCIAL
-    Hora: 18.00hs
-    Aula: MA-113 / MA-111
-    Edificio: MALVINAS ARGENTINAS
-
-  - Comision: 3
-    Dia: Miércoles 20 de Mayo
-    Modalidad: PRESENCIAL
-    Hora: 18.00hs
-    Aula: TA-001 / MA-108
-    Edificio: TRABAJO ARGENTINO
+    Aula: LAB MA-113
+    Edificio: Malvinas argentinas
 
   - Comision: 4
-    Dia: Viernes 22 de Mayo
+    Dia: Martes 29 de septiembre
     Hora: 18.00hs
     Modalidad: PRESENCIAL
-    Aula: TA-001
-    Edificio: TRABAJO ARGENTINO
+    Aula: LAB MA-111
+    Edificio: Malvinas argentinas
 
   - Comision: 5
-    Dia: Miércoles 20 de Mayo
-    Modalidad: PRESENCIAL
+    Dia: Martes 29 de septiembre
     Hora: 18.00hs
-    Aula: MA-113 / MA-108
-    Edificio: MALVINAS ARGENTINAS
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-108
+    Edificio: Malvinas argentinas
+
+  - Comision: 1
+    Dia: Miércoles 30 de septiembre
+    Hora: 8.00hs
+    Mensaje: NO HAY CLASES POR PARO
 
   - Comision: 6
-    Dia: Viernes 22 de Mayo
+    Dia: Miércoles 30 de septiembre
     Hora: 18.00hs
-    Modalidad: PRESENCIAL
-    Aula: TA-002
-    Edificio: TRABAJO ARGENTINO
-
-  - Comision: 7
-    Dia: Viernes 22 de Mayo
-    Hora: 18.00hs
-    Modalidad: PRESENCIAL
-    Aula: MA-111
-    Edificio: MALVINAS ARGENTINAS
+    Mensaje: NO HAY CLASES POR PARO
 
   - Comision: Todas
-    Dia: Lunes 18 de Mayo
-    Modalidad: 📣 VIRTUAL (¡tutoría extendida de 4 horas!) 📣
+    Dia: Jueves 1 de octubre
     Hora: 16.00hs
-    URL: https://meet.google.com/nqg-rprn-asn
+    Modalidad: TUTORÍA PRESENCIAL (2 hs) 🫂🙌
+    Aula: LAB MA-110
+    Edificio: Malvinas argentinas
 
   - Comision: Todas
-    Dia: Jueves 21 de Mayo
-    Modalidad: 📣 VIRTUAL (tutoría resolución de un parcial) 📣
-    Hora: 16.00hs
-    URL: https://meet.google.com/nqg-rprn-asn
-
-  - Comision: Todas
-    Dia: Sábado 23 de Mayo
-    Modalidad: VIRTUAL
+    Dia: Sábado 3 de octubre
+    Modalidad: CLASE VIRTUAL
     Hora: 10.00hs
-    URL: https://t.me/+GMlcEZyJtCo2OTUx
+    URL: https://meet.google.com/sia-cweg-zen
+
+  - Comision: Todas
+    Dia: Sábado 3 de octubre
+    Modalidad: TUTORÍA VIRTUAL (2 hs) 🫂🙌
+    Hora: 15.00hs
+    URL: https://meet.google.com/sia-cweg-zen
+
+videos:
+  - nombre: Aceptar asignación grupal y CREAR equipo (para TP Game)
+    urlYoutube: https://www.youtube.com/watch?v=BRK0gQZ0NZM
+  - nombre: Aceptar asignación grupal y UNIRSE a equipo ya creado (para TP Game)
+    urlYoutube: https://www.youtube.com/watch?v=AYfNUJESbZg
 
 ejercicios:
-  - name: PRIMER PARCIAL - COMISIÓN 2
-    #Poner template correcta del parcial
-    urlTemplate: https://github.com/obj1-unahur/parcial1Com2_2026C1
-    destOrg: obj1-unahur-2026s1
+  - name: TP grupal integrador Wollok Game
+    urlTemplate: https://github.com/obj1-unahur/tp-final-wollok-game
+    destOrg: obj1-unahur-2026s2
+    type: group
+    obligatorio: true
+    fechaDeEntrega: Semanas 26/10 - 16/11 - 23/11 (ver cronograma)
     comentarios:
-      - name: Primer parcial para comisión 2
-    #Los parciales se van a generar privados en la orga del cuatri
-    isPrivate: true
-    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: false
+      - name: Cada grupo debe aceptar esta tarea, que simplemente creará el repositorio remoto en el que trabajarán. Solo incluye las pautas y un README que deberán completar con los datos del grupo y su juego. Todo lo demás debe ser creación de ustedes.
 
-  - name: PRIMER PARCIAL - COMISIÓN 3 y 5
-    #Poner template correcta del parcial
-    urlTemplate: https://github.com/obj1-unahur/parcial-1_Com-3-5_2026-C1
-    destOrg: obj1-unahur-2026s1
+  - name: ?? - TP 4 CLASES Y HERENCIA - Individual obligatorio
+    urlTemplate: #https://github.com/obj1-unahur-2026s2/colecciones-avengers
+    destOrg: obj1-unahur-2026s2
+    obligatorio: true
+    fechaDeEntrega: Viernes 9/10/26
     comentarios:
-      - name: Primer parcial para comisión 2
-    #Los parciales se van a generar privados en la orga del cuatri 2026
-    isPrivate: true
-    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: false
-    #Atributo nuevo para requerir código de 6 digitos TOTP
-    requireTOTP: true
-    # totpSecret: "MI_SECRETO_BASE32"  # opcional, si no usás el default
+      - name: Cuarto trabajo práctico individual de entrega obligatoria. Hay tiempo de hacer push a GitHub con su solución hasta la fecha límite indicada (inclusive).
 
-  # #----------------------------------------------
-  # Para pruebas
-# - name: Prueba grupal
-# # urlTemplate: https://github.com/pruebaPermisosOrga/pruebaRepoForger
-# # destOrg: pruebaPermisosOrga
-# # requireTOTP: true
-# # obligatorio: true
-# # type: 'group'
-# # fechaDeEntrega: Domingo 17/05
-# # comentarios:
-# # # - name: TP Grupal número 1
+  - name: Naves espaciales
+    urlTemplate: #https://github.com/obj1-unahur/herencia-NavesEspaciales
+    destOrg: obj1-unahur-2026s2
+    comentarios:
+      - name: Ejercicio con clases y herencia para practicar en clase.
 
-# - name: Prueba individual
-# # urlTemplate: https://github.com/pruebaPermisosOrga/pruebaRepoForger
-# # destOrg: pruebaPermisosOrga
-# # requireTOTP: true
-# # obligatorio: true
-# # fechaDeEntrega: Domingo 17/05
-# # comentarios:
-# #   - name: TP Grupal número 1
+  - name: Plagas?
+    urlTemplate: #https://github.com/obj1-unahur/herenciaPlagas
+    destOrg: obj1-unahur-2026s2
+    comentarios:
+      - name: Ejercicio con clases y herencia para practicar en casa.
 
-# #----------------------------------------------
-# # CONFIG PARA PARCIAL PARCIAL DE VIERNES TN
-# # PARA HABILITAR 22/05 A LAS 18.00 HS
-# - name: PRIMER PARCIAL - COMISIÓN 4
-#   #Poner template correcta del parcial
-#   urlTemplate: https://github.com/obj1-unahur/parcial1-vie-tn
-#   destOrg: obj1-unahur-2026s1
-#   prefix: parcial1Com4_2026C1
-#   comentarios:
-#     - name: Primer parcial para las comisiones 4, 6 y 7 del viernes turno noche
-#   #Los parciales se van a generar privados en la orga del cuatri
-#   isPrivate: true
-#   obligatorio: true
-#   type: 'individual'
-#   fechaDeEntrega: Viernes 22/05
-
-#   #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-#   visible: true
-
-# - name: PRIMER PARCIAL - COMISIÓN 6
-#   #Poner template correcta del parcial
-#   urlTemplate: https://github.com/obj1-unahur/parcial1-vie-tn
-#   destOrg: obj1-unahur-2026s1
-#   prefix: parcial1Com6_2026C1
-#   comentarios:
-#     - name: Primer parcial para las comisiones 4, 6 y 7 del viernes turno noche
-#   #Los parciales se van a generar privados en la orga del cuatri
-#   isPrivate: true
-#   obligatorio: true
-#   type: 'individual'
-#   fechaDeEntrega: Viernes 22/05
-
-#   #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-#   visible: true
-
-# - name: PRIMER PARCIAL - COMISIÓN 7
-#   #Poner template correcta del parcial
-#   urlTemplate: https://github.com/obj1-unahur/parcial1-vie-tn
-#   destOrg: obj1-unahur-2026s1
-#   prefix: parcial1Com7_2026C1
-#   comentarios:
-#     - name: Primer parcial para las comisiones 4, 6 y 7 del viernes turno noche
-#   #Los parciales se van a generar privados en la orga del cuatri
-#   isPrivate: true
-#   obligatorio: true
-#   type: 'individual'
-#   fechaDeEntrega: Viernes 22/05
-
-#   #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-#   visible: true
-# #----------------------------------------------
+  - name: Golosinas?
+    urlTemplate: #https://github.com/obj1-unahur/...
+    destOrg: obj1-unahur-2026s2
+    comentarios:
+      - name: Otro ejercicio con clases y herencia para practicar en casa. Se espera resolverlo y/o hacer puesta en común el sábado en la clase virtual.
 ---
 
-- Semana de PARCIAL PRESENCIAL para todas las comisiones. Los temas que entran son hasta colecciones completo.
+- <iframe src="https://sudhurok.github.io/reloj-ley-universitaria/reloj-contador.html" width="100%" frameborder="0" scrolling="no" style="border-radius: 15px; border: none; height: 30rem"></iframe>
 
-- Quienes tengan notebook con puerto y cable de red y wollok funcionando, les pedimos llevarla para rendir el parcial; consideren llevar también los adaptadores y accesorios que requieran para conectarse, teniendo en cuenta que la red WiFi puede ser inestable o no estar disponible.
+- Esta semana vamos a profundizar en el uso de Clases y empezaremos a trabajar con el concepto de Herencia, que nos va a permitir la definición de nuevas clases basadas en clases existentes, estableciendo jerarquías de Superclase y Subclase. Vamos a poder agregar nuevos atributos y métodos, y también redefinir otros ya existentes.
 
-- La modalidad será INDIVIDUAL y ABIERTO, lo que significa que podrán utilizar todos los apuntes que tengan tanto físicos como digitales. Consistirá en resolver un ejercicio similar a los que trabajamos en las últimas clases. El enunciado se publicará en el momento de inicio del examen. La forma de entrega será la realización del push al repositorio de github que se generará para cada estudiante al aceptar la asignación.
+- También veremos el concepto de lookup method como mecanismo por el cual se determina, cuando se envía un mensaje, qué método se debe ejecutar.
 
-- **Importante**: Lleven anotado en físico o digital (ejemplo, en un documento de google o en un mail borrador) el token personal de github que necesitarán para realizar el push desde las PCs del laboratorio si la autenticación a través del navegador falla. Asegúrense que esté vigente ya que una vez cumplido el horario de fin del examen no podrán entregar el parcial.
+- Les dejamos a mano el enlace a la <a href="https://www.wollok.org/documentation/classes/" target="_blank">documentación de Wollok sobre Clases</a> para que lean con atención.
+
+- También les facilitamos el enlace a la presentación que resume los temas de esta semana: <a href="https://docs.google.com/presentation/d/1mvE-ML4E756U_meOayhIlWhq0i2mG2OYKMrHDEQjbG0/edit?usp=sharing" target="_blank">Presentación Semana 8</a>
+
+<br />
+
+---
+
+<br />
+
+- #### Trabajo práctico grupal integrador Wollok Game: Pautas
+
+- Por otro lado, llegó el momento de comenzar con el famoso TP Game. Como saben, se trata de un trabajo práctico integrador (o sea, se espera que demuestren todo lo visto y aprendido en la cursada) grupal, evaluable y promediable, ya que representa la segunda nota de la materia (la primera, claro, es el parcial). Tengan en cuenta lo que se menciona al respecto en el <a href="/contrato-pedagogico" target="_blank">Contrato pedagógico</a> sobre la forma de evaluación: 3 instancias donde se espera un progreso gradual que finaliza con la correspondiente defensa oral.
+
+- Respecto de lo que se espera del proyecto, lean con atención el siguiente documento de <a href="https://docs.google.com/document/d/1eUFp9Ckqhu1itXPSh4to3vsvFETI7uC7hsyoV7YpKvA/edit?usp=sharing" target="_blank">pautas generales y requisitos mínimos para el TP Wollok Game</a>.
+
+- Atención a los videos que dejamos acá abajo para la aceptación de la tarea y generación del repositorio remoto, ya que hay algunas pequeñas diferencias en el proceso por tratarse de un repositorio donde trabajarán grupalmente.
