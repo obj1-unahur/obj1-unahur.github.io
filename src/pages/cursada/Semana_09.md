@@ -4,80 +4,94 @@ title: Semana 9
 
 inicio: 2026-10-05
 
-descripcion: En esta semana veremos el concepto de Clase como patrón o modelo para crear objetos, que describe completa y detalladamente la estructura de información y comportamiento que tendrá todo objeto de la clase.
-
-atencion: Las comisiones 1, 4, 6 y 7 no tendrán clases debido al paro convocado para el viernes 29 de mayo, en reclamo por el incumplimiento de la Ley de financiamiento universitario.
+descripcion: Esta semana vamos a seguir profundizando en el uso de clases y herencia (y todo lo anterior visto también) de cara al parcial de la semana 11.
 
 horarios:
-  - Comision: 1
-    Dia: Viernes 29 de Mayo
-    Hora: 8.00hs
-    Mensaje: Sin clase por paro
+  - Comision: 3
+    Dia: Lunes 5 de octubre
+    Hora: 18.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB LP-207
+    Edificio: La Patria
 
   - Comision: 2
-    Dia: Martes 26 de Mayo
+    Dia: Martes 6 de octubre
+    Hora: 14.00hs
     Modalidad: PRESENCIAL
-    Hora: 18.00hs
-    Aula: LAB LP-207
-    Edificio: La Patria
-
-  - Comision: 3
-    Dia: Miércoles 27 de Mayo
-    Modalidad: PRESENCIAL
-    Hora: 18.00hs
-    Aula: LAB LP-206
-    Edificio: La Patria
+    Aula: LAB MA-113
+    Edificio: Malvinas argentinas
 
   - Comision: 4
-    Dia: Viernes 29 de Mayo
+    Dia: Martes 6 de octubre
     Hora: 18.00hs
-    Mensaje: Sin clase por paro
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-111
+    Edificio: Malvinas argentinas
 
   - Comision: 5
-    Dia: Miércoles 27 de Mayo
-    Modalidad: PRESENCIAL
+    Dia: Martes 6 de octubre
     Hora: 18.00hs
-    Aula: LAB LP-207
-    Edificio: La Patria
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-108
+    Edificio: Malvinas argentinas
+
+  - Comision: 1
+    Dia: Miércoles 7 de octubre
+    Hora: 8.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-109
+    Edificio: Malvinas argentinas
 
   - Comision: 6
-    Dia: Viernes 29 de Mayo
+    Dia: Miércoles 7 de octubre
     Hora: 18.00hs
-    Mensaje: Sin clase por paro
-
-  - Comision: 7
-    Dia: Viernes 29 de Mayo
-    Hora: 18.00hs
-    Mensaje: Sin clase por paro
+    Modalidad: PRESENCIAL
+    Aula: TA-002
+    Edificio: Trabajo argentino
 
   - Comision: Todas
-    Dia: Sábado 30 de Mayo
-    Modalidad: VIRTUAL
-    Hora: 10.00hs
-    URL: https://t.me/+GMlcEZyJtCo2OTUx
-
-  - Comision: Todas
-    Dia: Jueves 28 de Mayo
-    Modalidad: 📣 VIRTUAL (tutoría) 📣
+    Dia: Jueves 8 de octubre
     Hora: 16.00hs
-    URL: https://meet.google.com/nqg-rprn-asn
+    Modalidad: TUTORÍA PRESENCIAL (2 hs) 🫂🙌
+    Aula: LAB MA-110
+    Edificio: Malvinas argentinas
+
+  - Comision: Todas
+    Dia: Sábado 10 de octubre
+    Modalidad: CLASE VIRTUAL
+    Hora: 10.00hs
+    URL: https://meet.google.com/sia-cweg-zen
+
+  - Comision: Todas
+    Dia: Sábado 10 de octubre
+    Modalidad: TUTORÍA VIRTUAL (2 hs) 🫂🙌
+    Hora: 15.00hs
+    URL: https://meet.google.com/sia-cweg-zen
 
 ejercicios:
-  - name: Servicios profesionales
-    urlTemplate: https://github.com/obj1-unahur/clasesServiciosProfesionales
-    destOrg: obj1-unahur-2026s1
+  - name: Semillas al viento - TP 4 CLASES Y HERENCIA - Individual obligatorio
+    urlTemplate: https://github.com/obj1-unahur-2026s2/herencia-semillas
+    destOrg: obj1-unahur-2026s2
+    obligatorio: true
+    fechaDeEntrega: Viernes 16/10/26
     comentarios:
-      - name: Un ejercicio bastante completo para practicar clases en casa.
+      - name: Cuarto y último trabajo práctico individual de entrega obligatoria. Hay tiempo de hacer push a GitHub con su solución hasta la fecha límite indicada (inclusive).
 
-  - name: Flotas de rodados (con game)
-    urlTemplate: https://github.com/obj1-unahur/flotasDeRodadosConGameTS
-    destOrg: obj1-unahur-2026s1
+  - name: El coliseo
+    urlTemplate: https://github.com/obj1-unahur-2026s2/herencia-coliseo
+    destOrg: obj1-unahur-2026s2
     comentarios:
-      - name: Ejercicio incremental, polimorfismo, colecciones, clases y game. Para practicar en el aula y en casa.
+      - name: Ejercicio para seguir practicando herencia trabajando en clase.
+
+  - name: Bosque encantado y criaturas mágicas
+    urlTemplate: https://github.com/obj1-unahur-2026s2/integrador-criaturasMagicas
+    destOrg: obj1-unahur-2026s2
+    comentarios:
+      - name: Ejercicio tipo integrador para ir preparándose para el parcial (¡indispensable resolverlo en casa y anotar y evacuar dudas!)
 ---
 
-- En esta semana veremos el concepto de clase como patrón o modelo para crear objetos, que describe completa y detalladamente la estructura de información y comportamiento que tendrá todo objeto de la misma.
+- <iframe src="https://sudhurok.github.io/reloj-ley-universitaria/reloj-contador.html" width="100%" frameborder="0" scrolling="no" style="border-radius: 15px; border: none; height: 30rem"></iframe>
 
-- También aprenderemos el concepto de instanciación como creación de objetos a partir de una clase. Constructores de clase y "quién" es ahora self.
+- Esta semana vamos a seguir profundizando en el uso de clases y herencia (y todo lo anterior visto también) de cara al parcial de la semana 11.
 
-- Les dejamos el link a la presentación de la clase presencial, que resume los temas de esta semana: <a href="https://docs.google.com/presentation/d/1t-Kiarm80ivL78YXHUtO8-aL7Pc5V8EzwhHRxxutmSY/edit?usp=sharing" target="_blank">Presentación Semana 9</a>
+- Además recuerden que cada grupo (que aún no lo haya hecho) debe informar a su docente qué juego tienen en mente desarrollar para el trabajo práctico Game, para darles el visto bueno antes de que comiencen a programarlo.
