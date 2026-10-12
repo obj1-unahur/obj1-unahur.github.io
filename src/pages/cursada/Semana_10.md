@@ -2,7 +2,7 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 10
 
-inicio: 2028-10-12
+inicio: 2026-10-12
 
 descripcion: Esta semana es de puro repaso para el parcial de la próxima. Para ello, resolverán ejercicios de carácter integrador.
 
@@ -71,11 +71,17 @@ horarios:
     URL: https://meet.google.com/sia-cweg-zen
 
 ejercicios:
-  - name: #nombre
-    urlTemplate: #url plantilla
+  - name: Agencia de Viajes
+    urlTemplate: https://github.com/obj1-unahur-2026s2/agenciaDeViajes
     destOrg: obj1-unahur-2026s2
     comentarios:
-      - name: #Comentario
+      - name: Ejercicio tipo parcial para practicar en clase.
+
+  - name: Orbalion
+    urlTemplate: https://github.com/obj1-unahur-2026s2/herencia-orbalion
+    destOrg: obj1-unahur-2026s2
+    comentarios:
+      - name: Ejercicio tipo parcial para practicar en casa.
 ---
 
 - <iframe src="https://sudhurok.github.io/reloj-ley-universitaria/reloj-contador.html" width="100%" frameborder="0" scrolling="no" style="border-radius: 15px; border: none; height: 30rem"></iframe>
