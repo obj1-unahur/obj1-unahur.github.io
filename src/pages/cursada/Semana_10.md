@@ -2,95 +2,82 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 10
 
-inicio: 2026-10-12
+inicio: 2028-10-12
 
-descripcion: Esta semana vamos a profundizar en el uso de Clases y empezaremos a trabajar con el concepto de Herencia, que nos va a permitir la definición de nuevas clases basadas en clases existentes, estableciendo jerarquías de Superclase y Subclase. Vamos a poder agregar nuevas variables y métodos, y también redefinir otros ya existentes.
+descripcion: Esta semana es de puro repaso para el parcial de la próxima. Para ello, resolverán ejercicios de carácter integrador.
 
-atencion: Este miércoles 3/6 nuevamente hay paro para reclamar por el incumplimiento de la Ley de financiamiento universitario. Afecta a comisiones 3 y 5.
+atencion: Por el feriado del Día del Respeto a la Diversidad Cultural, la comisión 3 este lunes 12/10 no tiene clases. De igual manera deben seguir ejercitando y poniéndose al día durante esta semana.
 
-importante: Les dejamos más abajo el link a la consigna, requisitos e indicaciones para el desarrollo del TP Game Grupal.
+importante: Se les recuerda la convocatoria a la 5ta Marcha Federal Universitaria de este jueves 15/10. Es importante que se informen y asistan para seguir resistiendo, luchando y apoyando el justo reclamo para que el gobierno nacional cumpla la Ley de financiamiento universitario.
 
 horarios:
-  - Comision: 1
-    Dia: Viernes 5 de junio
-    Modalidad: PRESENCIAL
-    Hora: 8.00hs
-    Aula: LAB MA-113
-    Edificio: MALVINAS ARGENTINAS (PA)
+  - Comision: 3
+    Dia: Lunes 12 de octubre
+    Hora: 18.00hs
+    Mensaje: FERIADO
 
   - Comision: 2
-    Dia: Martes 2 de junio
+    Dia: Martes 13 de octubre
+    Hora: 14.00hs
     Modalidad: PRESENCIAL
-    Hora: 18.00hs
-    Aula: LAB TA-002
-    Edificio: TRABAJO ARGENTINO
-
-  - Comision: 3
-    Dia: Miércoles 3 de junio
-    Hora: 18.00hs
-    Mensaje: Sin clase por paro
+    Aula: LAB MA-113
+    Edificio: Malvinas argentinas
 
   - Comision: 4
-    Dia: Viernes 5 de junio
-    Hora: 18.00hs
-    Modalidad: PRESENCIAL
-    Aula: LAB TA-001
-    Edificio: TRABAJO ARGENTINO
-
-  - Comision: 5
-    Dia: Miércoles 3 de junio
-    Hora: 18.00hs
-    Mensaje: Sin clase por paro
-
-  - Comision: 6
-    Dia: Viernes 5 de junio
-    Hora: 18.00hs
-    Modalidad: PRESENCIAL
-    Aula: LAB TA-002
-    Edificio: TRABAJO ARGENTINO
-
-  - Comision: 7
-    Dia: Viernes 5 de junio
+    Dia: Martes 13 de octubre
     Hora: 18.00hs
     Modalidad: PRESENCIAL
     Aula: LAB MA-111
-    Edificio: MALVINAS ARGENTINAS (PA)
+    Edificio: Malvinas argentinas
+
+  - Comision: 5
+    Dia: Martes 13 de octubre
+    Hora: 18.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-108
+    Edificio: Malvinas argentinas
+
+  - Comision: 1
+    Dia: Miércoles 14 de octubre
+    Hora: 8.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-109
+    Edificio: Malvinas argentinas
+
+  - Comision: 6
+    Dia: Miércoles 14 de octubre
+    Hora: 18.00hs
+    Modalidad: PRESENCIAL
+    Aula: TA-002
+    Edificio: Trabajo argentino
+
+  #  - Comision: Todas
+  #  #  Dia: Jueves 8 de octubre
+  #  #  Hora: 16.00hs
+  #  #  Modalidad: TUTORÍA PRESENCIAL (2 hs) 🫂🙌
+  #  #  Aula: LAB MA-110
+  #  #  Edificio: Malvinas argentinas
 
   - Comision: Todas
-    Dia: Sábado 6 de junio
-    Modalidad: VIRTUAL
+    Dia: Sábado 17 de octubre
+    Modalidad: CLASE VIRTUAL
     Hora: 10.00hs
     URL: https://meet.google.com/sia-cweg-zen
 
+  - Comision: Todas
+    Dia: Sábado 17 de octubre
+    Modalidad: TUTORÍA VIRTUAL (2 hs) 🫂🙌
+    Hora: 15.00hs
+    URL: https://meet.google.com/sia-cweg-zen
+
 ejercicios:
-  - name: Naves espaciales
-    urlTemplate: https://github.com/obj1-unahur/herencia-NavesEspaciales
-    destOrg: obj1-unahur-2026s1
+  - name: #nombre
+    urlTemplate: #url plantilla
+    destOrg: obj1-unahur-2026s2
     comentarios:
-      - name: Ejercicio con clases y herencia para practicar en clase y en casa.
-
-  - name: Coliseo
-    urlTemplate: https://github.com/obj1-unahur/clasesColiseo
-    destOrg: obj1-unahur-2026s1
-    comentarios:
-      - name: Ejercicio con clases y herencia para practicar en casa.
-
-  - name: Plagas
-    urlTemplate: https://github.com/obj1-unahur/herenciaPlagas
-    destOrg: obj1-unahur-2026s1
-    comentarios:
-      - name: Ejercicio a realizar el sábado en la clase virtual. Incluye el tema nuevo herencia. Ideal para ir leyendo e intentar hacerlo para antes de dicha clase.
+      - name: #Comentario
 ---
 
-- Esta semana vamos a profundizar en el uso de Clases y empezaremos a trabajar con el concepto de Herencia, que nos va a permitir la definición de nuevas clases basadas en clases existentes, estableciendo jerarquías de Superclase y Subclase. Vamos a poder agregar nuevas variables y métodos, y también redefinir otros ya existentes.
+- <iframe src="https://sudhurok.github.io/reloj-ley-universitaria/reloj-contador.html" width="100%" frameborder="0" scrolling="no" style="border-radius: 15px; border: none; height: 30rem"></iframe>
 
-- También veremos el concepto de lookup method como mecanismo por el cual se determina, para el envío de un mensaje, qué método se debe ejecutar.
-
-- Les dejamos a mano el enlace a la <a href="https://www.wollok.org/documentation/classes/" target="_blank">documentación de Wollok sobre Clases</a> para que lean con atención.
-
-- También les facilitamos el enlace a la presentación que resume los temas de esta semana: <a href="https://docs.google.com/presentation/d/1mvE-ML4E756U_meOayhIlWhq0i2mG2OYKMrHDEQjbG0/edit?usp=sharing" target="_blank">Presentación Semana 10</a>
-
----
-
-- #### Trabajo práctico grupal integrador Wollok Game
-- ##### <a href="https://docs.google.com/document/d/1eUFp9Ckqhu1itXPSh4to3vsvFETI7uC7hsyoV7YpKvA/edit?usp=sharing" target="_blank">Pautas generales del TP Wollok Game grupal</a>
+- Esta semana es de puro repaso para el parcial de la próxima. Para ello resolverán ejercicios de carácter integrador, o sea que incluyen todos los conceptos vistos en la cursada y que se evaluarán en el examen: Objeto, mensaje, referencias, polimorfismo, testing, bloques y colecciones, y clases y herencia.
