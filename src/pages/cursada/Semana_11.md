@@ -4,105 +4,76 @@ title: Semana 11
 
 inicio: 2026-10-19
 
-descripcion: Esta semana vamos a seguir profundizando en el uso de Clases y Herencia y practicando para el segundo parcial que es la semana que viene.
+descripcion: Semana de examen parcial presencial para todas las comisiones.
 
-importante: Abajo en la sección de ejercicios tienen dos asignaciones importantes que aceptar. Por un lado la del TP integrador grupal Game, que les generará el repositorio remoto correspondiente a cada grupo donde irán subiendo su desarrollo. Por otro, el último TP obligatorio (también grupal) de la cursada que incluye todos los temas vistos.
+importante: Para la clase del sábado 24 deben asistir presencialmente al evento UNAHUR TIC desde las 9 am.
 
 horarios:
-  - Comision: 1
-    Dia: Viernes 12 de junio
-    Modalidad: PRESENCIAL
-    Hora: 8.00hs
-    Aula: LAB MA-113
-    Edificio: MALVINAS ARGENTINAS (PA)
-
-  - Comision: 2
-    Dia: Martes 9 de junio
-    Modalidad: PRESENCIAL
-    Hora: 18.00hs
-    Aula: LAB MA-111
-    Edificio: MALVINAS ARGENTINAS (PA)
-
   - Comision: 3
-    Dia: Miércoles 10 de junio
-    Modalidad: PRESENCIAL
-    Hora: 18.00hs
-    Aula: LAB LP-206
-    Edificio: La Patria
-
-  - Comision: 4
-    Dia: Viernes 12 de junio
+    Dia: Lunes 19 de octubre
     Hora: 18.00hs
     Modalidad: PRESENCIAL
-    Aula: TA-001
-    Edificio: TRABAJO ARGENTINO
-
-  - Comision: 5
-    Dia: Miércoles 10 de junio
-    Modalidad: PRESENCIAL
-    Hora: 18.00hs
     Aula: LAB LP-207
     Edificio: La Patria
 
-  - Comision: 6
-    Dia: Viernes 12 de junio
-    Hora: 18.00hs
+  - Comision: 2
+    Dia: Martes 20 de octubre
+    Hora: 14.00hs
     Modalidad: PRESENCIAL
-    Aula: LAB TA-002
-    Edificio: TRABAJO ARGENTINO
+    Aula: LAB MA-113
+    Edificio: Malvinas argentinas
 
-  - Comision: 7
-    Dia: Viernes 12 de junio
+  - Comision: 4
+    Dia: Martes 20 de octubre
     Hora: 18.00hs
     Modalidad: PRESENCIAL
     Aula: LAB MA-111
-    Edificio: MALVINAS ARGENTINAS (PA)
+    Edificio: Malvinas argentinas
 
-  - Comision: Todas
-    Dia: Sábado 13 de junio
-    Modalidad: VIRTUAL
-    Hora: 10.00hs
-    URL: https://meet.google.com/sia-cweg-zen
-
-  #Tutorías
-  - Comision: Todas
-    Dia: Lunes 8 de junio
-    Modalidad: 📣 VIRTUAL (tutoría) 📣
+  - Comision: 5
+    Dia: Martes 20 de octubre
     Hora: 18.00hs
-    URL: https://meet.google.com/sia-cweg-zen
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-108
+    Edificio: Malvinas argentinas
+
+  - Comision: 1
+    Dia: Miércoles 21 de octubre
+    Hora: 8.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-109
+    Edificio: Malvinas argentinas
+
+  - Comision: 6
+    Dia: Miércoles 21 de octubre
+    Hora: 18.00hs
+    Modalidad: PRESENCIAL
+    Aula: TA-002
+    Edificio: Trabajo argentino
 
   - Comision: Todas
-    Dia: Jueves 11 de junio
-    Modalidad: 📣 VIRTUAL (tutoría) 📣
+    Dia: Jueves 22 de octubre
     Hora: 16.00hs
+    Modalidad: TUTORÍA PRESENCIAL (2 hs) 🫂🙌
+    Aula: LAB MA-110
+    Edificio: Malvinas argentinas
+
+  - Comision: Todas
+    Dia: Sábado 24 de octubre
+    Modalidad: ESPECIAL UNAHUR TIC PRESENCIAL
+    Hora: 9.00hs
+
+  - Comision: Todas
+    Dia: Sábado 24 de octubre
+    Modalidad: TUTORÍA VIRTUAL (2 hs) 🫂🙌
+    Hora: 15.00hs
     URL: https://meet.google.com/sia-cweg-zen
-
-ejercicios:
-  - name: TP grupal integrador Wollok Game
-    urlTemplate: https://github.com/obj1-unahur/tp-final-wollok-game
-    destOrg: obj1-unahur-2026s1
-    type: group
-    obligatorio: true
-    fechaDeEntrega: Desarrollo semana del 7/7 | Defensa oral semana del 14/7 (día según comisión)
-    comentarios:
-      - name: Cada grupo debe aceptar esta tarea, que simplemente creará el repositorio remoto en el que trabajarán. Solo incluye las pautas y un README que deberán completar con los datos del grupo y su juego. Todo lo demás debe ser creación de ustedes.
-
-  - name: Semillas (TP Grupal Clases y Herencia)
-    urlTemplate: https://github.com/obj1-unahur/herencia-Semillas
-    destOrg: obj1-unahur-2026s1
-    type: group
-    obligatorio: true
-    fechaDeEntrega: Domingo 21/6/26
-    comentarios:
-      - name: TP grupal de entrega obligatoria que aborda todos los temas vistos incluyendo herencia.
-
-  - name: Criaturas mágicas
-    urlTemplate: https://github.com/obj1-unahur/integrador-criaturasMagicas
-    destOrg: obj1-unahur-2026s1
-    comentarios:
-      - name: Ejericio integrador tipo 2do parcial para practicar en clase.
 ---
 
-- Esta semana vamos a seguir profundizando en el uso de Clases y Herencia y practicando para el segundo parcial que es la semana que viene.
+- Semana de examen parcial presencial para todas las comisiones. Se evalúan todos los temas vistos en la cursada: Objeto, mensaje, polimorfismo, referencias, colecciones y bloques, y clases y herencia.
 
-- Además recuerden que cada grupo debe informar a su docente qué juego tienen en mente desarrollar para el trabajo práctico Game, para darles el visto bueno.
+- La modalidad será la que indique el/la docente de cada comisión. Si es en PC, quienes tengan notebook con puerto y cable de red pueden llevarla para rendir de manera que dejen disponible una PC extra para algún/a otrx compañerx que necesite. Consideren llevar también los adaptadores y accesorios que requieran para conectarse, como también cuaderno, birome, borrador y demás si es que rinden en papel.
+
+- El examen será INDIVIDUAL y ABIERTO, lo que significa que podrán utilizar todos los apuntes que tengan tanto físicos como digitales. Consistirá en resolver un ejercicio similar a los que trabajamos en las últimas clases, es decir, que incluye todo lo visto en la materia.
+
+- Sobre el sábado 24, deben asistir presencialmente al evento UNAHUR TIC desde las 9 am (aprovechen, otorga créditos). Consulten durante la semana a su docente la manera de dar el presente de la clase (presente para créditos no lo manejamos nosotres).
