@@ -70,6 +70,8 @@ horarios:
     URL: https://meet.google.com/sia-cweg-zen
 ---
 
+- <iframe src="https://sudhurok.github.io/reloj-ley-universitaria/reloj-contador.html" width="100%" frameborder="0" scrolling="no" style="border-radius: 15px; border: none; height: 35rem"></iframe>
+
 - Semana de examen parcial presencial para todas las comisiones. Se evalúan todos los temas vistos en la cursada: Objeto, mensaje, polimorfismo, referencias, colecciones y bloques, y clases y herencia.
 
 - La modalidad será la que indique el/la docente de cada comisión. Si es en PC, quienes tengan notebook con puerto y cable de red pueden llevarla para rendir de manera que dejen disponible una PC extra para algún/a otrx compañerx que necesite. Consideren llevar también los adaptadores y accesorios que requieran para conectarse, como también cuaderno, birome, borrador y demás si es que rinden en papel.
