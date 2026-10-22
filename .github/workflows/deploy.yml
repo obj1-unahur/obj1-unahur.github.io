@@ -5,7 +5,7 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    - cron: '0 3 * * *'  # Lunes 03:00 UTC = medianoche Argentina
+    - cron: '0 3 * * 1'  # Lunes 03:00 UTC = medianoche Argentina
 
 # Permite que este trabajo clone el repositorio y cree un despliegue de página
 permissions:
