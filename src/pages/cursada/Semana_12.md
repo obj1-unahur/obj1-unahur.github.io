@@ -4,155 +4,70 @@ title: Semana 12
 
 inicio: 2026-10-26
 
-descripcion: Semana de 2do. PARCIAL PRESENCIAL para todas las comisiones. Entra todo lo visto en la materia.
+descripcion: Esta semana es la primera instancia de evaluación del TP Game.
 
 horarios:
-  - Comision: 1
-    Dia: Viernes 19 de Junio
+  - Comision: 3
+    Dia: Lunes 26 de octubre
+    Hora: 18.00hs
     Modalidad: PRESENCIAL
-    Hora: 8.00hs
-    Aula: A Designar
-    Edificio: A Designar
+    Aula: LAB LP-207
+    Edificio: La Patria
 
   - Comision: 2
-    Dia: Martes 16 de Junio
+    Dia: Martes 27 de octubre
+    Hora: 14.00hs
     Modalidad: PRESENCIAL
-    Hora: 18.00hs
-    Aula: MA-109
-    Edificio: MALVINAS ARGENTINAS
-
-  - Comision: 3
-    Dia: Miércoles 17 de Junio
-    Modalidad: PRESENCIAL
-    Hora: 18.00hs
-    Aula: MA-107 / MA-111 / MA-112
-    Edificio: MALVINAS ARGENTINAS
+    Aula: LAB MA-113
+    Edificio: Malvinas argentinas
 
   - Comision: 4
-    Dia: Viernes 19 de Junio
+    Dia: Martes 27 de octubre
     Hora: 18.00hs
     Modalidad: PRESENCIAL
-    Aula: TA-001
-    Edificio: TRABAJO ARGENTINO
+    Aula: LAB MA-111
+    Edificio: Malvinas argentinas
 
   - Comision: 5
-    Dia: Miércoles 17 de Junio
-    Modalidad: PRESENCIAL
+    Dia: Martes 27 de octubre
     Hora: 18.00hs
-    Aula: MA-107 / MA-111 / MA-112
-    Edificio: MALVINAS ARGENTINAS
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-108
+    Edificio: Malvinas argentinas
+
+  - Comision: 1
+    Dia: Miércoles 28 de octubre
+    Hora: 8.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-109
+    Edificio: Malvinas argentinas
 
   - Comision: 6
-    Dia: Viernes 19 de Junio
+    Dia: Miércoles 28 de octubre
     Hora: 18.00hs
     Modalidad: PRESENCIAL
     Aula: TA-002
-    Edificio: TRABAJO ARGENTINO
-
-  - Comision: 7
-    Dia: Viernes 19 de Junio
-    Hora: 18.00hs
-    Modalidad: PRESENCIAL
-    Aula: MA-111
-    Edificio: MALVINAS ARGENTINAS
+    Edificio: Trabajo argentino
 
   - Comision: Todas
-    Dia: Lunes 15 de Junio
-    Modalidad: 📣 TUTORIA VIRTUAL 📣
+    Dia: Jueves 29 de octubre
     Hora: 16.00hs
-    URL: https://meet.google.com/sia-cweg-zen
+    Modalidad: TUTORÍA PRESENCIAL (2 hs) 🫂🙌
+    Aula: LAB MA-110
+    Edificio: Malvinas argentinas
 
   - Comision: Todas
-    Dia: Sábado 20 de Junio
+    Dia: Sábado 31 de octubre
+    Modalidad: CLASE VIRTUAL
     Hora: 10.00hs
-    Mensaje: NO HAY CLASES POR FERIADO
-
-ejercicios:
-  - name: SEGUNDO PARCIAL - COMISIÓN 2
-    urlTemplate: https://github.com/obj1-unahur/parcial2Com2_2026C1
-    destOrg: obj1-unahur-2026s1
-    comentarios:
-      - name: Segundo parcial para comisión 2
-    isPrivate: true
-    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: false
-
-  - name: SEGUNDO PARCIAL - COMISIÓN 3
-    urlTemplate: https://github.com/obj1-unahur/parcial2Com3_2026C1
-    destOrg: obj1-unahur-2026s1
-    comentarios:
-      - name: Segundo parcial para comisión 3
-    isPrivate: true
-    requireTOTP: true
-    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: false
-
-  - name: SEGUNDO PARCIAL - COMISIÓN 5
-    urlTemplate: https://github.com/obj1-unahur/parcial2Com5_2026C1
-    destOrg: obj1-unahur-2026s1
-    comentarios:
-      - name: Segundo parcial para comisión 5
-    isPrivate: true
-    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: false
-
-  # #----------------------------------------------
-  # CONFIG PARA PARCIAL PARCIAL DE VIERNES TN
-  # PARA HABILITAR 19/06 A LAS 18.00 HS
-  - name: SEGUNDO PARCIAL - COMISIÓN 4
-    #Poner template correcta del parcial
-    urlTemplate: https://github.com/obj1-unahur/parcial2-vie-tn
-    destOrg: obj1-unahur-2026s1
-    prefix: parcial2Com4_2026C1
-    comentarios:
-      - name: Segundo parcial para las comisión 4 del viernes turno noche
-    #Los parciales se van a generar privados en la orga del cuatri
-    isPrivate: true
-    obligatorio: true
-    type: 'individual'
-    fechaDeEntrega: Viernes 19/06
-
-    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: false
-
-  - name: SEGUNDO PARCIAL - COMISIÓN 6
-    #Poner template correcta del parcial
-    urlTemplate: https://github.com/obj1-unahur/parcial2-vie-tn
-    destOrg: obj1-unahur-2026s1
-    prefix: parcial2Com6_2026C1
-    comentarios:
-      - name: Segundo parcial para las comisión 6 del viernes turno noche
-    #Los parciales se van a generar privados en la orga del cuatri
-    isPrivate: true
-    obligatorio: true
-    type: 'individual'
-    fechaDeEntrega: Viernes 19/06
-
-    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: false
-
-  - name: SEGUNDO PARCIAL - COMISIÓN 7
-    #Poner template correcta del parcial
-    urlTemplate: https://github.com/obj1-unahur/parcial2-vie-tn
-    destOrg: obj1-unahur-2026s1
-    prefix: parcial2Com7_2026C1
-    comentarios:
-      - name: Segundo parcial para las comisión 7 del viernes turno noche
-    #Los parciales se van a generar privados en la orga del cuatri
-    isPrivate: true
-    obligatorio: true
-    type: 'individual'
-    fechaDeEntrega: Viernes 19/06
-
-    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: false
-  # #----------------------------------------------
+    URL: https://meet.google.com/sia-cweg-zen
+# - Comision: Todas
+# # Dia: Sábado 31 de octubre
+# # Modalidad: TUTORÍA VIRTUAL (2 hs) 🫂🙌
+# # Hora: 15.00hs
+# # URL: https://meet.google.com/sia-cweg-zen
 ---
 
-- Semana de 2do. PARCIAL PRESENCIAL para todas las comisiones. Entra todo lo visto en la materia.
+- <iframe src="https://sudhurok.github.io/reloj-ley-universitaria/reloj-contador.html" width="100%" frameborder="0" scrolling="no" style="border-radius: 15px; border: none; height: 35rem"></iframe>
 
-- Quienes tengan notebook con puerto y cable de red y wollok funcionando, les pedimos llevarla para rendir el parcial; consideren llevar también los adaptadores y accesorios que requieran para conectarse, teniendo en cuenta que la red WiFi puede ser inestable o no estar disponible.
-
-- La modalidad será INDIVIDUAL y ABIERTO, lo que significa que podrán utilizar todos los apuntes que tengan tanto físicos como digitales. Consistirá en resolver un ejercicio similar a los que trabajamos en las últimas clases. El enunciado se publicará en el momento de inicio del examen. La forma de entrega será la realización del push al repositorio de github que se generará para cada estudiante al aceptar la asignación.
-
-- **Importante**: Lleven anotado en físico o digital (ejemplo, en un documento de google o en un mail borrador) el token personal de github que necesitarán para realizar el push desde las PCs del laboratorio si la autenticación a través del navegador falla. Asegúrense que esté vigente ya que una vez cumplido el horario de fin del examen no podrán entregar el parcial.
+- Esta semana es la primera instancia de evaluación del TP Game. Esperamos ver plasmados los primeros avances, recuerden que tienen detallados los objetivos mínimos para esta fecha en el <a href="https://docs.google.com/document/d/1eUFp9Ckqhu1itXPSh4to3vsvFETI7uC7hsyoV7YpKvA/edit?usp=sharing" target="_blank">doc de pautas generales del trabajo práctico</a>. Y recuerden también que es importante que todxs lxs integrantes del equipo se presenten.
