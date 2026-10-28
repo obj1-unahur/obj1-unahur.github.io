@@ -38,16 +38,12 @@ horarios:
   - Comision: 1
     Dia: Miércoles 28 de octubre
     Hora: 8.00hs
-    Modalidad: PRESENCIAL
-    Aula: LAB MA-109
-    Edificio: Malvinas argentinas
+    Mensaje: NO HAY CLASES POR PARO
 
   - Comision: 6
     Dia: Miércoles 28 de octubre
     Hora: 18.00hs
-    Modalidad: PRESENCIAL
-    Aula: TA-002
-    Edificio: Trabajo argentino
+    Mensaje: NO HAY CLASES POR PARO
 
   - Comision: Todas
     Dia: Jueves 29 de octubre
