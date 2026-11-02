@@ -45,24 +45,24 @@ horarios:
     Aula: TA-002
     Edificio: Trabajo argentino
 
-  - Comision: Todas
-    Dia: Jueves 5 de noviembre
-    Hora: 16.00hs
-    Modalidad: TUTORÍA PRESENCIAL (2 hs) 🫂🙌
-    Aula: LAB MA-110
-    Edificio: Malvinas argentinas
+  # - Comision: Todas
+  # # Dia: Jueves 5 de noviembre
+  # # Hora: 16.00hs
+  # # Modalidad: TUTORÍA PRESENCIAL (2 hs) 🫂🙌
+  # # Aula: LAB MA-110
+  # # Edificio: Malvinas argentinas
 
   - Comision: Todas
     Dia: Sábado 7 de noviembre
     Modalidad: CLASE VIRTUAL
     Hora: 10.00hs
     URL: https://meet.google.com/sia-cweg-zen
+# - Comision: Todas
+# # Dia: Sábado 7 de noviembre
+# # Modalidad: TUTORÍA VIRTUAL (2 hs) 🫂🙌
+# # Hora: 15.00hs
+# # URL: https://meet.google.com/sia-cweg-zen
 
-  - Comision: Todas
-    Dia: Sábado 7 de noviembre
-    Modalidad: TUTORÍA VIRTUAL (2 hs) 🫂🙌
-    Hora: 15.00hs
-    URL: https://meet.google.com/sia-cweg-zen
 #ejercicios:
 # - name: ejercicio
 # # urlTemplate: https://github.com/obj1-unahur-2026s2/...
