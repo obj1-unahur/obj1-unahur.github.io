@@ -4,74 +4,73 @@ title: Semana 13
 
 inicio: 2026-11-02
 
-descripcion: Semana post-parcial y pre-recuperatorio. Resolución de segundo parcial.
+descripcion: Semana de repaso, pre-recuperatorio. Primera entrega Game para comisión 1 y 6.
 
-importante: Este sábado 27 la modalidad es excepcional. Deben concurrir presencialmente al evento sobre Wollok Game que se llevará a cabo en el Auditorio del edificio Trabajo argentino a partir de las 9 am.
-
-atencion: Esta semana a modo excepcional, las comisiones 2, 3 y 5 tienen clase VIRTUAL. El sábado, como se indicó oportunamente, será PRESENCIAL para todas las comisiones.
+atencion: Este martes 3/11, comisiones 2, 4 y 5 no tendrán clases por un nuevo paro en reclamo por la Ley de financiamiento universitario que el gobierno nacional sigue ignorando.
 
 horarios:
-  - Comision: 1
-    Dia: Viernes 26 de junio
+  - Comision: 3
+    Dia: Lunes 2 de noviembre
+    Hora: 18.00hs
     Modalidad: PRESENCIAL
-    Hora: 8.00hs
-    Aula: LAB MA-113
-    Edificio: MALVINAS ARGENTINAS (PA)
+    Aula: LAB LP-207
+    Edificio: La Patria
 
   - Comision: 2
-    Dia: Martes 23 de junio
-    Hora: 18.00hs
-    Modalidad: VIRTUAL
-    URL: https://meet.google.com/sia-cweg-zen
-
-  - Comision: 3
-    Dia: Miércoles 24 de junio
-    Hora: 18.00hs
-    Modalidad: VIRTUAL
-    URL: https://meet.google.com/sia-cweg-zen
+    Dia: Martes 3 de noviembre
+    Hora: 14.00hs
+    Mensaje: No hay clase por paro
 
   - Comision: 4
-    Dia: Viernes 26 de junio
+    Dia: Martes 3 de noviembre
     Hora: 18.00hs
-    Modalidad: PRESENCIAL
-    Aula: LAB TA-001
-    Edificio: TRABAJO ARGENTINO
+    Mensaje: No hay clase por paro
 
   - Comision: 5
-    Dia: Miércoles 24 de junio
+    Dia: Martes 3 de noviembre
     Hora: 18.00hs
-    Modalidad: VIRTUAL
-    URL: https://meet.google.com/sia-cweg-zen
+    Mensaje: No hay clase por paro
+
+  - Comision: 1
+    Dia: Miércoles 4 de noviembre
+    Hora: 8.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-109
+    Edificio: Malvinas argentinas
 
   - Comision: 6
-    Dia: Viernes 26 de junio
+    Dia: Miércoles 4 de noviembre
     Hora: 18.00hs
     Modalidad: PRESENCIAL
-    Aula: LAB TA-002
-    Edificio: TRABAJO ARGENTINO
-
-  - Comision: 7
-    Dia: Viernes 26 de junio
-    Hora: 18.00hs
-    Modalidad: PRESENCIAL
-    Aula: LAB MA-111
-    Edificio: MALVINAS ARGENTINAS (PA)
+    Aula: TA-002
+    Edificio: Trabajo argentino
 
   - Comision: Todas
-    Dia: Sábado 27 de junio
-    Hora: 9.00hs
-    Modalidad: PRESENCIAL (especial evento Wollok Game)
-    Aula: Auditorio
-    Edificio: TRABAJO ARGENTINO
+    Dia: Jueves 5 de noviembre
+    Hora: 16.00hs
+    Modalidad: TUTORÍA PRESENCIAL (2 hs) 🫂🙌
+    Aula: LAB MA-110
+    Edificio: Malvinas argentinas
 
-  #Tutorías
   - Comision: Todas
-    Dia: Lunes 22 de junio
-    Modalidad: 📣 VIRTUAL (tutoría) 📣
-    Hora: 18.00hs
+    Dia: Sábado 7 de noviembre
+    Modalidad: CLASE VIRTUAL
+    Hora: 10.00hs
     URL: https://meet.google.com/sia-cweg-zen
+
+  - Comision: Todas
+    Dia: Sábado 7 de noviembre
+    Modalidad: TUTORÍA VIRTUAL (2 hs) 🫂🙌
+    Hora: 15.00hs
+    URL: https://meet.google.com/sia-cweg-zen
+#ejercicios:
+# - name: ejercicio
+# # urlTemplate: https://github.com/obj1-unahur-2026s2/...
+# # destOrg: obj1-unahur-2026s2
+# # comentarios:
+# #   - name: Ejercicio
 ---
 
-- Esta semana se hará en clase una sugerencia de resolución del 2do parcial que se tomó la semana pasada. Esto servirá para despejar dudas de cara a los recuperatorios de la semana que viene y el final de cursada.
+- <iframe src="https://sudhurok.github.io/reloj-ley-universitaria/reloj-contador.html" width="100%" frameborder="0" scrolling="no" style="border-radius: 15px; border: none; height: 35rem"></iframe>
 
-- Por otro lado, el sábado 27 deben concurrir presencialmente (se toma asistencia) al evento sobre Wollok Game "Aprendiendo a programar creando videojuegos" que se llevará a cabo en el Auditorio del edificio Trabajo argentino a partir de las 9 am. Será una oportunidad especial para profundizar sobre esta biblioteca de Wollok, y les servirá para entender mejor el TP Game que están desarrollando en grupo y que deben entregar en la semana posterior a los recuperatorios.
+- Esta semana será de repaso y consultas pre-recuperatorio para comisión 3, mientras que para comisiones 1 y 6 toca la primera entrega y revisión del TP Game. Comisiones 2, 4 y 5 se ven afectadas por el paro del martes 3/11 al que todes les profes adherimos. Les recomendamos una vez más revisar con frecuencia el cronograma ya que siguen habiendo cambios dadas las condiciones atípicas de cursada de estos tiempos difíciles para la universidad pública.
