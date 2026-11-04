@@ -42,8 +42,8 @@ horarios:
     Dia: Miércoles 4 de noviembre
     Hora: 18.00hs
     Modalidad: PRESENCIAL
-    Aula: TA-002
-    Edificio: Trabajo argentino
+    Aula: MA-109
+    Edificio: Malvinas argentinas
 
   # - Comision: Todas
   # # Dia: Jueves 5 de noviembre
