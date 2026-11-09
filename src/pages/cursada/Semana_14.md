@@ -7,162 +7,67 @@ inicio: 2028-11-09
 descripcion: Semana de recuperatorios de ambos parciales para todas las comisiones.
 
 horarios:
-  - Comision: 1
-    Dia: Viernes 3 de julio
-    Modalidad: PRESENCIAL
-    Hora: 8.00hs
-    Aula: A determinar #LAB MA-113
-    Edificio: A determinar #MALVINAS ARGENTINAS (PA)
+  - Comision: 3
+    Dia: Lunes 9 de noviembre
+    Hora: 18.00hs
+    Mensaje: Feriado
 
   - Comision: 2
-    Dia: Martes 30 de junio
+    Dia: Martes 10 de noviembre
+    Hora: 14.00hs
     Modalidad: PRESENCIAL
-    Hora: 18.00hs
     Aula: LAB MA-113
-    Edificio: MALVINAS ARGENTINAS (PA)
-
-  - Comision: 3
-    Dia: Miércoles 1 de julio
-    Modalidad: PRESENCIAL
-    Hora: 18.00hs
-    Aula: LAB TA-002
-    Edificio: TRABAJO ARGENTINO
+    Edificio: Malvinas argentinas
 
   - Comision: 4
-    Dia: Viernes 3 de julio
+    Dia: Martes 10 de noviembre
     Hora: 18.00hs
     Modalidad: PRESENCIAL
-    Aula: A determinar #LAB TA-001
-    Edificio: A determinar #TRABAJO ARGENTINO
+    Aula: LAB MA-111
+    Edificio: Malvinas argentinas
 
   - Comision: 5
-    Dia: Miércoles 1 de julio
-    Modalidad: PRESENCIAL
+    Dia: Martes 10 de noviembre
     Hora: 18.00hs
-    Aula: LAB TA-001
-    Edificio: TRABAJO ARGENTINO
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-108
+    Edificio: Malvinas argentinas
+
+  - Comision: 1
+    Dia: Miércoles 11 de noviembre
+    Hora: 8.00hs
+    Mensaje: Feriado
 
   - Comision: 6
-    Dia: Viernes 3 de julio
+    Dia: Miércoles 11 de noviembre
+    Hora: 18.00hs
+    Mensaje: Feriado
+
+  # - Comision: Todas
+  # # Dia: Jueves 5 de noviembre
+  # # Hora: 16.00hs
+  # # Modalidad: TUTORÍA PRESENCIAL (2 hs) 🫂🙌
+  # # Aula: LAB MA-110
+  # # Edificio: Malvinas argentinas
+
+  - Comision: 5
+    Dia: Martes 10 de noviembre
     Hora: 18.00hs
     Modalidad: PRESENCIAL
-    Aula: A determinar #LAB TA-002
-    Edificio: A determinar #TRABAJO ARGENTINO
+    Aula: LAB MA-108
+    Edificio: Malvinas argentinas
+# - Comision: Todas
+# # Dia: Sábado 7 de noviembre
+# # Modalidad: TUTORÍA VIRTUAL (2 hs) 🫂🙌
+# # Hora: 15.00hs
+# # URL: https://meet.google.com/sia-cweg-zen
 
-  - Comision: 7
-    Dia: Viernes 3 de julio
-    Hora: 18.00hs
-    Modalidad: PRESENCIAL
-    Aula: A determinar #LAB MA-111
-    Edificio: A determinar #MALVINAS ARGENTINAS (PA)
-
-  - Comision: Todas
-    Dia: Sábado 4 de julio
-    Modalidad: VIRTUAL
-    Hora: 10.00hs
-    URL: https://meet.google.com/sia-cweg-zen
-
-  #Tutorías
-  - Comision: Todas
-    Dia: Lunes 29 de junio
-    Modalidad: 📣 VIRTUAL (tutoría) 📣
-    Hora: 18.00hs
-    URL: https://meet.google.com/sia-cweg-zen
-
-ejercicios:
-  - name: RECUPERATORIO - COMISIÓN 2
-    urlTemplate: https://github.com/obj1-unahur/recu1y2_com2_2026c1
-    destOrg: obj1-unahur-2026s1
-    comentarios:
-      - name: Examen recuperatorio para comisión 2
-    isPrivate: true
-    visible: false
-
-  - name: RECUPERATORIO - COMISIÓN 3
-    urlTemplate: https://github.com/obj1-unahur/recuperatorioCom3_2026C1
-    destOrg: obj1-unahur-2026s1
-    comentarios:
-      - name: Examen recuperatorio para comisión 3
-    isPrivate: true
-    visible: false
-
-  - name: RECUPERATORIO - COMISIÓN 5
-    urlTemplate: https://github.com/obj1-unahur/recuperatorioCom5_2026C1
-    destOrg: obj1-unahur-2026s1
-    comentarios:
-      - name: Examen recuperatorio para comisión 5
-    isPrivate: true
-    visible: false
-
-  # #----------------------------------------------
-  # CONFIG PARA PARCIAL PARCIAL DE VIERNES TN
-  # PARA HABILITAR 03/07 A LAS 18.00 HS
-  - name: SEGUNDO PARCIAL - COMISIÓN 4
-    #Poner template correcta del parcial
-    urlTemplate: https://github.com/obj1-unahur/cine
-    destOrg: obj1-unahur-2026s1
-    prefix: recu1y2Com4_2026C1
-    comentarios:
-      - name: Segundo parcial para las comisión 4 del viernes turno noche
-    #Los parciales se van a generar privados en la orga del cuatri
-    isPrivate: true
-    obligatorio: true
-    type: 'individual'
-    fechaDeEntrega: Viernes 03/07
-
-    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: false
-
-  - name: SEGUNDO PARCIAL - COMISIÓN 6
-    #Poner template correcta del parcial
-    urlTemplate: https://github.com/obj1-unahur/cine
-    destOrg: obj1-unahur-2026s1
-    prefix: recu1y2Com6_2026C1
-    comentarios:
-      - name: Segundo parcial para las comisión 6 del viernes turno noche
-    #Los parciales se van a generar privados en la orga del cuatri
-    isPrivate: true
-    obligatorio: true
-    type: 'individual'
-    fechaDeEntrega: Viernes 03/07
-
-    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: false
-
-  - name: SEGUNDO PARCIAL - COMISIÓN 7
-    #Poner template correcta del parcial
-    urlTemplate: https://github.com/obj1-unahur/cine
-    destOrg: obj1-unahur-2026s1
-    prefix: recu1y2Com7_2026C1
-    comentarios:
-      - name: Segundo parcial para las comisión 7 del viernes turno noche
-    #Los parciales se van a generar privados en la orga del cuatri
-    isPrivate: true
-    obligatorio: true
-    type: 'individual'
-    fechaDeEntrega: Viernes 03/07
-
-    #Poner en true / comentar / borrar atributo 'visible' para que se vea el ejercicio
-    visible: false
-  # #----------------------------------------------
+#ejercicios:
+# - name: ejercicio
+# # urlTemplate: https://github.com/obj1-unahur-2026s2/...
+# # destOrg: obj1-unahur-2026s2
+# # comentarios:
+# #   - name: Ejercicio
 ---
 
-- Esta semana se tomará examen recuperatorio tanto del primer parcial como del segundo, para cada comisión en su día y horario correspondiente. La modalidad es PRESENCIAL, pero la forma de evaluación puede variar según decida el/la docente de cada comisión (consultar cualquier duda).
-
-- **Temas a evaluar**
-
-  - • Para recuperar primer parcial: Objeto, mensaje, polimorfismo, colecciones, bloques, referencias y test unitarios.
-
-  - • Para recuperar segundo parcial: super() + clases y herencia (todo lo anterior y además clases y herencia).
-
-- **¿Tengo que recuperar?**
-
-  - • Si tenés dudas de si te conviene recuperar y qué, volvé a leer el <a href="/contrato-pedagogico#aprobacion">Contrato pedagógico, sección aprobación</a>.
-
-- **Recordatorios y recomendaciones importantes**
-
-  - • Quienes tengan notebook con puerto y cable de red y wollok funcionando, se sugiere llevarla para rendir y ayudar a que todes tengan pc para trabajar; considerar llevar también los adaptadores y accesorios que requieran para conectarse, teniendo en cuenta que la red WiFi puede ser inestable.
-
-  - • El examen es INDIVIDUAL y ABIERTO, lo que significa que pueden utilizar todos los apuntes que tengan tanto físicos como digitales.
-
-  - • Llevar anotado el token personal de github. Asegurarse de que esté vigente.
+- <iframe src="https://sudhurok.github.io/reloj-ley-universitaria/reloj-contador.html" width="100%" frameborder="0" scrolling="no" style="border-radius: 15px; border: none; height: 35rem"></iframe>
