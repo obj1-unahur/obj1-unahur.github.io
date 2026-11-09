@@ -67,3 +67,5 @@ horarios:
 ---
 
 - <iframe src="https://sudhurok.github.io/reloj-ley-universitaria/reloj-contador.html" width="100%" frameborder="0" scrolling="no" style="border-radius: 15px; border: none; height: 35rem"></iframe>
+
+- Semana de recuperatorio del parcial. La modalidad será en PC, usando Wollok Online, como fue el parcial para la mayoría de las comisiones.
