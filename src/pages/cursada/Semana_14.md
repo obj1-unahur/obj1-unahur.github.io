@@ -6,7 +6,7 @@ inicio: 2026-11-09
 
 descripcion: Semana de recuperatorio del parcial para todas las comisiones.
 
-importante: Como saben, comisiones de lunes y miércoles se ven afectadas por los feriados, por lo que el recuperatorio lo rendirán el sábado 14 por la mañana.
+atencion: Como saben, comisiones de lunes y miércoles se ven afectadas por los feriados, por lo que el recuperatorio lo rendirán el sábado 14 por la mañana.
 
 horarios:
   - Comision: 3
