@@ -60,10 +60,10 @@ horarios:
 
   - Comision: 1, 3 y 6
     Dia: Sábado 14 de noviembre
-    Modalidad: PRESENCIAL
+    Modalidad: RECUPERATORIO PRESENCIAL
     Hora: 9.00hs
-    Aula: A determinar
-    Edificio: A determinar
+    Aula: MA-112 y MA-113
+    Edificio: Malvinas argentinas
 ---
 
 - <iframe src="https://sudhurok.github.io/reloj-ley-universitaria/reloj-contador.html" width="100%" frameborder="0" scrolling="no" style="border-radius: 15px; border: none; height: 35rem"></iframe>
