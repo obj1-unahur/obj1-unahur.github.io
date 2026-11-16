@@ -2,70 +2,67 @@
 layout: src/layouts/PostCursadaLayout.astro
 title: Semana 15
 
-inicio: 2028-11-16
+inicio: 2026-11-16
 
 descripcion: Esta semana es la entrega del TP Game grupal.
 
-atencion: El viernes 10/7 no hay clase por feriado, por lo tanto las comisiones afectadas (1, 4, 6 y 7) harán entrega de su Game de manera virtual el día sábado 11/7. Asimismo por este motivo comisiones 2, 3 y 5 no tendrán clase dicho sábado.
+atencion: El lunes 16/11 no hay clases por el paro. La comisión 3 hará la presentación y defensa del TPGame (2do parcial) el sábado 21/11.
 
 horarios:
-  - Comision: 1
-    Dia: Viernes 10 de julio
-    Hora: 8.00hs
-    Mensaje: NO HAY CLASES POR FERIADO
-
-  - Comision: 2
-    Dia: Martes 7 de julio
-    Modalidad: PRESENCIAL
+  - Comision: 3
+    Dia: Lunes 16 de noviembre
     Hora: 18.00hs
-    Aula: LAB LP-207
-    Edificio: La Patria
+    Mensaje: No hay clase por paro
 
   - Comision: 3
-    Dia: Miércoles 8 de julio
+    Dia: Sábado 21 de noviembre
+    Modalidad: Presentación y defensa oral TP Game (2do Parcial)
+    Hora: 10.00hs
+    URL: LINK A CONFIRMAR
+
+  - Comision: 2
+    Dia: Martes 17 de noviembre
+    Hora: 14.00hs
     Modalidad: PRESENCIAL
-    Hora: 18.00hs
-    Aula: LAB LP-206
-    Edificio: La Patria
+    Aula: LAB MA-113
+    Edificio: Malvinas argentinas
 
   - Comision: 4
-    Dia: Viernes 10 de julio
+    Dia: Martes 17 de noviembre
     Hora: 18.00hs
-    Mensaje: NO HAY CLASES POR FERIADO
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-111
+    Edificio: Malvinas argentinas
 
   - Comision: 5
-    Dia: Miércoles 8 de julio
-    Modalidad: PRESENCIAL
+    Dia: Martes 17 de noviembre
     Hora: 18.00hs
-    Aula: LAB LP-207
-    Edificio: La Patria
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-108
+    Edificio: Malvinas argentinas
+
+  - Comision: 1
+    Dia: Miércoles 18 de noviembre
+    Hora: 8.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-109
+    Edificio: Malvinas argentinas
 
   - Comision: 6
-    Dia: Viernes 10 de julio
+    Dia: Miércoles 18 de noviembre
     Hora: 18.00hs
-    Mensaje: NO HAY CLASES POR FERIADO
+    Modalidad: PRESENCIAL
+    Aula: TA-002
+    Edificio: Trabajo argentino
 
-  - Comision: 7
-    Dia: Viernes 10 de julio
-    Hora: 18.00hs
-    Mensaje: NO HAY CLASES POR FERIADO
-
-  - Comision: 1, 4, 6 y 7
-    Dia: Sábado 11 de julio
-    Modalidad: VIRTUAL (horario y enlace a determinar según comisión)
-    Hora: 10
-    URL: A determinar
-
-  #Tutorías
-  - Comision: Todas
-    Dia: Lunes 6 de julio
-    Modalidad: 📣 VIRTUAL (tutoría) 📣
-    Hora: 18.00hs
-    URL: https://meet.google.com/sia-cweg-zen
+  - Comision: 1,2,4,5,6
+    Dia: Sábado 21 de noviembre
+    Hora: 10.00hs
+    Mensaje: SIN ACTIVIDAD
 ---
 
-- Esta semana es la entrega del TP Game grupal, cada grupo mostrará su producción para el resto del curso y explicarán a su docente cómo jugarlo para que pueda probarlo "en vivo" en su computadora. Comisiones 2, 3 y 5 harán dicha entrega en la clase presencial durante la semana, mientras que las demás lo harán de manera virtual en la clase del sábado por el feriado del viernes. Habrá una videollamada distinta para cada comisión, y puede que se requiera empezar más temprano de lo habitual para llegar a ver todos los trabajos. Estén atent@s a lo que informe su docente.
+- Esta semana es la 2da entrega (FINAL) del TP Game grupal. Cada grupo mostrará su producción para el resto del curso y explicarán a su docente cómo jugarlo para que pueda probarlo "en vivo" en su computadora. Comisiones 1, 2, 4, 5 y 6 harán dicha entrega en la clase presencial de esta semana, mientras que la comisión 3 lo hará de manera virtual en la clase del sábado por el paro del lunes 16/11. Atención comisión 3 que además de presentar los TPGame, tienen el examen oral que es el 2do parcial.
 
-- Aclaración importante: Para la entrega DEBEN ESTAR PRESENTES TOD@S l@s integrantes del grupo. Quien se ausente no solo lo verá reflejado en su nota sino que afectará negativamente la imagen del equipo todo.
+- Aclaración importante: Para la entrega DEBEN ESTAR PRESENTES TOD@S l@s integrantes del grupo sin excepción.
 
-- Aclaración importante 2: Esto es una entrega, NO es igual ni reemplaza la defensa oral del trabajo que deberán hacer la próxima semana (tal como figura en el cronograma).
+- Aclaración importante 2: Esto es una entrega, NO es igual ni reemplaza la defensa oral (parcial 2) que deberán hacer la próxima semana todas las comisiones a excepción de la 3 que será el sábado 21/11 (tal como figura en el cronograma)
