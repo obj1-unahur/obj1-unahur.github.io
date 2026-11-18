@@ -50,8 +50,8 @@ horarios:
     Dia: Miércoles 18 de noviembre
     Hora: 18.00hs
     Modalidad: PRESENCIAL
-    Aula: TA-002
-    Edificio: Trabajo argentino
+    Aula: LAB MA-113
+    Edificio: Malvinas argentinas
 
   - Comision: 1,2,4,5,6
     Dia: Sábado 21 de noviembre
