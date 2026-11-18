@@ -16,9 +16,10 @@ horarios:
 
   - Comision: 3
     Dia: Sábado 21 de noviembre
-    Modalidad: Presentación y defensa oral TP Game (2do Parcial)
     Hora: 10.00hs
-    URL: LINK A CONFIRMAR
+    Modalidad: PRESENCIAL - Presentación y defensa oral TP Game
+    Aula: TA 01
+    Edificio: Trabajo argentino
 
   - Comision: 2
     Dia: Martes 17 de noviembre
@@ -59,7 +60,7 @@ horarios:
     Mensaje: SIN ACTIVIDAD
 ---
 
-- Esta semana es la 2da entrega (FINAL) del TP Game grupal. Cada grupo mostrará su producción para el resto del curso y explicarán a su docente cómo jugarlo para que pueda probarlo "en vivo" en su computadora. Comisiones 1, 4, 5 y 6 harán dicha entrega en la clase presencial de esta semana, mientras que la comisión 3 lo hará de manera virtual en la clase del sábado por el paro del lunes 16/11. Atención comisión 3 que además de presentar los TPGame, tienen el examen oral que es el 2do parcial. Comisión 2 (martes 14hs) presenta y defiende el martes 24/11 14hs.
+- Esta semana es la 2da entrega (FINAL) del TP Game grupal. Cada grupo mostrará su producción para el resto del curso y explicarán a su docente cómo jugarlo para que pueda probarlo "en vivo" en su computadora. Comisiones 1, 4, 5 y 6 harán dicha entrega en la clase presencial de esta semana, mientras que la comisión 3 lo hará de manera presencial en la clase del sábado por el paro del lunes 16/11. Atención comisión 3 que además de presentar los TPGame, tienen el examen oral que es el 2do parcial. Comisión 2 (martes 14hs) presenta y defiende el martes 24/11 14hs.
 
 - Aclaración importante: Para la entrega DEBEN ESTAR PRESENTES TOD@S l@s integrantes del grupo sin excepción.
 
