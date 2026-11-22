@@ -60,6 +60,8 @@ horarios:
     Mensaje: SIN ACTIVIDAD
 ---
 
+- <iframe src="https://sudhurok.github.io/reloj-ley-universitaria/reloj-contador.html" width="100%" frameborder="0" scrolling="no" style="border-radius: 15px; border: none; height: 35rem"></iframe>
+
 - Esta semana es la 2da entrega (FINAL) del TP Game grupal. Cada grupo mostrará su producción para el resto del curso y explicarán a su docente cómo jugarlo para que pueda probarlo "en vivo" en su computadora. Comisiones 1, 4, 5 y 6 harán dicha entrega en la clase presencial de esta semana, mientras que la comisión 3 lo hará de manera presencial en la clase del sábado por el paro del lunes 16/11. Atención comisión 3 que además de presentar los TPGame, tienen el examen oral que es el 2do parcial. Comisión 2 (martes 14hs) presenta y defiende el martes 24/11 14hs.
 
 - Aclaración importante: Para la entrega DEBEN ESTAR PRESENTES TOD@S l@s integrantes del grupo sin excepción.

@@ -6,60 +6,69 @@ inicio: 2026-11-23
 
 descripcion: Esta semana es la defensa oral y presentación de correcciones y mejoras del TP Game.
 
-atencion: Debido al partido del miércoles 15/7 y a posibles inconvenientes de transporte, excepcionalmente el examen oral de las comisiones 3 y 5 será Virtual (cámara y micrófono obligatorios). El inicio será entre las 18 y las 19 hs, según la finalización del partido.
+atencion: El lunes 23/11 no hay clases por el feriado del Día de la Soberanía nacional (trasladado del día 20).
 
 horarios:
-  - Comision: 1
-    Dia: Viernes 17 de julio
-    Modalidad: PRESENCIAL
-    Hora: 8.00hs
-    Aula: LAB MA-113
-    Edificio: MALVINAS ARGENTINAS (PA)
+  - Comision: 3
+    Dia: Lunes 23 de noviembre
+    Hora: 18.00hs
+    Mensaje: Sin clase por feriado
 
   - Comision: 2
-    Dia: Martes 14 de julio
+    Dia: Martes 24 de noviembre
+    Hora: 14.00hs
     Modalidad: PRESENCIAL
-    Hora: 18.00hs
-    Aula: LAB LP-207
-    Edificio: La Patria
-
-  - Comision: 3
-    Dia: Miércoles 15 de julio
-    Hora: inicio  18.00~19.00hs
-    Modalidad: VIRTUAL
-    URL: https://meet.google.com/sia-cweg-zen
+    Aula: LAB MA-113
+    Edificio: Malvinas argentinas
 
   - Comision: 4
-    Dia: Viernes 17 de julio
-    Hora: 18.00hs
-    Modalidad: PRESENCIAL
-    Aula: LAB TA-001
-    Edificio: TRABAJO ARGENTINO
-
-  - Comision: 5
-    Dia: Miércoles 15 de julio
-    Hora: inicio  18.00~19.00hs
-    Modalidad: VIRTUAL
-    URL: https://meet.google.com/sia-cweg-zen
-
-  - Comision: 6
-    Dia: Viernes 17 de julio
-    Hora: 18.00hs
-    Modalidad: PRESENCIAL
-    Aula: LAB TA-002
-    Edificio: TRABAJO ARGENTINO
-
-  - Comision: 7
-    Dia: Viernes 17 de julio
+    Dia: Martes 24 de noviembre
     Hora: 18.00hs
     Modalidad: PRESENCIAL
     Aula: LAB MA-111
-    Edificio: MALVINAS ARGENTINAS (PA)
+    Edificio: Malvinas argentinas
 
-  - Comision: Todas
-    Dia: Sábado 18 de julio
-    Hora: 10.00hs
-    Mensaje: NO HAY CLASES
+  - Comision: 5
+    Dia: Martes 24 de noviembre
+    Hora: 18.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-108
+    Edificio: Malvinas argentinas
+
+  - Comision: 1
+    Dia: Miércoles 25 de noviembre
+    Hora: 8.00hs
+    Modalidad: PRESENCIAL
+    Aula: LAB MA-109
+    Edificio: Malvinas argentinas
+
+  - Comision: 6
+    Dia: Miércoles 25 de noviembre
+    Hora: 18.00hs
+    Modalidad: PRESENCIAL
+    Aula: TA-002
+    Edificio: Trabajo argentino
+# - Comision: Todas
+# # Dia: Jueves 22 de octubre
+# # Hora: 16.00hs
+# # Modalidad: TUTORÍA PRESENCIAL (2 hs) 🫂🙌
+# # Aula: LAB MA-110
+# # Edificio: Malvinas argentinas
+
+# - Comision: Todas
+# # Dia: Sábado 24 de octubre
+# # Modalidad: ESPECIAL UNAHUR TIC PRESENCIAL
+# # Hora: 9.00hs
+
+# - Comision: Todas
+# # Dia: Sábado 24 de octubre
+# # Modalidad: TUTORÍA VIRTUAL (2 hs) 🫂🙌
+# # Hora: 15.00hs
+# # URL: https://meet.google.com/sia-cweg-zen
 ---
 
-- Esta semana se realizará la defensa oral y la presentación de las correcciones y mejoras del TP Game grupal. Esta instancia obligatoria complementa la evaluación del 2.º parcial, tal como se informó en el contrato pedagógico, y permite cerrar la calificación del parcial. En función del desempeño en la defensa y de las respuestas a las preguntas conceptuales, la nota del 2.º parcial podrá aumentar, mantenerse o disminuir.
+- <iframe src="https://sudhurok.github.io/reloj-ley-universitaria/reloj-contador.html" width="100%" frameborder="0" scrolling="no" style="border-radius: 15px; border: none; height: 35rem"></iframe>
+
+- Esta semana se realizará la defensa oral y la presentación de las correcciones y mejoras del TP Game grupal. Comisión 2 debe hacer también la entrega del desarrollo completo que quedó pendiente de la semana anterior. Comisión 3 ya hizo la respectiva entrega y defensa y no tiene clases por el feriado.
+
+- Además, el sábado 5/12 se estará llevando a cabo una nueva edición del concurso Wollok Game en la Universidad Nacional de Quilmes. La participación es voluntaria, para más información visiten el siguiente enlace: <a href="https://docs.google.com/document/d/e/2PACX-1vQvpZzvKHKiwQ2vdsF5l80kFCod0W9OYKemUfIhCU5GBzIDjcQiMC4kQZwsoxDpGQ/pub">Concurso Wollok Game</a>
